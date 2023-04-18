@@ -65,13 +65,26 @@ atv_app_code_subminor_ver		one	uint16_T	1					Sub-minor version of the applicati
 t_sample		sec	real_T	0.01					Sample time definition for fast VSM Cycle
 
 
+
+** Drive By Wire
 atvc_mtawnb	100	one	uint8_T		0	100			Maximum Torque When Braking [%]
 atvc_mtadd	100	one	uint8_T		0	100			Maximum Torque [%]
 atvc_mtadd_rev	100	one	uint8_T		0	100			Maximum Torque When Braking Reverese [%]
 atvc_mtawnb_rev	100	one	uint8_T		0	100			Maximum Torque Reverese [%]
-atvc_upperLimitPedalF	1000	one	uint16_T		550	1000			High Pedal limit [%]
-atvc_lowerLimitPedalF	0	one	uint16_T		0	450			Low Pedal Limit [%]
-atvc_throttleNeutralPoint	100	one	uint16_T		0	450			Throttle neutral position [%]
+atvc_upperLimitPedalF	1000	one	uint16_T		550	1000			High Pedal limit [0.1%]
+atvc_lowerLimitPedalF	0	one	uint16_T		0	450			Low Pedal Limit [0.1%]
+atvc_throttleNeutralPoint	100	one	uint16_T		0	450			Throttle neutral position [0.1%]
+atvc_brakePedalOn	100	one	uint16_T		50	1000			Brake Pedal On Trheashold [0.1%]
+atvc_brakePedalHis	0	one	uint16_T		0	25			Brake Pedal Histeresis [0.1%]
+atvc_an_in_sel_th	2.5	one	real_T		1	4			Analog Selectors Threashold Pedal On Trheashold [V]
+atvc_an_in_sel_his	0.25	one	real_T		0	1			Analog Selectors Histeresis  [V]
+atvc_velocityLimitRwd	5	one	uint8_T		3	100			Speed Limit Reverse
+atvc_velocityLimitFwd	10	one	uint8_T		3	120			Speed Limit Forward
+atvc_maxRegenCurr	50	one	uint16_T		30	300			Max Inbound current [A]
+atvc_maxDischCurr	100	one	uint16_T		30	900			Max Outbound current [A]
+
+
+
 atvc_dcMinFan	30	one	uint8_T		0	100			Minimum Fan Speed [%]
 atvc_tempSwitchOffFan	48	degree_Celsius	uint8_T		10	100			Fan Off Temp
 atvc_tempSwitchOnFan	50	degree_Celsius	uint8_T		10	100			Fan On Temp
@@ -84,6 +97,16 @@ atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status (RAW)
 atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status
 atv_xd3_raw_ain		V	real_T	0.001					Foot Pedal FS1 Switch (Raw Voltage)
 atv_fs1_in		one	boolean_T	1					Foot Pedal FS1 Switch Status
+atv_xa3_brake_pedal_raw_ain		V	real_T	0.001					Brake Pedal (Raw Voltage)
+atv_brake_pedalX1000		V	uint16_T	1					Brake Input 0-1000
+atv_brake_pedal_digital_in		one	boolean_T	1					Brake Pedal In Digital
+atv_xe4_raw_ain		V	real_T	0.001					2WD/4WD  Selector (Raw Voltage)
+atv_4wd_din		one	boolean_T	1					2WD/4WD Selector
+atv_xc1_raw_ain		V	real_T	0.001					Fwd Selector (Raw Voltage)
+atv_xc4_raw_ain		V	real_T	0.001					Rwd Selector (Raw Voltage)
+atv_xe2_raw_ain		V	real_T	0.001					APU Button (Raw Voltage)
+atv_apu_req_in		one	boolean_T	1					APU Button (Boolean) 
+
 
 atv_wakelock_out		one	boolean_T	1					Wakelock Status
 atv_key_signal_in		one	boolean_T	1					Key Logical Status

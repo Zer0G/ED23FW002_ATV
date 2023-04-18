@@ -3,9 +3,9 @@
  *
  * Code generation for model "ATV".
  *
- * Model version              : 6.103
+ * Model version              : 6.38
  * Simulink Coder version : 9.0 (R2018b) 24-May-2018
- * C source code generated on : Wed Apr  5 23:09:45 2023
+ * C source code generated on : Tue Apr 18 19:34:44 2023
  *
  * Target selection: openecu_grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -68,19 +68,29 @@ Verification pane for ERT based targets, which will disable the \
 preprocessor word size checks.
 #endif
 
-extern uint32_T MultiWord2uLong(const uint32_T u[]);
-extern void sMultiWordShr(const uint32_T u1[], int32_T n1, uint32_T n2, uint32_T
-  y[], int32_T n);
-extern void MultiWordAdd(const uint32_T u1[], const uint32_T u2[], uint32_T y[],
-  int32_T n);
 extern void sMultiWordMul(const uint32_T u1[], int32_T n1, const uint32_T u2[],
   int32_T n2, uint32_T y[], int32_T n);
+extern int32_T MultiWord2sLong(const uint32_T u[]);
+extern void sMultiWordDivFloor(const uint32_T u1[], int32_T n1, const uint32_T
+  u2[], int32_T n2, uint32_T y1[], int32_T m1, uint32_T y2[], int32_T m2,
+  uint32_T t1[], int32_T l1, uint32_T t2[], int32_T l2);
+extern void MultiWordNeg(const uint32_T u1[], uint32_T y[], int32_T n);
+extern void sMultiWord2MultiWord(const uint32_T u1[], int32_T n1, uint32_T y[],
+  int32_T n);
+extern void MultiWordSetSignedMin(uint32_T y[], int32_T n);
+extern void MultiWordSetSignedMax(uint32_T y[], int32_T n);
+extern void uMultiWordInc(uint32_T y[], int32_T n);
+extern boolean_T MultiWord2Bool(const uint32_T u[], int32_T n);
+extern int32_T uMultiWordDiv(uint32_T a[], int32_T na, uint32_T b[], int32_T nb,
+  uint32_T q[], int32_T nq, uint32_T r[], int32_T nr);
+extern void sLong2MultiWord(int32_T u, uint32_T y[], int32_T n);
+extern boolean_T sMultiWordGe(const uint32_T u1[], const uint32_T u2[], int32_T
+  n);
+extern int32_T sMultiWordCmp(const uint32_T u1[], const uint32_T u2[], int32_T n);
 extern void ATV_Chart_Init(DW_Chart_ATV_T *localDW);
 extern void ATV_Chart(boolean_T rtu_in, B_Chart_ATV_T *localB, DW_Chart_ATV_T
                       *localDW);
-extern void ATV_DBWREVERSE(boolean_T rtu_FS1, uint16_T rtu_throttleX1000,
-  B_DBWREVERSE_ATV_T *localB);
-extern void ATV_DBWREG_BRAKEFORWARD(boolean_T rtu_FS1, uint16_T
-  rtu_throttleX1000, B_DBWREG_BRAKEFORWARD_ATV_T *localB);
+extern void GestioneIbridoProceduraAvvi(uint16_T rtu_rPMG,
+  B_GestioneIbridoProceduraAvvi_T *localB);
 
 #endif                                 /* RTW_HEADER_ATV_private_h_ */

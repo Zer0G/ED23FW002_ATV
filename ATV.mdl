@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "6.12"
+    ComputedModelVersion    "6.39"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -17,7 +17,7 @@ Model {
     PreCompExecutionDomainType "Unset"
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 53
+    NumExternalFileReferences 60
     ExternalFileReference {
       Reference		      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
       Path		      "ATV/CANBUS_Output_Processing/Compare To Zero"
@@ -145,9 +145,21 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
+      Reference		      "simulink/Logic and Bit\nOperations/Interval Test\nDynamic"
+      Path		      "ATV/Input_Processing/Interval Test Dynamic"
+      SID		      "1909"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
       Reference		      "simulink/Logic and Bit\nOperations/Interval Test"
       Path		      "ATV/Input_Processing/Throttle_validation/Interval Test"
       SID		      "520"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink/Logic and Bit\nOperations/Interval Test"
+      Path		      "ATV/Input_Processing/Throttle_validation1/Interval Test"
+      SID		      "1855"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -172,6 +184,36 @@ Model {
       Reference		      "pai/pai_BasicAnalogInput"
       Path		      "ATV/Input_Processing/pai_BasicAnalogInput3"
       SID		      "528"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "pai/pai_BasicAnalogInput"
+      Path		      "ATV/Input_Processing/pai_BasicAnalogInput4"
+      SID		      "1845"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "pai/pai_BasicAnalogInput"
+      Path		      "ATV/Input_Processing/pai_BasicAnalogInput5"
+      SID		      "1881"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "pai/pai_BasicAnalogInput"
+      Path		      "ATV/Input_Processing/pai_BasicAnalogInput6"
+      SID		      "1886"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "pai/pai_BasicAnalogInput"
+      Path		      "ATV/Input_Processing/pai_BasicAnalogInput7"
+      SID		      "1893"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "pai/pai_BasicAnalogInput"
+      Path		      "ATV/Input_Processing/pai_BasicAnalogInput8"
+      SID		      "1905"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -384,22 +426,22 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		25
+	Dimension		26
 	Object {
 	  $ObjectID		  5
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1875.0, 879.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [165.15618928647666, 774.14999999999986]
+	  ZoomFactor		  [0.3]
+	  Offset		  [-1468.0117478563784, -315.87238095238274]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "87"
-	  Extents		  [1660.0, 626.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.59377777777777774]
 	  Offset		  [-370.10472305389226, -52.875000000000341]
 	}
@@ -408,7 +450,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "423"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.34569978278530317]
 	  Offset		  [-174.8833228663334, -690.59455935363621]
 	}
@@ -417,9 +459,9 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "134"
-	  Extents		  [913.0, 869.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-665.62125504491746, 51.554403228682077]
+	  Offset		  [-797.99268361634608, 442.76773656201556]
 	}
 	Object {
 	  $ObjectID		  9
@@ -428,14 +470,14 @@ Model {
 	  LoadSaveID		  "120"
 	  Extents		  [1875.0, 879.0]
 	  ZoomFactor		  [1.25]
-	  Offset		  [393.88911398624566, 183.75668119775264]
+	  Offset		  [311.41337710333607, 227.79979821201448]
 	}
 	Object {
 	  $ObjectID		  10
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1324"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.5]
 	  Offset		  [-707.06666666666638, -151.96666666666675]
 	}
@@ -444,7 +486,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1289"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [3.0]
 	  Offset		  [-788.66866267465059, 168.88982035928115]
 	}
@@ -453,7 +495,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1309"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.46388888888888891]
 	  Offset		  [-639.377245508982, -224.0]
 	}
@@ -463,15 +505,15 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "184"
 	  Extents		  [1875.0, 879.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [24.185495362904248, 645.39999999999509]
+	  ZoomFactor		  [1.5]
+	  Offset		  [-275.41002976190344, -192.1466666666669]
 	}
 	Object {
 	  $ObjectID		  14
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "102"
-	  Extents		  [1660.0, 626.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.43966230756497265]
 	  Offset		  [-825.85738310384374, -251.49490820424558]
 	}
@@ -480,61 +522,61 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "516"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.25]
-	  Offset		  [-125.38125000000008, -60.835071867950063]
+	  Offset		  [-125.38125000000008, -60.835071867950091]
 	}
 	Object {
 	  $ObjectID		  16
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1715"
-	  Extents		  [1875.0, 879.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-913.31047619047615, 48.729523809523926]
+	  Extents		  [1920.0, 1080.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-151.03047619047578, 491.83619047619015]
 	}
 	Object {
 	  $ObjectID		  17
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1448"
-	  Extents		  [1875.0, 879.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [1402.3295238095229, -308.12562182581934]
+	  Extents		  [1920.0, 1080.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [803.969523809523, -504.178955159153]
 	}
 	Object {
 	  $ObjectID		  18
 	  IsActive		  [0]
 	  ViewObjType		  "StateflowState"
 	  LoadSaveID		  "192:20"
-	  Extents		  [1920.0, 913.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [227.99171485488273, 166.93066223672963]
+	  Extents		  [1920.0, 1080.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [-570.252094668927, -2.8445758585143039]
 	}
 	Object {
 	  $ObjectID		  19
 	  IsActive		  [0]
 	  ViewObjType		  "StateflowChart"
 	  LoadSaveID		  "192"
-	  Extents		  [1920.0, 913.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [282.27392983839377, 242.11930131645488]
+	  Extents		  [1920.0, 1080.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-304.31236016693731, -14.534630177487998]
 	}
 	Object {
 	  $ObjectID		  20
 	  IsActive		  [0]
 	  ViewObjType		  "StateflowChart"
 	  LoadSaveID		  "1757"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.3]
-	  Offset		  [282.10784607273263, -271.43524450118218]
+	  Offset		  [282.10784607273263, -271.4352445011823]
 	}
 	Object {
 	  $ObjectID		  21
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1751"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [-451.56347615072679, -209.6797972931349]
 	}
@@ -543,7 +585,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "820"
-	  Extents		  [1653.0, 589.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [974.63446194606331, -164.15722315152919]
 	}
@@ -552,16 +594,16 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1131"
-	  Extents		  [1653.0, 589.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [0.5]
-	  Offset		  [514.98631285852366, -243.23706287422067]
+	  Offset		  [514.98631285852389, -243.23706287422067]
 	}
 	Object {
 	  $ObjectID		  24
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1503"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [967.45478622406881, -250.28562730938546]
 	}
@@ -570,7 +612,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1687"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.25]
 	  Offset		  [-385.04056250442773, 49.226869362004607]
 	}
@@ -579,7 +621,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1146"
-	  Extents		  [1653.0, 589.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.5]
 	  Offset		  [940.640856116551, 458.12571551715178]
 	}
@@ -588,7 +630,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1211"
-	  Extents		  [1920.0, 960.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [2.5]
 	  Offset		  [-200.30666666666673, 58.099999999999426]
 	}
@@ -597,7 +639,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1471"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.75]
 	  Offset		  [-166.84550595238062, -67.387619047619438]
 	}
@@ -606,9 +648,18 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1815"
-	  Extents		  [1875.0, 879.0]
+	  Extents		  [1920.0, 1080.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [-635.02187499999991, -216.2]
+	}
+	Object {
+	  $ObjectID		  30
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1909"
+	  Extents		  [1920.0, 1080.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-529.59999999999991, -200.7]
 	}
 	PropName		"EditorsInfo"
       }
@@ -616,7 +667,7 @@ Model {
 	Type			"Simulink.DockComponentInfo"
 	Dimension		2
 	Object {
-	  $ObjectID		  30
+	  $ObjectID		  31
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -628,7 +679,7 @@ Model {
 	  Height		  [384]
 	}
 	Object {
-	  $ObjectID		  31
+	  $ObjectID		  32
 	  Type			  "GLUE2:DDG Component"
 	  ID			  "SymbolManager"
 	  Visible		  [0]
@@ -637,7 +688,7 @@ Model {
 	  Floating		  [0]
 	  DockPosition		  "Right"
 	  Width			  [252]
-	  Height		  [652]
+	  Height		  [793]
 	}
 	PropName		"DockComponentsInfo"
       }
@@ -649,7 +700,7 @@ Model {
       "EwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAEEAVABWAF8AMgAAAAAA/////wAAAAAAA"
       "AAAAAAAAQAAAX8AAAL7/AIAAAAC+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlA"
       "HIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAABGAP////sAAABCAEcATABVAEUAMgA6AEQARABHACAAQwBvAG0AcABvAG4AZQBuA"
-      "HQALwBTAHkAbQBiAG8AbABNAGEAbgBhAGcAZQByAAAAALUAAAL7AAAAJgD///8AAAADAAAFVgAAATb8AQAAAAH8AAAAAAAABVAAAAAAAP////r//"
+      "HQALwBTAHkAbQBiAG8AbABNAGEAbgBhAGcAZQByAAAAALUAAAL7AAAAJgD///8AAAADAAAHgAAAAJ/8AQAAAAH8AAAAAAAABVAAAAAAAP////r//"
       "///AQAAAAAAAAeAAAADuAAAAAEAAAACAAAAAQAAAAL8AAAABAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAD/////8AAAAAAP////8AAAAAAAAAAP///"
       "/8BAAAAAP////8AAAAAAAAAAP////8AAAAAAP////8AAAAAAAAAAP////8AAAAAAP////8AAAAAAAAAAP////8AAAAAAP////8AAAAAAAAAAP///"
       "/8BAAAAkf////8AAAAAAAAAAP////8BAAABBP////8AAAAAAAAAAP////8AAAAAAP////8AAAAAAAAAAP////8BAAABlf////8AAAAAAAAAAP///"
@@ -664,9 +715,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "giovanni"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Apr 18 13:04:12 2023"
-  RTWModifiedTimeStamp	  603723844
-  ModelVersionFormat	  "6.%<AutoIncrement:12>"
+  LastModifiedDate	  "Tue Apr 18 20:02:47 2023"
+  RTWModifiedTimeStamp	  603747271
+  ModelVersionFormat	  "6.%<AutoIncrement:39>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "all"
@@ -721,7 +772,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    32
+    $ObjectID		    33
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ATV"
     Array {
@@ -758,14 +809,16 @@ Model {
   ExtModeSkipDownloadWhenConnect off
   ExtModeLogAll		  on
   ExtModeAutoUpdateStatusClock on
-  TunableVars		  "atvc_dcMinFan,atvc_lowerLimitPedalF,atvc_maxTempInv,atvc_maxTempMotor,atvc_minTempInv,atvc_minTempMo"
-  "tor,atvc_mtadd,atvc_mtadd_rev,atvc_mtawnb,atvc_mtawnb_rev,atvc_socLimitSave,atvc_tempSwitchOffFan,atvc_tempSwitchOnF"
-  "an,atvc_throttleNeutralPoint,atvc_upperLimitPedalF"
+  TunableVars		  "atvc_an_in_sel_his,atvc_an_in_sel_th,atvc_brakePedalHis,atvc_brakePedalOn,atvc_dcMinFan,atvc_lowerLi"
+  "mitPedalF,atvc_maxDischCurr,atvc_maxRegenCurr,atvc_maxTempInv,atvc_maxTempMotor,atvc_minTempInv,atvc_minTempMotor,at"
+  "vc_mtadd,atvc_mtadd_rev,atvc_mtawnb,atvc_mtawnb_rev,atvc_socLimitSave,atvc_tempSwitchOffFan,atvc_tempSwitchOnFan,atv"
+  "c_throttleNeutralPoint,atvc_upperLimitPedalF,atvc_velocityLimitFwd,atvc_velocityLimitRwd"
   TunableVarsStorageClass "ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,E"
   "xportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlob"
-  "al,ExportedGlobal"
+  "al,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,ExportedGlobal,Exported"
+  "Global,ExportedGlobal"
   TunableVarsTypeQualifier "OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL"
-  ",OE_CAL,OE_CAL"
+  ",OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL,OE_CAL"
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
   OrderedModelArguments	  on
@@ -773,7 +826,7 @@ Model {
     Type		    "Handle"
     Dimension		    3
     Simulink.ConfigSet {
-      $ObjectID		      33
+      $ObjectID		      34
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
@@ -781,7 +834,7 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  34
+	  $ObjectID		  35
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -822,7 +875,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  35
+	  $ObjectID		  36
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -863,7 +916,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  36
+	  $ObjectID		  37
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -931,7 +984,7 @@ Model {
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  37
+	  $ObjectID		  38
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -1050,7 +1103,7 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  38
+	  $ObjectID		  39
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1098,7 +1151,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  39
+	  $ObjectID		  40
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1117,7 +1170,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  40
+	  $ObjectID		  41
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1150,7 +1203,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  41
+	  $ObjectID		  42
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -1240,7 +1293,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      42
+	      $ObjectID		      43
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -1328,7 +1381,7 @@ Model {
 	    }
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      43
+	      $ObjectID		      44
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -1432,7 +1485,7 @@ Model {
 		Dimension		1
 		RTW.RSimTargetCC {
 		  $BackupClass		  "Simulink.TargetCC"
-		  $ObjectID		  44
+		  $ObjectID		  45
 		  Version		  "1.18.1"
 		  Array {
 		    Type		    "Cell"
@@ -1729,7 +1782,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  45
+	  $ObjectID		  46
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1776,7 +1829,7 @@ Model {
       ConfigPrmDlgPosition    [ 520, 225, 1400, 855 ]
     }
     Simulink.ConfigSet {
-      $ObjectID		      46
+      $ObjectID		      47
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
@@ -1784,7 +1837,7 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  47
+	  $ObjectID		  48
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1825,7 +1878,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  48
+	  $ObjectID		  49
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1866,7 +1919,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  49
+	  $ObjectID		  50
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -1934,7 +1987,7 @@ Model {
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  50
+	  $ObjectID		  51
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -2053,7 +2106,7 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  51
+	  $ObjectID		  52
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2101,7 +2154,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  52
+	  $ObjectID		  53
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2120,7 +2173,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  53
+	  $ObjectID		  54
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2153,7 +2206,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  54
+	  $ObjectID		  55
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -2241,7 +2294,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      55
+	      $ObjectID		      56
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -2329,11 +2382,11 @@ Model {
 	    }
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      56
+	      $ObjectID		      57
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
-		Dimension		24
+		Dimension		25
 		Cell			"ecu_type"
 		Cell			"part_number"
 		Cell			"issue_number"
@@ -2356,8 +2409,9 @@ Model {
 		Cell			"ParenthesesLevel"
 		Cell			"ERTMultiwordTypeDef"
 		Cell			"MultiwordTypeDef"
-		Cell			"ModelReferenceCompliant"
 		Cell			"disable_naming"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"ModelReferenceCompliant"
 		PropName		"DisabledProps"
 	      }
 	      Description	      ""
@@ -2430,11 +2484,11 @@ Model {
 		Dimension		1
 		Simulink.GRTTargetCC {
 		  $BackupClass		  "Simulink.TargetCC"
-		  $ObjectID		  57
+		  $ObjectID		  58
 		  Version		  "1.18.1"
 		  Array {
 		    Type		    "Cell"
-		    Dimension		    20
+		    Dimension		    21
 		    Cell		    "IncludeMdlTerminateFcn"
 		    Cell		    "SuppressErrorStatus"
 		    Cell		    "ERTCustomFileBanners"
@@ -2454,6 +2508,7 @@ Model {
 		    Cell		    "ParenthesesLevel"
 		    Cell		    "ERTMultiwordTypeDef"
 		    Cell		    "MultiwordTypeDef"
+		    Cell		    "CombineOutputUpdateFcns"
 		    Cell		    "ModelReferenceCompliant"
 		    PropName		    "DisabledProps"
 		  }
@@ -2729,7 +2784,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  58
+	  $ObjectID		  59
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -2776,7 +2831,7 @@ Model {
       ConfigPrmDlgPosition    [ 70, 70, 1466, 794 ]
     }
     Simulink.ConfigSet {
-      $ObjectID		      59
+      $ObjectID		      60
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
@@ -2784,7 +2839,7 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  60
+	  $ObjectID		  61
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2825,7 +2880,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  61
+	  $ObjectID		  62
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2866,7 +2921,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  62
+	  $ObjectID		  63
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -2921,7 +2976,7 @@ Model {
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  63
+	  $ObjectID		  64
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -3035,7 +3090,7 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  64
+	  $ObjectID		  65
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -3083,7 +3138,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  65
+	  $ObjectID		  66
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -3102,7 +3157,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  66
+	  $ObjectID		  67
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -3135,7 +3190,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  67
+	  $ObjectID		  68
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  SystemTargetFile	  "openecu_ert.tlc"
@@ -3202,7 +3257,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      68
+	      $ObjectID		      69
 	      Version		      "1.18.1"
 	      DisabledProps	      []
 	      Description	      ""
@@ -3258,7 +3313,7 @@ Model {
 	    }
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      69
+	      $ObjectID		      70
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -3338,7 +3393,7 @@ Model {
 		Dimension		1
 		Simulink.ERTTargetCC {
 		  $BackupClass		  "Simulink.TargetCC"
-		  $ObjectID		  70
+		  $ObjectID		  71
 		  Version		  "1.18.1"
 		  DisabledProps		  []
 		  Description		  ""
@@ -3695,7 +3750,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  71
+	  $ObjectID		  72
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -3745,11 +3800,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    46
+    $ObjectID		    47
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    72
+    $ObjectID		    73
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -4181,20 +4236,20 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "30"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1844"
+    SIDHighWatermark	    "1920"
     Block {
       BlockType		      SubSystem
       Name		      "CANBUS_Output_Processing"
       SID		      "134"
       Ports		      [6]
-      Position		      [1365, 992, 1475, 1253]
+      Position		      [1365, 909, 1475, 1256]
       ZOrder		      20
       RequestExecContextInheritance off
       System {
 	Name			"CANBUS_Output_Processing"
-	Location		[762, 0, 1543, 870]
+	Location		[-7, -7, 1543, 871]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4357,7 +4412,8 @@ Model {
 	  ZOrder		  432
 	  ForegroundColor	  "red"
 	  ShowName		  off
-	  OutputSignals		  "atv_regen_x1000_rear,atv_motoring_x1000_rear,atv_regen_x1000_front,atv_motoring_x1000_front,fs1"
+	  OutputSignals		  "atv_regen_x1000_rear,atv_motoring_x1000_rear,atv_regen_x1000_front,atv_motoring_x1000_front,signa"
+	  "l5"
 	  OutputAsBus		  off
 	  Port {
 	    PortNumber		    1
@@ -4377,7 +4433,7 @@ Model {
 	  }
 	  Port {
 	    PortNumber		    5
-	    Name		    "<fs1>"
+	    Name		    "<signal5>"
 	  }
 	}
 	Block {
@@ -4480,24 +4536,6 @@ Model {
 	  relop			  ">"
 	  OutDataTypeStr	  "boolean"
 	  ZeroCross		  on
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant"
-	  SID			  "1439"
-	  Position		  [-65, 920, 0, 940]
-	  ZOrder		  60
-	  Value			  "30"
-	  OutDataTypeStr	  "uint16"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant1"
-	  SID			  "1440"
-	  Position		  [-65, 990, 0, 1010]
-	  ZOrder		  61
-	  Value			  "30"
-	  OutDataTypeStr	  "uint16"
 	}
 	Block {
 	  BlockType		  Gain
@@ -4698,6 +4736,24 @@ Model {
 	  ZOrder		  37
 	  ForegroundColor	  "green"
 	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "atvc_maxDischCurr"
+	  SID			  "1440"
+	  Position		  [-90, 990, 0, 1010]
+	  ZOrder		  61
+	  Value			  "atvc_maxDischCurr"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "atvc_maxRegenCurr"
+	  SID			  "1439"
+	  Position		  [-95, 920, 0, 940]
+	  ZOrder		  60
+	  Value			  "atvc_maxRegenCurr"
+	  OutDataTypeStr	  "uint16"
 	}
 	Block {
 	  BlockType		  Reference
@@ -5280,7 +5336,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  Name			  "<fs1>"
+	  Name			  "<signal5>"
 	  ZOrder		  307
 	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector2"
@@ -5307,7 +5363,7 @@ Model {
 	}
 	Line {
 	  ZOrder		  207
-	  SrcBlock		  "Constant"
+	  SrcBlock		  "atvc_maxRegenCurr"
 	  SrcPort		  1
 	  Points		  [146, 0]
 	  Branch {
@@ -5366,7 +5422,7 @@ Model {
 	}
 	Line {
 	  ZOrder		  208
-	  SrcBlock		  "Constant1"
+	  SrcBlock		  "atvc_maxDischCurr"
 	  SrcPort		  1
 	  Points		  [66, 0]
 	  Branch {
@@ -5556,13 +5612,13 @@ Model {
       Name		      "CANBUS_Reception_BMS"
       SID		      "87"
       Ports		      [0, 6]
-      Position		      [-55, 552, 75, 643]
+      Position		      [-55, 1292, 75, 1383]
       ZOrder		      26
       ForegroundColor	      "red"
       RequestExecContextInheritance off
       System {
 	Name			"CANBUS_Reception_BMS"
-	Location		[8, 8, 1376, 745]
+	Location		[-7, -7, 1543, 871]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -5592,11 +5648,11 @@ Model {
 	    Name		    "bms_pack_soc"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      73
+	      $ObjectID		      74
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		74
+		$ObjectID		75
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -5606,7 +5662,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  75
+		  $ObjectID		  76
 		}
 	      }
 	      Description	      ""
@@ -5622,7 +5678,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		76
+		$ObjectID		77
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -5649,11 +5705,11 @@ Model {
 	    Name		    "bms_rolling_counter"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      77
+	      $ObjectID		      78
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		78
+		$ObjectID		79
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -5663,7 +5719,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  79
+		  $ObjectID		  80
 		}
 	      }
 	      Description	      ""
@@ -5679,7 +5735,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		80
+		$ObjectID		81
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -5774,6 +5830,49 @@ Model {
 	  Port {
 	    PortNumber		    6
 	    Name		    "bms_pack_voltage"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      82
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		83
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  84
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		85
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
 	  }
 	  Port {
 	    PortNumber		    7
@@ -5963,12 +6062,12 @@ Model {
       Name		      "CANBUS_Reception_V_DBG_CTRL"
       SID		      "102"
       Ports		      [0, 3]
-      Position		      [-60, 699, 75, 811]
+      Position		      [-60, 749, 75, 861]
       ZOrder		      27
       RequestExecContextInheritance off
       System {
 	Name			"CANBUS_Reception_V_DBG_CTRL"
-	Location		[8, 8, 1376, 745]
+	Location		[-7, -7, 1543, 871]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -6175,11 +6274,11 @@ Model {
 	    Name		    "atv_v_dbg_chg_req"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      81
+	      $ObjectID		      86
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		82
+		$ObjectID		87
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -6189,7 +6288,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  83
+		  $ObjectID		  88
 		}
 	      }
 	      Description	      ""
@@ -6205,7 +6304,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		84
+		$ObjectID		89
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -6232,11 +6331,11 @@ Model {
 	    Name		    "atv_v_dbg_heater_req"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      85
+	      $ObjectID		      90
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		86
+		$ObjectID		91
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -6246,7 +6345,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  87
+		  $ObjectID		  92
 		}
 	      }
 	      Description	      ""
@@ -6262,7 +6361,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		88
+		$ObjectID		93
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -6523,7 +6622,7 @@ Model {
       Name		      "CANBUS_Reception_V_DBG_CTRL1"
       SID		      "337"
       Ports		      [0, 7]
-      Position		      [-55, 841, 70, 1129]
+      Position		      [-55, 991, 75, 1249]
       ZOrder		      390
       RequestExecContextInheritance off
       System {
@@ -6543,7 +6642,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"150"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Chart"
@@ -7031,8 +7130,10 @@ Model {
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  11
-	  Points		  [360, 95; 38, 0; 0, 15]
+	  ZOrder		  78
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  4
+	  Points		  [38, 0; 0, 15]
 	  DstBlock		  "Switch"
 	  DstPort		  1
 	}
@@ -7053,8 +7154,10 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  42
-	  Points		  [360, 155; 54, 0; 0, 70]
+	  ZOrder		  81
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  7
+	  Points		  [54, 0; 0, 70]
 	  DstBlock		  "Switch2"
 	  DstPort		  1
 	}
@@ -7075,8 +7178,10 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  22
-	  Points		  [360, 115; 63, 0; 0, 55]
+	  ZOrder		  79
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  5
+	  Points		  [82, 0; 0, 55]
 	  DstBlock		  "Switch1"
 	  DstPort		  1
 	}
@@ -7129,14 +7234,18 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  44
-	  Points		  [360, 135; 25, 0; 0, 155]
+	  ZOrder		  80
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  6
+	  Points		  [25, 0; 0, 155]
 	  DstBlock		  "Switch3"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  49
-	  Points		  [360, 175; 10, 0; 0, 175]
+	  ZOrder		  82
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  8
+	  Points		  [10, 0; 0, 175]
 	  DstBlock		  "Switch4"
 	  DstPort		  1
 	}
@@ -7219,14 +7328,18 @@ Model {
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  53
-	  Points		  [360, 195; 109, 0; 0, 210]
+	  ZOrder		  83
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  9
+	  Points		  [109, 0; 0, 210]
 	  DstBlock		  "Switch5"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  54
-	  Points		  [360, 215; 3, 0; 0, 245]
+	  ZOrder		  84
+	  SrcBlock		  "pcx_CANdb_ReceiveMessage"
+	  SrcPort		  10
+	  Points		  [3, 0; 0, 245]
 	  DstBlock		  "Switch6"
 	  DstPort		  1
 	}
@@ -7255,7 +7368,7 @@ Model {
       Name		      "Digital_Output_Processing"
       SID		      "423"
       Ports		      [2]
-      Position		      [1360, 628, 1480, 772]
+      Position		      [1360, 633, 1480, 777]
       ZOrder		      404
       RequestExecContextInheritance off
       System {
@@ -7401,11 +7514,11 @@ Model {
 	    Name		    "atv_dbg_FAN_out"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      89
+	      $ObjectID		      94
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		90
+		$ObjectID		95
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -7415,7 +7528,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  91
+		  $ObjectID		  96
 		}
 	      }
 	      Description	      ""
@@ -7431,7 +7544,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		92
+		$ObjectID		97
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -7458,11 +7571,11 @@ Model {
 	    Name		    "atv_dbg_pumpB_out"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      93
+	      $ObjectID		      98
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		94
+		$ObjectID		99
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -7472,7 +7585,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  95
+		  $ObjectID		  100
 		}
 	      }
 	      Description	      ""
@@ -7488,7 +7601,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		96
+		$ObjectID		101
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -7513,49 +7626,6 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "atv_dbg_pumpB_out"
-	    Object {
-	      $PropName		      "SignalObject"
-	      $ObjectID		      97
-	      $ClassName	      "ASAP2.Signal"
-	      Simulink.CoderInfo {
-		$PropName		"CoderInfo"
-		$ObjectID		98
-		StorageClass		"ExportedGlobal"
-		TypeQualifier		""
-		Alias			""
-		Alignment		-1
-		CSCPackageName		"Simulink"
-		ParameterOrSignal	"Signal"
-		CustomStorageClass	"Default"
-		SimulinkCSC.AttribClass_Simulink_Default {
-		  $PropName		  "CustomAttributes"
-		  $ObjectID		  99
-		}
-	      }
-	      Description	      ""
-	      DataType		      "auto"
-	      Min		      []
-	      Max		      []
-	      DocUnits		      ""
-	      Dimensions	      [-1.0]
-	      DimensionsMode	      "auto"
-	      Complexity	      "auto"
-	      SampleTime	      [-1.0]
-	      SamplingMode	      "auto"
-	      InitialValue	      ""
-	      Simulink.LoggingInfo {
-		$PropName		"LoggingInfo"
-		$ObjectID		100
-		DataLogging		0
-		NameMode		0
-		LoggingName		""
-		DecimateData		0
-		Decimation		2
-		LimitDataPoints		0
-		MaxPoints		5000
-	      }
-	    }
-	    RTWStorageClass	    "ExportedGlobal"
 	  }
 	}
 	Block {
@@ -8233,8 +8303,8 @@ Model {
       BlockType		      SubSystem
       Name		      "Input_Processing"
       SID		      "120"
-      Ports		      [0, 6]
-      Position		      [-55, 345, 75, 525]
+      Ports		      [0, 13]
+      Position		      [-55, 344, 75, 676]
       ZOrder		      22
       ForegroundColor	      "red"
       RequestExecContextInheritance off
@@ -8257,6 +8327,44 @@ Model {
 	ShowPageBoundaries	off
 	ZoomFactor		"125"
 	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "1915"
+	  Ports			  [2, 1]
+	  Position		  [905, 387, 935, 418]
+	  ZOrder		  80
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "1910"
+	  Position		  [725, 385, 845, 405]
+	  ZOrder		  75
+	  Value			  "atvc_throttleNeutralPoint"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "1913"
+	  Position		  [750, 415, 870, 435]
+	  ZOrder		  78
+	  Value			  "0"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  "1914"
+	  Position		  [765, 430, 885, 450]
+	  ZOrder		  79
+	  Value			  "20"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
 	  BlockType		  Gain
 	  Name			  "Gain"
 	  SID			  "121"
@@ -8271,11 +8379,11 @@ Model {
 	    Name		    "atv_xd1_key_ain"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      101
+	      $ObjectID		      102
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		102
+		$ObjectID		103
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8285,7 +8393,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  103
+		  $ObjectID		  104
 		}
 	      }
 	      Description	      ""
@@ -8301,7 +8409,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		104
+		$ObjectID		105
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8318,7 +8426,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "Gain2"
 	  SID			  "123"
-	  Position		  [1100, 440, 1130, 470]
+	  Position		  [960, 440, 990, 470]
 	  ZOrder		  19
 	  Gain			  "1000"
 	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -8329,11 +8437,11 @@ Model {
 	    Name		    "atv_xe3_ain"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      105
+	      $ObjectID		      106
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		106
+		$ObjectID		107
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8343,7 +8451,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  107
+		  $ObjectID		  108
 		}
 	      }
 	      Description	      ""
@@ -8359,7 +8467,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		108
+		$ObjectID		109
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8401,6 +8509,51 @@ Model {
 	  ZOrder		  34
 	}
 	Block {
+	  BlockType		  Ground
+	  Name			  "Ground5"
+	  SID			  "1879"
+	  Position		  [115, 1025, 135, 1045]
+	  ZOrder		  54
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground6"
+	  SID			  "1884"
+	  Position		  [115, 1140, 135, 1160]
+	  ZOrder		  59
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground7"
+	  SID			  "1891"
+	  Position		  [115, 1245, 135, 1265]
+	  ZOrder		  63
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground8"
+	  SID			  "1903"
+	  Position		  [115, 905, 135, 925]
+	  ZOrder		  69
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Interval Test\nDynamic"
+	  SID			  "1909"
+	  Ports			  [3, 1]
+	  Position		  [1000, 389, 1035, 421]
+	  ZOrder		  74
+	  LibraryVersion	  "1.444"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Interval Test\nDynamic"
+	  SourceType		  "Interval Test Dynamic"
+	  SourceProductName	  "Simulink"
+	  SourceProductBaseCode	  "SL"
+	  ContentPreviewEnabled	  on
+	  IntervalClosedRight	  on
+	  IntervalClosedLeft	  on
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
 	  BlockType		  Logic
 	  Name			  "Logical\nOperator"
 	  SID			  "1414"
@@ -8416,6 +8569,21 @@ Model {
 	  }
 	}
 	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "1920"
+	  Ports			  [1, 1]
+	  Position		  [1075, 389, 1105, 421]
+	  ZOrder		  81
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_fs1_in"
+	  }
+	}
+	Block {
 	  BlockType		  Relay
 	  Name			  "Relay"
 	  SID			  "530"
@@ -8423,18 +8591,35 @@ Model {
 	  ZOrder		  37
 	  OnSwitchValue		  "3"
 	  OffSwitchValue	  "2"
+	  OnOutputValue		  "0"
+	  OffOutputValue	  "1"
 	  OutDataTypeStr	  "boolean"
 	  InputProcessing	  "Elements as channels (sample based)"
 	  Port {
 	    PortNumber		    1
 	    Name		    "atv_fs1_in"
+	  }
+	}
+	Block {
+	  BlockType		  Relay
+	  Name			  "Relay1"
+	  SID			  "1847"
+	  Position		  [1040, 760, 1070, 790]
+	  ZOrder		  42
+	  OnSwitchValue		  "atvc_brakePedalOn + atvc_brakePedalHis"
+	  OffSwitchValue	  "atvc_brakePedalOn - atvc_brakePedalHis"
+	  OutDataTypeStr	  "boolean"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_brake_pedal_digital_in"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      109
+	      $ObjectID		      110
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		110
+		$ObjectID		111
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8444,7 +8629,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  111
+		  $ObjectID		  112
 		}
 	      }
 	      Description	      ""
@@ -8460,7 +8645,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		112
+		$ObjectID		113
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8474,6 +8659,253 @@ Model {
 	  }
 	}
 	Block {
+	  BlockType		  Relay
+	  Name			  "Relay2"
+	  SID			  "1895"
+	  Position		  [930, 1020, 960, 1050]
+	  ZOrder		  67
+	  OnSwitchValue		  "atvc_an_in_sel_th + atvc_an_in_sel_his"
+	  OffSwitchValue	  "atvc_an_in_sel_th - atvc_an_in_sel_his"
+	  OnOutputValue		  "0"
+	  OffOutputValue	  "1"
+	  OutDataTypeStr	  "boolean"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_fwd_mode_in"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      114
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		115
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  116
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		117
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Relay
+	  Name			  "Relay3"
+	  SID			  "1894"
+	  Position		  [930, 1135, 960, 1165]
+	  ZOrder		  66
+	  OnSwitchValue		  "atvc_an_in_sel_th + atvc_an_in_sel_his"
+	  OffSwitchValue	  "atvc_an_in_sel_th - atvc_an_in_sel_his"
+	  OnOutputValue		  "0"
+	  OffOutputValue	  "1"
+	  OutDataTypeStr	  "boolean"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_rwd_mode_in"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      118
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		119
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  120
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		121
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Relay
+	  Name			  "Relay4"
+	  SID			  "1892"
+	  Position		  [930, 1240, 960, 1270]
+	  ZOrder		  65
+	  OnSwitchValue		  "atvc_an_in_sel_th + atvc_an_in_sel_his"
+	  OffSwitchValue	  "atvc_an_in_sel_th - atvc_an_in_sel_his"
+	  OnOutputValue		  "0"
+	  OffOutputValue	  "1"
+	  OutDataTypeStr	  "boolean"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_apu_req_in"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      122
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		123
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  124
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		125
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Relay
+	  Name			  "Relay5"
+	  SID			  "1904"
+	  Position		  [930, 900, 960, 930]
+	  ZOrder		  71
+	  OnSwitchValue		  "atvc_an_in_sel_th + atvc_an_in_sel_his"
+	  OffSwitchValue	  "atvc_an_in_sel_th - atvc_an_in_sel_his"
+	  OnOutputValue		  "0"
+	  OffOutputValue	  "1"
+	  OutDataTypeStr	  "boolean"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_4wd_din"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      126
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		127
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  128
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		129
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "1907"
+	  Position		  [985, 675, 1005, 695]
+	  ZOrder		  72
+	}
+	Block {
 	  BlockType		  SubSystem
 	  Name			  "Throttle_validation"
 	  SID			  "516"
@@ -8485,6 +8917,49 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "atv_throttleX1000"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      130
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		131
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  132
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		133
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
 	  }
 	  System {
 	    Name		    "Throttle_validation"
@@ -8707,6 +9182,310 @@ Model {
 	  }
 	}
 	Block {
+	  BlockType		  SubSystem
+	  Name			  "Throttle_validation1"
+	  SID			  "1849"
+	  Ports			  [1, 2]
+	  Position		  [850, 759, 960, 826]
+	  ZOrder		  43
+	  RequestExecContextInheritance	off
+	  ContentPreviewEnabled	  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_brake_pedalX1000"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      134
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		135
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  136
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		137
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	  System {
+	    Name		    "Throttle_validation1"
+	    Location		    [-7, -7, 1543, 871]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "125"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "in"
+	      SID		      "1850"
+	      Position		      [20, 43, 50, 57]
+	      ZOrder		      32
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "1851"
+	      Ports		      [2, 1]
+	      Position		      [380, 42, 410, 73]
+	      ZOrder		      38
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "1852"
+	      Position		      [530, 82, 555, 98]
+	      ZOrder		      29
+	      Value		      "0"
+	      OutDataTypeStr	      "uint16"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "1853"
+	      Position		      [325, 57, 350, 73]
+	      ZOrder		      39
+	      Value		      "0.5"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "1854"
+	      Position		      [455, 45, 485, 75]
+	      ZOrder		      36
+	      Gain		      "750"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "uint16"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Interval Test"
+	      SID		      "1855"
+	      Ports		      [1, 1]
+	      Position		      [215, 133, 250, 167]
+	      ZOrder		      35
+	      LibraryVersion	      "1.444"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Interval Test"
+	      SourceType	      "Interval Test"
+	      SourceProductName	      "Simulink"
+	      SourceProductBaseCode   "SL"
+	      ContentPreviewEnabled   on
+	      IntervalClosedRight     on
+	      uplimit		      "4.55"
+	      IntervalClosedLeft      on
+	      lowlimit		      "0.450"
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "Logical\nOperator"
+	      SID		      "1856"
+	      Ports		      [1, 1]
+	      Position		      [325, 134, 355, 166]
+	      ZOrder		      31
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      SID		      "1857"
+	      Ports		      [1, 1]
+	      Position		      [260, 35, 290, 65]
+	      ZOrder		      37
+	      InputPortMap	      "u0"
+	      UpperLimit	      "4.5"
+	      LowerLimit	      "0.5"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation1"
+	      SID		      "1863"
+	      Ports		      [1, 1]
+	      Position		      [510, 45, 540, 75]
+	      ZOrder		      40
+	      InputPortMap	      "u0"
+	      UpperLimit	      "1000"
+	      LowerLimit	      "0"
+	      OutDataTypeStr	      "uint16"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      SID		      "1858"
+	      Position		      [600, 55, 650, 95]
+	      ZOrder		      28
+	      Criteria		      "u2 > Threshold"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "brake_pedal_ain"
+	      SID		      "1859"
+	      Position		      [695, 68, 725, 82]
+	      ZOrder		      33
+	      IconDisplay	      "Port number"
+	      OutDataTypeStr	      "uint16"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "err_brake_pedal"
+	      SID		      "1860"
+	      Position		      [695, 143, 725, 157]
+	      ZOrder		      34
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "brake_pedal_ain"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "in"
+	      SrcPort		      1
+	      Points		      [147, 0]
+	      Branch {
+		ZOrder			3
+		DstBlock		"Saturation"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			4
+		Points			[0, 100]
+		DstBlock		"Interval Test"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "Interval Test"
+	      SrcPort		      1
+	      Points		      [17, 0]
+	      Branch {
+		ZOrder			7
+		Points			[0, -33; 233, 0; 0, -42]
+		DstBlock		"Switch"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			8
+		DstBlock		"Logical\nOperator"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "Logical\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "err_brake_pedal"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Saturation1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "Saturation1"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      SID		      "1864"
+	      Name		      "Da rendere tutto calibrabile per ritagliare e riscalare il segnale correttamente"
+	      Position		      [372, -17, 710, -3]
+	      InternalMargins	      [0, 0, 0, 0]
+	      HorizontalAlignment     "left"
+	      VerticalAlignment	      "top"
+	      ZOrder		      -1
+	    }
+	  }
+	}
+	Block {
 	  BlockType		  Reference
 	  Name			  "pai_BasicAnalogInput"
 	  SID			  "127"
@@ -8740,11 +9519,11 @@ Model {
 	    Name		    "atv_xa1_ain_throttle_raw"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      113
+	      $ObjectID		      138
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		114
+		$ObjectID		139
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8754,7 +9533,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  115
+		  $ObjectID		  140
 		}
 	      }
 	      Description	      ""
@@ -8770,7 +9549,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		116
+		$ObjectID		141
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8817,11 +9596,11 @@ Model {
 	    Name		    "atv_xd3_raw_ain"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      117
+	      $ObjectID		      142
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		118
+		$ObjectID		143
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8831,7 +9610,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  119
+		  $ObjectID		  144
 		}
 	      }
 	      Description	      ""
@@ -8847,7 +9626,317 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		120
+		$ObjectID		145
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pai_BasicAnalogInput4"
+	  SID			  "1845"
+	  Ports			  [0, 1]
+	  Position		  [320, 750, 635, 840]
+	  ZOrder		  39
+	  LibraryVersion	  "1.1331"
+	  SourceBlock		  "pai/pai_BasicAnalogInput"
+	  SourceType		  "BASIC ANALOG INPUT"
+	  MultiThreadCoSim	  "auto"
+	  chan			  "AIN (pin XA3)"
+	  pail_sample		  "0.01"
+	  pail_provide_sim_input  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_xa3_brake_pedal_raw_ain"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      146
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		147
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  148
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		149
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pai_BasicAnalogInput5"
+	  SID			  "1881"
+	  Ports			  [1, 1]
+	  Position		  [320, 990, 635, 1080]
+	  ZOrder		  55
+	  LibraryVersion	  "1.1331"
+	  SourceBlock		  "pai/pai_BasicAnalogInput"
+	  SourceType		  "BASIC ANALOG INPUT"
+	  MultiThreadCoSim	  "auto"
+	  chan			  "AIN (pin XC1)"
+	  pail_sample		  "0.01"
+	  pail_provide_sim_input  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_xc1_raw_ain"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      150
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		151
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  152
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		153
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pai_BasicAnalogInput6"
+	  SID			  "1886"
+	  Ports			  [1, 1]
+	  Position		  [320, 1105, 635, 1195]
+	  ZOrder		  60
+	  LibraryVersion	  "1.1331"
+	  SourceBlock		  "pai/pai_BasicAnalogInput"
+	  SourceType		  "BASIC ANALOG INPUT"
+	  MultiThreadCoSim	  "auto"
+	  chan			  "AIN (pin XC4)"
+	  pail_sample		  "0.01"
+	  pail_provide_sim_input  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_xc4_raw_ain"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      154
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		155
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  156
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		157
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pai_BasicAnalogInput7"
+	  SID			  "1893"
+	  Ports			  [1, 1]
+	  Position		  [320, 1210, 635, 1300]
+	  ZOrder		  64
+	  LibraryVersion	  "1.1331"
+	  SourceBlock		  "pai/pai_BasicAnalogInput"
+	  SourceType		  "BASIC ANALOG INPUT"
+	  MultiThreadCoSim	  "auto"
+	  chan			  "AIN (pin XE2)"
+	  pail_sample		  "0.01"
+	  pail_provide_sim_input  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_xe2_raw_ain"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      158
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		159
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  160
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		161
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pai_BasicAnalogInput8"
+	  SID			  "1905"
+	  Ports			  [1, 1]
+	  Position		  [320, 870, 635, 960]
+	  ZOrder		  70
+	  LibraryVersion	  "1.1331"
+	  SourceBlock		  "pai/pai_BasicAnalogInput"
+	  SourceType		  "BASIC ANALOG INPUT"
+	  MultiThreadCoSim	  "auto"
+	  chan			  "AIN (pin XE4)"
+	  pail_sample		  "0.01"
+	  pail_provide_sim_input  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "atv_xe4_raw_ain"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      162
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		163
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  164
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		165
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8884,11 +9973,11 @@ Model {
 	    Name		    "atv_za3_StartBtn_din"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      121
+	      $ObjectID		      166
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		122
+		$ObjectID		167
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -8898,7 +9987,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  123
+		  $ObjectID		  168
 		}
 	      }
 	      Description	      ""
@@ -8914,7 +10003,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		124
+		$ObjectID		169
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -8985,6 +10074,76 @@ Model {
 	  Port			  "6"
 	  IconDisplay		  "Port number"
 	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "brake_pedal_din"
+	  SID			  "1848"
+	  Position		  [1235, 768, 1265, 782]
+	  ZOrder		  41
+	  ForegroundColor	  "red"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "BrakePedalX1000"
+	  SID			  "1861"
+	  Position		  [1235, 803, 1265, 817]
+	  ZOrder		  44
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "err_brake_pedal"
+	  SID			  "1862"
+	  Position		  [1235, 848, 1265, 862]
+	  ZOrder		  45
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "4WD_din"
+	  SID			  "1874"
+	  Position		  [1235, 908, 1265, 922]
+	  ZOrder		  48
+	  ForegroundColor	  "red"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "fwd_mode_in"
+	  SID			  "1882"
+	  Position		  [1235, 1028, 1265, 1042]
+	  ZOrder		  53
+	  ForegroundColor	  "red"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rwd_mode_in"
+	  SID			  "1887"
+	  Position		  [1235, 1143, 1265, 1157]
+	  ZOrder		  58
+	  ForegroundColor	  "red"
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "apu_req_in"
+	  SID			  "1896"
+	  Position		  [1235, 1248, 1265, 1262]
+	  ZOrder		  68
+	  ForegroundColor	  "red"
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
 	Line {
 	  ZOrder		  1
 	  SrcBlock		  "Ground"
@@ -9011,11 +10170,21 @@ Model {
 	Line {
 	  Name			  "atv_throttleX1000"
 	  ZOrder		  33
-	  Labels		  [1, 1]
 	  SrcBlock		  "Throttle_validation"
 	  SrcPort		  1
-	  DstBlock		  "throttleX1000"
-	  DstPort		  1
+	  Points		  [53, 0]
+	  Branch {
+	    ZOrder		    99
+	    Points		    [0, 80]
+	    DstBlock		    "Interval Test\nDynamic"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    98
+	    Labels		    [1, 1]
+	    DstBlock		    "throttleX1000"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  7
@@ -9089,12 +10258,10 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  Name			  "atv_fs1_in"
-	  ZOrder		  38
-	  Labels		  [-1, 0]
-	  SrcBlock		  "Relay"
+	  ZOrder		  141
+	  SrcBlock		  "Interval Test\nDynamic"
 	  SrcPort		  1
-	  DstBlock		  "fs1_in"
+	  DstBlock		  "Logical\nOperator1"
 	  DstPort		  1
 	}
 	Line {
@@ -9104,6 +10271,201 @@ Model {
 	  SrcBlock		  "Logical\nOperator"
 	  SrcPort		  1
 	  DstBlock		  "StartBtn_In"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_brake_pedal_digital_in"
+	  ZOrder		  45
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Relay1"
+	  SrcPort		  1
+	  DstBlock		  "brake_pedal_din"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_xa3_brake_pedal_raw_ain"
+	  ZOrder		  47
+	  Labels		  [1, 1]
+	  SrcBlock		  "pai_BasicAnalogInput4"
+	  SrcPort		  1
+	  DstBlock		  "Throttle_validation1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_brake_pedalX1000"
+	  ZOrder		  53
+	  SrcBlock		  "Throttle_validation1"
+	  SrcPort		  1
+	  Points		  [47, 0]
+	  Branch {
+	    ZOrder		    59
+	    Labels		    [2, 1]
+	    Points		    [0, 35]
+	    DstBlock		    "BrakePedalX1000"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    55
+	    DstBlock		    "Relay1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  52
+	  SrcBlock		  "Throttle_validation1"
+	  SrcPort		  2
+	  Points		  [21, 0; 0, 45]
+	  DstBlock		  "err_brake_pedal"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_fwd_mode_in"
+	  ZOrder		  81
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Relay2"
+	  SrcPort		  1
+	  DstBlock		  "fwd_mode_in"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_xc1_raw_ain"
+	  ZOrder		  80
+	  Labels		  [1, 1]
+	  SrcBlock		  "pai_BasicAnalogInput5"
+	  SrcPort		  1
+	  DstBlock		  "Relay2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  69
+	  SrcBlock		  "Ground5"
+	  SrcPort		  1
+	  DstBlock		  "pai_BasicAnalogInput5"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  70
+	  SrcBlock		  "Ground6"
+	  SrcPort		  1
+	  DstBlock		  "pai_BasicAnalogInput6"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_xc4_raw_ain"
+	  ZOrder		  78
+	  Labels		  [1, 1]
+	  SrcBlock		  "pai_BasicAnalogInput6"
+	  SrcPort		  1
+	  DstBlock		  "Relay3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_rwd_mode_in"
+	  ZOrder		  79
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Relay3"
+	  SrcPort		  1
+	  DstBlock		  "rwd_mode_in"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_apu_req_in"
+	  ZOrder		  82
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Relay4"
+	  SrcPort		  1
+	  DstBlock		  "apu_req_in"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  76
+	  SrcBlock		  "Ground7"
+	  SrcPort		  1
+	  DstBlock		  "pai_BasicAnalogInput7"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_xe2_raw_ain"
+	  ZOrder		  77
+	  Labels		  [1, 1]
+	  SrcBlock		  "pai_BasicAnalogInput7"
+	  SrcPort		  1
+	  DstBlock		  "Relay4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_xe4_raw_ain"
+	  ZOrder		  90
+	  Labels		  [1, 1]
+	  SrcBlock		  "pai_BasicAnalogInput8"
+	  SrcPort		  1
+	  DstBlock		  "Relay5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_4wd_din"
+	  ZOrder		  93
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Relay5"
+	  SrcPort		  1
+	  DstBlock		  "4WD_din"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  92
+	  SrcBlock		  "Ground8"
+	  SrcPort		  1
+	  DstBlock		  "pai_BasicAnalogInput8"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_fs1_in"
+	  ZOrder		  96
+	  Labels		  [0, 0]
+	  SrcBlock		  "Relay"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  140
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [104, 0; 0, -10]
+	  DstBlock		  "Interval Test\nDynamic"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  143
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  142
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  144
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [7, 0; 0, 5; 23, 0; 0, -15]
+	  DstBlock		  "Interval Test\nDynamic"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "atv_fs1_in"
+	  ZOrder		  166
+	  Labels		  [3, 1]
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 280]
+	  DstBlock		  "fs1_in"
 	  DstPort		  1
 	}
 	Annotation {
@@ -9131,7 +10493,7 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition1"
       SID		      "171"
-      Position		      [195, 379, 220, 401]
+      Position		      [195, 374, 220, 396]
       ZOrder		      24
       ForegroundColor	      "red"
       OutPortSampleTime	      "0.01"
@@ -9140,28 +10502,28 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition10"
       SID		      "379"
-      Position		      [135, 1009, 165, 1041]
+      Position		      [135, 1139, 165, 1171]
       ZOrder		      395
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition11"
       SID		      "380"
-      Position		      [135, 1049, 165, 1081]
+      Position		      [135, 1174, 165, 1206]
       ZOrder		      396
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition12"
       SID		      "381"
-      Position		      [135, 1089, 165, 1121]
+      Position		      [135, 1209, 165, 1241]
       ZOrder		      397
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition13"
       SID		      "503"
-      Position		      [195, 469, 220, 491]
+      Position		      [195, 449, 220, 471]
       ZOrder		      424
       ForegroundColor	      "red"
       OutPortSampleTime	      "0.01"
@@ -9170,7 +10532,7 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition14"
       SID		      "531"
-      Position		      [195, 409, 220, 431]
+      Position		      [195, 399, 220, 421]
       ZOrder		      427
       ForegroundColor	      "red"
       OutPortSampleTime	      "0.01"
@@ -9179,8 +10541,44 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition15"
       SID		      "532"
-      Position		      [195, 499, 220, 521]
+      Position		      [195, 474, 220, 496]
       ZOrder		      428
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition16"
+      SID		      "1865"
+      Position		      [195, 499, 220, 521]
+      ZOrder		      429
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition17"
+      SID		      "1866"
+      Position		      [195, 524, 220, 546]
+      ZOrder		      433
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition18"
+      SID		      "1867"
+      Position		      [195, 549, 220, 571]
+      ZOrder		      430
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition19"
+      SID		      "1875"
+      Position		      [195, 574, 220, 596]
+      ZOrder		      435
       ForegroundColor	      "red"
       OutPortSampleTime	      "0.01"
     }
@@ -9188,8 +10586,35 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition2"
       SID		      "172"
-      Position		      [195, 439, 220, 461]
+      Position		      [195, 424, 220, 446]
       ZOrder		      25
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition20"
+      SID		      "1889"
+      Position		      [195, 599, 220, 621]
+      ZOrder		      436
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition21"
+      SID		      "1890"
+      Position		      [195, 624, 220, 646]
+      ZOrder		      437
+      ForegroundColor	      "red"
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition22"
+      SID		      "1897"
+      Position		      [195, 649, 220, 671]
+      ZOrder		      438
       ForegroundColor	      "red"
       OutPortSampleTime	      "0.01"
     }
@@ -9197,112 +10622,126 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition3"
       SID		      "173"
-      Position		      [135, 704, 165, 736]
+      Position		      [135, 754, 165, 786]
       ZOrder		      28
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition4"
       SID		      "174"
-      Position		      [135, 739, 165, 771]
+      Position		      [135, 789, 165, 821]
       ZOrder		      29
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition5"
       SID		      "175"
-      Position		      [135, 774, 165, 806]
+      Position		      [135, 824, 165, 856]
       ZOrder		      30
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition6"
       SID		      "355"
-      Position		      [135, 849, 165, 881]
+      Position		      [135, 999, 165, 1031]
       ZOrder		      391
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition7"
       SID		      "356"
-      Position		      [135, 889, 165, 921]
+      Position		      [135, 1034, 165, 1066]
       ZOrder		      392
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition8"
       SID		      "357"
-      Position		      [135, 929, 165, 961]
+      Position		      [135, 1069, 165, 1101]
       ZOrder		      393
     }
     Block {
       BlockType		      RateTransition
       Name		      "Rate Transition9"
       SID		      "378"
-      Position		      [135, 969, 165, 1001]
+      Position		      [135, 1104, 165, 1136]
       ZOrder		      394
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator1"
       SID		      "177"
-      Position		      [255, 440, 275, 460]
+      Position		      [255, 425, 275, 445]
       ZOrder		      32
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator10"
+      SID		      "1868"
+      Position		      [255, 550, 275, 570]
+      ZOrder		      431
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator11"
+      SID		      "1869"
+      Position		      [255, 525, 275, 545]
+      ZOrder		      432
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator2"
       SID		      "178"
-      Position		      [155, 550, 175, 570]
+      Position		      [155, 1290, 175, 1310]
       ZOrder		      33
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator3"
       SID		      "179"
-      Position		      [155, 565, 175, 585]
+      Position		      [155, 1305, 175, 1325]
       ZOrder		      34
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator4"
       SID		      "180"
-      Position		      [155, 580, 175, 600]
+      Position		      [155, 1320, 175, 1340]
       ZOrder		      35
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator5"
       SID		      "181"
-      Position		      [155, 595, 175, 615]
+      Position		      [155, 1335, 175, 1355]
       ZOrder		      36
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator6"
       SID		      "182"
-      Position		      [155, 610, 175, 630]
+      Position		      [155, 1350, 175, 1370]
       ZOrder		      37
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator7"
       SID		      "183"
-      Position		      [155, 625, 175, 645]
+      Position		      [155, 1365, 175, 1385]
       ZOrder		      38
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator8"
       SID		      "504"
-      Position		      [200, 710, 220, 730]
+      Position		      [200, 760, 220, 780]
       ZOrder		      425
     }
     Block {
       BlockType		      Terminator
       Name		      "Terminator9"
       SID		      "525"
-      Position		      [255, 410, 275, 430]
+      Position		      [255, 400, 275, 420]
       ZOrder		      426
     }
     Block {
@@ -9683,11 +11122,11 @@ Model {
 		    Name		    "atv_task_duration_1s"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    125
+		    $ObjectID		    170
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    126
+		    $ObjectID		    171
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -9697,7 +11136,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    127
+		    $ObjectID		    172
 		    }
 		    }
 		    Description		    ""
@@ -9713,7 +11152,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    128
+		    $ObjectID		    173
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -9746,11 +11185,11 @@ Model {
 		    Name		    "atv_task_duration_1s_max"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    129
+		    $ObjectID		    174
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    130
+		    $ObjectID		    175
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -9760,7 +11199,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    131
+		    $ObjectID		    176
 		    }
 		    }
 		    Description		    ""
@@ -9776,7 +11215,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    132
+		    $ObjectID		    177
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -9808,11 +11247,11 @@ Model {
 		    Name		    "atv_cpu_loading"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    133
+		    $ObjectID		    178
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    134
+		    $ObjectID		    179
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -9822,7 +11261,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    135
+		    $ObjectID		    180
 		    }
 		    }
 		    Description		    ""
@@ -9838,7 +11277,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    136
+		    $ObjectID		    181
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -9870,11 +11309,11 @@ Model {
 		    Name		    "atv_cpu_loading_max"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    137
+		    $ObjectID		    182
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    138
+		    $ObjectID		    183
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -9884,7 +11323,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    139
+		    $ObjectID		    184
 		    }
 		    }
 		    Description		    ""
@@ -9900,7 +11339,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    140
+		    $ObjectID		    185
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -9931,11 +11370,11 @@ Model {
 		    Name		    "atv_stack_used"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    141
+		    $ObjectID		    186
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    142
+		    $ObjectID		    187
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -9945,7 +11384,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    143
+		    $ObjectID		    188
 		    }
 		    }
 		    Description		    ""
@@ -9961,7 +11400,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    144
+		    $ObjectID		    189
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10126,11 +11565,11 @@ Model {
 		    Name		    "atv_app_code_year"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    145
+		    $ObjectID		    190
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    146
+		    $ObjectID		    191
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10140,7 +11579,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    147
+		    $ObjectID		    192
 		    }
 		    }
 		    Description		    ""
@@ -10156,7 +11595,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    148
+		    $ObjectID		    193
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10173,11 +11612,11 @@ Model {
 		    Name		    "atv_app_code_month"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    149
+		    $ObjectID		    194
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    150
+		    $ObjectID		    195
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10187,7 +11626,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    151
+		    $ObjectID		    196
 		    }
 		    }
 		    Description		    ""
@@ -10203,7 +11642,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    152
+		    $ObjectID		    197
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10220,11 +11659,11 @@ Model {
 		    Name		    "atv_app_code_day"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    153
+		    $ObjectID		    198
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    154
+		    $ObjectID		    199
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10234,7 +11673,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    155
+		    $ObjectID		    200
 		    }
 		    }
 		    Description		    ""
@@ -10250,7 +11689,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    156
+		    $ObjectID		    201
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10280,11 +11719,11 @@ Model {
 		    Name		    "atv_app_code_major_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    157
+		    $ObjectID		    202
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    158
+		    $ObjectID		    203
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10294,7 +11733,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    159
+		    $ObjectID		    204
 		    }
 		    }
 		    Description		    ""
@@ -10310,7 +11749,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    160
+		    $ObjectID		    205
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10327,11 +11766,11 @@ Model {
 		    Name		    "atv_app_code_minor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    161
+		    $ObjectID		    206
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    162
+		    $ObjectID		    207
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10341,7 +11780,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    163
+		    $ObjectID		    208
 		    }
 		    }
 		    Description		    ""
@@ -10357,7 +11796,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    164
+		    $ObjectID		    209
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10374,11 +11813,11 @@ Model {
 		    Name		    "atv_app_code_subminor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    165
+		    $ObjectID		    210
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    166
+		    $ObjectID		    211
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10388,7 +11827,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    167
+		    $ObjectID		    212
 		    }
 		    }
 		    Description		    ""
@@ -10404,7 +11843,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    168
+		    $ObjectID		    213
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10564,11 +12003,11 @@ Model {
 		    Name		    "atv_boot_code_year"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    169
+		    $ObjectID		    214
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    170
+		    $ObjectID		    215
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10578,7 +12017,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    171
+		    $ObjectID		    216
 		    }
 		    }
 		    Description		    ""
@@ -10594,7 +12033,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    172
+		    $ObjectID		    217
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10611,11 +12050,11 @@ Model {
 		    Name		    "atv_boot_code_month"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    173
+		    $ObjectID		    218
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    174
+		    $ObjectID		    219
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10625,7 +12064,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    175
+		    $ObjectID		    220
 		    }
 		    }
 		    Description		    ""
@@ -10641,7 +12080,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    176
+		    $ObjectID		    221
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10658,11 +12097,11 @@ Model {
 		    Name		    "atv_boot_code_day"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    177
+		    $ObjectID		    222
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    178
+		    $ObjectID		    223
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10672,7 +12111,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    179
+		    $ObjectID		    224
 		    }
 		    }
 		    Description		    ""
@@ -10688,7 +12127,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    180
+		    $ObjectID		    225
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10718,11 +12157,11 @@ Model {
 		    Name		    "atv_boot_code_major_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    181
+		    $ObjectID		    226
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    182
+		    $ObjectID		    227
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10732,7 +12171,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    183
+		    $ObjectID		    228
 		    }
 		    }
 		    Description		    ""
@@ -10748,7 +12187,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    184
+		    $ObjectID		    229
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10765,11 +12204,11 @@ Model {
 		    Name		    "atv_boot_code_minor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    185
+		    $ObjectID		    230
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    186
+		    $ObjectID		    231
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10779,7 +12218,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    187
+		    $ObjectID		    232
 		    }
 		    }
 		    Description		    ""
@@ -10795,7 +12234,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    188
+		    $ObjectID		    233
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -10812,11 +12251,11 @@ Model {
 		    Name		    "atv_boot_code_subminor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    189
+		    $ObjectID		    234
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    190
+		    $ObjectID		    235
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -10826,7 +12265,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    191
+		    $ObjectID		    236
 		    }
 		    }
 		    Description		    ""
@@ -10842,7 +12281,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    192
+		    $ObjectID		    237
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11002,11 +12441,11 @@ Model {
 		    Name		    "atv_prg_code_year"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    193
+		    $ObjectID		    238
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    194
+		    $ObjectID		    239
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11016,7 +12455,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    195
+		    $ObjectID		    240
 		    }
 		    }
 		    Description		    ""
@@ -11032,7 +12471,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    196
+		    $ObjectID		    241
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11049,11 +12488,11 @@ Model {
 		    Name		    "atv_prg_code_month"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    197
+		    $ObjectID		    242
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    198
+		    $ObjectID		    243
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11063,7 +12502,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    199
+		    $ObjectID		    244
 		    }
 		    }
 		    Description		    ""
@@ -11079,7 +12518,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    200
+		    $ObjectID		    245
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11096,11 +12535,11 @@ Model {
 		    Name		    "atv_prg_code_day"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    201
+		    $ObjectID		    246
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    202
+		    $ObjectID		    247
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11110,7 +12549,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    203
+		    $ObjectID		    248
 		    }
 		    }
 		    Description		    ""
@@ -11126,7 +12565,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    204
+		    $ObjectID		    249
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11156,11 +12595,11 @@ Model {
 		    Name		    "atv_prg_code_major_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    205
+		    $ObjectID		    250
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    206
+		    $ObjectID		    251
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11170,7 +12609,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    207
+		    $ObjectID		    252
 		    }
 		    }
 		    Description		    ""
@@ -11186,7 +12625,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    208
+		    $ObjectID		    253
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11203,11 +12642,11 @@ Model {
 		    Name		    "atv_prg_code_minor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    209
+		    $ObjectID		    254
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    210
+		    $ObjectID		    255
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11217,7 +12656,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    211
+		    $ObjectID		    256
 		    }
 		    }
 		    Description		    ""
@@ -11233,7 +12672,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    212
+		    $ObjectID		    257
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11250,11 +12689,11 @@ Model {
 		    Name		    "atv_prg_code_subminor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    213
+		    $ObjectID		    258
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    214
+		    $ObjectID		    259
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11264,7 +12703,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    215
+		    $ObjectID		    260
 		    }
 		    }
 		    Description		    ""
@@ -11280,7 +12719,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    216
+		    $ObjectID		    261
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11440,11 +12879,11 @@ Model {
 		    Name		    "atv_platform_code_year"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    217
+		    $ObjectID		    262
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    218
+		    $ObjectID		    263
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11454,7 +12893,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    219
+		    $ObjectID		    264
 		    }
 		    }
 		    Description		    ""
@@ -11470,7 +12909,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    220
+		    $ObjectID		    265
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11487,11 +12926,11 @@ Model {
 		    Name		    "atv_platform_code_month"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    221
+		    $ObjectID		    266
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    222
+		    $ObjectID		    267
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11501,7 +12940,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    223
+		    $ObjectID		    268
 		    }
 		    }
 		    Description		    ""
@@ -11517,7 +12956,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    224
+		    $ObjectID		    269
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11534,11 +12973,11 @@ Model {
 		    Name		    "atv_platform_code_day"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    225
+		    $ObjectID		    270
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    226
+		    $ObjectID		    271
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11548,7 +12987,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    227
+		    $ObjectID		    272
 		    }
 		    }
 		    Description		    ""
@@ -11564,7 +13003,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    228
+		    $ObjectID		    273
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11594,11 +13033,11 @@ Model {
 		    Name		    "atv_platform_code_major_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    229
+		    $ObjectID		    274
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    230
+		    $ObjectID		    275
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11608,7 +13047,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    231
+		    $ObjectID		    276
 		    }
 		    }
 		    Description		    ""
@@ -11624,7 +13063,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    232
+		    $ObjectID		    277
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11641,11 +13080,11 @@ Model {
 		    Name		    "atv_platform_code_minor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    233
+		    $ObjectID		    278
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    234
+		    $ObjectID		    279
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11655,7 +13094,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    235
+		    $ObjectID		    280
 		    }
 		    }
 		    Description		    ""
@@ -11671,7 +13110,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    236
+		    $ObjectID		    281
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11688,11 +13127,11 @@ Model {
 		    Name		    "atv_platform_code_subminor_ver"
 		    Object {
 		    $PropName		    "SignalObject"
-		    $ObjectID		    237
+		    $ObjectID		    282
 		    $ClassName		    "ASAP2.Signal"
 		    Simulink.CoderInfo {
 		    $PropName		    "CoderInfo"
-		    $ObjectID		    238
+		    $ObjectID		    283
 		    StorageClass	    "ExportedGlobal"
 		    TypeQualifier	    ""
 		    Alias		    ""
@@ -11702,7 +13141,7 @@ Model {
 		    CustomStorageClass	    "Default"
 		    SimulinkCSC.AttribClass_Simulink_Default {
 		    $PropName		    "CustomAttributes"
-		    $ObjectID		    239
+		    $ObjectID		    284
 		    }
 		    }
 		    Description		    ""
@@ -11718,7 +13157,7 @@ Model {
 		    InitialValue	    ""
 		    Simulink.LoggingInfo {
 		    $PropName		    "LoggingInfo"
-		    $ObjectID		    240
+		    $ObjectID		    285
 		    DataLogging		    0
 		    NameMode		    0
 		    LoggingName		    ""
@@ -11886,7 +13325,7 @@ Model {
       Name		      "loop_10ms"
       SID		      "184"
       Ports		      [19, 6]
-      Position		      [730, 604, 880, 1296]
+      Position		      [735, 608, 890, 1282]
       ZOrder		      21
       RequestExecContextInheritance off
       System {
@@ -11906,7 +13345,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"150"
 	Block {
 	  BlockType		  Inport
 	  Name			  "atv_key_signal_in"
@@ -11930,7 +13369,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "StartBtn_In"
 	  SID			  "186"
-	  Position		  [15, 8, 45, 22]
+	  Position		  [-50, 3, -20, 17]
 	  ZOrder		  10
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -11948,93 +13387,13 @@ Model {
 	}
 	Block {
 	  BlockType		  Inport
-	  Name			  "chg_ctrl"
-	  SID			  "187"
-	  Position		  [15, 308, 45, 322]
-	  ZOrder		  11
+	  Name			  "brake_pedal"
+	  SID			  "1765"
+	  Position		  [15, 83, 45, 97]
+	  ZOrder		  729
 	  Port			  "5"
 	  IconDisplay		  "Port number"
 	  OutDataTypeStr	  "boolean"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "heater_ctrl"
-	  SID			  "188"
-	  Position		  [15, 383, 45, 397]
-	  ZOrder		  12
-	  Port			  "6"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "boolean"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_FMot"
-	  SID			  "370"
-	  Position		  [70, 528, 100, 542]
-	  ZOrder		  574
-	  Port			  "7"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_FInv"
-	  SID			  "371"
-	  Position		  [15, 553, 45, 567]
-	  ZOrder		  575
-	  Port			  "8"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_RMot"
-	  SID			  "373"
-	  Position		  [15, 603, 45, 617]
-	  ZOrder		  577
-	  Port			  "9"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_RInv"
-	  SID			  "374"
-	  Position		  [70, 628, 100, 642]
-	  ZOrder		  578
-	  Port			  "10"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_GMot"
-	  SID			  "372"
-	  Position		  [70, 578, 100, 592]
-	  ZOrder		  576
-	  Port			  "11"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_GInv"
-	  SID			  "375"
-	  Position		  [15, 653, 45, 667]
-	  ZOrder		  579
-	  Port			  "12"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "T_Rad"
-	  SID			  "376"
-	  Position		  [70, 678, 100, 692]
-	  ZOrder		  580
-	  Port			  "13"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "uint8"
 	}
 	Block {
 	  BlockType		  Inport
@@ -12042,17 +13401,7 @@ Model {
 	  SID			  "1731"
 	  Position		  [75, 1138, 105, 1152]
 	  ZOrder		  714
-	  Port			  "14"
-	  IconDisplay		  "Port number"
-	  OutDataTypeStr	  "boolean"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "brake_pedal"
-	  SID			  "1765"
-	  Position		  [15, 83, 45, 97]
-	  ZOrder		  729
-	  Port			  "15"
+	  Port			  "6"
 	  IconDisplay		  "Port number"
 	  OutDataTypeStr	  "boolean"
 	}
@@ -12062,13 +13411,12 @@ Model {
 	  SID			  "1740"
 	  Position		  [-210, 1243, -180, 1257]
 	  ZOrder		  721
-	  Port			  "16"
+	  Port			  "7"
 	  IconDisplay		  "Port number"
 	  OutDataTypeStr	  "boolean"
 	  Port {
 	    PortNumber		    1
 	    Name		    "fwdCmd"
-	    PropagatedSignals	    "fwdCmd"
 	  }
 	}
 	Block {
@@ -12077,13 +13425,12 @@ Model {
 	  SID			  "1741"
 	  Position		  [-210, 1273, -180, 1287]
 	  ZOrder		  722
-	  Port			  "17"
+	  Port			  "8"
 	  IconDisplay		  "Port number"
 	  OutDataTypeStr	  "boolean"
 	  Port {
 	    PortNumber		    1
 	    Name		    "rwdCmd"
-	    PropagatedSignals	    "rwdCmd"
 	  }
 	}
 	Block {
@@ -12092,8 +13439,98 @@ Model {
 	  SID			  "1761"
 	  Position		  [55, 1333, 85, 1347]
 	  ZOrder		  725
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "chg_ctrl"
+	  SID			  "187"
+	  Position		  [15, 308, 45, 322]
+	  ZOrder		  11
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "heater_ctrl"
+	  SID			  "188"
+	  Position		  [15, 383, 45, 397]
+	  ZOrder		  12
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_FMot"
+	  SID			  "370"
+	  Position		  [70, 528, 100, 542]
+	  ZOrder		  574
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_FInv"
+	  SID			  "371"
+	  Position		  [15, 553, 45, 567]
+	  ZOrder		  575
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_RMot"
+	  SID			  "373"
+	  Position		  [15, 603, 45, 617]
+	  ZOrder		  577
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_RInv"
+	  SID			  "374"
+	  Position		  [70, 628, 100, 642]
+	  ZOrder		  578
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_GMot"
+	  SID			  "372"
+	  Position		  [70, 578, 100, 592]
+	  ZOrder		  576
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_GInv"
+	  SID			  "375"
+	  Position		  [15, 653, 45, 667]
+	  ZOrder		  579
+	  Port			  "17"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_Rad"
+	  SID			  "376"
+	  Position		  [70, 678, 100, 692]
+	  ZOrder		  580
 	  Port			  "18"
 	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
 	}
 	Block {
 	  BlockType		  Inport
@@ -12103,26 +13540,6 @@ Model {
 	  ZOrder		  726
 	  Port			  "19"
 	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "ATVC_VelocityLimitFWD"
-	  SID			  "1696"
-	  Position		  [70, 995, 110, 1015]
-	  ZOrder		  700
-	  BackgroundColor	  "red"
-	  Value			  "70"
-	  OutDataTypeStr	  "uint8"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "ATVC_VelocityLimitRWD"
-	  SID			  "1697"
-	  Position		  [70, 960, 110, 980]
-	  ZOrder		  701
-	  BackgroundColor	  "red"
-	  Value			  "20"
-	  OutDataTypeStr	  "uint8"
 	}
 	Block {
 	  BlockType		  BusCreator
@@ -13784,15 +15201,15 @@ Model {
 	      ".0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098"
 	      " 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07450980"
 	      "39215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Marker','o','MarkerSize',8"
-	      ")}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Logical Operator'}},'ShowContent',true,'Placemen"
-	      "t',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYL"
-	      "imMag','0.00000','MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false"
-	      ",'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.07"
-	      "45098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.71764705882352"
-	      "9 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098"
-	      "039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'Previous"
-	      "ZoomMode','ZoomX','PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')"
-	      "),'Version','2018b','Position',[1 49 1280 599.333333333333])"
+	      ")}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1)},'DisplayP"
+	      "ropertyDefaults',struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag','0.00000'"
+	      ",'MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 "
+	      "0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0"
+	      ".623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921"
+	      "569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.6509"
+	      "80392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousZoomMode','ZoomX"
+	      "','PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')),'Version','201"
+	      "8b','Position',[1 49 1280 599.333333333333])"
 	      NumInputPorts	      "1"
 	      Floating		      off
 	    }
@@ -14385,11 +15802,11 @@ Model {
 	    Name		    "atv_key_signal"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      241
+	      $ObjectID		      286
 	      $ClassName	      "Simulink.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		242
+		$ObjectID		287
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -14399,7 +15816,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  243
+		  $ObjectID		  288
 		}
 	      }
 	      Description	      ""
@@ -14415,7 +15832,7 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		244
+		$ObjectID		289
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -14472,7 +15889,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "ENABLE_front"
@@ -14560,7 +15977,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"80"
 		Block {
 		  BlockType		  Inport
 		  Name			  "throttle_neutral_point"
@@ -15436,7 +16853,7 @@ Model {
 	      Name		      "DRIVE BY WIRE REAR"
 	      SID		      "1503"
 	      Ports		      [4, 2]
-	      Position		      [275, 714, 480, 926]
+	      Position		      [275, 716, 480, 929]
 	      ZOrder		      606
 	      RequestExecContextInheritance off
 	      ContentPreviewEnabled   on
@@ -16431,7 +17848,7 @@ Model {
 	      }
 	      Branch {
 		ZOrder			545
-		Points			[0, 410]
+		Points			[0, 420]
 		DstBlock		"DRIVE BY WIRE REAR"
 		DstPort			4
 	      }
@@ -16487,7 +17904,7 @@ Model {
 	      }
 	      Branch {
 		ZOrder			544
-		Points			[0, 330]
+		Points			[0, 335]
 		DstBlock		"DRIVE BY WIRE REAR"
 		DstPort			3
 	      }
@@ -16597,7 +18014,7 @@ Model {
 	  }
 	  System {
 	    Name		    "DRIVE BY WIRE_FRONT"
-	    Location		    [8, 8, 1376, 745]
+	    Location		    [-7, -7, 1543, 871]
 	    Open		    on
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -16775,7 +18192,7 @@ Model {
 	      ContentPreviewEnabled   on
 	      System {
 		Name			"DBW\nREVERSE"
-		Location		[8, 8, 1376, 745]
+		Location		[-7, -7, 1543, 871]
 		Open			on
 		PortBlocksUseCompactNotation off
 		SetExecutionDomain	off
@@ -17752,16 +19169,11 @@ Model {
 		    Ports		    [3, 1]
 		    Position		    [340, 70, 420, 110]
 		    ZOrder		    559
-		    LibraryVersion	    "3.4"
+		    LibraryVersion	    "1.444"
 		    SourceBlock		    "simulink/Discontinuities/Saturation\nDynamic"
 		    SourceType		    "Saturation Dynamic"
 		    SourceProductName	    "Simulink"
 		    SourceProductBaseCode   "SL"
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
 		    ContentPreviewEnabled   on
 		    OutMin		    "[]"
 		    OutMax		    "[]"
@@ -17814,7 +19226,7 @@ Model {
 		    ContentPreviewEnabled   on
 		    System {
 		    Name		    "negativo"
-		    Location		    [8, 8, 1376, 745]
+		    Location		    [-7, -7, 1543, 871]
 		    Open		    on
 		    PortBlocksUseCompactNotation off
 		    SetExecutionDomain	    off
@@ -18718,16 +20130,11 @@ Model {
 		  Ports			  [1, 1]
 		  Position		  [255, 90, 280, 110]
 		  ZOrder		  665
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  relop			  "=="
 		  const			  "0"
@@ -18741,16 +20148,11 @@ Model {
 		  Ports			  [1, 1]
 		  Position		  [215, 105, 240, 125]
 		  ZOrder		  666
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  relop			  "=="
 		  const			  "0"
@@ -19682,7 +21084,7 @@ Model {
 	  }
 	  System {
 	    Name		    "DRIVE BY WIRE_REAR"
-	    Location		    [8, 8, 1376, 745]
+	    Location		    [-7, -7, 1543, 871]
 	    Open		    on
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -19948,16 +21350,11 @@ Model {
 		  Ports			  [1, 1]
 		  Position		  [1230, 350, 1270, 370]
 		  ZOrder		  555
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  relop			  "=="
 		  const			  "0"
@@ -20010,16 +21407,11 @@ Model {
 		  Ports			  [3, 1]
 		  Position		  [1220, 295, 1275, 345]
 		  ZOrder		  531
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Discontinuities/Saturation\nDynamic"
 		  SourceType		  "Saturation Dynamic"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  OutMin		  "[]"
 		  OutMax		  "[]"
@@ -20847,16 +22239,11 @@ Model {
 		    Ports		    [3, 1]
 		    Position		    [340, 70, 420, 110]
 		    ZOrder		    559
-		    LibraryVersion	    "3.4"
+		    LibraryVersion	    "1.444"
 		    SourceBlock		    "simulink/Discontinuities/Saturation\nDynamic"
 		    SourceType		    "Saturation Dynamic"
 		    SourceProductName	    "Simulink"
 		    SourceProductBaseCode   "SL"
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
 		    ContentPreviewEnabled   on
 		    OutMin		    "[]"
 		    OutMax		    "[]"
@@ -21824,16 +23211,11 @@ Model {
 		  Ports			  [1, 1]
 		  Position		  [255, 90, 280, 110]
 		  ZOrder		  665
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  relop			  "=="
 		  const			  "0"
@@ -21847,16 +23229,11 @@ Model {
 		  Ports			  [1, 1]
 		  Position		  [215, 105, 240, 125]
 		  ZOrder		  666
-		  LibraryVersion	  "3.4"
+		  LibraryVersion	  "1.444"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  SourceProductName	  "Simulink"
 		  SourceProductBaseCode	  "SL"
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
 		  ContentPreviewEnabled	  on
 		  relop			  "=="
 		  const			  "0"
@@ -23014,27 +24391,26 @@ Model {
 		    "74509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352"
 		    "9411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.71764"
 		    "7058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalL"
-		    "abel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'rPMG'}},'ShowConten"
-		    "t',true,'Placement',1),struct('MinYLimReal','900.00000','MaxYLimReal','1100.00000','YLabelReal','','MinYLimMag',"
-		    "'0.00000','MaxYLimMag','31.28681','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
-		    "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666"
-		    "6666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137"
-		    "2549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 "
-		    "0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines'"
-		    ",1,'LineNames',{{'ATVC_rPMStart'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.125','MaxYLimReal'"
-		    ",'1.125','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','31.28681','LegendVisibility','off','XGrid',true,'Y"
-		    "Grid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68627"
-		    "4509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16"
-		    "078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588"
-		    "235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'Us"
-		    "erDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Switch'}},'ShowContent',true,'Placement',3)},'DisplayPro"
-		    "pertyDefaults',struct('YLabelReal','','AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0"
-		    ".686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 "
-		    "0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;"
-		    "0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1]),extmgr.Configur"
-		    "ation('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousZoomMode','ZoomX','PreviousAutoscale','XY'),ext"
-		    "mgr.Configuration('Tools','Measurements',true,'Version','2022b')),'Version','2022b','Position',[1 49 1280 599.33"
-		    "3333333333])"
+		    "abel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',t"
+		    "rue,'Placement',1),struct('MinYLimReal','900.00000','MaxYLimReal','1100.00000','YLabelReal','','MinYLimMag','0.0"
+		    "0000','MaxYLimMag','31.28681','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor"
+		    "',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666"
+		    "666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549"
+		    "019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65"
+		    "0980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'"
+		    "LineNames',{{[]}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.125','MaxYLimReal','1.125','YLabelR"
+		    "eal','','MinYLimMag','0.00000','MaxYLimMag','31.28681','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotM"
+		    "agPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'Colo"
+		    "rOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.39"
+		    "2156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;"
+		    "1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelN"
+		    "ames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',3)},'DisplayPropertyDefaults',struct('"
+		    "YLabelReal','','AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'Colo"
+		    "rOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.71"
+		    "7647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;"
+		    "1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1]),extmgr.Configuration('Tools','Plot Nav"
+		    "igation',true,'OnceAtStop',false,'PreviousZoomMode','ZoomX','PreviousAutoscale','XY'),extmgr.Configuration('Tool"
+		    "s','Measurements',true,'Version','2018b')),'Version','2018b','Position',[1 49 1280 599.333333333333])"
 		    NumInputPorts	    "3"
 		    Floating		    off
 		    }
@@ -23440,18 +24816,46 @@ Model {
 	}
 	Block {
 	  BlockType		  Logic
-	  Name			  "Logical\nOperator"
-	  SID			  "1733"
+	  Name			  "Logical\nOperator1"
+	  SID			  "1898"
+	  Ports			  [2, 1]
+	  Position		  [-30, 52, 0, 83]
+	  ZOrder		  730
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  SID			  "1899"
 	  Ports			  [1, 1]
-	  Position		  [535, 904, 565, 936]
-	  ZOrder		  719
+	  Position		  [-65, 51, -45, 69]
+	  ZOrder		  731
 	  Operator		  "NOT"
 	  AllPortsSameDT	  off
 	  OutDataTypeStr	  "boolean"
-	  Port {
-	    PortNumber		    1
-	    Name		    "fs1"
-	  }
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  SID			  "1900"
+	  Ports			  [3, 1]
+	  Position		  [120, 4, 155, 26]
+	  ZOrder		  732
+	  Inputs		  "3"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator4"
+	  SID			  "1901"
+	  Ports			  [1, 1]
+	  Position		  [-65, 66, -45, 84]
+	  ZOrder		  733
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -24370,23 +25774,13 @@ Model {
 	    PortNumber		    1
 	    Name		    "atv_state_out"
 	    PropagatedSignals	    "state_out"
-	  }
-	  Port {
-	    PortNumber		    2
-	    Name		    "atv_sub_state_out"
-	    PropagatedSignals	    "sub_state_out"
-	  }
-	  Port {
-	    PortNumber		    3
-	    Name		    "atv_wakelock_out"
-	    PropagatedSignals	    "wakelock_out"
 	    Object {
 	      $PropName		      "SignalObject"
-	      $ObjectID		      245
+	      $ObjectID		      290
 	      $ClassName	      "ASAP2.Signal"
 	      Simulink.CoderInfo {
 		$PropName		"CoderInfo"
-		$ObjectID		246
+		$ObjectID		291
 		StorageClass		"ExportedGlobal"
 		TypeQualifier		""
 		Alias			""
@@ -24396,7 +25790,7 @@ Model {
 		CustomStorageClass	"Default"
 		SimulinkCSC.AttribClass_Simulink_Default {
 		  $PropName		  "CustomAttributes"
-		  $ObjectID		  247
+		  $ObjectID		  292
 		}
 	      }
 	      Description	      ""
@@ -24412,7 +25806,103 @@ Model {
 	      InitialValue	      ""
 	      Simulink.LoggingInfo {
 		$PropName		"LoggingInfo"
-		$ObjectID		248
+		$ObjectID		293
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "atv_sub_state_out"
+	    PropagatedSignals	    "sub_state_out"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      294
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		295
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  296
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		297
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "atv_wakelock_out"
+	    PropagatedSignals	    "wakelock_out"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      298
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		299
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  300
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		301
 		DataLogging		0
 		NameMode		0
 		LoggingName		""
@@ -24428,15 +25918,101 @@ Model {
 	    PortNumber		    11
 	    Name		    "atv_runLed_out"
 	    PropagatedSignals	    "runLed_out"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      302
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		303
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  304
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		305
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
 	  }
 	  Port {
 	    PortNumber		    12
 	    Name		    "atv_en_dcdc_out"
 	    PropagatedSignals	    "en_dcdc_out"
+	    Object {
+	      $PropName		      "SignalObject"
+	      $ObjectID		      306
+	      $ClassName	      "ASAP2.Signal"
+	      Simulink.CoderInfo {
+		$PropName		"CoderInfo"
+		$ObjectID		307
+		StorageClass		"ExportedGlobal"
+		TypeQualifier		""
+		Alias			""
+		Alignment		-1
+		CSCPackageName		"Simulink"
+		ParameterOrSignal	"Signal"
+		CustomStorageClass	"Default"
+		SimulinkCSC.AttribClass_Simulink_Default {
+		  $PropName		  "CustomAttributes"
+		  $ObjectID		  308
+		}
+	      }
+	      Description	      ""
+	      DataType		      "auto"
+	      Min		      []
+	      Max		      []
+	      DocUnits		      ""
+	      Dimensions	      [-1.0]
+	      DimensionsMode	      "auto"
+	      Complexity	      "auto"
+	      SampleTime	      [-1.0]
+	      SamplingMode	      "auto"
+	      InitialValue	      ""
+	      Simulink.LoggingInfo {
+		$PropName		"LoggingInfo"
+		$ObjectID		309
+		DataLogging		0
+		NameMode		0
+		LoggingName		""
+		DecimateData		0
+		Decimation		2
+		LimitDataPoints		0
+		MaxPoints		5000
+	      }
+	    }
+	    RTWStorageClass	    "ExportedGlobal"
 	  }
 	  System {
 	    Name		    "VSM"
-	    Location		    [8, 8, 1376, 745]
+	    Location		    [-7, -7, 1543, 871]
 	    Open		    on
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -24876,6 +26452,26 @@ Model {
 	}
 	Block {
 	  BlockType		  Constant
+	  Name			  "atvc_velocityLimitFwd"
+	  SID			  "1697"
+	  Position		  [70, 960, 110, 980]
+	  ZOrder		  701
+	  BackgroundColor	  "red"
+	  Value			  "atvc_velocityLimitFwd"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "atvc_velocityLimitRwd"
+	  SID			  "1696"
+	  Position		  [70, 995, 110, 1015]
+	  ZOrder		  700
+	  BackgroundColor	  "red"
+	  Value			  "atvc_velocityLimitRwd"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Constant
 	  Name			  "state_Const"
 	  SID			  "335"
 	  Position		  [70, 477, 120, 493]
@@ -24979,11 +26575,11 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  6
+	  ZOrder		  718
 	  SrcBlock		  "StartBtn_In"
 	  SrcPort		  1
-	  DstBlock		  "VSM"
-	  DstPort		  2
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  7
@@ -25277,14 +26873,14 @@ Model {
 	}
 	Line {
 	  ZOrder		  469
-	  SrcBlock		  "ATVC_VelocityLimitRWD"
+	  SrcBlock		  "atvc_velocityLimitFwd"
 	  SrcPort		  1
 	  DstBlock		  "SPEED LIMITER"
 	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  470
-	  SrcBlock		  "ATVC_VelocityLimitFWD"
+	  SrcBlock		  "atvc_velocityLimitRwd"
 	  SrcPort		  1
 	  DstBlock		  "SPEED LIMITER"
 	  DstPort		  2
@@ -25519,8 +27115,17 @@ Model {
 	  Branch {
 	    ZOrder		    592
 	    Points		    [0, -1085]
-	    DstBlock		    "VSM"
-	    DstPort		    4
+	    Branch {
+	      ZOrder		      729
+	      DstBlock		      "VSM"
+	      DstPort		      4
+	    }
+	    Branch {
+	      ZOrder		      725
+	      Points		      [0, -105]
+	      DstBlock		      "Logical\nOperator2"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Line {
@@ -25532,8 +27137,18 @@ Model {
 	  Branch {
 	    ZOrder		    597
 	    Points		    [0, -1040]
-	    DstBlock		    "VSM"
-	    DstPort		    5
+	    Branch {
+	      ZOrder		      728
+	      DstBlock		      "VSM"
+	      DstPort		      5
+	    }
+	    Branch {
+	      ZOrder		      727
+	      Labels		      [2, 1]
+	      Points		      [0, -165]
+	      DstBlock		      "Logical\nOperator4"
+	      DstPort		      1
+	    }
 	  }
 	  Branch {
 	    ZOrder		    596
@@ -25543,17 +27158,8 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  552
+	  ZOrder		  808
 	  SrcBlock		  "FS1"
-	  SrcPort		  1
-	  DstBlock		  "Logical\nOperator"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "fs1"
-	  ZOrder		  553
-	  Labels		  [1, 1]
-	  SrcBlock		  "Logical\nOperator"
 	  SrcPort		  1
 	  DstBlock		  "Bus\nCreator4"
 	  DstPort		  5
@@ -25597,8 +27203,47 @@ Model {
 	  ZOrder		  590
 	  SrcBlock		  "brake_pedal"
 	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    ZOrder		    731
+	    Points		    [0, -70]
+	    DstBlock		    "Logical\nOperator3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    730
+	    DstBlock		    "VSM"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  723
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  Points		  [28, 0; 0, -55]
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  721
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  722
+	  SrcBlock		  "Logical\nOperator4"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  926
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
 	  DstBlock		  "VSM"
-	  DstPort		  3
+	  DstPort		  2
 	}
 	Annotation {
 	  SID			  "194"
@@ -25737,12 +27382,12 @@ Model {
       put_id_naming	      "Generic pin naming"
       put_id_name	      "New_model_v%ver-major%.%ver-minor%.%ver-subminor%_%target%"
       put_id_description      "(none)"
-      put_id_major_ver_str    "0"
-      put_id_major_ver_num    "0"
+      put_id_major_ver_str    "1"
+      put_id_major_ver_num    "1"
       put_id_minor_ver_str    "0"
       put_id_minor_ver_num    "0"
-      put_id_subminor_ver_str "5"
-      put_id_subminor_ver_num "5"
+      put_id_subminor_ver_str "0"
+      put_id_subminor_ver_num "0"
       put_id_copyright	      "(none)"
       put_id_target	      "Unused"
       put_id_target_type      "M560"
@@ -25772,10 +27417,10 @@ Model {
       ZOrder		      3
       SrcBlock		      "loop_10ms"
       SrcPort		      1
-      Points		      [358, 0]
+      Points		      [348, 0]
       Branch {
-	ZOrder			406
-	Points			[0, 345]
+	ZOrder			487
+	Points			[0, 275]
 	DstBlock		"CANBUS_Output_Processing"
 	DstPort			1
       }
@@ -25803,9 +27448,9 @@ Model {
       ZOrder		      6
       SrcBlock		      "Rate Transition5"
       SrcPort		      1
-      Points		      [278, 0; 0, 20]
+      Points		      [72, 0; 0, 140]
       DstBlock		      "loop_10ms"
-      DstPort		      6
+      DstPort		      11
     }
     Line {
       ZOrder		      7
@@ -25825,7 +27470,7 @@ Model {
       ZOrder		      123
       SrcBlock		      "Rate Transition13"
       SrcPort		      1
-      Points		      [250, 0; 0, 225]
+      Points		      [250, 0; 0, 240]
       DstBlock		      "loop_10ms"
       DstPort		      3
     }
@@ -25833,9 +27478,9 @@ Model {
       ZOrder		      10
       SrcBlock		      "Rate Transition4"
       SrcPort		      1
-      Points		      [278, 0; 0, 20]
+      Points		      [107, 0; 0, 140]
       DstBlock		      "loop_10ms"
-      DstPort		      5
+      DstPort		      10
     }
     Line {
       ZOrder		      11
@@ -25863,7 +27508,7 @@ Model {
       ZOrder		      14
       SrcBlock		      "Rate Transition"
       SrcPort		      1
-      Points		      [354, 0; 0, 275]
+      Points		      [354, 0; 0, 270]
       DstBlock		      "loop_10ms"
       DstPort		      1
     }
@@ -25941,41 +27586,36 @@ Model {
       ZOrder		      42
       SrcBlock		      "Rate Transition8"
       SrcPort		      1
-      Points		      [317, 0; 0, -30]
       DstBlock		      "loop_10ms"
-      DstPort		      9
+      DstPort		      14
     }
     Line {
       ZOrder		      41
       SrcBlock		      "Rate Transition7"
       SrcPort		      1
-      Points		      [296, 0; 0, -25]
       DstBlock		      "loop_10ms"
-      DstPort		      8
+      DstPort		      13
     }
     Line {
       ZOrder		      40
       SrcBlock		      "Rate Transition6"
       SrcPort		      1
-      Points		      [278, 0; 0, -20]
       DstBlock		      "loop_10ms"
-      DstPort		      7
+      DstPort		      12
     }
     Line {
       ZOrder		      44
       SrcBlock		      "Rate Transition10"
       SrcPort		      1
-      Points		      [361, 0; 0, -40]
       DstBlock		      "loop_10ms"
-      DstPort		      11
+      DstPort		      16
     }
     Line {
       ZOrder		      43
       SrcBlock		      "Rate Transition9"
       SrcPort		      1
-      Points		      [332, 0; 0, -35]
       DstBlock		      "loop_10ms"
-      DstPort		      10
+      DstPort		      15
     }
     Line {
       ZOrder		      36
@@ -25988,9 +27628,8 @@ Model {
       ZOrder		      45
       SrcBlock		      "Rate Transition11"
       SrcPort		      1
-      Points		      [402, 0; 0, -45]
       DstBlock		      "loop_10ms"
-      DstPort		      12
+      DstPort		      17
     }
     Line {
       ZOrder		      34
@@ -26017,9 +27656,8 @@ Model {
       ZOrder		      57
       SrcBlock		      "Rate Transition12"
       SrcPort		      1
-      Points		      [417, 0; 0, -50]
       DstBlock		      "loop_10ms"
-      DstPort		      13
+      DstPort		      18
     }
     Line {
       ZOrder		      95
@@ -26122,7 +27760,7 @@ Model {
       ZOrder		      168
       SrcBlock		      "Rate Transition15"
       SrcPort		      1
-      Points		      [220, 0; 0, 230]
+      Points		      [220, 0; 0, 250]
       DstBlock		      "loop_10ms"
       DstPort		      4
     }
@@ -26130,16 +27768,16 @@ Model {
       ZOrder		      210
       SrcBlock		      "loop_10ms"
       SrcPort		      2
-      Points		      [142, 0]
+      Points		      [318, 0]
       Branch {
 	ZOrder			404
-	Points			[0, -45]
+	Points			[0, -40]
 	DstBlock		"Digital_Output_Processing"
 	DstPort			2
       }
       Branch {
 	ZOrder			305
-	Points			[0, 275]
+	Points			[0, 220]
 	DstBlock		"CANBUS_Output_Processing"
 	DstPort			2
       }
@@ -26148,7 +27786,7 @@ Model {
       ZOrder		      213
       SrcBlock		      "loop_10ms"
       SrcPort		      3
-      Points		      [106, 0; 0, 205]
+      Points		      [211, 0; 0, 165]
       DstBlock		      "CANBUS_Output_Processing"
       DstPort		      3
     }
@@ -26156,7 +27794,7 @@ Model {
       ZOrder		      225
       SrcBlock		      "loop_10ms"
       SrcPort		      4
-      Points		      [75, 0; 0, 135]
+      Points		      [145, 0; 0, 110]
       DstBlock		      "CANBUS_Output_Processing"
       DstPort		      4
     }
@@ -26164,53 +27802,119 @@ Model {
       ZOrder		      228
       SrcBlock		      "loop_10ms"
       SrcPort		      5
-      Points		      [46, 0; 0, 65]
+      Points		      [36, 0; 0, 55]
       DstBlock		      "CANBUS_Output_Processing"
       DstPort		      5
-    }
-    Line {
-      ZOrder		      313
-      Points		      [541, 1230; 189, 0]
-      DstBlock		      "loop_10ms"
-      DstPort		      18
-    }
-    Line {
-      ZOrder		      314
-      Points		      [540, 1265]
-      DstBlock		      "loop_10ms"
-      DstPort		      19
     }
     Line {
       ZOrder		      330
       SrcBlock		      "loop_10ms"
       SrcPort		      6
-      Points		      [233, 0; 0, -5]
       DstBlock		      "CANBUS_Output_Processing"
       DstPort		      6
     }
     Line {
-      ZOrder		      315
-      Points		      [539, 1160]
+      ZOrder		      472
+      SrcBlock		      "Rate Transition16"
+      SrcPort		      1
+      Points		      [195, 0; 0, 260]
       DstBlock		      "loop_10ms"
-      DstPort		      16
+      DstPort		      5
     }
     Line {
-      ZOrder		      316
-      Points		      [540, 1195]
-      DstBlock		      "loop_10ms"
-      DstPort		      17
+      ZOrder		      471
+      SrcBlock		      "Input_Processing"
+      SrcPort		      7
+      DstBlock		      "Rate Transition16"
+      DstPort		      1
     }
     Line {
-      ZOrder		      317
-      Points		      [543, 1125]
-      DstBlock		      "loop_10ms"
-      DstPort		      15
+      ZOrder		      479
+      SrcBlock		      "Input_Processing"
+      SrcPort		      8
+      DstBlock		      "Rate Transition17"
+      DstPort		      1
     }
     Line {
-      ZOrder		      320
-      Points		      [627, 1090]
+      ZOrder		      478
+      SrcBlock		      "Input_Processing"
+      SrcPort		      9
+      DstBlock		      "Rate Transition18"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      476
+      SrcBlock		      "Rate Transition17"
+      SrcPort		      1
+      DstBlock		      "Terminator11"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      477
+      SrcBlock		      "Rate Transition18"
+      SrcPort		      1
+      DstBlock		      "Terminator10"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      483
+      SrcBlock		      "Input_Processing"
+      SrcPort		      10
+      DstBlock		      "Rate Transition19"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      484
+      SrcBlock		      "Rate Transition19"
+      SrcPort		      1
+      Points		      [178, 0; 0, 220]
       DstBlock		      "loop_10ms"
-      DstPort		      14
+      DstPort		      6
+    }
+    Line {
+      ZOrder		      493
+      SrcBlock		      "Input_Processing"
+      SrcPort		      11
+      DstBlock		      "Rate Transition20"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      492
+      SrcBlock		      "Input_Processing"
+      SrcPort		      12
+      DstBlock		      "Rate Transition21"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      494
+      SrcBlock		      "Rate Transition20"
+      SrcPort		      1
+      Points		      [135, 0; 0, 230]
+      DstBlock		      "loop_10ms"
+      DstPort		      7
+    }
+    Line {
+      ZOrder		      498
+      SrcBlock		      "Rate Transition21"
+      SrcPort		      1
+      Points		      [112, 0; 0, 240]
+      DstBlock		      "loop_10ms"
+      DstPort		      8
+    }
+    Line {
+      ZOrder		      501
+      SrcBlock		      "Rate Transition22"
+      SrcPort		      1
+      Points		      [88, 0; 0, 250]
+      DstBlock		      "loop_10ms"
+      DstPort		      9
+    }
+    Line {
+      ZOrder		      502
+      SrcBlock		      "Input_Processing"
+      SrcPort		      13
+      DstBlock		      "Rate Transition22"
+      DstPort		      1
     }
   }
 }
@@ -26260,6 +27964,8 @@ Stateflow {
     ssIdNumber		    3
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    4
@@ -26272,6 +27978,8 @@ Stateflow {
     ssIdNumber		    5
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   data {
     id			    5
@@ -26406,14 +28114,12 @@ Stateflow {
     machine		    1
     name		    "loop_10ms/HYBRID MANAGEMENT/VSMGestioneIbrido"
     windowPosition	    [-1 -7 1281 680]
-    viewLimits		    [282.108 4948.775 -271.435 2161.898]
+    viewLimits		    [282.108 5402.108 -271.435 2608.565]
     zoomFactor		    4.444
     screen		    [1 1 3200 1200 1.25]
     treeNode		    [0 12 0 0]
     viewObj		    11
     visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    220
     decomposition	    SET_CHART
     chartFileNumber	    2
@@ -27812,8 +29518,8 @@ Stateflow {
     machine		    1
     name		    "loop_10ms/VSM"
     windowPosition	    [-7 -7 1550 878]
-    viewLimits		    [282.274 1818.274 242.119 972.119]
-    zoomFactor		    1.333
+    viewLimits		    [-304.312 1615.688 -14.535 1065.465]
+    zoomFactor		    1.667
     screen		    [1 1 3200 1200 1.25]
     treeNode		    [0 81 0 0]
     viewObj		    80
@@ -27884,10 +29590,10 @@ Stateflow {
     superState		    SUBCHART
     subviewer		    80
     subviewS {
-      panLimits		      [227.992 1763.992 166.931 896.931]
+      panLimits		      [-570.252 1989.748 -2.845 1437.155]
       x1		      20.333
       y1		      92.333
-      zoomFactor	      1.333
+      zoomFactor	      2.222
       pos		      [48.533 20.521 1565.067 1069.679]
     }
     contentPreviewEnabled   1
@@ -28290,8 +29996,8 @@ Stateflow {
   }
   transition {
     id			    110
-    labelString		    "[in(HV_CTRL.HV_ON) && brake_pedal && ~forward && ~reverse ]"
-    labelPosition	    [360.569 439.827 356.5 16]
+    labelString		    "[in(HV_CTRL.HV_ON) ]"
+    labelPosition	    [360.569 439.827 128.563 16]
     fontSize		    12
     src {
       id		      86
@@ -28428,31 +30134,6 @@ Stateflow {
   }
   transition {
     id			    116
-    labelString		    "[~StartBtn_In&&~chg_req_in]"
-    labelPosition	    [259.873 760.868 157.984 16]
-    fontSize		    12
-    src {
-      id		      90
-      intersection	      [2 1 0 0.6353 259.0933 842.2275 0 0]
-    }
-    dst {
-      id		      91
-      intersection	      [4 -1 -0 0.3647 276.5333 842.2275 0 0]
-    }
-    midPoint		    [263.8133 842.2275]
-    chart		    80
-    dataLimits		    [259.093 276.533 839.827 844.627]
-    subviewer		    84
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    84
-    linkNode		    [89 115 117]
-  }
-  transition {
-    id			    117
     labelString		    "[StartBtn_In&&~chg_req_in]"
     labelPosition	    [412.035 737.588 150.984 16]
     fontSize		    12
@@ -28475,6 +30156,31 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    51
+    linkNode		    [89 115 117]
+  }
+  transition {
+    id			    117
+    labelString		    "[~StartBtn_In&&~chg_req_in]"
+    labelPosition	    [259.873 760.868 157.984 16]
+    fontSize		    12
+    src {
+      id		      90
+      intersection	      [2 1 0 0.6353 259.0933 842.2275 0 0]
+    }
+    dst {
+      id		      91
+      intersection	      [4 -1 -0 0.3647 276.5333 842.2275 0 0]
+    }
+    midPoint		    [263.8133 842.2275]
+    chart		    80
+    dataLimits		    [259.093 276.533 839.827 844.627]
+    subviewer		    84
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    84
     linkNode		    [89 116 118]
   }
   transition {
@@ -29793,6 +31499,8 @@ Stateflow {
     type		    AND_STATE
     decomposition	    CLUSTER_STATE
     executionOrder	    1
+    eml {
+    }
     firstTransition	    185
   }
   state {
@@ -29806,6 +31514,8 @@ Stateflow {
     ssIdNumber		    63
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    177
@@ -29818,6 +31528,8 @@ Stateflow {
     ssIdNumber		    54
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    178
@@ -29921,6 +31633,8 @@ Stateflow {
     type		    AND_STATE
     decomposition	    CLUSTER_STATE
     executionOrder	    2
+    eml {
+    }
     firstTransition	    197
     firstJunction	    196
   }
@@ -29935,6 +31649,8 @@ Stateflow {
     ssIdNumber		    24
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    182
@@ -29948,6 +31664,8 @@ Stateflow {
     ssIdNumber		    22
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    183
@@ -29961,6 +31679,8 @@ Stateflow {
     ssIdNumber		    28
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
+    eml {
+    }
   }
   state {
     id			    184

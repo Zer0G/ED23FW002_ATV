@@ -61,7 +61,7 @@ COMPILER_TOOL_CHAIN =           default
 #  ADD_INCLUDES    - series of include directories for s-functions etc.
 
 MODEL                         = ATV
-MODULES                       = ATV_data.c rtGetInf.c rtGetNaN.c rt_nonfinite.c
+MODULES                       = rtGetInf.c rtGetNaN.c rt_nonfinite.c
 MAKEFILE                      = ATV.mk
 MATLAB_ROOT                   = C:\Program Files\MATLAB\R2018b
 MATLAB_BIN                    = C:\Program Files\MATLAB\R2018b\bin

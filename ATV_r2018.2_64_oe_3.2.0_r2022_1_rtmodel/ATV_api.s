@@ -1746,7 +1746,7 @@ psc_mem_runtime_checks_enabled:
 	.align		1
 	.globl		psc_app_major_ver_num
 psc_app_major_ver_num:
-	.short		0
+	.short		1
 	.section	.cal_sec,,r
 	.type		psc_app_minor_ver_num,@object
 	.size		psc_app_minor_ver_num,2
@@ -1760,7 +1760,7 @@ psc_app_minor_ver_num:
 	.align		1
 	.globl		psc_app_sub_minor_ver_num
 psc_app_sub_minor_ver_num:
-	.short		5
+	.short		0
 	.section	.text_vle
 	.0byte		.L2082
 	.section	.text_vle
@@ -1769,7 +1769,7 @@ psc_app_sub_minor_ver_num:
 	.align		1
 	.globl		psc_app_build_day
 psc_app_build_day:
-	.short		5
+	.short		18
 	.section	.text_vle
 	.type		psc_app_build_month,@object
 	.size		psc_app_build_month,2
@@ -1790,7 +1790,7 @@ psc_app_build_year:
 	.align		2
 	.globl		psc_app_name
 psc_app_name:
-	.byte		78,101,119,95,109,111,100,101,108,95,118,48,46,48,46,53
+	.byte		78,101,119,95,109,111,100,101,108,95,118,49,46,48,46,48
 	.byte		95,77,53,54,48,95,48,48,48
 	.byte		0
 	.section	.cal_sec,,r
@@ -1955,7 +1955,7 @@ pkn_task_1000ms_periodic_hdl:
 	.align		2
 	.globl		psc_app_ver
 psc_app_ver:
-	.byte		48,46,48,46,53
+	.byte		49,46,48,46,48
 	.byte		0
 	.section	.text_vle
 	.type		psc_app_build_sec,@object
@@ -1963,29 +1963,29 @@ psc_app_ver:
 	.align		1
 	.globl		psc_app_build_sec
 psc_app_build_sec:
-	.short		59
+	.short		1
 	.section	.text_vle
 	.type		psc_app_build_min,@object
 	.size		psc_app_build_min,2
 	.align		1
 	.globl		psc_app_build_min
 psc_app_build_min:
-	.short		9
+	.short		35
 	.section	.text_vle
 	.type		psc_app_build_hour,@object
 	.size		psc_app_build_hour,2
 	.align		1
 	.globl		psc_app_build_hour
 psc_app_build_hour:
-	.short		23
+	.short		19
 	.section	.cal_sec,,r
 	.type		psc_app_build_str,@object
 	.size		psc_app_build_str,27
 	.align		2
 	.globl		psc_app_build_str
 psc_app_build_str:
-	.byte		87,101,100,44,32,48,53,32,65,112,114,32,50,48,50,51
-	.byte		44,32,50,51,58,48,57,58,53,57
+	.byte		84,117,101,44,32,49,56,32,65,112,114,32,50,48,50,51
+	.byte		44,32,49,57,58,51,53,58,48,49
 	.byte		0
 	.section	.bss_stack,,d
 	.0byte		.L2150

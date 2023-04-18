@@ -199,7 +199,7 @@ Var=Ud signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
 Var=Motor_Temperature_Torque_Cutback unsigned 16,16 /f:0.00390625 /max:1 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
 Var=Drive_Trq_Voltage_Cutback_Factor unsigned 0,16 /f:3.0517578125E-005 /max:1 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
 
-[D_STATUS_GEN]
+[D_STATUS4_GEN]
 ID=227h
 DLC=8
 Var=Measured_inductance unsigned 48,16 /u:uH /f:0.059604645 /d:0
@@ -233,7 +233,7 @@ Var=Analog_Output_1 signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog 
 Var=Battery_Current signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
 Var=Capacitor_Voltage unsigned 0,16 /u:Volt /f:0.0625 /d:0	// Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table
 
-[D_STATUS_FRONT]
+[D_STATUS5_FRONT]
 ID=218h
 DLC=8
 Var=Uq signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual

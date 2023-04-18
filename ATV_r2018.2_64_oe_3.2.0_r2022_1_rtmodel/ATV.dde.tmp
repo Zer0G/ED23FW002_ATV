@@ -1,16 +1,20 @@
 Name	Cref	Value	Units	Description	Type	Accuracy	Min	Max	Enums	Scale	Offset	Lookup	Rate
+atv_4wd_din	atv_4wd_din		one	2WD/4WD Selector	boolean_T	1	0	1					10
 atv_app_code_day	atv_app_code_day		one	Day the application code was built.	uint16_T	1	0	0					10
 atv_app_code_major_ver	atv_app_code_major_ver		one	Major version of the application code.	uint16_T	1	0	0					10
 atv_app_code_minor_ver	atv_app_code_minor_ver		one	Minor version of the application code.	uint16_T	1	0	0					10
 atv_app_code_month	atv_app_code_month		one	Month the application code was built.	uint16_T	1	0	0					10
 atv_app_code_subminor_ver	atv_app_code_subminor_ver		one	Sub-minor version of the application code.	uint16_T	1	0	0					10
 atv_app_code_year	atv_app_code_year		one	Year the application code was built.	uint16_T	1	0	0					10
+atv_apu_req_in	atv_apu_req_in		one	APU Button (Boolean)	boolean_T	1	0	1					10
 atv_boot_code_day	atv_boot_code_day		one	Day the boot code was built.	uint16_T	1	0	0					10
 atv_boot_code_major_ver	atv_boot_code_major_ver		one	Major version of the boot code.	uint16_T	1	0	0					10
 atv_boot_code_minor_ver	atv_boot_code_minor_ver		one	Minor version of the boot code.	uint16_T	1	0	0					10
 atv_boot_code_month	atv_boot_code_month		one	Month the boot code was built.	uint16_T	1	0	0					10
 atv_boot_code_subminor_ver	atv_boot_code_subminor_ver		one	Sub-minor version of the boot code.	uint16_T	1	0	0					10
 atv_boot_code_year	atv_boot_code_year		one	Year the boot code was built.	uint16_T	1	0	0					10
+atv_brake_pedalX1000	atv_brake_pedalX1000		V	Brake Input 0-1000	uint16_T	1	0	0					0
+atv_brake_pedal_digital_in	atv_brake_pedal_digital_in		one	Brake Pedal In Digital	boolean_T	1	0	1					10
 atv_cpu_loading	atv_cpu_loading		%	CPU loading seen in last 50ms	uint8_T	1	0	0					1000
 atv_cpu_loading_max	atv_cpu_loading_max		%	Maximum CPU loading seen in any 50ms period	uint8_T	1	0	0					1000
 atv_dbg_FAN	atv_dbg_FAN		one	Replace this with a useful comment.	real_T	0.01	0	0					0
@@ -49,12 +53,23 @@ atv_v_dbg_heater_req	atv_v_dbg_heater_req		one	HV Relay Control (Debug Signal)	b
 atv_v_dbg_hv_req	atv_v_dbg_hv_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					0
 atv_wakelock_out	atv_wakelock_out		one	Wakelock Status	boolean_T	1	0	1					10
 atv_xa1_ain_throttle_raw	atv_xa1_ain_throttle_raw		V	Throttle Input V (Raw Voltage)	real_T	0.001	0	0					10
+atv_xa3_brake_pedal_raw_ain	atv_xa3_brake_pedal_raw_ain		V	Brake Pedal (Raw Voltage)	real_T	0.001	0	0					10
+atv_xc1_raw_ain	atv_xc1_raw_ain		V	Fwd Selector (Raw Voltage)	real_T	0.001	0	0					10
+atv_xc4_raw_ain	atv_xc4_raw_ain		V	Rwd Selector (Raw Voltage)	real_T	0.001	0	0					10
 atv_xd1_key_ain	atv_xd1_key_ain		V	Key Signal Voltage	int32_T	1	0	0					10
 atv_xd3_raw_ain	atv_xd3_raw_ain		V	Foot Pedal FS1 Switch (Raw Voltage)	real_T	0.001	0	0					10
+atv_xe2_raw_ain	atv_xe2_raw_ain		V	APU Button (Raw Voltage)	real_T	0.001	0	0					10
 atv_xe3_ain	atv_xe3_ain		V	(not defined)	int32_T	1	0	0					10
+atv_xe4_raw_ain	atv_xe4_raw_ain		V	2WD/4WD  Selector (Raw Voltage)	real_T	0.001	0	0					10
 atv_za3_StartBtn_din	atv_za3_StartBtn_din		one	Start Button Status (RAW)	boolean_T	1	0	1					10
+atvc_an_in_sel_his	atvc_an_in_sel_his	0.25	one	Analog Selectors Histeresis  [V]	real_T	0.0001	0	1					0
+atvc_an_in_sel_th	atvc_an_in_sel_th	2.5	one	Analog Selectors Threashold Pedal On Trheashold [V]	real_T	0.0001	1	4					0
+atvc_brakePedalHis	atvc_brakePedalHis	0	one	Brake Pedal Histeresis [0.1%]	uint16_T	1	0	25					0
+atvc_brakePedalOn	atvc_brakePedalOn	100	one	Brake Pedal On Trheashold [0.1%]	uint16_T	1	50	1000					0
 atvc_dcMinFan	atvc_dcMinFan	30	one	Minimum Fan Speed [%]	uint8_T	1	0	100					0
-atvc_lowerLimitPedalF	atvc_lowerLimitPedalF	0	one	Low Pedal Limit [%]	uint16_T	1	0	450					0
+atvc_lowerLimitPedalF	atvc_lowerLimitPedalF	0	one	Low Pedal Limit [0.1%]	uint16_T	1	0	450					0
+atvc_maxDischCurr	atvc_maxDischCurr	100	one	Max Outbound current [A]	uint16_T	1	30	900					0
+atvc_maxRegenCurr	atvc_maxRegenCurr	50	one	Max Inbound current [A]	uint16_T	1	30	300					0
 atvc_maxTempInv	atvc_maxTempInv	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0
 atvc_maxTempMotor	atvc_maxTempMotor	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0
 atvc_minTempInv	atvc_minTempInv	40	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0
@@ -66,8 +81,10 @@ atvc_mtawnb_rev	atvc_mtawnb_rev	100	one	Maximum Torque Reverese [%]	uint8_T	1	0	
 atvc_socLimitSave	atvc_socLimitSave	5	one	Min soc for pump control	uint8_T	1	2	90					0
 atvc_tempSwitchOffFan	atvc_tempSwitchOffFan	48	degree_Celsius	Fan Off Temp	uint8_T	1	10	100					0
 atvc_tempSwitchOnFan	atvc_tempSwitchOnFan	50	degree_Celsius	Fan On Temp	uint8_T	1	10	100					0
-atvc_throttleNeutralPoint	atvc_throttleNeutralPoint	100	one	Throttle neutral position [%]	uint16_T	1	0	450					0
-atvc_upperLimitPedalF	atvc_upperLimitPedalF	1000	one	High Pedal limit [%]	uint16_T	1	550	1000					0
+atvc_throttleNeutralPoint	atvc_throttleNeutralPoint	100	one	Throttle neutral position [0.1%]	uint16_T	1	0	450					0
+atvc_upperLimitPedalF	atvc_upperLimitPedalF	1000	one	High Pedal limit [0.1%]	uint16_T	1	550	1000					0
+atvc_velocityLimitFwd	atvc_velocityLimitFwd	10	one	Speed Limit Forward	uint8_T	1	3	120					0
+atvc_velocityLimitRwd	atvc_velocityLimitRwd	5	one	Speed Limit Reverse	uint8_T	1	3	100					0
 bms_pack_soc	bms_pack_soc		%	Battery SOC	uint8_T	1	0	0					Inf
 bms_pack_voltage	bms_pack_voltage		V	Battery Voltage	real_T	1	0	0					100
 bms_rolling_counter	bms_rolling_counter		one	BMS Rolling counter	uint8_T	1	0	0					Inf

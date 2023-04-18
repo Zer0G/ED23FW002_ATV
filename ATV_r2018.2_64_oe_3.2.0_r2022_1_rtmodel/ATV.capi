@@ -26,9 +26,9 @@ target-ecu
 /* Define name, version and description data about the application */
 application
 {
-  major-version    = 0;
+  major-version    = 1;
   minor-version    = 0;
-  subminor-version = 5;
+  subminor-version = 0;
 
   name             = "New_model_v%ver-major%.%ver-minor%.%ver-subminor%_%target%";
   description      = "(none)";

@@ -9,7 +9,7 @@
  *
  *  Notes:          Automatically generated as part of the build process.
  *                  Do not modify.
- *                  Created on: Wed Apr 05 23:09:59 2023 
+ *                  Created on: Tue Apr 18 19:35:01 2023 
  *
  *****************************************************************************
  */
@@ -186,9 +186,9 @@ enum
 
 /* These are the application version numbers.
  */
-const U16 psc_app_major_ver_num     = 0;
+const U16 psc_app_major_ver_num     = 1;
 const U16 psc_app_minor_ver_num     = 0;
-const U16 psc_app_sub_minor_ver_num = 5;
+const U16 psc_app_sub_minor_ver_num = 0;
 
 
 /* These are the copyright text, app. description text, app. name and version string to be
@@ -196,31 +196,31 @@ const U16 psc_app_sub_minor_ver_num = 5;
  */
 const U8 psc_app_copyright[]      = {"(none)"};
 const U8 psc_app_desc[]           = {"(none)"};
-const U8 psc_app_name[]           = {"New_model_v0.0.5_M560_000"};
-const U8 psc_app_ver[]            = {"0.0.5"};
+const U8 psc_app_name[]           = {"New_model_v1.0.0_M560_000"};
+const U8 psc_app_ver[]            = {"1.0.0"};
 
 
 #if !defined(__GCC__)
 #pragma section CONST ".text" ".text"
 #pragma section SCONST ".text" ".text"
-const U16 psc_app_build_sec = 59;
-const U16 psc_app_build_min = 9;
-const U16 psc_app_build_hour = 23;
-const U16 psc_app_build_day = 5;
+const U16 psc_app_build_sec = 1;
+const U16 psc_app_build_min = 35;
+const U16 psc_app_build_hour = 19;
+const U16 psc_app_build_day = 18;
 const U16 psc_app_build_month = 4;
 const U16 psc_app_build_year = 2023;
 #pragma section CONST
 #pragma section SCONST
 #else
-const U16 psc_app_build_sec  __attribute__ ((section(".text_data"))) = 59;
-const U16 psc_app_build_min  __attribute__ ((section(".text_data"))) = 9;
-const U16 psc_app_build_hour  __attribute__ ((section(".text_data"))) = 23;
-const U16 psc_app_build_day  __attribute__ ((section(".text_data"))) = 5;
+const U16 psc_app_build_sec  __attribute__ ((section(".text_data"))) = 1;
+const U16 psc_app_build_min  __attribute__ ((section(".text_data"))) = 35;
+const U16 psc_app_build_hour  __attribute__ ((section(".text_data"))) = 19;
+const U16 psc_app_build_day  __attribute__ ((section(".text_data"))) = 18;
 const U16 psc_app_build_month  __attribute__ ((section(".text_data"))) = 4;
 const U16 psc_app_build_year  __attribute__ ((section(".text_data"))) = 2023;
 #endif
 
-const U8 psc_app_build_str[]         = {"Wed, 05 Apr 2023, 23:09:59"};
+const U8 psc_app_build_str[]         = {"Tue, 18 Apr 2023, 19:35:01"};
 
 
 

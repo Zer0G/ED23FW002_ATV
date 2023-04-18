@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   4 \
+    NumChartData   15 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,17 +21,73 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_PumpBLogic"\
+      Name         "is_GestioneIbrido"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "PumpBLogic"\
+      Path         "GestioneIbrido"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "PumpStB"\
+      Name         "is_ProceduraAvviamento"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "GestioneIbrido.ProceduraAvviamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RegenerativeMode"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "GestioneIbrido.ProceduraAvviamento.RegenerativeMode"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_StarterMode"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "GestioneIbrido.ProceduraAvviamento.StarterMode"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_MonitoraggioStatoICE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MonitoraggioStatoICE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_MonitoraggioStatoICE"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "MonitoraggioStatoICE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "IceStatus"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "PumpStB"\
+      Path         "IceStatus"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ShutDownHybrid"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ShutDownHybrid"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "IceOn"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "IceOn"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "IceFault"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "IceFault"\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -39,6 +95,27 @@
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ReqGen_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "ReqGen"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ReqGen_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "ReqGen"\
       SrcLocation  ""\
     }\
   }

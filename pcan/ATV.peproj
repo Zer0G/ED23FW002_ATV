@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PCANExplorerProject Version="5.0" Name="ATV">
     <Connections AutoReset="0" IgnoreRTRLength="0" ProcessRTR="1">
-        <Connection Bus="2" Enabled="0" Protocol="0" ErrorFrames="1" SymbolsFileName="ATV.sym" BitRate="28" Connection="PCAN500@pcan_usb" Name="PCAN500"/>
+        <Connection Bus="2" Enabled="0" Protocol="0" ErrorFrames="1" SymbolsFileName="ATV.sym" Connection="PCAN500@pcan_usb" Name="PCAN500"/>
         <Connection Bus="3" Enabled="0" Protocol="0" SymbolsFileName="ATV.sym" BitRate="20" Connection="PCAN1M@pcan_usb" Name="PCAN1M"/>
         <Connection Bus="4" Enabled="0" Protocol="0" SymbolsFileName="ATV.sym" BitRate="284" Connection="PCAN250@pcan_usb" Name="PCAN250"/>
         <Connection Bus="5" Enabled="0" Protocol="0" BitRate="284" Connection="PCAN250@pcan_usb" Name="PCAN2501"/>

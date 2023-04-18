@@ -22,7 +22,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
   </properties>
   <snoop_main_window>
     <window_attributes window_state="maximized">
-      <rectangle top="78" left="0" width="891" height="578" />
+      <rectangle top="173" left="489" width="891" height="578" />
     </window_attributes>
     <ordered_windows>
       <window type="NS_Snoop.FrmWatch" title="Watch1" />
@@ -42,7 +42,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
   <snoop_dbc_config />
   <snoop_ecu name="ECU1">
     <calibration_area include_gaps="true" automatic="true">
-      <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="3696" />
+      <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="4216" />
     </calibration_area>
     <protocol>
       <plugin_properties settings_name="settings">
@@ -59,7 +59,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
     <settings auto_start_comms="true" reconnect_action="continue" />
     <hardware_channel>CAN1</hardware_channel>
     <file path="C:\Users\giovanni\OneDrive\Desktop\workspace\Firmware\ATV.elf" relative="ATV.elf" symbols="true" prompt_before_overwrite="true" enabled="true" load="false" download="false" flash="false" upload="false" save="false" percent_complete="0" operation_in_progress="false" last_warning="">
-      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-03-28T20:20:13.3379628+02:00" size_bytes_on_disk="1753932" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="2023-03-28T20:20:30.1807971+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-03-28T20:20:30.1807971+02:00">
+      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-04-18T19:05:57.6081978+02:00" size_bytes_on_disk="1791516" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="2023-04-18T19:06:21.4150700+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-04-18T19:06:21.4150700+02:00">
         <upload_area type="manually_defined" manual_regions_contiguous="true" const_regions_contiguous="false">
           <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
           <upload_region start_address=".cal_sec" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
@@ -70,7 +70,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
       </properties>
     </file>
     <file path="C:\Users\giovanni\OneDrive\Desktop\workspace\Firmware\ATV_tool_generic.a2l" relative="ATV_tool_generic.a2l" symbols="true" prompt_before_overwrite="true" enabled="true" load="false" download="false" flash="false" upload="false" save="false" percent_complete="0" operation_in_progress="false" last_warning="">
-      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-03-28T20:20:18.7896944+02:00" size_bytes_on_disk="138778" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="2023-03-28T20:20:31.9108901+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-03-28T20:20:31.9108901+02:00">
+      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-04-18T19:06:03.3934750+02:00" size_bytes_on_disk="151850" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="2023-04-18T19:06:23.1700348+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-04-18T19:06:23.1700348+02:00">
         <upload_area type="manually_defined" manual_regions_contiguous="true" const_regions_contiguous="false">
           <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
           <upload_region start_address=".cal_sec" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
@@ -81,7 +81,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
       </properties>
     </file>
     <file path="C:\Users\giovanni\OneDrive\Desktop\workspace\Firmware\ATV_image_small.hex" relative="ATV_image_small.hex" load="false" flash="false" upload="false" download="false" save="false" prompt_before_overwrite="true" enabled="false" symbols="false" percent_complete="0" operation_in_progress="false" last_warning="">
-      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-03-28T20:20:20.8362548+02:00" size_bytes_on_disk="429972" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="0001-01-01T00:00:00.0000000" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2022-04-19T19:54:59.7062022+02:00">
+      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-04-18T19:06:05.7038152+02:00" size_bytes_on_disk="448732" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="0001-01-01T00:00:00.0000000" changed_since_flashed="false" last_time_loaded="0001-01-01T00:00:00.0000000" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2022-04-19T19:54:59.7062022+02:00">
         <upload_area type="existing_file_areas" manual_regions_contiguous="false" const_regions_contiguous="false">
           <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
           <upload_region start_address=".cal_sec" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
@@ -92,7 +92,7 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
       </properties>
     </file>
     <file path="C:\Users\giovanni\OneDrive\Desktop\workspace\Firmware\ATV_image_small.s37" relative="ATV_image_small.s37" load="true" flash="true" upload="false" download="false" save="false" prompt_before_overwrite="true" enabled="true" symbols="false" percent_complete="0" operation_in_progress="false" last_warning="">
-      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-03-28T20:20:20.4313310+02:00" size_bytes_on_disk="452524" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="2023-03-28T20:20:39.5505948+02:00" changed_since_flashed="false" last_time_loaded="2023-03-28T20:20:34.3014009+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-03-28T20:20:39.5505948+02:00">
+      <properties load_memory_type="file_data" disk_properties_error="" exists_on_disk="true" time_disk_modified="2023-04-18T19:06:05.2101333+02:00" size_bytes_on_disk="472272" last_time_downloaded="0001-01-01T00:00:00.0000000" changed_since_downloaded="false" last_time_flashed="2023-04-18T19:06:30.3518808+02:00" changed_since_flashed="false" last_time_loaded="2023-04-18T19:06:25.4982794+02:00" changed_since_loaded="false" last_time_saved="0001-01-01T00:00:00.0000000" changed_since_saved="false" time_operation_started="2023-04-18T19:06:30.3518808+02:00">
         <upload_area type="existing_file_areas" manual_regions_contiguous="false" const_regions_contiguous="false">
           <upload_region start_address="Calibration" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
           <upload_region start_address=".cal_sec" byte_length="" errors="" address_numeric="16777216" length_numeric="3048" />
@@ -109,40 +109,61 @@ Note: the template layout is squashed up for 1024x768 projectors. Move windows a
   <snoop_asap3_config />
   <snoop_watch name="Watch1">
     <window_attributes window_state="normal">
-      <rectangle top="13" left="635" width="881" height="698" />
+      <rectangle top="20" left="296" width="1189" height="726" />
     </window_attributes>
-    <display scope_showing="true" scope_horizontal="false" autohide_buttons="true" scope_split_vertical="0.399768250289687" scope_split_horizontal="0.5" enums="decimal_and_label" pointers="label_or_hex" scope_timebase_sec="1" scope_acq_period_ms="10" scope_exclude_cals_from_daq="true" scope_exclude_unselected_signals_from_daq="true" scope_black_background="true" scope_show_grid="true" scope_show_points="false" scope_use_steps="false" scope_autoscale_mode="stacked_separated" />
+    <display scope_showing="true" scope_horizontal="false" autohide_buttons="true" scope_split_vertical="0.581554227156277" scope_split_horizontal="0.5" enums="decimal_and_label" pointers="label_or_hex" scope_timebase_sec="1" scope_acq_period_ms="10" scope_exclude_cals_from_daq="true" scope_exclude_unselected_signals_from_daq="true" scope_black_background="true" scope_show_grid="true" scope_show_points="false" scope_use_steps="false" scope_autoscale_mode="stacked_separated" />
     <can_signals dbc_to_timeout_mult="10" no_dbc_period_timeout_ms="3000" />
     <logging target_period_ms="100" filename_style="date_time_sortable" format="compact" can_format="with_variables" enums="decimal" pointers="label_or_hex" logfile_absolute="C:\Users\giovanni\OneDrive\Desktop\workspace\Firmware\" logfile_relative="" paused_loaded_from_file="false" />
     <columns>
       <column name="ColAddress" index="0" visible="true" visible_scope_on="false" width="68" width_scope_on="30" font_name="Courier New" font_size="8.25" />
       <column name="ColHex" index="1" visible="true" visible_scope_on="false" width="80" width_scope_on="33" font_name="Verdana" font_size="8.25" />
-      <column name="ColValue" index="3" visible="true" visible_scope_on="true" width="98" width_scope_on="86" font_name="Verdana" font_size="8.25" />
-      <column name="ColName" index="2" visible="true" visible_scope_on="true" width="266" width_scope_on="190" font_name="Verdana" font_size="8.25" />
+      <column name="ColValue" index="3" visible="true" visible_scope_on="true" width="98" width_scope_on="137" font_name="Verdana" font_size="8.25" />
+      <column name="ColName" index="2" visible="true" visible_scope_on="true" width="266" width_scope_on="311" font_name="Verdana" font_size="8.25" />
       <column name="ColType" index="4" visible="true" visible_scope_on="false" width="85" width_scope_on="53" font_name="Arial Narrow" font_size="8.25" />
       <column name="ColUnits" index="5" visible="true" visible_scope_on="false" width="105" width_scope_on="30" font_name="Arial Narrow" font_size="8.25" />
-      <column name="ColDescription" index="6" visible="true" visible_scope_on="false" width="130" width_scope_on="87" font_name="Arial Narrow" font_size="8.25" />
-      <column name="ColScope" index="7" visible="false" visible_scope_on="true" width="30" width_scope_on="49" font_name="Arial" font_size="8.25" />
+      <column name="ColDescription" index="6" visible="true" visible_scope_on="true" width="130" width_scope_on="134" font_name="Arial Narrow" font_size="8.25" />
+      <column name="ColScope" index="7" visible="false" visible_scope_on="true" width="30" width_scope_on="79" font_name="Arial" font_size="8.25" />
     </columns>
     <rows>
       <row displayed_name="atv_xe3_ain" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-65536" />
       <row displayed_name="atv_wakelock_out" nesting_depth="0" ecu="ECU1" scope_on="false" />
       <row displayed_name="atv_state_out" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="bms_pack_soc" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="bms_pack_voltage" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="bms_rolling_counter" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="atvc_maxTempInv" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="atvc_minTempInv" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="atv_fan_output" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_sub_state_out" nesting_depth="0" ecu="ECU1" scope_on="false" />
       <row displayed_name="atvc_tempSwitchOffFan" nesting_depth="0" ecu="ECU1" scope_on="false" />
       <row displayed_name="atvc_tempSwitchOnFan" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="atv_fan_setpoint" nesting_depth="0" ecu="ECU1" scope_on="false" />
-      <row displayed_name="atv_fan_status" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-10185235" />
+      <row displayed_name="atv_xd1_key_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
       <row displayed_name="atv_key_signal" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-32944" />
       <row displayed_name="atv_xa1_ain_throttle_raw" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-16711936" />
-      <row displayed_name="atv_xd1_key_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_brake_pedalX1000" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_xa3_brake_pedal_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_throttleX1000" nesting_depth="0" ecu="ECU1" scope_on="false" />
       <row displayed_name="atv_fs1_in" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-7722014" />
       <row displayed_name="atv_xd3_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="true" scope_autoscaled="true" scope_colour_set="true" scope_colour_user="false" scope_colour="-10185235" />
+      <row displayed_name="atv_en_dcdc_out" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_minTempInv" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_minTempMotor" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_socLimitSave" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_throttleNeutralPoint" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_velocityLimitFwd" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_velocityLimitRwd" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_brake_pedal_digital_in" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_xc1_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_fwd_mode_in" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_xc4_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_rwd_mode_in" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_xe2_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_apu_req_in" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_za3_StartBtn_din" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_an_in_sel_his" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_an_in_sel_th" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_brakePedalHis" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_brakePedalOn" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_maxTempInv" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_maxTempMotor" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_4wd_din" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atv_xe4_raw_ain" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_maxDischCurr" nesting_depth="0" ecu="ECU1" scope_on="false" />
+      <row displayed_name="atvc_maxRegenCurr" nesting_depth="0" ecu="ECU1" scope_on="false" />
     </rows>
   </snoop_watch>
 </snoop_workspace>

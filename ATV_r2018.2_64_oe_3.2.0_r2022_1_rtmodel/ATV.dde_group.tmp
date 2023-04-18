@@ -1,74 +1,91 @@
 Name	Cref	Value	Units	Description	Type	Accuracy	Min	Max	Enums	Scale	Offset	Lookup	Rate	Group
-atv_xd1_key_ain	atv_xd1_key_ain		V	Key Signal Voltage	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atvc_minTempInv	atvc_minTempInv	40	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/Others
-atv_key_signal	atv_key_signal		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_platform_code_minor_ver	atv_platform_code_minor_ver		one	Minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atvc_tempSwitchOnFan	atvc_tempSwitchOnFan	50	degree_Celsius	Fan On Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/Cooling System1/GestioneImpiantoRaffreddamento,/ByType/Scalars
-atvc_maxTempMotor	atvc_maxTempMotor	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/Others
-atv_task_duration_1s	atv_task_duration_1s		microsecond	Duration of 1s task (last measured valued)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atv_en_dcdc_out	atv_en_dcdc_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_key_signal_in	atv_key_signal_in		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
-atv_sub_state_out	atv_sub_state_out		one	VSM SubState	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_mtawnb_rev	atvc_mtawnb_rev	100	one	Maximum Torque Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE,/ByType/Scalars
-atv_param	atv_param		kPa	Replace this with a useful comment.	real_T	0.01	0.0	0.0					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_tempSwitchOffFan	atvc_tempSwitchOffFan	48	degree_Celsius	Fan Off Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByType/Scalars
 t_sample	t_sample		sec	Sample time definition for fast VSM Cycle	real_T	0.01	0	0					0	/ByDataDictionaryPrefix/t_s,/Others
-atv_app_code_year	atv_app_code_year		one	Year the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atv_platform_code_day	atv_platform_code_day		one	Day the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atv_v_dbg_chg_req	atv_v_dbg_chg_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL,/ByType/Signals
-atv_fan_setpoint	atv_fan_setpoint		%	Calculated Fan Duty Cycle	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_mtawnb	atvc_mtawnb	100	one	Maximum Torque When Braking [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
-atvc_mtadd	atvc_mtadd	100	one	Maximum Torque [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
-atvc_dcMinFan	atvc_dcMinFan	30	one	Minimum Fan Speed [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/Cooling System1/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByType/Scalars
-atv_fan_output	atv_fan_output		one	Fan Output Status (Indicates Status of Fan output)	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atv_wakelock_out	atv_wakelock_out		one	Wakelock Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/VSM,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_app_code_major_ver	atv_app_code_major_ver		one	Major version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-bms_pack_voltage	bms_pack_voltage		V	Battery Voltage	real_T	1	0	0					100	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atvc_brakePedalOn	atvc_brakePedalOn	100	one	Brake Pedal On Trheashold [0.1%]	uint16_T	1	50	1000					0	/ByDataDictionaryPrefix/atv,/Others
+atv_brake_pedal_digital_in	atv_brake_pedal_digital_in		one	Brake Pedal In Digital	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_platform_code_month	atv_platform_code_month		one	Month the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atv_app_code_month	atv_app_code_month		one	Month the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atv_task_duration_1s_max	atv_task_duration_1s_max		microsecond	Duration of 1s task (maximum since power up)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atv_boot_code_month	atv_boot_code_month		one	Month the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atvc_brakePedalHis	atvc_brakePedalHis	0	one	Brake Pedal Histeresis [0.1%]	uint16_T	1	0	25					0	/ByDataDictionaryPrefix/atv,/Others
 atv_prg_code_subminor_ver	atv_prg_code_subminor_ver		one	Sub-minor version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
-atv_cpu_loading_max	atv_cpu_loading_max		%	Maximum CPU loading seen in any 50ms period	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atv_app_code_day	atv_app_code_day		one	Day the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
 atv_throttleX1000	atv_throttleX1000		V	Throttle Input 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_state_out	atv_state_out		one	VSM State	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-bms_pack_soc	bms_pack_soc		%	Battery SOC	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
-atv_prg_code_major_ver	atv_prg_code_major_ver		one	Major version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
 atv_v_dbg_heater_req	atv_v_dbg_heater_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL,/ByType/Signals
-atvc_lowerLimitPedalF	atvc_lowerLimitPedalF	0	one	Low Pedal Limit [%]	uint16_T	1	0	450					0	/ByDataDictionaryPrefix/atv,/Others
-atv_app_code_minor_ver	atv_app_code_minor_ver		one	Minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atv_xe3_ain	atv_xe3_ain		V	(not defined)	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_app_code_subminor_ver	atv_app_code_subminor_ver		one	Sub-minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atvc_upperLimitPedalF	atvc_upperLimitPedalF	1000	one	High Pedal limit [%]	uint16_T	1	550	1000					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_tempSwitchOffFan	atvc_tempSwitchOffFan	48	degree_Celsius	Fan Off Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/Others
-atv_xa1_ain_throttle_raw	atv_xa1_ain_throttle_raw		V	Throttle Input V (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_lowerLimitPedalF	atvc_lowerLimitPedalF	0	one	Low Pedal Limit [0.1%]	uint16_T	1	0	450					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_maxTempInv	atvc_maxTempInv	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM,/ByType/Scalars
+atv_xe4_raw_ain	atv_xe4_raw_ain		V	2WD/4WD  Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_dbg_pumpA_out	atv_dbg_pumpA_out		one	Pump A (Debug Signal)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
 atv_prg_code_year	atv_prg_code_year		one	Year the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
-atv_xd3_raw_ain	atv_xd3_raw_ain		V	Foot Pedal FS1 Switch (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atvc_throttleNeutralPoint	atvc_throttleNeutralPoint	100	one	Throttle neutral position [%]	uint16_T	1	0	450					0	/ByDataDictionaryPrefix/atv,/Others
-atv_cpu_loading	atv_cpu_loading		%	CPU loading seen in last 50ms	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atv_prg_code_minor_ver	atv_prg_code_minor_ver		one	Minor version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
-atv_boot_code_day	atv_boot_code_day		one	Day the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atv_boot_code_minor_ver	atv_boot_code_minor_ver		one	Minor version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atv_v_dbg_hv_req	atv_v_dbg_hv_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
 atv_dbg_pumpB_out	atv_dbg_pumpB_out		one	Pump A (Debug Signal)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Signals
-bms_rolling_counter	bms_rolling_counter		one	BMS Rolling counter	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
-atv_runLed_out	atv_runLed_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_dbg_FAN_in	atv_dbg_FAN_in		one	VSM State	real_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atv_fs1_in	atv_fs1_in		one	Foot Pedal FS1 Switch Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_za3_StartBtn_din	atv_za3_StartBtn_din		one	Start Button Status (RAW)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_prg_code_month	atv_prg_code_month		one	Month the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
 atv_boot_code_subminor_ver	atv_boot_code_subminor_ver		one	Sub-minor version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atvc_mtadd_rev	atvc_mtadd_rev	100	one	Maximum Torque When Braking Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE,/ByType/Scalars
-atvc_socLimitSave	atvc_socLimitSave	5	one	Min soc for pump control	uint8_T	1	2	90					0	/ByDataDictionaryPrefix/atv,/Others
-atv_prg_code_day	atv_prg_code_day		one	Day the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
-atv_platform_code_subminor_ver	atv_platform_code_subminor_ver		one	Sub-minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvc_mtawnb	atvc_mtawnb	100	one	Maximum Torque When Braking [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/TORQUE SPLITTER,/ByType/Scalars
 atv_platform_code_major_ver	atv_platform_code_major_ver		one	Major version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atvc_minTempMotor	atvc_minTempMotor	80	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/Others
-atv_boot_code_year	atv_boot_code_year		one	Year the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atvc_an_in_sel_his	atvc_an_in_sel_his	0.25	one	Analog Selectors Histeresis  [V]	real_T	0.0001	0	1					0	/ByDataDictionaryPrefix/atv,/Others
 atv_boot_code_major_ver	atv_boot_code_major_ver		one	Major version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atv_stack_used	atv_stack_used		byte	Amount of used stack	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atvc_maxTempInv	atvc_maxTempInv	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_maxDischCurr	atvc_maxDischCurr	100	one	Max Outbound current [A]	uint16_T	1	30	900					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
 atv_fan_status	atv_fan_status		one	Fan Status (Indicates Fan running)	uint8_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
 atv_dbg_FAN	atv_dbg_FAN		one	Replace this with a useful comment.	real_T	0.01	0	0					0	/ByDataDictionaryPrefix/atv,/Others
+atv_key_signal	atv_key_signal		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_app_code_subminor_ver	atv_app_code_subminor_ver		one	Sub-minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atvc_maxTempMotor	atvc_maxTempMotor	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM,/ByType/Scalars
+atv_task_duration_1s	atv_task_duration_1s		microsecond	Duration of 1s task (last measured valued)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
+atv_apu_req_in	atv_apu_req_in		one	APU Button (Boolean)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_sub_state_out	atv_sub_state_out		one	VSM SubState	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_tempSwitchOnFan	atvc_tempSwitchOnFan	50	degree_Celsius	Fan On Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
+atv_app_code_year	atv_app_code_year		one	Year the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atv_4wd_din	atv_4wd_din		one	2WD/4WD Selector	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+bms_pack_voltage	bms_pack_voltage		V	Battery Voltage	real_T	1	0	0					100	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atv_wakelock_out	atv_wakelock_out		one	Wakelock Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/VSM,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_state_out	atv_state_out		one	VSM State	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_prg_code_major_ver	atv_prg_code_major_ver		one	Major version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_app_code_minor_ver	atv_app_code_minor_ver		one	Minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atvc_maxRegenCurr	atvc_maxRegenCurr	50	one	Max Inbound current [A]	uint16_T	1	30	300					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_xc1_raw_ain	atv_xc1_raw_ain		V	Fwd Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_cpu_loading	atv_cpu_loading		%	CPU loading seen in last 50ms	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
+atv_boot_code_day	atv_boot_code_day		one	Day the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atv_xd1_key_ain	atv_xd1_key_ain		V	Key Signal Voltage	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_dbg_FAN_in	atv_dbg_FAN_in		one	VSM State	real_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
+atv_fs1_in	atv_fs1_in		one	Foot Pedal FS1 Switch Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_prg_code_day	atv_prg_code_day		one	Day the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_boot_code_year	atv_boot_code_year		one	Year the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atvc_minTempInv	atvc_minTempInv	40	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM,/ByType/Scalars
+atv_platform_code_minor_ver	atv_platform_code_minor_ver		one	Minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvc_an_in_sel_th	atvc_an_in_sel_th	2.5	one	Analog Selectors Threashold Pedal On Trheashold [V]	real_T	0.0001	1	4					0	/ByDataDictionaryPrefix/atv,/Others
+atv_stack_used	atv_stack_used		byte	Amount of used stack	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
+atv_key_signal_in	atv_key_signal_in		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_mtawnb_rev	atvc_mtawnb_rev	100	one	Maximum Torque Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
+atv_param	atv_param		kPa	Replace this with a useful comment.	real_T	0.01	0.0	0.0					0	/ByDataDictionaryPrefix/atv,/Others
+atv_fan_setpoint	atv_fan_setpoint		%	Calculated Fan Duty Cycle	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_mtadd	atvc_mtadd	100	one	Maximum Torque [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
+atv_brake_pedalX1000	atv_brake_pedalX1000		V	Brake Input 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_task_duration_1s_max	atv_task_duration_1s_max		microsecond	Duration of 1s task (maximum since power up)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
+atv_cpu_loading_max	atv_cpu_loading_max		%	Maximum CPU loading seen in any 50ms period	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
+atv_app_code_day	atv_app_code_day		one	Day the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atv_xe2_raw_ain	atv_xe2_raw_ain		V	APU Button (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_throttleNeutralPoint	atvc_throttleNeutralPoint	100	one	Throttle neutral position [0.1%]	uint16_T	1	0	450					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atv_prg_code_minor_ver	atv_prg_code_minor_ver		one	Minor version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_boot_code_minor_ver	atv_boot_code_minor_ver		one	Minor version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atv_v_dbg_hv_req	atv_v_dbg_hv_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+bms_rolling_counter	bms_rolling_counter		one	BMS Rolling counter	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atv_runLed_out	atv_runLed_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_za3_StartBtn_din	atv_za3_StartBtn_din		one	Start Button Status (RAW)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_socLimitSave	atvc_socLimitSave	5	one	Min soc for pump control	uint8_T	1	2	90					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM,/ByType/Scalars
+atvc_velocityLimitRwd	atvc_velocityLimitRwd	5	one	Speed Limit Reverse	uint8_T	1	3	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atv_platform_code_subminor_ver	atv_platform_code_subminor_ver		one	Sub-minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvc_mtadd_rev	atvc_mtadd_rev	100	one	Maximum Torque When Braking Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
 atv_platform_code_year	atv_platform_code_year		one	Year the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvc_upperLimitPedalF	atvc_upperLimitPedalF	1000	one	High Pedal limit [0.1%]	uint16_T	1	550	1000					0	/ByDataDictionaryPrefix/atv,/Others
+atv_en_dcdc_out	atv_en_dcdc_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_platform_code_day	atv_platform_code_day		one	Day the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atv_v_dbg_chg_req	atv_v_dbg_chg_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL,/ByType/Signals
+atv_fan_output	atv_fan_output		one	Fan Output Status (Indicates Status of Fan output)	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
+atv_app_code_major_ver	atv_app_code_major_ver		one	Major version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atv_app_code_month	atv_app_code_month		one	Month the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atv_boot_code_month	atv_boot_code_month		one	Month the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+bms_pack_soc	bms_pack_soc		%	Battery SOC	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atvc_minTempMotor	atvc_minTempMotor	80	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM,/ByType/Scalars
+atv_xe3_ain	atv_xe3_ain		V	(not defined)	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xc4_raw_ain	atv_xc4_raw_ain		V	Rwd Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xa1_ain_throttle_raw	atv_xa1_ain_throttle_raw		V	Throttle Input V (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xd3_raw_ain	atv_xd3_raw_ain		V	Foot Pedal FS1 Switch (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xa3_brake_pedal_raw_ain	atv_xa3_brake_pedal_raw_ain		V	Brake Pedal (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_dcMinFan	atvc_dcMinFan	30	one	Minimum Fan Speed [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByType/Scalars
+atv_prg_code_month	atv_prg_code_month		one	Month the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atvc_velocityLimitFwd	atvc_velocityLimitFwd	10	one	Speed Limit Forward	uint8_T	1	3	120					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars

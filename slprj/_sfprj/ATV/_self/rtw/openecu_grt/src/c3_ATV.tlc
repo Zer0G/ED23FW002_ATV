@@ -28,6 +28,13 @@
       SrcLocation  ""\
     }\
     ChartData {\
+      Name         "is_DRIVE_ENABLE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.DRIVE_ENABLE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
       Name         "is_HV_CTRL"\
       Description  "StateActiveChild"\
       SFName       ""\
@@ -46,13 +53,6 @@
       Description  "StateActiveChild"\
       SFName       ""\
       Path         "KEY_ON.HEATER_CTRL"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_DRIVE_ENABLE"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "KEY_ON.DRIVE_ENABLE"\
       SrcLocation  ""\
     }\
     ChartData {\

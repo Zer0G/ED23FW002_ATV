@@ -1,15 +1,19 @@
+/ByDataDictionaryPrefix/atv:atv_4wd_din
 /ByDataDictionaryPrefix/atv:atv_app_code_day
 /ByDataDictionaryPrefix/atv:atv_app_code_major_ver
 /ByDataDictionaryPrefix/atv:atv_app_code_minor_ver
 /ByDataDictionaryPrefix/atv:atv_app_code_month
 /ByDataDictionaryPrefix/atv:atv_app_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_app_code_year
+/ByDataDictionaryPrefix/atv:atv_apu_req_in
 /ByDataDictionaryPrefix/atv:atv_boot_code_day
 /ByDataDictionaryPrefix/atv:atv_boot_code_major_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_minor_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_month
 /ByDataDictionaryPrefix/atv:atv_boot_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_year
+/ByDataDictionaryPrefix/atv:atv_brake_pedalX1000
+/ByDataDictionaryPrefix/atv:atv_brake_pedal_digital_in
 /ByDataDictionaryPrefix/atv:atv_cpu_loading
 /ByDataDictionaryPrefix/atv:atv_cpu_loading_max
 /ByDataDictionaryPrefix/atv:atv_dbg_FAN
@@ -48,12 +52,23 @@
 /ByDataDictionaryPrefix/atv:atv_v_dbg_hv_req
 /ByDataDictionaryPrefix/atv:atv_wakelock_out
 /ByDataDictionaryPrefix/atv:atv_xa1_ain_throttle_raw
+/ByDataDictionaryPrefix/atv:atv_xa3_brake_pedal_raw_ain
+/ByDataDictionaryPrefix/atv:atv_xc1_raw_ain
+/ByDataDictionaryPrefix/atv:atv_xc4_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xd1_key_ain
 /ByDataDictionaryPrefix/atv:atv_xd3_raw_ain
+/ByDataDictionaryPrefix/atv:atv_xe2_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xe3_ain
+/ByDataDictionaryPrefix/atv:atv_xe4_raw_ain
 /ByDataDictionaryPrefix/atv:atv_za3_StartBtn_din
+/ByDataDictionaryPrefix/atv:atvc_an_in_sel_his
+/ByDataDictionaryPrefix/atv:atvc_an_in_sel_th
+/ByDataDictionaryPrefix/atv:atvc_brakePedalHis
+/ByDataDictionaryPrefix/atv:atvc_brakePedalOn
 /ByDataDictionaryPrefix/atv:atvc_dcMinFan
 /ByDataDictionaryPrefix/atv:atvc_lowerLimitPedalF
+/ByDataDictionaryPrefix/atv:atvc_maxDischCurr
+/ByDataDictionaryPrefix/atv:atvc_maxRegenCurr
 /ByDataDictionaryPrefix/atv:atvc_maxTempInv
 /ByDataDictionaryPrefix/atv:atvc_maxTempMotor
 /ByDataDictionaryPrefix/atv:atvc_minTempInv
@@ -67,23 +82,37 @@
 /ByDataDictionaryPrefix/atv:atvc_tempSwitchOnFan
 /ByDataDictionaryPrefix/atv:atvc_throttleNeutralPoint
 /ByDataDictionaryPrefix/atv:atvc_upperLimitPedalF
+/ByDataDictionaryPrefix/atv:atvc_velocityLimitFwd
+/ByDataDictionaryPrefix/atv:atvc_velocityLimitRwd
 /ByDataDictionaryPrefix/bms:bms_pack_soc
 /ByDataDictionaryPrefix/bms:bms_pack_voltage
 /ByDataDictionaryPrefix/bms:bms_rolling_counter
 /ByDataDictionaryPrefix/t_s:t_sample
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_maxDischCurr
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_maxRegenCurr
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_pack_soc
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_pack_voltage
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_rolling_counter
 /ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL:atv_v_dbg_chg_req
 /ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL:atv_v_dbg_heater_req
 /ByModelHeirarchy/ATV/Digital_Output_Processing:atv_dbg_pumpB_out
+/ByModelHeirarchy/ATV/Input_Processing:atv_4wd_din
+/ByModelHeirarchy/ATV/Input_Processing:atv_apu_req_in
+/ByModelHeirarchy/ATV/Input_Processing:atv_brake_pedalX1000
+/ByModelHeirarchy/ATV/Input_Processing:atv_brake_pedal_digital_in
 /ByModelHeirarchy/ATV/Input_Processing:atv_fs1_in
 /ByModelHeirarchy/ATV/Input_Processing:atv_throttleX1000
 /ByModelHeirarchy/ATV/Input_Processing:atv_xa1_ain_throttle_raw
+/ByModelHeirarchy/ATV/Input_Processing:atv_xa3_brake_pedal_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xc1_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xc4_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xd1_key_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xd3_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xe2_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xe3_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xe4_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_za3_StartBtn_din
+/ByModelHeirarchy/ATV/Input_Processing:atvc_throttleNeutralPoint
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_cpu_loading
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_cpu_loading_max
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_stack_used
@@ -113,12 +142,17 @@
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_month
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_subminor_ver
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_year
-/ByModelHeirarchy/ATV/loop_10ms/Cooling System1/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_dcMinFan
-/ByModelHeirarchy/ATV/loop_10ms/Cooling System1/GestioneImpiantoRaffreddamento:atvc_tempSwitchOnFan
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE:atvc_mtadd_rev
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE:atvc_mtawnb_rev
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE:atvc_mtadd_rev
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE:atvc_mtawnb_rev
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_dcMinFan
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_tempSwitchOffFan
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_tempSwitchOnFan
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_tempSwitchOnFan
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM:atvc_maxTempInv
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM:atvc_maxTempMotor
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM:atvc_minTempInv
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM:atvc_minTempMotor
+/ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM:atvc_socLimitSave
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_throttleNeutralPoint
+/ByModelHeirarchy/ATV/loop_10ms/TORQUE SPLITTER:atvc_mtawnb
 /ByModelHeirarchy/ATV/loop_10ms/VSM:atv_wakelock_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_en_dcdc_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_key_signal
@@ -126,26 +160,38 @@
 /ByModelHeirarchy/ATV/loop_10ms:atv_state_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_sub_state_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_wakelock_out
-/ByModelHeirarchy/ATV/loop_10ms:atvc_mtadd
-/ByModelHeirarchy/ATV/loop_10ms:atvc_mtawnb
+/ByModelHeirarchy/ATV/loop_10ms:atvc_velocityLimitFwd
+/ByModelHeirarchy/ATV/loop_10ms:atvc_velocityLimitRwd
 /ByType/Scalars:atvc_dcMinFan
-/ByType/Scalars:atvc_mtadd
-/ByType/Scalars:atvc_mtadd_rev
+/ByType/Scalars:atvc_maxDischCurr
+/ByType/Scalars:atvc_maxRegenCurr
+/ByType/Scalars:atvc_maxTempInv
+/ByType/Scalars:atvc_maxTempMotor
+/ByType/Scalars:atvc_minTempInv
+/ByType/Scalars:atvc_minTempMotor
 /ByType/Scalars:atvc_mtawnb
-/ByType/Scalars:atvc_mtawnb_rev
+/ByType/Scalars:atvc_socLimitSave
+/ByType/Scalars:atvc_tempSwitchOffFan
 /ByType/Scalars:atvc_tempSwitchOnFan
+/ByType/Scalars:atvc_throttleNeutralPoint
+/ByType/Scalars:atvc_velocityLimitFwd
+/ByType/Scalars:atvc_velocityLimitRwd
+/ByType/Signals:atv_4wd_din
 /ByType/Signals:atv_app_code_day
 /ByType/Signals:atv_app_code_major_ver
 /ByType/Signals:atv_app_code_minor_ver
 /ByType/Signals:atv_app_code_month
 /ByType/Signals:atv_app_code_subminor_ver
 /ByType/Signals:atv_app_code_year
+/ByType/Signals:atv_apu_req_in
 /ByType/Signals:atv_boot_code_day
 /ByType/Signals:atv_boot_code_major_ver
 /ByType/Signals:atv_boot_code_minor_ver
 /ByType/Signals:atv_boot_code_month
 /ByType/Signals:atv_boot_code_subminor_ver
 /ByType/Signals:atv_boot_code_year
+/ByType/Signals:atv_brake_pedalX1000
+/ByType/Signals:atv_brake_pedal_digital_in
 /ByType/Signals:atv_cpu_loading
 /ByType/Signals:atv_cpu_loading_max
 /ByType/Signals:atv_dbg_pumpB_out
@@ -175,9 +221,14 @@
 /ByType/Signals:atv_v_dbg_heater_req
 /ByType/Signals:atv_wakelock_out
 /ByType/Signals:atv_xa1_ain_throttle_raw
+/ByType/Signals:atv_xa3_brake_pedal_raw_ain
+/ByType/Signals:atv_xc1_raw_ain
+/ByType/Signals:atv_xc4_raw_ain
 /ByType/Signals:atv_xd1_key_ain
 /ByType/Signals:atv_xd3_raw_ain
+/ByType/Signals:atv_xe2_raw_ain
 /ByType/Signals:atv_xe3_ain
+/ByType/Signals:atv_xe4_raw_ain
 /ByType/Signals:atv_za3_StartBtn_din
 /ByType/Signals:bms_pack_soc
 /ByType/Signals:bms_pack_voltage
@@ -191,13 +242,13 @@
 /Others:atv_key_signal_in
 /Others:atv_param
 /Others:atv_v_dbg_hv_req
+/Others:atvc_an_in_sel_his
+/Others:atvc_an_in_sel_th
+/Others:atvc_brakePedalHis
+/Others:atvc_brakePedalOn
 /Others:atvc_lowerLimitPedalF
-/Others:atvc_maxTempInv
-/Others:atvc_maxTempMotor
-/Others:atvc_minTempInv
-/Others:atvc_minTempMotor
-/Others:atvc_socLimitSave
-/Others:atvc_tempSwitchOffFan
-/Others:atvc_throttleNeutralPoint
+/Others:atvc_mtadd
+/Others:atvc_mtadd_rev
+/Others:atvc_mtawnb_rev
 /Others:atvc_upperLimitPedalF
 /Others:t_sample
