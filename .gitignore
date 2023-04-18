@@ -1,6 +1,12 @@
 # Prerequisites
 *.d
 
+ATV_r2018.2_64_oe_3.2.0_r2022_1_ert/
+*.err
+*.old
+.OLD
+*.bak
+
 # Object files
 *.o
 *.ko
