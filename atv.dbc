@@ -13,12 +13,16 @@ SG_ b_HVpCtrl : 8|1@1+ (1,0) [0|1] "" Vector__XXX
 SG_ b_ChgCtrl : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 SG_ b_HeaterCtrl : 24|1@1+ (1,0) [0|1] "" Vector__XXX
 SG_ b_HeaterSsrCtrl : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ b_EnableDCDC : 40|1@1+ (1,0) [0|1] "" Vector__XXX
 
 
 BO_ 256 VC_STATUS: 8 Vector__XXX
 SG_ v_vsmStatus : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 SG_ v_vsmSubStatus : 8|8@1+ (1,0) [0|255] "" Vector__XXX
 SG_ v_CPUload : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ WakeLock : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ v_EnDCDC : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ v_RunActive : 26|1@1+ (1,0) [0|1] "" Vector__XXX
 
 
 BO_ 320 BMS_PACK_STS: 8 Vector__XXX
@@ -360,9 +364,13 @@ BA_ "GenSigStartValue" SG_ 335 b_HVpCtrl 0;
 BA_ "GenSigStartValue" SG_ 335 b_ChgCtrl 0;
 BA_ "GenSigStartValue" SG_ 335 b_HeaterCtrl 0;
 BA_ "GenSigStartValue" SG_ 335 b_HeaterSsrCtrl 0;
+BA_ "GenSigStartValue" SG_ 335 b_EnableDCDC 0;
 BA_ "GenSigStartValue" SG_ 256 v_vsmStatus 0;
 BA_ "GenSigStartValue" SG_ 256 v_vsmSubStatus 0;
 BA_ "GenSigStartValue" SG_ 256 v_CPUload 0;
+BA_ "GenSigStartValue" SG_ 256 WakeLock 0;
+BA_ "GenSigStartValue" SG_ 256 v_EnDCDC 0;
+BA_ "GenSigStartValue" SG_ 256 v_RunActive 0;
 BA_ "GenSigStartValue" SG_ 320 b_counter 0;
 BA_ "GenSigStartValue" SG_ 320 b_SOC 0;
 BA_ "GenSigStartValue" SG_ 320 b_Pack_V 0;

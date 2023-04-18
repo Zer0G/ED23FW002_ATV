@@ -15,6 +15,7 @@ Var=b_HVpCtrl bit 8,1
 Var=b_ChgCtrl bit 0,1
 Var=b_HeaterCtrl bit 24,1
 Var=b_HeaterSsrCtrl bit 32,1
+Var=b_EnableDCDC bit 40,1
 
 [VC_STATUS]
 ID=100h
@@ -23,6 +24,9 @@ CycleTime=100
 Var=v_vsmStatus unsigned 0,8
 Var=v_vsmSubStatus unsigned 8,8
 Var=v_CPUload unsigned 16,8
+Var=WakeLock bit 24,1
+Var=v_EnDCDC unsigned 25,1
+Var=v_RunActive unsigned 26,1
 
 [BMS_PACK_STS]
 ID=140h	// This ID Transmits at 200 ms.
