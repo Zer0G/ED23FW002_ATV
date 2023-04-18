@@ -1,0 +1,298 @@
+FormatVersion=5.0 // Do not edit!
+Title="atv"
+
+{ENUMS}
+enum VtSig_FS1_Switch_Node_3(1="ACTIVE", 0="INACTIVE")
+
+{SENDRECEIVE}
+
+[V_BMS_RELAY_CTRL]
+ID=14Fh
+DLC=8
+CycleTime=100
+Var=b_HVmCtrl bit 16,1
+Var=b_HVpCtrl bit 8,1
+Var=b_ChgCtrl bit 0,1
+Var=b_HeaterCtrl bit 24,1
+Var=b_HeaterSsrCtrl bit 32,1
+
+[VC_STATUS]
+ID=100h
+DLC=8
+CycleTime=100
+Var=v_vsmStatus unsigned 0,8
+Var=v_vsmSubStatus unsigned 8,8
+Var=v_CPUload unsigned 16,8
+
+[BMS_PACK_STS]
+ID=140h	// This ID Transmits at 200 ms.
+DLC=8
+Var=b_counter unsigned 0,8 -m /u:Num
+Var=b_SOC unsigned 8,8 -m /u:Percent /f:0.5 /d:0
+Var=b_Pack_V unsigned 16,16 /u:Volts /f:0.1 /d:0
+Var=b_Pack_I signed 32,16 /u:Amps /f:0.1 /d:0
+Var=b_SOH unsigned 48,8 -m /u:Percent
+Var=b_CRC_Checksum unsigned 56,8 -m /o:1720
+
+[BMS_CELL_V]
+ID=142h	// This ID Transmits at 200 ms.
+DLC=8
+Var=b_Low_Cell_Voltage unsigned 0,16 /u:Volts /f:0.001 /p:3 /d:0
+Var=b_Low_Cell_Voltage_ID unsigned 16,8 -m /u:ID /f:10 /d:0
+Var=b_High_Cell_Voltage unsigned 24,16 /u:Volts /f:0.0001 /p:3 /d:0
+Var=b_High_Cell_Voltage_ID unsigned 40,8 -m /u:ID
+Var=b_Low_Temperature unsigned 48,8 -m /u:Celsius
+Var=b_High_Temperature unsigned 56,8 -m /u:Celsius /o:1721
+
+[BMS_PACK_C_LIMITS]
+ID=144h	// This ID Transmits at 200 ms.
+DLC=8
+Var=b_Pack_DCL unsigned 0,16 /u:Amps /f:10 /d:0
+Var=b_Pack_CCL unsigned 16,16 /u:Amps /f:10 /d:0
+Var=b_Maximum_Pack_DCL unsigned 32,16 /u:Amps /f:10 /d:0
+Var=b_Maximum_Pack_CCL unsigned 48,16 /u:Amps /f:10 /d:0
+
+[BMS_C_BCAST]
+ID=150h	// This ID Transmits at 100 ms.
+DLC=8
+Var=b_CellId unsigned 0,8 -m /u:#
+Var=b_CellVoltage unsigned 8,16 -m /u:Volts /f:0.0001 /d:0
+Var=b_CellResistance unsigned 25,15 -m /u:mOhms /f:0.01 /d:0
+Var=b_CellOpenVoltage unsigned 40,16 -m /u:Volts /f:0.0001 /d:0
+Var=b_Checksum unsigned 56,8 -m	// Value = (0x156 + 8 + byte0 + byte1 + ... + byte6) & 0xFF
+Var=b_CellBalancing bit 31,1
+
+[V_DBG_CTRL]
+ID=1F0h
+DLC=8
+Var=hv_en_req bit 0,1
+Var=chg_en_req unsigned 8,1
+Var=heater_en_req unsigned 16,1
+
+[D_SYNC]
+ID=080h
+DLC=0
+
+[D_HB_REAR]
+ID=703h
+DLC=8
+CycleTime=500
+
+[D_HB_GEN]
+ID=702h
+DLC=8
+CycleTime=500
+
+[D_HB_FRONT]
+ID=701h
+DLC=8
+CycleTime=500
+
+[D_CTRL2_REAR]
+ID=332h
+DLC=8
+CycleTime=20
+Var=FS1_Switch_Node_3 bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_3 bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_3 bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=Max_Batt_Recharge_Node_3 signed 16,16 /u:Amp /max:0	// Maximum battery recharge current
+Var=Max_Batt_Discharge_Node_3 signed 0,16 /u:Amp /min:0	// Maximum battery discharge current
+
+[D_CTRL1_REAR]
+ID=331h
+DLC=8
+CycleTime=20
+Var=Brake_Value_Node_3 unsigned 48,16 /max:1000	// Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile
+Var=Throttle_Value_Node_3 unsigned 32,16 /max:1000	// Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile
+Var=Maximum_Speed_Reverse_Node_3 unsigned 16,16 /u:RPM /max:20000	// Speed limit in reverse direction
+Var=Maximum_Speed_Forward_Node_3 unsigned 0,16 /u:RPM /max:20000	// Speed limit in forwards direction
+
+[D_CTRL2_GEN]
+ID=322h
+DLC=8
+CycleTime=20
+Var=FS1_Switch_Node_2 bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_2 bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_2 bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=Max_Batt_Recharge_Node_2 signed 16,16 /u:Amp /max:0	// Maximum battery recharge current
+Var=Max_Batt_Discharge_Node_2 signed 0,16 /u:Amp /min:0	// Maximum battery discharge current
+
+[D_CTRL1_GEN]
+ID=321h
+DLC=8
+CycleTime=20
+Var=Brake_Value_Node_2 unsigned 48,16 /max:1000	// Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile
+Var=Throttle_Value_Node_2 unsigned 32,16 /max:1000	// Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile
+Var=Maximum_Speed_Reverse_Node_2 unsigned 16,16 /u:RPM /max:20000	// Speed limit in reverse direction
+Var=Maximum_Speed_Forward_Node_2 unsigned 0,16 /u:RPM /max:20000	// Speed limit in forwards direction
+
+[D_CTRL2_FRONT]
+ID=312h
+DLC=8
+CycleTime=20
+Var=FS1_Switch_Node_1 bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_1 bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_1 bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=Max_Batt_Recharge_Node_1 signed 16,16 /u:Amp /max:0	// Maximum battery recharge current
+Var=Max_Batt_Discharge_Node_1 signed 0,16 /u:Amp /min:0	// Maximum battery discharge current
+
+[D_CTRL1_FRONT]
+ID=311h
+DLC=8
+CycleTime=20
+Var=Brake_Value_Node_1 unsigned 48,16 /max:1000	// Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile
+Var=Throttle_Value_Node_1 unsigned 32,16 /max:1000	// Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile
+Var=Maximum_Speed_Reverse_Node_1 unsigned 16,16 /u:RPM /max:20000	// Speed limit in reverse direction
+Var=Maximum_Speed_Forward_Node_1 unsigned 0,16 /u:RPM /max:20000	// Speed limit in forwards direction
+
+[D_STATUS5_REAR]
+ID=238h
+DLC=8
+Var=Uq signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
+Var=Ud signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
+Var=Motor_Temperature_Torque_Cutback unsigned 16,16 /f:0.00390625 /max:1 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Factor unsigned 0,16 /f:3.0517578125E-005 /max:1 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+
+[D_STATUS4_REAR]
+ID=237h
+DLC=8
+Var=Measured_inductance unsigned 48,16 /u:uH /f:0.059604645 /d:0
+Var=Motor_temperature signed 32,16 /u:DegC /min:-50 /max:250	// Motor temperature readed from thermal probe installed on motor
+Var=Voltage_modulation signed 16,16 /u:% /f:0.390625 /min:0 /max:100 /d:0	// Motor voltage modulation Index
+Var=Torque_demand signed 0,16 /u:Nm /f:0.0625 /d:0	// Torque demand value in Nm
+
+[D_STATUS3_REAR]
+ID=236h
+DLC=8
+Var=Iq signed 48,16 /f:0.0625 /d:0	// Motor Iq Actual
+Var=Id signed 32,16 /f:0.0625 /d:0	// Motor Id Actual
+Var=Target_Iq signed 16,16 /f:0.0625 /d:0	// Motor Iq Reference
+Var=Target_Id signed 0,16 /f:0.0625 /d:0	// Motor Id Reference
+
+[D_STATUS2_REAR]
+ID=235h
+DLC=8
+Var=Traction_drive_state signed 56,8
+Var=Heatsink_temperature signed 48,8 /u:DegC	// Temperature of heatsink readed
+Var=Torque_actual_value signed 32,16 /u:Nm /f:0.0625 /d:0	// Torque actual in Nm
+Var=Velocity_Gen signed 0,32 /u:RPM	// Actual velocity in RPM.
+
+[D_STATUS1_REAR]
+ID=234h
+DLC=8
+CycleTime=50
+Timeout=100
+Var=Active_Fault unsigned 48,16	// Fault ID of currently active highest priority fault
+Var=Analog_Output_1 signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
+Var=Battery_Current signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
+Var=Capacitor_Voltage unsigned 0,16 /u:Volt /f:0.0625 /d:0	// Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table
+
+[D_STATUS5_GEN]
+ID=228h
+DLC=8
+Var=Uq signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
+Var=Ud signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
+Var=Motor_Temperature_Torque_Cutback unsigned 16,16 /f:0.00390625 /max:1 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Factor unsigned 0,16 /f:3.0517578125E-005 /max:1 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+
+[D_STATUS_GEN]
+ID=227h
+DLC=8
+Var=Measured_inductance unsigned 48,16 /u:uH /f:0.059604645 /d:0
+Var=Motor_temperature signed 32,16 /u:DegC /min:-50 /max:250	// Motor temperature readed from thermal probe installed on motor
+Var=Voltage_modulation signed 16,16 /u:% /f:0.390625 /min:0 /max:100 /d:0	// Motor voltage modulation Index
+Var=Torque_demand signed 0,16 /u:Nm /f:0.0625 /d:0	// Torque demand value in Nm
+
+[D_STATUS3_GEN]
+ID=226h
+DLC=8
+Var=Iq signed 48,16 /f:0.0625 /d:0	// Motor Iq Actual
+Var=Id signed 32,16 /f:0.0625 /d:0	// Motor Id Actual
+Var=Target_Iq signed 16,16 /f:0.0625 /d:0	// Motor Iq Reference
+Var=Target_Id signed 0,16 /f:0.0625 /d:0	// Motor Id Reference
+
+[D_STATUS2_GEN]
+ID=225h
+DLC=8
+Var=Traction_drive_state signed 56,8
+Var=Heatsink_temperature signed 48,8 /u:DegC	// Temperature of heatsink readed
+Var=Torque_actual_value signed 32,16 /u:Nm /f:0.0625 /d:0	// Torque actual in Nm
+Var=Velocity_Rear signed 0,32 /u:RPM	// Actual velocity in RPM.
+
+[D_STATUS1_GEN]
+ID=224h
+DLC=8
+CycleTime=50
+Timeout=100
+Var=Active_Fault unsigned 48,16	// Fault ID of currently active highest priority fault
+Var=Analog_Output_1 signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
+Var=Battery_Current signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
+Var=Capacitor_Voltage unsigned 0,16 /u:Volt /f:0.0625 /d:0	// Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table
+
+[D_STATUS_FRONT]
+ID=218h
+DLC=8
+Var=Uq signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
+Var=Ud signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
+Var=Motor_Temperature_Torque_Cutback unsigned 16,16 /f:0.00390625 /max:1 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Factor unsigned 0,16 /f:3.0517578125E-005 /max:1 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+
+[D_STATUS3_FRONT]
+ID=216h
+DLC=8
+Var=Iq signed 48,16 /f:0.0625 /d:0	// Motor Iq Actual
+Var=Id signed 32,16 /f:0.0625 /d:0	// Motor Id Actual
+Var=Target_Iq signed 16,16 /f:0.0625 /d:0	// Motor Iq Reference
+Var=Target_Id signed 0,16 /f:0.0625 /d:0	// Motor Id Reference
+
+[D_STATUS4_FRONT]
+ID=217h
+DLC=8
+Var=Measured_inductance unsigned 48,16 /u:uH /f:0.059604645 /d:0
+Var=Motor_temperature signed 32,16 /u:DegC /min:-50 /max:250	// Motor temperature readed from thermal probe installed on motor
+Var=Voltage_modulation signed 16,16 /u:% /f:0.390625 /min:0 /max:100 /d:0	// Motor voltage modulation Index
+Var=Torque_demand signed 0,16 /u:Nm /f:0.0625 /d:0	// Torque demand value in Nm
+
+[D_STATUS2_FRONT]
+ID=215h
+DLC=8
+CycleTime=50
+Timeout=100
+Var=Traction_drive_state signed 56,8
+Var=Heatsink_temperature signed 48,8 /u:DegC	// Temperature of heatsink readed
+Var=Torque_actual_value signed 32,16 /u:Nm /f:0.0625 /d:0	// Torque actual in Nm
+Var=Velocity_Front signed 0,32 /u:RPM	// Actual velocity in RPM.
+
+[D_STATUS1_FRONT]
+ID=214h
+DLC=8
+CycleTime=50
+Timeout=100
+Var=Active_Fault unsigned 48,16	// Fault ID of currently active highest priority fault
+Var=Analog_Output_1 signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
+Var=Battery_Current signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
+Var=Capacitor_Voltage unsigned 0,16 /u:Volt /f:0.0625 /d:0	// Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table
+
+[testCoolingIn]
+ID=1F1h
+DLC=8
+CycleTime=100
+Timeout=300
+Var=T_FMot unsigned 0,8
+Var=T_FInv unsigned 8,8
+Var=T_RInv unsigned 24,8
+Var=T_RMot unsigned 16,8
+Var=T_GMot unsigned 32,8
+Var=T_GInv unsigned 40,8
+Var=T_Rad unsigned 48,8
+
+[testCoolingOut]
+ID=1F2h
+DLC=8
+CycleTime=100
+Timeout=300
+Var=PumpACtrl unsigned 0,1
+Var=PumpBCtrl unsigned 8,1
+Var=RadFanCtrl unsigned 16,1
+Var=FanPWMDuty unsigned 24,8
+

@@ -1,0 +1,314 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ORAL_ECU Generator_Node_3 Traction_Node_2 Traction_Node_1
+VAL_TABLE_ Fault_Code 0 "No Fault" 9217 "LOG IN" 13377 "Host SW Upgrade" 13378 "DSP SW Upgrade" 17537 "Handbrake Fault" 17729 "Fan Fault" 17730 "Low Oil" 17730 "Device test waiting" 17731 "Hydraulic filter" 17732 "Pump Current Low" 17733 "Isolation Fault" 17734 "No Motor Speed Signal" 17735 "Tow Mode" 17736 "Steer Sensor Warning" 17737 "Pulsed Enable" 17738 "Bridge Enable Delayed" 17739 "MOSFET s/c tests waiting" 17740 "Electrolyte Low Level" 17741 "Electrolyte Cutout Level" 17742 "Power limit CB ( Warn )" 17793 "Throttle Fault (Warn)" 17794 "Safety Case 1" 17795 "Safety Case 2" 17796 "Analogue Output Over Current (warn)" 17797 "Analogue Output Off with Failsafe (warn)" 17798 "Analogue Output Over Temperature (warn)" 17799 "Analogue Output Under Current (warn)" 17800 "Analogue Output Short Circuit (warn)" 17801 "Analogue supply (warn)" 17802 "Seat (warning)" 17803 "Footbrake ( warn)" 17857 "BDI Warning" 17858 "BDI Cutout" 17859 "Low Battery Cut" 17860 "High Battery Cut" 17861 "High Capacitor Cut" 17862 "Vbat below rated min" 17863 "Vbat above rated max" 17864 "Vcap above rated max" 17865 "Motor in low voltage cutback" 17866 "Motor in high voltage cutback" 17867 "Mains Undervoltage" 17868 "Mains Overvoltage" 17869 "KL 15/30 Too Low" 17870 "VCap Vkey diff" 17921 "Device too cold" 17922 "Device too hot" 17923 "Motor in thermal cutback" 17924 "Motor too cold" 17925 "Motor Thermistor Wiring" 18049 "Unit in preoperational" 18050 "IO can't init" 18051 "RPDO Timeout (warning)" 18113 "Encoder Alignment Warning" 18114 "SinCos Tracking Warning" 18115 "Fault Ride Through" 18116 "Motor Pull-Out Warning" 18117 "Stator resistance error" 18118 "Encoder PLL deactivated warning" 18177 "CAN warning" 18241 "Scheduler stack overflow warning" 18242 "Internal supply out of renge warning" 18243 "CAN Protocol error warning" 18305 "CANopen anon EMCY level 1" 18306 "24V Supply Low" 18307 "24V Supply High" 18369 "Vehicle Service Required" 18370 "Watchdog reset" 18370 "CAN bus off warning" 18371 "Protocol CAN off warning" 18372 "CAN HPRX warning" 18373 "CAN HPTX warning" 18374 "Interlock loop broken" 18375 "Pump oil level" 18376 "Pump oil temp" 18561 "Seat Fault" 18562 "Two Direction Fault" 18563 "SRO Fault" 18564 "Sequence Fault" 18565 "FS1 Recycle Fault" 18566 "Inch Fault" 18567 "Overload Fault" 18568 "Raised and Tilted Fault" 18569 "Pothole Fault" 18570 "Traction Inhibit Fault" 18571 "Illegal Mode Change Fault" 18572 "Tilt Sensor Fault" 18573 "Belly fault" 18574 "Mom dir fault" 18575 "Sensorless startup" 18625 "Drive not enable" 18753 "Motor Overspeed" 18754 "PST Fault" 18755 "PFC Fault" 18756 "Boost Fault" 18817 "Throttle Fault" 18818 "E-Brake Wire off" 18819 "Direction Change" 18881 "ORFET Fault" 18882 "Entering Cutback" 18945 "Cutback" 19073 "RPDO Timeout (drive inhibit)" 19201 "CAN off bus (drive inhibit)" 19202 "Ren Data" 19203 "IO Data Error" 19204 "Customer protocol error" 19205 "CAN Protocol lost Message 1" 19206 "CAN Protocol lost Message 2" 19207 "CAN Protocol invalid signal 1" 19208 "CAN Protocol invalid signal 2" 19329 "CANopen anon EMCY level 2" 19330 "Boost Enable mismatch" 19331 "Boost Overvoltage" 19332 "Input Undervoltage" 19333 "Input Overvoltage" 19334 "Output Overvoltage" 19337 "Motor Overtemp" 19521 "Too many slaves" 19585 "HVIL Loop Broken" 19713 "Circuit Breaker Open" 19714 "Circuit Breaker Welded" 19715 "DC Link Collapsed" 19716 "Circuit Breaker Timeout" 19777 "Motor Isolation Fault" 19778 "Motor Open Circuit Fault" 19779 "Motor Stalled" 19841 "Pin strapping failed" 19907 "Power Supply Critical" 20097 "RPDO Timeout (severe)" 20161 "Cant Establish Fld Curr" 20162 "Pulsing Disabled" 20160 "Max Recycle Reached" 20225 "Unexpected slave state" 20226 "EMCY send failed" 20289 "Internal Fault" 20290 "Out of memory" 20291 "General DSP error" 20292 "Timer Failed" 20293 "Queue Error" 20294 "Scheduler Error" 20295 "DSP Heartbeat Error" 20296 "I/O SS Error" 20297 "GIO SS Error" 20298 "LCM SS Error" 20299 "LCP SS Error" 20300 "OBD SS Error" 20301 "VA SS Error" 20302 "DMC SS Error" 20303 "TracApp SS Error" 20304 "New Powerframe Detected" 20305 "DSP Not Detected" 20306 "DSP Comms Error" 20307 "App Manager SS Error" 20308 "Autozero range error" 20309 "DSP parameter error" 20310 "Motor in wrong direction" 20311 "Motor stalled" 20312 "DC/DC SS Error" 20353 "CANopen anon EMCY level 3" 20544 "CPU KEY not valid" 20545 "Bad NVM Data" 20546 "VPDO Out of Range" 20547 "Static Range Error" 20548 "Dynamic Range Error" 20549 "Auto-configuration Fault" 20550 "Voltage autoconfig error" 20609 "Invalid Steer Switches" 20737 "Line Contactor o/c" 20738 "Line Contactor welded" 20739 "Contactor Drive Fault" 20801 "Beltloader Fault" 20802 "Ren Signal" 20803 "VERLOG" 20865 "Digital Input Wire Off" 20866 "Analogue Input Wire Off" 20867 "Analogue Output Over Current" 20868 "Analogue Output On with No Failsafe" 20869 "Analogue Output Off with Failsafe" 20870 "Analogue Output Over Temperature" 20871 "Analogue Output Under Current" 20872 "Analogue Output Short Circuit" 20929 "Power Supply Interrupt" 20930 "Capacitor Precharge Failure" 20931 "KL 15/30 Too high" 20993 "Heatsink overtemp" 21185 "DSP Encoder Fault" 21186 "DSP Overcurrent Fault" 21187 "Current Control Fault" 21188 "Motor Overspeed Fault" 21189 "Encoder Alignment Severe" 21190 "DI/DT Fault ( Suspected S/C )" 21191 "Vcap Overvoltage (software overvoltage)" 21192 "Device overcurrent" 21249 "CANBUS Fault" 21250 "Bootup not received" 21251 "LPRX queue overrun" 21252 "LPTX queue overrun" 21253 "HPRX queue overrun" 21254 "HPTX queue overrun" 21255 "CAN overrun" 21256 "CAN off bus" 21257 "Nodeguarding Failed" 21258 "Short PDO received" 21259 "CANopen Heartbeat Failed" 21260 "CANopen slave in wrong state" 21261 "CAN ESTAT set" 21262 "SDO HDL Error" 21263 "SDO Timeout Error" 21264 "SDO Abort Error" 21265 "SDO State Error" 21266 "SDO Toggle Error" 21267 "SDO Rec Error" 21268 "SDO Len Error" 21269 "SDO Send Error" 21270 "SDO unknown event" 21271 "SDO Bad SRC" 21272 "SDO bad error number" 21273 "Motor slave in wrong state" 21274 "Ren Protocol" 21313 "Invalid DSP Protocol" 21314 "OSC Watchdog Fault" 21315 "Fault List Overflow" 21316 "DSP SPI Comms Fault" 21317 "Scheduler stack overflow fault" 21318 "Internal Supply Out of range fault" 21377 "CANopen anon EMCY level 4" 21379 "Boost over voltage" 21380 "Input under voltage" 21381 "Input over voltage" 21382 "Output over voltage" 21383 "Output under Voltage" 21384 "boost under Voltage" 21385 "Motor Over temperature" 21386 "Device under temperatrue" 21569 "Incompatible hardware version" 21570 "Calibration Fault" 21697 "PF Overvoltage" 21698 "Powerframe Fault" 21699 "MOSFET s/c M1>B+" 21700 "MOSFET s/c M1>B-" 21701 "MOSFET s/c M2>B+" 21702 "MOSFET s/c M2>B-" 21703 "MOSFET s/c M3>B+" 21704 "MOSFET s/c M3>B-" 21705 "MOSFET s/c checks incomplete" 21706 "IGBT M1 Low Driver Fail" 21707 "IGBT M1 High Driver Fail" 21708 "IGBT M2 Low Driver Fail" 21709 "IGBT M2 High Driver Fail" 21710 "IGBT M3 Low Driver Fail" 21711 "IGBT M3 High Driver Fail" 22337 "Invalid Powerframe Rating" 22401 "CANopen anon EMCY level 5" 22402 "Boost Enable Mismatch" ;
+VAL_TABLE_ NMT_Status 127 "PREOPERATIONAL" 5 "OPERATIONAL" 0 "BOOT" ;
+VAL_TABLE_ Switch_State 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_TABLE_ Traction_drive_state 10 "CONTROLLED_ROLL_OFF" 9 "POWER_OFF" 8 "IDLE" 7 "HILL_HOLD" 6 "NEUTRAL_BRAKING" 5 "ACCELERATION_RATE" 4 "DECELERATION_RATE" 3 "STOP_AT_DECELERATION_RATE" 2 "DRIVE" 1 "FOOTBRAKING" 0 "OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NMT_Status_Node_3 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NMT_Status_Node_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NMT_Status_Node_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SYNC : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 128 SYNC: 0 ORAL_ECU
+
+BO_ 1795 Heartbeat_Node_3: 8 Generator_Node_3
+
+BO_ 1794 Heartbeat_Node_2: 8 Traction_Node_2
+
+BO_ 1793 Heartbeat_Node_1: 8 Traction_Node_1
+
+BO_ 818 Control_Frame_2_Nodo_3: 8 ORAL_ECU
+ SG_ FS1_Switch_Node_3 : 34|1@1- (1,0) [0|1] ""  Generator_Node_3
+ SG_ Reverse_Switch_Node_3 : 33|1@1- (1,0) [0|1] ""  Generator_Node_3
+ SG_ Forward_Switch_Node_3 : 32|1@1- (1,0) [0|1] ""  Generator_Node_3
+ SG_ Max_Batt_Recharge_Node_3 : 16|16@1- (1,0) [-32768|0] "Amp"  Generator_Node_3
+ SG_ Max_Batt_Discharge_Node_3 : 0|16@1- (1,0) [0|32767] "Amp"  Generator_Node_3
+
+BO_ 817 Control_Frame_1_Nodo_3: 8 ORAL_ECU
+ SG_ Brake_Value_Node_3 : 48|16@1+ (1,0) [0|1000] ""  Generator_Node_3
+ SG_ Throttle_Value_Node_3 : 32|16@1+ (1,0) [0|1000] ""  Generator_Node_3
+ SG_ Maximum_Speed_Reverse_Node_3 : 16|16@1+ (1,0) [0|20000] "RPM"  Generator_Node_3
+ SG_ Maximum_Speed_Forward_Node_3 : 0|16@1+ (1,0) [0|20000] "RPM"  Generator_Node_3
+
+BO_ 802 Control_Frame_2_Nodo_2: 8 ORAL_ECU
+ SG_ FS1_Switch_Node_2 : 34|1@1- (1,0) [0|1] ""  Traction_Node_2
+ SG_ Reverse_Switch_Node_2 : 33|1@1- (1,0) [0|1] ""  Traction_Node_2
+ SG_ Forward_Switch_Node_2 : 32|1@1- (1,0) [0|1] ""  Traction_Node_2
+ SG_ Max_Batt_Recharge_Node_2 : 16|16@1- (1,0) [-32768|0] "Amp"  Traction_Node_2
+ SG_ Max_Batt_Discharge_Node_2 : 0|16@1- (1,0) [0|32767] "Amp"  Traction_Node_2
+
+BO_ 801 Control_Frame_1_Nodo_2: 8 ORAL_ECU
+ SG_ Brake_Value_Node_2 : 48|16@1+ (1,0) [0|1000] ""  Traction_Node_2
+ SG_ Throttle_Value_Node_2 : 32|16@1+ (1,0) [0|1000] ""  Traction_Node_2
+ SG_ Maximum_Speed_Reverse_Node_2 : 16|16@1+ (1,0) [0|20000] "RPM"  Traction_Node_2
+ SG_ Maximum_Speed_Forward_Node_2 : 0|16@1+ (1,0) [0|20000] "RPM"  Traction_Node_2
+
+BO_ 786 Control_Frame_2_Nodo_1: 8 ORAL_ECU
+ SG_ FS1_Switch_Node_1 : 34|1@1- (1,0) [0|1] ""  Traction_Node_1
+ SG_ Reverse_Switch_Node_1 : 33|1@1- (1,0) [0|1] ""  Traction_Node_1
+ SG_ Forward_Switch_Node_1 : 32|1@1- (1,0) [0|1] ""  Traction_Node_1
+ SG_ Max_Batt_Recharge_Node_1 : 16|16@1- (1,0) [-32768|0] "Amp"  Traction_Node_1
+ SG_ Max_Batt_Discharge_Node_1 : 0|16@1- (1,0) [0|32767] "Amp"  Traction_Node_1
+
+BO_ 785 Control_Frame_1_Nodo_1: 8 ORAL_ECU
+ SG_ Brake_Value_Node_1 : 48|16@1+ (1,0) [0|1000] ""  Traction_Node_1
+ SG_ Throttle_Value_Node_1 : 32|16@1+ (1,0) [0|1000] ""  Traction_Node_1
+ SG_ Maximum_Speed_Reverse_Node_1 : 16|16@1+ (1,0) [0|20000] "RPM"  Traction_Node_1
+ SG_ Maximum_Speed_Forward_Node_1 : 0|16@1+ (1,0) [0|20000] "RPM"  Traction_Node_1
+
+BO_ 568 Debug_Frame_5_Node_3: 8 Generator_Node_3
+ SG_ Uq : 48|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Ud : 32|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+ SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+BO_ 567 Debug_Frame_4_Node_3: 8 Generator_Node_3
+ SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+ SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+ SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+ SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+BO_ 566 Debug_Frame_3_Node_3: 8 Generator_Node_3
+ SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+BO_ 565 Debug_Frame_2_Node_3: 8 Generator_Node_3
+ SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+ SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Velocity : 0|32@1- (1,0) [-20000|20000] "RPM" Vector__XXX
+
+BO_ 564 Debug_Frame_1_Node_3: 8 Generator_Node_3
+ SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+ SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+ SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4096] "Volt" Vector__XXX
+
+BO_ 552 Debug_Frame_5_Node_2: 8 Traction_Node_2
+ SG_ Uq : 48|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Ud : 32|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+ SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+BO_ 551 Debug_Frame_4_Node_2: 8 Traction_Node_2
+ SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+ SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+ SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+ SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+BO_ 550 Debug_Frame_3_Node_2: 8 Traction_Node_2
+ SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+BO_ 549 Debug_Frame_2_Node_2: 8 Traction_Node_2
+ SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+ SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Velocity : 0|32@1- (1,0) [-20000|20000] "RPM" Vector__XXX
+
+BO_ 548 Debug_Frame_1_Node_2: 8 Traction_Node_2
+ SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+ SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+ SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4096] "Volt" Vector__XXX
+
+BO_ 536 Debug_Frame_5_Node_1: 8 Traction_Node_1
+ SG_ Uq : 48|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Ud : 32|16@1- (0.0625,0) [-3200|3200] "" Vector__XXX
+ SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+ SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+BO_ 535 Debug_Frame_4_Node_1: 8 Traction_Node_1
+ SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+ SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+ SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+ SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+BO_ 534 Debug_Frame_3_Node_1: 8 Traction_Node_1
+ SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+ SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+BO_ 533 Debug_Frame_2_Node_1: 8 Traction_Node_1
+ SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+ SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Velocity : 0|32@1- (1,0) [-20000|20000] "RPM" Vector__XXX
+
+BO_ 532 Debug_Frame_1_Node_1: 8 Traction_Node_1
+ SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+ SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+ SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4096] "Volt" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 818 FS1_Switch_Node_3 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 818 Reverse_Switch_Node_3 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 818 Forward_Switch_Node_3 "Forward switch for enable traction in forward direction";
+CM_ SG_ 818 Max_Batt_Recharge_Node_3 "Maximum battery recharge current";
+CM_ SG_ 818 Max_Batt_Discharge_Node_3 "Maximum battery discharge current
+";
+CM_ SG_ 817 Brake_Value_Node_3 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 817 Throttle_Value_Node_3 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 817 Maximum_Speed_Reverse_Node_3 "Speed limit in reverse direction";
+CM_ SG_ 817 Maximum_Speed_Forward_Node_3 "Speed limit in forwards direction";
+CM_ SG_ 802 FS1_Switch_Node_2 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 802 Reverse_Switch_Node_2 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 802 Forward_Switch_Node_2 "Forward switch for enable traction in forward direction";
+CM_ SG_ 802 Max_Batt_Recharge_Node_2 "Maximum battery recharge current";
+CM_ SG_ 802 Max_Batt_Discharge_Node_2 "Maximum battery discharge current
+";
+CM_ SG_ 801 Brake_Value_Node_2 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 801 Throttle_Value_Node_2 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 801 Maximum_Speed_Reverse_Node_2 "Speed limit in reverse direction";
+CM_ SG_ 801 Maximum_Speed_Forward_Node_2 "Speed limit in forwards direction";
+CM_ SG_ 786 FS1_Switch_Node_1 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 786 Reverse_Switch_Node_1 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 786 Forward_Switch_Node_1 "Forward switch for enable traction in forward direction";
+CM_ SG_ 786 Max_Batt_Recharge_Node_1 "Maximum battery recharge current";
+CM_ SG_ 786 Max_Batt_Discharge_Node_1 "Maximum battery discharge current
+";
+CM_ SG_ 785 Brake_Value_Node_1 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 785 Throttle_Value_Node_1 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 785 Maximum_Speed_Reverse_Node_1 "Speed limit in reverse direction";
+CM_ SG_ 785 Maximum_Speed_Forward_Node_1 "Speed limit in forwards direction";
+CM_ SG_ 568 Uq "Motor Uq Actual";
+CM_ SG_ 568 Ud "Motor Ud Actual";
+CM_ SG_ 568 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 568 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 567 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 567 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 567 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 566 Iq "Motor Iq Actual";
+CM_ SG_ 566 Id "Motor Id Actual";
+CM_ SG_ 566 Target_Iq "Motor Iq Reference";
+CM_ SG_ 566 Target_Id "Motor Id Reference";
+CM_ SG_ 565 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 565 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 565 Velocity "Actual velocity in RPM.";
+CM_ SG_ 564 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 564 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor 
+Value = 0 --> Line Contactor Open
+Value > 0 --> Line Contactor Closed";
+CM_ SG_ 564 Battery_Current "Battery current measured from controller
+Positive value --> Current flow from battery to controller i.e. traction
+Negative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 564 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value is
+used for all calculation related to voltage i.e. Cutback Table";
+CM_ SG_ 552 Uq "Motor Uq Actual";
+CM_ SG_ 552 Ud "Motor Ud Actual";
+CM_ SG_ 552 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 552 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 551 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 551 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 551 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 550 Iq "Motor Iq Actual";
+CM_ SG_ 550 Id "Motor Id Actual";
+CM_ SG_ 550 Target_Iq "Motor Iq Reference";
+CM_ SG_ 550 Target_Id "Motor Id Reference";
+CM_ SG_ 549 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 549 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 549 Velocity "Actual velocity in RPM.";
+CM_ SG_ 548 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 548 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor 
+Value = 0 --> Line Contactor Open
+Value > 0 --> Line Contactor Closed";
+CM_ SG_ 548 Battery_Current "Battery current measured from controller
+Positive value --> Current flow from battery to controller i.e. traction
+Negative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 548 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value is
+used for all calculation related to voltage i.e. Cutback Table";
+CM_ SG_ 536 Uq "Motor Uq Actual";
+CM_ SG_ 536 Ud "Motor Ud Actual";
+CM_ SG_ 536 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 536 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table
+ This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 535 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 535 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 535 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 534 Iq "Motor Iq Actual";
+CM_ SG_ 534 Id "Motor Id Actual";
+CM_ SG_ 534 Target_Iq "Motor Iq Reference";
+CM_ SG_ 534 Target_Id "Motor Id Reference";
+CM_ SG_ 533 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 533 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 533 Velocity "Actual velocity in RPM.";
+CM_ SG_ 532 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 532 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor 
+Value = 0 --> Line Contactor Open
+Value > 0 --> Line Contactor Closed";
+CM_ SG_ 532 Battery_Current "Battery current measured from controller
+Positive value --> Current flow from battery to controller i.e. traction
+Negative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 532 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value is
+used for all calculation related to voltage i.e. Cutback Table";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 NMT_Status_Node_3 127 "PREOPERATIONAL" 5 "OPERATIONAL" 0 "BOOT" ;
+VAL_ 3221225472 NMT_Status_Node_2 127 "PREOPERATIONAL" 5 "OPERATIONAL" 0 "BOOT" ;
+VAL_ 3221225472 NMT_Status_Node_1 127 "PREOPERATIONAL" 5 "OPERATIONAL" 0 "BOOT" ;
+VAL_ 818 FS1_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 818 Reverse_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 818 Forward_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 FS1_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 Reverse_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 Forward_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 FS1_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 Reverse_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 Forward_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 565 Traction_drive_state 10 "CONTROLLED_ROLL_OFF" 9 "POWER_OFF" 8 "IDLE" 7 "HILL_HOLD" 6 "NEUTRAL_BRAKING" 5 "ACCELERATION_RATE" 4 "DECELERATION_RATE" 3 "STOP_AT_DECELERATION_RATE" 2 "DRIVE" 1 "FOOTBRAKING" 0 "OFF" ;
+VAL_ 564 Active_Fault 0 "No Fault" 9217 "LOG IN" 13377 "Host SW Upgrade" 13378 "DSP SW Upgrade" 17537 "Handbrake Fault" 17729 "Fan Fault" 17730 "Low Oil" 17730 "Device test waiting" 17731 "Hydraulic filter" 17732 "Pump Current Low" 17733 "Isolation Fault" 17734 "No Motor Speed Signal" 17735 "Tow Mode" 17736 "Steer Sensor Warning" 17737 "Pulsed Enable" 17738 "Bridge Enable Delayed" 17739 "MOSFET s/c tests waiting" 17740 "Electrolyte Low Level" 17741 "Electrolyte Cutout Level" 17742 "Power limit CB ( Warn )" 17793 "Throttle Fault (Warn)" 17794 "Safety Case 1" 17795 "Safety Case 2" 17796 "Analogue Output Over Current (warn)" 17797 "Analogue Output Off with Failsafe (warn)" 17798 "Analogue Output Over Temperature (warn)" 17799 "Analogue Output Under Current (warn)" 17800 "Analogue Output Short Circuit (warn)" 17801 "Analogue supply (warn)" 17802 "Seat (warning)" 17803 "Footbrake ( warn)" 17857 "BDI Warning" 17858 "BDI Cutout" 17859 "Low Battery Cut" 17860 "High Battery Cut" 17861 "High Capacitor Cut" 17862 "Vbat below rated min" 17863 "Vbat above rated max" 17864 "Vcap above rated max" 17865 "Motor in low voltage cutback" 17866 "Motor in high voltage cutback" 17867 "Mains Undervoltage" 17868 "Mains Overvoltage" 17869 "KL 15/30 Too Low" 17870 "VCap Vkey diff" 17921 "Device too cold" 17922 "Device too hot" 17923 "Motor in thermal cutback" 17924 "Motor too cold" 17925 "Motor Thermistor Wiring" 18049 "Unit in preoperational" 18050 "IO can't init" 18051 "RPDO Timeout (warning)" 18113 "Encoder Alignment Warning" 18114 "SinCos Tracking Warning" 18115 "Fault Ride Through" 18116 "Motor Pull-Out Warning" 18117 "Stator resistance error" 18118 "Encoder PLL deactivated warning" 18177 "CAN warning" 18241 "Scheduler stack overflow warning" 18242 "Internal supply out of renge warning" 18243 "CAN Protocol error warning" 18305 "CANopen anon EMCY level 1" 18306 "24V Supply Low" 18307 "24V Supply High" 18369 "Vehicle Service Required" 18370 "Watchdog reset" 18370 "CAN bus off warning" 18371 "Protocol CAN off warning" 18372 "CAN HPRX warning" 18373 "CAN HPTX warning" 18374 "Interlock loop broken" 18375 "Pump oil level" 18376 "Pump oil temp" 18561 "Seat Fault" 18562 "Two Direction Fault" 18563 "SRO Fault" 18564 "Sequence Fault" 18565 "FS1 Recycle Fault" 18566 "Inch Fault" 18567 "Overload Fault" 18568 "Raised and Tilted Fault" 18569 "Pothole Fault" 18570 "Traction Inhibit Fault" 18571 "Illegal Mode Change Fault" 18572 "Tilt Sensor Fault" 18573 "Belly fault" 18574 "Mom dir fault" 18575 "Sensorless startup" 18625 "Drive not enable" 18753 "Motor Overspeed" 18754 "PST Fault" 18755 "PFC Fault" 18756 "Boost Fault" 18817 "Throttle Fault" 18818 "E-Brake Wire off" 18819 "Direction Change" 18881 "ORFET Fault" 18882 "Entering Cutback" 18945 "Cutback" 19073 "RPDO Timeout (drive inhibit)" 19201 "CAN off bus (drive inhibit)" 19202 "Ren Data" 19203 "IO Data Error" 19204 "Customer protocol error" 19205 "CAN Protocol lost Message 1" 19206 "CAN Protocol lost Message 2" 19207 "CAN Protocol invalid signal 1" 19208 "CAN Protocol invalid signal 2" 19329 "CANopen anon EMCY level 2" 19330 "Boost Enable mismatch" 19331 "Boost Overvoltage" 19332 "Input Undervoltage" 19333 "Input Overvoltage" 19334 "Output Overvoltage" 19337 "Motor Overtemp" 19521 "Too many slaves" 19585 "HVIL Loop Broken" 19713 "Circuit Breaker Open" 19714 "Circuit Breaker Welded" 19715 "DC Link Collapsed" 19716 "Circuit Breaker Timeout" 19777 "Motor Isolation Fault" 19778 "Motor Open Circuit Fault" 19779 "Motor Stalled" 19841 "Pin strapping failed" 19907 "Power Supply Critical" 20097 "RPDO Timeout (severe)" 20161 "Cant Establish Fld Curr" 20162 "Pulsing Disabled" 20160 "Max Recycle Reached" 20225 "Unexpected slave state" 20226 "EMCY send failed" 20289 "Internal Fault" 20290 "Out of memory" 20291 "General DSP error" 20292 "Timer Failed" 20293 "Queue Error" 20294 "Scheduler Error" 20295 "DSP Heartbeat Error" 20296 "I/O SS Error" 20297 "GIO SS Error" 20298 "LCM SS Error" 20299 "LCP SS Error" 20300 "OBD SS Error" 20301 "VA SS Error" 20302 "DMC SS Error" 20303 "TracApp SS Error" 20304 "New Powerframe Detected" 20305 "DSP Not Detected" 20306 "DSP Comms Error" 20307 "App Manager SS Error" 20308 "Autozero range error" 20309 "DSP parameter error" 20310 "Motor in wrong direction" 20311 "Motor stalled" 20312 "DC/DC SS Error" 20353 "CANopen anon EMCY level 3" 20544 "CPU KEY not valid" 20545 "Bad NVM Data" 20546 "VPDO Out of Range" 20547 "Static Range Error" 20548 "Dynamic Range Error" 20549 "Auto-configuration Fault" 20550 "Voltage autoconfig error" 20609 "Invalid Steer Switches" 20737 "Line Contactor o/c" 20738 "Line Contactor welded" 20739 "Contactor Drive Fault" 20801 "Beltloader Fault" 20802 "Ren Signal" 20803 "VERLOG" 20865 "Digital Input Wire Off" 20866 "Analogue Input Wire Off" 20867 "Analogue Output Over Current" 20868 "Analogue Output On with No Failsafe" 20869 "Analogue Output Off with Failsafe" 20870 "Analogue Output Over Temperature" 20871 "Analogue Output Under Current" 20872 "Analogue Output Short Circuit" 20929 "Power Supply Interrupt" 20930 "Capacitor Precharge Failure" 20931 "KL 15/30 Too high" 20993 "Heatsink overtemp" 21185 "DSP Encoder Fault" 21186 "DSP Overcurrent Fault" 21187 "Current Control Fault" 21188 "Motor Overspeed Fault" 21189 "Encoder Alignment Severe" 21190 "DI/DT Fault ( Suspected S/C )" 21191 "Vcap Overvoltage (software overvoltage)" 21192 "Device overcurrent" 21249 "CANBUS Fault" 21250 "Bootup not received" 21251 "LPRX queue overrun" 21252 "LPTX queue overrun" 21253 "HPRX queue overrun" 21254 "HPTX queue overrun" 21255 "CAN overrun" 21256 "CAN off bus" 21257 "Nodeguarding Failed" 21258 "Short PDO received" 21259 "CANopen Heartbeat Failed" 21260 "CANopen slave in wrong state" 21261 "CAN ESTAT set" 21262 "SDO HDL Error" 21263 "SDO Timeout Error" 21264 "SDO Abort Error" 21265 "SDO State Error" 21266 "SDO Toggle Error" 21267 "SDO Rec Error" 21268 "SDO Len Error" 21269 "SDO Send Error" 21270 "SDO unknown event" 21271 "SDO Bad SRC" 21272 "SDO bad error number" 21273 "Motor slave in wrong state" 21274 "Ren Protocol" 21313 "Invalid DSP Protocol" 21314 "OSC Watchdog Fault" 21315 "Fault List Overflow" 21316 "DSP SPI Comms Fault" 21317 "Scheduler stack overflow fault" 21318 "Internal Supply Out of range fault" 21377 "CANopen anon EMCY level 4" 21379 "Boost over voltage" 21380 "Input under voltage" 21381 "Input over voltage" 21382 "Output over voltage" 21383 "Output under Voltage" 21384 "boost under Voltage" 21385 "Motor Over temperature" 21386 "Device under temperatrue" 21569 "Incompatible hardware version" 21570 "Calibration Fault" 21697 "PF Overvoltage" 21698 "Powerframe Fault" 21699 "MOSFET s/c M1>B+" 21700 "MOSFET s/c M1>B-" 21701 "MOSFET s/c M2>B+" 21702 "MOSFET s/c M2>B-" 21703 "MOSFET s/c M3>B+" 21704 "MOSFET s/c M3>B-" 21705 "MOSFET s/c checks incomplete" 21706 "IGBT M1 Low Driver Fail" 21707 "IGBT M1 High Driver Fail" 21708 "IGBT M2 Low Driver Fail" 21709 "IGBT M2 High Driver Fail" 21710 "IGBT M3 Low Driver Fail" 21711 "IGBT M3 High Driver Fail" 22337 "Invalid Powerframe Rating" 22401 "CANopen anon EMCY level 5" 22402 "Boost Enable Mismatch" ;
+VAL_ 549 Traction_drive_state 10 "CONTROLLED_ROLL_OFF" 9 "POWER_OFF" 8 "IDLE" 7 "HILL_HOLD" 6 "NEUTRAL_BRAKING" 5 "ACCELERATION_RATE" 4 "DECELERATION_RATE" 3 "STOP_AT_DECELERATION_RATE" 2 "DRIVE" 1 "FOOTBRAKING" 0 "OFF" ;
+VAL_ 548 Active_Fault 0 "No Fault" 9217 "LOG IN" 13377 "Host SW Upgrade" 13378 "DSP SW Upgrade" 17537 "Handbrake Fault" 17729 "Fan Fault" 17730 "Low Oil" 17730 "Device test waiting" 17731 "Hydraulic filter" 17732 "Pump Current Low" 17733 "Isolation Fault" 17734 "No Motor Speed Signal" 17735 "Tow Mode" 17736 "Steer Sensor Warning" 17737 "Pulsed Enable" 17738 "Bridge Enable Delayed" 17739 "MOSFET s/c tests waiting" 17740 "Electrolyte Low Level" 17741 "Electrolyte Cutout Level" 17742 "Power limit CB ( Warn )" 17793 "Throttle Fault (Warn)" 17794 "Safety Case 1" 17795 "Safety Case 2" 17796 "Analogue Output Over Current (warn)" 17797 "Analogue Output Off with Failsafe (warn)" 17798 "Analogue Output Over Temperature (warn)" 17799 "Analogue Output Under Current (warn)" 17800 "Analogue Output Short Circuit (warn)" 17801 "Analogue supply (warn)" 17802 "Seat (warning)" 17803 "Footbrake ( warn)" 17857 "BDI Warning" 17858 "BDI Cutout" 17859 "Low Battery Cut" 17860 "High Battery Cut" 17861 "High Capacitor Cut" 17862 "Vbat below rated min" 17863 "Vbat above rated max" 17864 "Vcap above rated max" 17865 "Motor in low voltage cutback" 17866 "Motor in high voltage cutback" 17867 "Mains Undervoltage" 17868 "Mains Overvoltage" 17869 "KL 15/30 Too Low" 17870 "VCap Vkey diff" 17921 "Device too cold" 17922 "Device too hot" 17923 "Motor in thermal cutback" 17924 "Motor too cold" 17925 "Motor Thermistor Wiring" 18049 "Unit in preoperational" 18050 "IO can't init" 18051 "RPDO Timeout (warning)" 18113 "Encoder Alignment Warning" 18114 "SinCos Tracking Warning" 18115 "Fault Ride Through" 18116 "Motor Pull-Out Warning" 18117 "Stator resistance error" 18118 "Encoder PLL deactivated warning" 18177 "CAN warning" 18241 "Scheduler stack overflow warning" 18242 "Internal supply out of renge warning" 18243 "CAN Protocol error warning" 18305 "CANopen anon EMCY level 1" 18306 "24V Supply Low" 18307 "24V Supply High" 18369 "Vehicle Service Required" 18370 "Watchdog reset" 18370 "CAN bus off warning" 18371 "Protocol CAN off warning" 18372 "CAN HPRX warning" 18373 "CAN HPTX warning" 18374 "Interlock loop broken" 18375 "Pump oil level" 18376 "Pump oil temp" 18561 "Seat Fault" 18562 "Two Direction Fault" 18563 "SRO Fault" 18564 "Sequence Fault" 18565 "FS1 Recycle Fault" 18566 "Inch Fault" 18567 "Overload Fault" 18568 "Raised and Tilted Fault" 18569 "Pothole Fault" 18570 "Traction Inhibit Fault" 18571 "Illegal Mode Change Fault" 18572 "Tilt Sensor Fault" 18573 "Belly fault" 18574 "Mom dir fault" 18575 "Sensorless startup" 18625 "Drive not enable" 18753 "Motor Overspeed" 18754 "PST Fault" 18755 "PFC Fault" 18756 "Boost Fault" 18817 "Throttle Fault" 18818 "E-Brake Wire off" 18819 "Direction Change" 18881 "ORFET Fault" 18882 "Entering Cutback" 18945 "Cutback" 19073 "RPDO Timeout (drive inhibit)" 19201 "CAN off bus (drive inhibit)" 19202 "Ren Data" 19203 "IO Data Error" 19204 "Customer protocol error" 19205 "CAN Protocol lost Message 1" 19206 "CAN Protocol lost Message 2" 19207 "CAN Protocol invalid signal 1" 19208 "CAN Protocol invalid signal 2" 19329 "CANopen anon EMCY level 2" 19330 "Boost Enable mismatch" 19331 "Boost Overvoltage" 19332 "Input Undervoltage" 19333 "Input Overvoltage" 19334 "Output Overvoltage" 19337 "Motor Overtemp" 19521 "Too many slaves" 19585 "HVIL Loop Broken" 19713 "Circuit Breaker Open" 19714 "Circuit Breaker Welded" 19715 "DC Link Collapsed" 19716 "Circuit Breaker Timeout" 19777 "Motor Isolation Fault" 19778 "Motor Open Circuit Fault" 19779 "Motor Stalled" 19841 "Pin strapping failed" 19907 "Power Supply Critical" 20097 "RPDO Timeout (severe)" 20161 "Cant Establish Fld Curr" 20162 "Pulsing Disabled" 20160 "Max Recycle Reached" 20225 "Unexpected slave state" 20226 "EMCY send failed" 20289 "Internal Fault" 20290 "Out of memory" 20291 "General DSP error" 20292 "Timer Failed" 20293 "Queue Error" 20294 "Scheduler Error" 20295 "DSP Heartbeat Error" 20296 "I/O SS Error" 20297 "GIO SS Error" 20298 "LCM SS Error" 20299 "LCP SS Error" 20300 "OBD SS Error" 20301 "VA SS Error" 20302 "DMC SS Error" 20303 "TracApp SS Error" 20304 "New Powerframe Detected" 20305 "DSP Not Detected" 20306 "DSP Comms Error" 20307 "App Manager SS Error" 20308 "Autozero range error" 20309 "DSP parameter error" 20310 "Motor in wrong direction" 20311 "Motor stalled" 20312 "DC/DC SS Error" 20353 "CANopen anon EMCY level 3" 20544 "CPU KEY not valid" 20545 "Bad NVM Data" 20546 "VPDO Out of Range" 20547 "Static Range Error" 20548 "Dynamic Range Error" 20549 "Auto-configuration Fault" 20550 "Voltage autoconfig error" 20609 "Invalid Steer Switches" 20737 "Line Contactor o/c" 20738 "Line Contactor welded" 20739 "Contactor Drive Fault" 20801 "Beltloader Fault" 20802 "Ren Signal" 20803 "VERLOG" 20865 "Digital Input Wire Off" 20866 "Analogue Input Wire Off" 20867 "Analogue Output Over Current" 20868 "Analogue Output On with No Failsafe" 20869 "Analogue Output Off with Failsafe" 20870 "Analogue Output Over Temperature" 20871 "Analogue Output Under Current" 20872 "Analogue Output Short Circuit" 20929 "Power Supply Interrupt" 20930 "Capacitor Precharge Failure" 20931 "KL 15/30 Too high" 20993 "Heatsink overtemp" 21185 "DSP Encoder Fault" 21186 "DSP Overcurrent Fault" 21187 "Current Control Fault" 21188 "Motor Overspeed Fault" 21189 "Encoder Alignment Severe" 21190 "DI/DT Fault ( Suspected S/C )" 21191 "Vcap Overvoltage (software overvoltage)" 21192 "Device overcurrent" 21249 "CANBUS Fault" 21250 "Bootup not received" 21251 "LPRX queue overrun" 21252 "LPTX queue overrun" 21253 "HPRX queue overrun" 21254 "HPTX queue overrun" 21255 "CAN overrun" 21256 "CAN off bus" 21257 "Nodeguarding Failed" 21258 "Short PDO received" 21259 "CANopen Heartbeat Failed" 21260 "CANopen slave in wrong state" 21261 "CAN ESTAT set" 21262 "SDO HDL Error" 21263 "SDO Timeout Error" 21264 "SDO Abort Error" 21265 "SDO State Error" 21266 "SDO Toggle Error" 21267 "SDO Rec Error" 21268 "SDO Len Error" 21269 "SDO Send Error" 21270 "SDO unknown event" 21271 "SDO Bad SRC" 21272 "SDO bad error number" 21273 "Motor slave in wrong state" 21274 "Ren Protocol" 21313 "Invalid DSP Protocol" 21314 "OSC Watchdog Fault" 21315 "Fault List Overflow" 21316 "DSP SPI Comms Fault" 21317 "Scheduler stack overflow fault" 21318 "Internal Supply Out of range fault" 21377 "CANopen anon EMCY level 4" 21379 "Boost over voltage" 21380 "Input under voltage" 21381 "Input over voltage" 21382 "Output over voltage" 21383 "Output under Voltage" 21384 "boost under Voltage" 21385 "Motor Over temperature" 21386 "Device under temperatrue" 21569 "Incompatible hardware version" 21570 "Calibration Fault" 21697 "PF Overvoltage" 21698 "Powerframe Fault" 21699 "MOSFET s/c M1>B+" 21700 "MOSFET s/c M1>B-" 21701 "MOSFET s/c M2>B+" 21702 "MOSFET s/c M2>B-" 21703 "MOSFET s/c M3>B+" 21704 "MOSFET s/c M3>B-" 21705 "MOSFET s/c checks incomplete" 21706 "IGBT M1 Low Driver Fail" 21707 "IGBT M1 High Driver Fail" 21708 "IGBT M2 Low Driver Fail" 21709 "IGBT M2 High Driver Fail" 21710 "IGBT M3 Low Driver Fail" 21711 "IGBT M3 High Driver Fail" 22337 "Invalid Powerframe Rating" 22401 "CANopen anon EMCY level 5" 22402 "Boost Enable Mismatch" ;
+VAL_ 533 Traction_drive_state 10 "CONTROLLED_ROLL_OFF" 9 "POWER_OFF" 8 "IDLE" 7 "HILL_HOLD" 6 "NEUTRAL_BRAKING" 5 "ACCELERATION_RATE" 4 "DECELERATION_RATE" 3 "STOP_AT_DECELERATION_RATE" 2 "DRIVE" 1 "FOOTBRAKING" 0 "OFF" ;
+VAL_ 532 Active_Fault 0 "No Fault" 9217 "LOG IN" 13377 "Host SW Upgrade" 13378 "DSP SW Upgrade" 17537 "Handbrake Fault" 17729 "Fan Fault" 17730 "Low Oil" 17730 "Device test waiting" 17731 "Hydraulic filter" 17732 "Pump Current Low" 17733 "Isolation Fault" 17734 "No Motor Speed Signal" 17735 "Tow Mode" 17736 "Steer Sensor Warning" 17737 "Pulsed Enable" 17738 "Bridge Enable Delayed" 17739 "MOSFET s/c tests waiting" 17740 "Electrolyte Low Level" 17741 "Electrolyte Cutout Level" 17742 "Power limit CB ( Warn )" 17793 "Throttle Fault (Warn)" 17794 "Safety Case 1" 17795 "Safety Case 2" 17796 "Analogue Output Over Current (warn)" 17797 "Analogue Output Off with Failsafe (warn)" 17798 "Analogue Output Over Temperature (warn)" 17799 "Analogue Output Under Current (warn)" 17800 "Analogue Output Short Circuit (warn)" 17801 "Analogue supply (warn)" 17802 "Seat (warning)" 17803 "Footbrake ( warn)" 17857 "BDI Warning" 17858 "BDI Cutout" 17859 "Low Battery Cut" 17860 "High Battery Cut" 17861 "High Capacitor Cut" 17862 "Vbat below rated min" 17863 "Vbat above rated max" 17864 "Vcap above rated max" 17865 "Motor in low voltage cutback" 17866 "Motor in high voltage cutback" 17867 "Mains Undervoltage" 17868 "Mains Overvoltage" 17869 "KL 15/30 Too Low" 17870 "VCap Vkey diff" 17921 "Device too cold" 17922 "Device too hot" 17923 "Motor in thermal cutback" 17924 "Motor too cold" 17925 "Motor Thermistor Wiring" 18049 "Unit in preoperational" 18050 "IO can't init" 18051 "RPDO Timeout (warning)" 18113 "Encoder Alignment Warning" 18114 "SinCos Tracking Warning" 18115 "Fault Ride Through" 18116 "Motor Pull-Out Warning" 18117 "Stator resistance error" 18118 "Encoder PLL deactivated warning" 18177 "CAN warning" 18241 "Scheduler stack overflow warning" 18242 "Internal supply out of renge warning" 18243 "CAN Protocol error warning" 18305 "CANopen anon EMCY level 1" 18306 "24V Supply Low" 18307 "24V Supply High" 18369 "Vehicle Service Required" 18370 "Watchdog reset" 18370 "CAN bus off warning" 18371 "Protocol CAN off warning" 18372 "CAN HPRX warning" 18373 "CAN HPTX warning" 18374 "Interlock loop broken" 18375 "Pump oil level" 18376 "Pump oil temp" 18561 "Seat Fault" 18562 "Two Direction Fault" 18563 "SRO Fault" 18564 "Sequence Fault" 18565 "FS1 Recycle Fault" 18566 "Inch Fault" 18567 "Overload Fault" 18568 "Raised and Tilted Fault" 18569 "Pothole Fault" 18570 "Traction Inhibit Fault" 18571 "Illegal Mode Change Fault" 18572 "Tilt Sensor Fault" 18573 "Belly fault" 18574 "Mom dir fault" 18575 "Sensorless startup" 18625 "Drive not enable" 18753 "Motor Overspeed" 18754 "PST Fault" 18755 "PFC Fault" 18756 "Boost Fault" 18817 "Throttle Fault" 18818 "E-Brake Wire off" 18819 "Direction Change" 18881 "ORFET Fault" 18882 "Entering Cutback" 18945 "Cutback" 19073 "RPDO Timeout (drive inhibit)" 19201 "CAN off bus (drive inhibit)" 19202 "Ren Data" 19203 "IO Data Error" 19204 "Customer protocol error" 19205 "CAN Protocol lost Message 1" 19206 "CAN Protocol lost Message 2" 19207 "CAN Protocol invalid signal 1" 19208 "CAN Protocol invalid signal 2" 19329 "CANopen anon EMCY level 2" 19330 "Boost Enable mismatch" 19331 "Boost Overvoltage" 19332 "Input Undervoltage" 19333 "Input Overvoltage" 19334 "Output Overvoltage" 19337 "Motor Overtemp" 19521 "Too many slaves" 19585 "HVIL Loop Broken" 19713 "Circuit Breaker Open" 19714 "Circuit Breaker Welded" 19715 "DC Link Collapsed" 19716 "Circuit Breaker Timeout" 19777 "Motor Isolation Fault" 19778 "Motor Open Circuit Fault" 19779 "Motor Stalled" 19841 "Pin strapping failed" 19907 "Power Supply Critical" 20097 "RPDO Timeout (severe)" 20161 "Cant Establish Fld Curr" 20162 "Pulsing Disabled" 20160 "Max Recycle Reached" 20225 "Unexpected slave state" 20226 "EMCY send failed" 20289 "Internal Fault" 20290 "Out of memory" 20291 "General DSP error" 20292 "Timer Failed" 20293 "Queue Error" 20294 "Scheduler Error" 20295 "DSP Heartbeat Error" 20296 "I/O SS Error" 20297 "GIO SS Error" 20298 "LCM SS Error" 20299 "LCP SS Error" 20300 "OBD SS Error" 20301 "VA SS Error" 20302 "DMC SS Error" 20303 "TracApp SS Error" 20304 "New Powerframe Detected" 20305 "DSP Not Detected" 20306 "DSP Comms Error" 20307 "App Manager SS Error" 20308 "Autozero range error" 20309 "DSP parameter error" 20310 "Motor in wrong direction" 20311 "Motor stalled" 20312 "DC/DC SS Error" 20353 "CANopen anon EMCY level 3" 20544 "CPU KEY not valid" 20545 "Bad NVM Data" 20546 "VPDO Out of Range" 20547 "Static Range Error" 20548 "Dynamic Range Error" 20549 "Auto-configuration Fault" 20550 "Voltage autoconfig error" 20609 "Invalid Steer Switches" 20737 "Line Contactor o/c" 20738 "Line Contactor welded" 20739 "Contactor Drive Fault" 20801 "Beltloader Fault" 20802 "Ren Signal" 20803 "VERLOG" 20865 "Digital Input Wire Off" 20866 "Analogue Input Wire Off" 20867 "Analogue Output Over Current" 20868 "Analogue Output On with No Failsafe" 20869 "Analogue Output Off with Failsafe" 20870 "Analogue Output Over Temperature" 20871 "Analogue Output Under Current" 20872 "Analogue Output Short Circuit" 20929 "Power Supply Interrupt" 20930 "Capacitor Precharge Failure" 20931 "KL 15/30 Too high" 20993 "Heatsink overtemp" 21185 "DSP Encoder Fault" 21186 "DSP Overcurrent Fault" 21187 "Current Control Fault" 21188 "Motor Overspeed Fault" 21189 "Encoder Alignment Severe" 21190 "DI/DT Fault ( Suspected S/C )" 21191 "Vcap Overvoltage (software overvoltage)" 21192 "Device overcurrent" 21249 "CANBUS Fault" 21250 "Bootup not received" 21251 "LPRX queue overrun" 21252 "LPTX queue overrun" 21253 "HPRX queue overrun" 21254 "HPTX queue overrun" 21255 "CAN overrun" 21256 "CAN off bus" 21257 "Nodeguarding Failed" 21258 "Short PDO received" 21259 "CANopen Heartbeat Failed" 21260 "CANopen slave in wrong state" 21261 "CAN ESTAT set" 21262 "SDO HDL Error" 21263 "SDO Timeout Error" 21264 "SDO Abort Error" 21265 "SDO State Error" 21266 "SDO Toggle Error" 21267 "SDO Rec Error" 21268 "SDO Len Error" 21269 "SDO Send Error" 21270 "SDO unknown event" 21271 "SDO Bad SRC" 21272 "SDO bad error number" 21273 "Motor slave in wrong state" 21274 "Ren Protocol" 21313 "Invalid DSP Protocol" 21314 "OSC Watchdog Fault" 21315 "Fault List Overflow" 21316 "DSP SPI Comms Fault" 21317 "Scheduler stack overflow fault" 21318 "Internal Supply Out of range fault" 21377 "CANopen anon EMCY level 4" 21379 "Boost over voltage" 21380 "Input under voltage" 21381 "Input over voltage" 21382 "Output over voltage" 21383 "Output under Voltage" 21384 "boost under Voltage" 21385 "Motor Over temperature" 21386 "Device under temperatrue" 21569 "Incompatible hardware version" 21570 "Calibration Fault" 21697 "PF Overvoltage" 21698 "Powerframe Fault" 21699 "MOSFET s/c M1>B+" 21700 "MOSFET s/c M1>B-" 21701 "MOSFET s/c M2>B+" 21702 "MOSFET s/c M2>B-" 21703 "MOSFET s/c M3>B+" 21704 "MOSFET s/c M3>B-" 21705 "MOSFET s/c checks incomplete" 21706 "IGBT M1 Low Driver Fail" 21707 "IGBT M1 High Driver Fail" 21708 "IGBT M2 Low Driver Fail" 21709 "IGBT M2 High Driver Fail" 21710 "IGBT M3 Low Driver Fail" 21711 "IGBT M3 High Driver Fail" 22337 "Invalid Powerframe Rating" 22401 "CANopen anon EMCY level 5" 22402 "Boost Enable Mismatch" ;
+

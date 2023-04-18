@@ -1,0 +1,95 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c3_ATV"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c3_ATV"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HV_CTRL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.HV_CTRL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_CHG_CTRL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.CHG_CTRL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HEATER_CTRL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.HEATER_CTRL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DRIVE_ENABLE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.DRIVE_ENABLE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STARTTRIGGER"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEY_ON.STARTTRIGGER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "startBtnArmed"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "startBtnArmed"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

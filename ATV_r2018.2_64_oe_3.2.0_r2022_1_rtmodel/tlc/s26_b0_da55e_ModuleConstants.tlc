@@ -1,0 +1,31 @@
+%implements s26_b0_da55e_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S31>/PUMP LOGIC' */
+#define ATV_IN_NO_ACTIVE_CHILD_m ((uint8_T)0U)
+#define ATV_IN_Off ((uint8_T)1U)
+#define ATV_IN_Run ((uint8_T)2U)
+#define ATV_IN_Run60sec ((uint8_T)3U)
+
+/* Named constants for Chart: '<S8>/VSM' */
+#define ATV_IN_CHG_OFF ((uint8_T)1U)
+#define ATV_IN_DRIVE_ENABLED ((uint8_T)1U)
+#define ATV_IN_HEATER_OFF ((uint8_T)1U)
+#define ATV_IN_HVM_ON ((uint8_T)1U)
+#define ATV_IN_HVM_ON_n ((uint8_T)2U)
+#define ATV_IN_HV_ARMED ((uint8_T)2U)
+#define ATV_IN_HV_DEL ((uint8_T)2U)
+#define ATV_IN_HV_OFF ((uint8_T)3U)
+#define ATV_IN_HV_ON ((uint8_T)4U)
+#define ATV_IN_HV_ON_p ((uint8_T)3U)
+#define ATV_IN_HV_WAIT_INV_OFF ((uint8_T)5U)
+#define ATV_IN_IDLE ((uint8_T)3U)
+#define ATV_IN_INIT ((uint8_T)1U)
+#define ATV_IN_KEY_ON ((uint8_T)2U)
+#define ATV_IN_PRE_SLEEP ((uint8_T)3U)
+#define ATV_IN_SLEEP ((uint8_T)4U)
+#define ATV_IN_STARTTRIGGER_OFF ((uint8_T)1U)
+#define ATV_IN_STARTTRIGGER_ON ((uint8_T)2U)
+%endfunction

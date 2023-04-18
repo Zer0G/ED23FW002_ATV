@@ -1,0 +1,66 @@
+%implements s26_b0_da55e_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T rtb_Switch1_e;
+%closefile localVarDecl
+/* {S!d4222}Switch: '<S35>/Switch1' incorporates:
+ *  Constant: '<S35>/Constant10'
+ *  RelationalOperator: '<S38>/Compare'
+ */
+if (!rtu_FS1) {
+    /* {S!d4220}Switch: '<S39>/Switch2' incorporates:
+ *  Constant: '<S35>/ATVC_upperLimitPedalREV'
+ *  RelationalOperator: '<S39>/LowerRelop1'
+ *  Switch: '<S39>/Switch'
+ */
+    if (rtu_throttleX1000 > 1000) {
+        rtb_Switch1_e = 1000;
+    } else {
+        rtb_Switch1_e = rtu_throttleX1000;
+    }
+    /* {E!d4220}End of Switch: '<S39>/Switch2' */
+} else {
+    rtb_Switch1_e = 0;
+}
+/* {E!d4222}End of Switch: '<S35>/Switch1' */
+
+/* {S!d4224}DataTypeConversion: '<S35>/Cast' */
+localB->Cast = (uint16_T)(int32_T)fmod(rtb_Switch1_e, 65536.0);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(1, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_DBWREVERSE(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_FS1\
+%assign comma = ", "
+%<comma>uint16_T rtu_throttleX1000\
+%assign comma = ", "
+%<comma>B_DBWREVERSE_ATV_T *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%endfunction

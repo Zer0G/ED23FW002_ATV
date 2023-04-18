@@ -1,0 +1,499 @@
+VERSION ""
+
+
+NS_ :
+
+BS_:
+
+BU_: Vector__XXX
+
+BO_ 335 V_BMS_RELAY_CTRL: 8 Vector__XXX
+SG_ b_HVmCtrl : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ b_HVpCtrl : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ b_ChgCtrl : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ b_HeaterCtrl : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ b_HeaterSsrCtrl : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+BO_ 256 VC_STATUS: 8 Vector__XXX
+SG_ v_vsmStatus : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ v_vsmSubStatus : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ v_CPUload : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+BO_ 320 BMS_PACK_STS: 8 Vector__XXX
+SG_ b_counter : 7|8@0+ (1,0) [0|255] "Num" Vector__XXX
+SG_ b_SOC : 15|8@0+ (0.5,0) [0|127.5] "Percent" Vector__XXX
+SG_ b_Pack_V : 16|16@1+ (0.1,0) [0|6553.5] "Volts" Vector__XXX
+SG_ b_Pack_I : 32|16@1- (0.1,0) [-3276.8|3276.7] "Amps" Vector__XXX
+SG_ b_SOH : 55|8@0+ (1,0) [0|255] "Percent" Vector__XXX
+SG_ b_CRC_Checksum : 63|8@0+ (1,1720) [1720|1975] "" Vector__XXX
+
+
+BO_ 322 BMS_CELL_V: 8 Vector__XXX
+SG_ b_Low_Cell_Voltage : 0|16@1+ (0.001,0) [0|65.535] "Volts" Vector__XXX
+SG_ b_Low_Cell_Voltage_ID : 23|8@0+ (10,0) [0|2550] "ID" Vector__XXX
+SG_ b_High_Cell_Voltage : 24|16@1+ (0.0001,0) [0|6.5535] "Volts" Vector__XXX
+SG_ b_High_Cell_Voltage_ID : 47|8@0+ (1,0) [0|255] "ID" Vector__XXX
+SG_ b_Low_Temperature : 55|8@0+ (1,0) [0|255] "Celsius" Vector__XXX
+SG_ b_High_Temperature : 63|8@0+ (1,1721) [1721|1976] "Celsius" Vector__XXX
+
+
+BO_ 324 BMS_PACK_C_LIMITS: 8 Vector__XXX
+SG_ b_Pack_DCL : 0|16@1+ (10,0) [0|655350] "Amps" Vector__XXX
+SG_ b_Pack_CCL : 16|16@1+ (10,0) [0|655350] "Amps" Vector__XXX
+SG_ b_Maximum_Pack_DCL : 32|16@1+ (10,0) [0|655350] "Amps" Vector__XXX
+SG_ b_Maximum_Pack_CCL : 48|16@1+ (10,0) [0|655350] "Amps" Vector__XXX
+
+
+BO_ 336 BMS_C_BCAST: 8 Vector__XXX
+SG_ b_CellId : 7|8@0+ (1,0) [0|255] "#" Vector__XXX
+SG_ b_CellVoltage : 15|16@0+ (0.0001,0) [0|6.5535] "Volts" Vector__XXX
+SG_ b_CellResistance : 30|15@0+ (0.01,0) [0|327.67] "mOhms" Vector__XXX
+SG_ b_CellOpenVoltage : 47|16@0+ (0.0001,0) [0|6.5535] "Volts" Vector__XXX
+SG_ b_Checksum : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+SG_ b_CellBalancing : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+BO_ 496 V_DBG_CTRL: 8 Vector__XXX
+SG_ hv_en_req : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ chg_en_req : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ heater_en_req : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+BO_ 128 D_SYNC: 0 Vector__XXX
+
+
+BO_ 1795 D_HB_REAR: 8 Vector__XXX
+
+
+BO_ 1794 D_HB_GEN: 8 Vector__XXX
+
+
+BO_ 1793 D_HB_FRONT: 8 Vector__XXX
+
+
+BO_ 818 D_CTRL2_REAR: 8 Vector__XXX
+SG_ FS1_Switch_Node_3 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Reverse_Switch_Node_3 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Forward_Switch_Node_3 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Max_Batt_Recharge_Node_3 : 16|16@1- (1,0) [-32768|0] "Amp" Vector__XXX
+SG_ Max_Batt_Discharge_Node_3 : 0|16@1- (1,0) [0|32767] "Amp" Vector__XXX
+
+
+BO_ 817 D_CTRL1_REAR: 8 Vector__XXX
+SG_ Brake_Value_Node_3 : 48|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Throttle_Value_Node_3 : 32|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Maximum_Speed_Reverse_Node_3 : 16|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+SG_ Maximum_Speed_Forward_Node_3 : 0|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+
+
+BO_ 802 D_CTRL2_GEN: 8 Vector__XXX
+SG_ FS1_Switch_Node_2 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Reverse_Switch_Node_2 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Forward_Switch_Node_2 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Max_Batt_Recharge_Node_2 : 16|16@1- (1,0) [-32768|0] "Amp" Vector__XXX
+SG_ Max_Batt_Discharge_Node_2 : 0|16@1- (1,0) [0|32767] "Amp" Vector__XXX
+
+
+BO_ 801 D_CTRL1_GEN: 8 Vector__XXX
+SG_ Brake_Value_Node_2 : 48|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Throttle_Value_Node_2 : 32|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Maximum_Speed_Reverse_Node_2 : 16|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+SG_ Maximum_Speed_Forward_Node_2 : 0|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+
+
+BO_ 786 D_CTRL2_FRONT: 8 Vector__XXX
+SG_ FS1_Switch_Node_1 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Reverse_Switch_Node_1 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Forward_Switch_Node_1 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ Max_Batt_Recharge_Node_1 : 16|16@1- (1,0) [-32768|0] "Amp" Vector__XXX
+SG_ Max_Batt_Discharge_Node_1 : 0|16@1- (1,0) [0|32767] "Amp" Vector__XXX
+
+
+BO_ 785 D_CTRL1_FRONT: 8 Vector__XXX
+SG_ Brake_Value_Node_1 : 48|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Throttle_Value_Node_1 : 32|16@1+ (1,0) [0|1000] "" Vector__XXX
+SG_ Maximum_Speed_Reverse_Node_1 : 16|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+SG_ Maximum_Speed_Forward_Node_1 : 0|16@1+ (1,0) [0|20000] "RPM" Vector__XXX
+
+
+BO_ 568 D_STATUS5_REAR: 8 Vector__XXX
+SG_ Uq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Ud : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+
+BO_ 567 D_STATUS4_REAR: 8 Vector__XXX
+SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+
+BO_ 566 D_STATUS3_REAR: 8 Vector__XXX
+SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+
+BO_ 565 D_STATUS2_REAR: 8 Vector__XXX
+SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+SG_ Velocity_Gen : 0|32@1- (1,0) [-2147483648|2147483647] "RPM" Vector__XXX
+
+
+BO_ 564 D_STATUS1_REAR: 8 Vector__XXX
+SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4095.9375] "Volt" Vector__XXX
+
+
+BO_ 552 D_STATUS5_GEN: 8 Vector__XXX
+SG_ Uq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Ud : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+
+BO_ 551 D_STATUS_GEN: 8 Vector__XXX
+SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+
+BO_ 550 D_STATUS3_GEN: 8 Vector__XXX
+SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+
+BO_ 549 D_STATUS2_GEN: 8 Vector__XXX
+SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+SG_ Velocity_Rear : 0|32@1- (1,0) [-2147483648|2147483647] "RPM" Vector__XXX
+
+
+BO_ 548 D_STATUS1_GEN: 8 Vector__XXX
+SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4095.9375] "Volt" Vector__XXX
+
+
+BO_ 536 D_STATUS_FRONT: 8 Vector__XXX
+SG_ Uq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Ud : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Motor_Temperature_Torque_Cutback : 16|16@1+ (0.00390625,0) [0|1] "" Vector__XXX
+SG_ Drive_Trq_Voltage_Cutback_Factor : 0|16@1+ (3.0517578125E-005,0) [0|1] "" Vector__XXX
+
+
+BO_ 534 D_STATUS3_FRONT: 8 Vector__XXX
+SG_ Iq : 48|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Id : 32|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Iq : 16|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+SG_ Target_Id : 0|16@1- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+
+BO_ 535 D_STATUS4_FRONT: 8 Vector__XXX
+SG_ Measured_inductance : 48|16@1+ (0.059604645,0) [0|3906.190410075] "uH" Vector__XXX
+SG_ Motor_temperature : 32|16@1- (1,0) [-50|250] "DegC" Vector__XXX
+SG_ Voltage_modulation : 16|16@1- (0.390625,0) [0|100] "%" Vector__XXX
+SG_ Torque_demand : 0|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+
+BO_ 533 D_STATUS2_FRONT: 8 Vector__XXX
+SG_ Traction_drive_state : 56|8@1- (1,0) [-128|127] "" Vector__XXX
+SG_ Heatsink_temperature : 48|8@1- (1,0) [-128|127] "DegC" Vector__XXX
+SG_ Torque_actual_value : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+SG_ Velocity_Front : 0|32@1- (1,0) [-2147483648|2147483647] "RPM" Vector__XXX
+
+
+BO_ 532 D_STATUS1_FRONT: 8 Vector__XXX
+SG_ Active_Fault : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+SG_ Analog_Output_1 : 32|16@1- (0.00390625,0) [-128|127.99609375] "Volt" Vector__XXX
+SG_ Battery_Current : 16|16@1- (0.0625,0) [-2048|2047.9375] "Amp" Vector__XXX
+SG_ Capacitor_Voltage : 0|16@1+ (0.0625,0) [0|4095.9375] "Volt" Vector__XXX
+
+
+BO_ 497 testCoolingIn: 8 Vector__XXX
+SG_ T_FMot : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_FInv : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_RInv : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_RMot : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_GMot : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_GInv : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ T_Rad : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+BO_ 498 testCoolingOut: 8 Vector__XXX
+SG_ PumpACtrl : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ PumpBCtrl : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ RadFanCtrl : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ FanPWMDuty : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+CM_ BO_ 320 "This ID Transmits at 200 ms.";
+CM_ BO_ 322 "This ID Transmits at 200 ms.";
+CM_ BO_ 324 "This ID Transmits at 200 ms.";
+CM_ BO_ 336 "This ID Transmits at 100 ms.";
+CM_ SG_ 336 b_Checksum "Value = (0x156 + 8 + byte0 + byte1 + ... + byte6) & 0xFF";
+CM_ SG_ 818 FS1_Switch_Node_3 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 818 Reverse_Switch_Node_3 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 818 Forward_Switch_Node_3 "Forward switch for enable traction in forward direction";
+CM_ SG_ 818 Max_Batt_Recharge_Node_3 "Maximum battery recharge current";
+CM_ SG_ 818 Max_Batt_Discharge_Node_3 "Maximum battery discharge current";
+CM_ SG_ 817 Brake_Value_Node_3 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 817 Throttle_Value_Node_3 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 817 Maximum_Speed_Reverse_Node_3 "Speed limit in reverse direction";
+CM_ SG_ 817 Maximum_Speed_Forward_Node_3 "Speed limit in forwards direction";
+CM_ SG_ 802 FS1_Switch_Node_2 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 802 Reverse_Switch_Node_2 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 802 Forward_Switch_Node_2 "Forward switch for enable traction in forward direction";
+CM_ SG_ 802 Max_Batt_Recharge_Node_2 "Maximum battery recharge current";
+CM_ SG_ 802 Max_Batt_Discharge_Node_2 "Maximum battery discharge current";
+CM_ SG_ 801 Brake_Value_Node_2 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 801 Throttle_Value_Node_2 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 801 Maximum_Speed_Reverse_Node_2 "Speed limit in reverse direction";
+CM_ SG_ 801 Maximum_Speed_Forward_Node_2 "Speed limit in forwards direction";
+CM_ SG_ 786 FS1_Switch_Node_1 "Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0";
+CM_ SG_ 786 Reverse_Switch_Node_1 "Reverse switch for enable traction in reverse direction";
+CM_ SG_ 786 Forward_Switch_Node_1 "Forward switch for enable traction in forward direction";
+CM_ SG_ 786 Max_Batt_Recharge_Node_1 "Maximum battery recharge current";
+CM_ SG_ 786 Max_Batt_Discharge_Node_1 "Maximum battery discharge current";
+CM_ SG_ 785 Brake_Value_Node_1 "Value of braking torque in 1/1000 based on maximum braking torque available at current drive profile";
+CM_ SG_ 785 Throttle_Value_Node_1 "Value of drive torque in 1/1000 based on maximum drive torque available at current drive profile";
+CM_ SG_ 785 Maximum_Speed_Reverse_Node_1 "Speed limit in reverse direction";
+CM_ SG_ 785 Maximum_Speed_Forward_Node_1 "Speed limit in forwards direction";
+CM_ SG_ 568 Uq "Motor Uq Actual";
+CM_ SG_ 568 Ud "Motor Ud Actual";
+CM_ SG_ 568 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 568 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 567 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 567 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 567 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 566 Iq "Motor Iq Actual";
+CM_ SG_ 566 Id "Motor Id Actual";
+CM_ SG_ 566 Target_Iq "Motor Iq Reference";
+CM_ SG_ 566 Target_Id "Motor Id Reference";
+CM_ SG_ 565 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 565 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 565 Velocity_Gen "Actual velocity in RPM.";
+CM_ SG_ 564 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 564 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed";
+CM_ SG_ 564 Battery_Current "Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 564 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table";
+CM_ SG_ 552 Uq "Motor Uq Actual";
+CM_ SG_ 552 Ud "Motor Ud Actual";
+CM_ SG_ 552 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 552 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 551 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 551 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 551 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 550 Iq "Motor Iq Actual";
+CM_ SG_ 550 Id "Motor Id Actual";
+CM_ SG_ 550 Target_Iq "Motor Iq Reference";
+CM_ SG_ 550 Target_Id "Motor Id Reference";
+CM_ SG_ 549 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 549 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 549 Velocity_Rear "Actual velocity in RPM.";
+CM_ SG_ 548 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 548 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed";
+CM_ SG_ 548 Battery_Current "Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 548 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table";
+CM_ SG_ 536 Uq "Motor Uq Actual";
+CM_ SG_ 536 Ud "Motor Ud Actual";
+CM_ SG_ 536 Motor_Temperature_Torque_Cutback "Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 536 Drive_Trq_Voltage_Cutback_Factor "Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)";
+CM_ SG_ 534 Iq "Motor Iq Actual";
+CM_ SG_ 534 Id "Motor Id Actual";
+CM_ SG_ 534 Target_Iq "Motor Iq Reference";
+CM_ SG_ 534 Target_Id "Motor Id Reference";
+CM_ SG_ 535 Motor_temperature "Motor temperature readed from thermal probe installed on motor";
+CM_ SG_ 535 Voltage_modulation "Motor voltage modulation Index";
+CM_ SG_ 535 Torque_demand "Torque demand value in Nm";
+CM_ SG_ 533 Heatsink_temperature "Temperature of heatsink readed";
+CM_ SG_ 533 Torque_actual_value "Torque actual in Nm";
+CM_ SG_ 533 Velocity_Front "Actual velocity in RPM.";
+CM_ SG_ 532 Active_Fault "Fault ID of currently active highest priority fault";
+CM_ SG_ 532 Analog_Output_1 "Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed";
+CM_ SG_ 532 Battery_Current "Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen";
+CM_ SG_ 532 Capacitor_Voltage "Voltage readed on capacitor internal bank, this value isused for all calculation related to voltage i.e. Cutback Table";
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+
+BA_ "BusType" "CAN";
+
+BA_ "GenMsgCycleTime" BO_ 335 100;
+BA_ "GenMsgCycleTime" BO_ 256 100;
+BA_ "GenMsgCycleTime" BO_ 1795 500;
+BA_ "GenMsgCycleTime" BO_ 1794 500;
+BA_ "GenMsgCycleTime" BO_ 1793 500;
+BA_ "GenMsgCycleTime" BO_ 818 20;
+BA_ "GenMsgCycleTime" BO_ 817 20;
+BA_ "GenMsgCycleTime" BO_ 802 20;
+BA_ "GenMsgCycleTime" BO_ 801 20;
+BA_ "GenMsgCycleTime" BO_ 786 20;
+BA_ "GenMsgCycleTime" BO_ 785 20;
+BA_ "GenMsgCycleTime" BO_ 564 50;
+BA_ "GenMsgCycleTime" BO_ 548 50;
+BA_ "GenMsgCycleTime" BO_ 533 50;
+BA_ "GenMsgCycleTime" BO_ 532 50;
+BA_ "GenMsgCycleTime" BO_ 497 100;
+BA_ "GenMsgCycleTime" BO_ 498 100;
+
+BA_ "GenSigStartValue" SG_ 335 b_HVmCtrl 0;
+BA_ "GenSigStartValue" SG_ 335 b_HVpCtrl 0;
+BA_ "GenSigStartValue" SG_ 335 b_ChgCtrl 0;
+BA_ "GenSigStartValue" SG_ 335 b_HeaterCtrl 0;
+BA_ "GenSigStartValue" SG_ 335 b_HeaterSsrCtrl 0;
+BA_ "GenSigStartValue" SG_ 256 v_vsmStatus 0;
+BA_ "GenSigStartValue" SG_ 256 v_vsmSubStatus 0;
+BA_ "GenSigStartValue" SG_ 256 v_CPUload 0;
+BA_ "GenSigStartValue" SG_ 320 b_counter 0;
+BA_ "GenSigStartValue" SG_ 320 b_SOC 0;
+BA_ "GenSigStartValue" SG_ 320 b_Pack_V 0;
+BA_ "GenSigStartValue" SG_ 320 b_Pack_I 0;
+BA_ "GenSigStartValue" SG_ 320 b_SOH 0;
+BA_ "GenSigStartValue" SG_ 320 b_CRC_Checksum -1720;
+BA_ "GenSigStartValue" SG_ 322 b_Low_Cell_Voltage 0;
+BA_ "GenSigStartValue" SG_ 322 b_Low_Cell_Voltage_ID 0;
+BA_ "GenSigStartValue" SG_ 322 b_High_Cell_Voltage 0;
+BA_ "GenSigStartValue" SG_ 322 b_High_Cell_Voltage_ID 0;
+BA_ "GenSigStartValue" SG_ 322 b_Low_Temperature 0;
+BA_ "GenSigStartValue" SG_ 322 b_High_Temperature -1721;
+BA_ "GenSigStartValue" SG_ 324 b_Pack_DCL 0;
+BA_ "GenSigStartValue" SG_ 324 b_Pack_CCL 0;
+BA_ "GenSigStartValue" SG_ 324 b_Maximum_Pack_DCL 0;
+BA_ "GenSigStartValue" SG_ 324 b_Maximum_Pack_CCL 0;
+BA_ "GenSigStartValue" SG_ 336 b_CellId 0;
+BA_ "GenSigStartValue" SG_ 336 b_CellVoltage 0;
+BA_ "GenSigStartValue" SG_ 336 b_CellResistance 0;
+BA_ "GenSigStartValue" SG_ 336 b_CellOpenVoltage 0;
+BA_ "GenSigStartValue" SG_ 336 b_Checksum 0;
+BA_ "GenSigStartValue" SG_ 336 b_CellBalancing 0;
+BA_ "GenSigStartValue" SG_ 496 hv_en_req 0;
+BA_ "GenSigStartValue" SG_ 496 chg_en_req 0;
+BA_ "GenSigStartValue" SG_ 496 heater_en_req 0;
+BA_ "GenSigStartValue" SG_ 818 FS1_Switch_Node_3 0;
+BA_ "GenSigStartValue" SG_ 818 Reverse_Switch_Node_3 0;
+BA_ "GenSigStartValue" SG_ 818 Forward_Switch_Node_3 0;
+BA_ "GenSigStartValue" SG_ 818 Max_Batt_Recharge_Node_3 0;
+BA_ "GenSigStartValue" SG_ 818 Max_Batt_Discharge_Node_3 0;
+BA_ "GenSigStartValue" SG_ 817 Brake_Value_Node_3 0;
+BA_ "GenSigStartValue" SG_ 817 Throttle_Value_Node_3 0;
+BA_ "GenSigStartValue" SG_ 817 Maximum_Speed_Reverse_Node_3 0;
+BA_ "GenSigStartValue" SG_ 817 Maximum_Speed_Forward_Node_3 0;
+BA_ "GenSigStartValue" SG_ 802 FS1_Switch_Node_2 0;
+BA_ "GenSigStartValue" SG_ 802 Reverse_Switch_Node_2 0;
+BA_ "GenSigStartValue" SG_ 802 Forward_Switch_Node_2 0;
+BA_ "GenSigStartValue" SG_ 802 Max_Batt_Recharge_Node_2 0;
+BA_ "GenSigStartValue" SG_ 802 Max_Batt_Discharge_Node_2 0;
+BA_ "GenSigStartValue" SG_ 801 Brake_Value_Node_2 0;
+BA_ "GenSigStartValue" SG_ 801 Throttle_Value_Node_2 0;
+BA_ "GenSigStartValue" SG_ 801 Maximum_Speed_Reverse_Node_2 0;
+BA_ "GenSigStartValue" SG_ 801 Maximum_Speed_Forward_Node_2 0;
+BA_ "GenSigStartValue" SG_ 786 FS1_Switch_Node_1 0;
+BA_ "GenSigStartValue" SG_ 786 Reverse_Switch_Node_1 0;
+BA_ "GenSigStartValue" SG_ 786 Forward_Switch_Node_1 0;
+BA_ "GenSigStartValue" SG_ 786 Max_Batt_Recharge_Node_1 0;
+BA_ "GenSigStartValue" SG_ 786 Max_Batt_Discharge_Node_1 0;
+BA_ "GenSigStartValue" SG_ 785 Brake_Value_Node_1 0;
+BA_ "GenSigStartValue" SG_ 785 Throttle_Value_Node_1 0;
+BA_ "GenSigStartValue" SG_ 785 Maximum_Speed_Reverse_Node_1 0;
+BA_ "GenSigStartValue" SG_ 785 Maximum_Speed_Forward_Node_1 0;
+BA_ "GenSigStartValue" SG_ 568 Uq 0;
+BA_ "GenSigStartValue" SG_ 568 Ud 0;
+BA_ "GenSigStartValue" SG_ 568 Motor_Temperature_Torque_Cutback 0;
+BA_ "GenSigStartValue" SG_ 568 Drive_Trq_Voltage_Cutback_Factor 0;
+BA_ "GenSigStartValue" SG_ 567 Measured_inductance 0;
+BA_ "GenSigStartValue" SG_ 567 Motor_temperature 0;
+BA_ "GenSigStartValue" SG_ 567 Voltage_modulation 0;
+BA_ "GenSigStartValue" SG_ 567 Torque_demand 0;
+BA_ "GenSigStartValue" SG_ 566 Iq 0;
+BA_ "GenSigStartValue" SG_ 566 Id 0;
+BA_ "GenSigStartValue" SG_ 566 Target_Iq 0;
+BA_ "GenSigStartValue" SG_ 566 Target_Id 0;
+BA_ "GenSigStartValue" SG_ 565 Traction_drive_state 0;
+BA_ "GenSigStartValue" SG_ 565 Heatsink_temperature 0;
+BA_ "GenSigStartValue" SG_ 565 Torque_actual_value 0;
+BA_ "GenSigStartValue" SG_ 565 Velocity_Gen 0;
+BA_ "GenSigStartValue" SG_ 564 Active_Fault 0;
+BA_ "GenSigStartValue" SG_ 564 Analog_Output_1 0;
+BA_ "GenSigStartValue" SG_ 564 Battery_Current 0;
+BA_ "GenSigStartValue" SG_ 564 Capacitor_Voltage 0;
+BA_ "GenSigStartValue" SG_ 552 Uq 0;
+BA_ "GenSigStartValue" SG_ 552 Ud 0;
+BA_ "GenSigStartValue" SG_ 552 Motor_Temperature_Torque_Cutback 0;
+BA_ "GenSigStartValue" SG_ 552 Drive_Trq_Voltage_Cutback_Factor 0;
+BA_ "GenSigStartValue" SG_ 551 Measured_inductance 0;
+BA_ "GenSigStartValue" SG_ 551 Motor_temperature 0;
+BA_ "GenSigStartValue" SG_ 551 Voltage_modulation 0;
+BA_ "GenSigStartValue" SG_ 551 Torque_demand 0;
+BA_ "GenSigStartValue" SG_ 550 Iq 0;
+BA_ "GenSigStartValue" SG_ 550 Id 0;
+BA_ "GenSigStartValue" SG_ 550 Target_Iq 0;
+BA_ "GenSigStartValue" SG_ 550 Target_Id 0;
+BA_ "GenSigStartValue" SG_ 549 Traction_drive_state 0;
+BA_ "GenSigStartValue" SG_ 549 Heatsink_temperature 0;
+BA_ "GenSigStartValue" SG_ 549 Torque_actual_value 0;
+BA_ "GenSigStartValue" SG_ 549 Velocity_Rear 0;
+BA_ "GenSigStartValue" SG_ 548 Active_Fault 0;
+BA_ "GenSigStartValue" SG_ 548 Analog_Output_1 0;
+BA_ "GenSigStartValue" SG_ 548 Battery_Current 0;
+BA_ "GenSigStartValue" SG_ 548 Capacitor_Voltage 0;
+BA_ "GenSigStartValue" SG_ 536 Uq 0;
+BA_ "GenSigStartValue" SG_ 536 Ud 0;
+BA_ "GenSigStartValue" SG_ 536 Motor_Temperature_Torque_Cutback 0;
+BA_ "GenSigStartValue" SG_ 536 Drive_Trq_Voltage_Cutback_Factor 0;
+BA_ "GenSigStartValue" SG_ 534 Iq 0;
+BA_ "GenSigStartValue" SG_ 534 Id 0;
+BA_ "GenSigStartValue" SG_ 534 Target_Iq 0;
+BA_ "GenSigStartValue" SG_ 534 Target_Id 0;
+BA_ "GenSigStartValue" SG_ 535 Measured_inductance 0;
+BA_ "GenSigStartValue" SG_ 535 Motor_temperature 0;
+BA_ "GenSigStartValue" SG_ 535 Voltage_modulation 0;
+BA_ "GenSigStartValue" SG_ 535 Torque_demand 0;
+BA_ "GenSigStartValue" SG_ 533 Traction_drive_state 0;
+BA_ "GenSigStartValue" SG_ 533 Heatsink_temperature 0;
+BA_ "GenSigStartValue" SG_ 533 Torque_actual_value 0;
+BA_ "GenSigStartValue" SG_ 533 Velocity_Front 0;
+BA_ "GenSigStartValue" SG_ 532 Active_Fault 0;
+BA_ "GenSigStartValue" SG_ 532 Analog_Output_1 0;
+BA_ "GenSigStartValue" SG_ 532 Battery_Current 0;
+BA_ "GenSigStartValue" SG_ 532 Capacitor_Voltage 0;
+BA_ "GenSigStartValue" SG_ 497 T_FMot 0;
+BA_ "GenSigStartValue" SG_ 497 T_FInv 0;
+BA_ "GenSigStartValue" SG_ 497 T_RInv 0;
+BA_ "GenSigStartValue" SG_ 497 T_RMot 0;
+BA_ "GenSigStartValue" SG_ 497 T_GMot 0;
+BA_ "GenSigStartValue" SG_ 497 T_GInv 0;
+BA_ "GenSigStartValue" SG_ 497 T_Rad 0;
+BA_ "GenSigStartValue" SG_ 498 PumpACtrl 0;
+BA_ "GenSigStartValue" SG_ 498 PumpBCtrl 0;
+BA_ "GenSigStartValue" SG_ 498 RadFanCtrl 0;
+BA_ "GenSigStartValue" SG_ 498 FanPWMDuty 0;
+
+VAL_ 818 FS1_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 818 Reverse_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 818 Forward_Switch_Node_3 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 FS1_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 Reverse_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 802 Forward_Switch_Node_2 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 FS1_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 Reverse_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+VAL_ 786 Forward_Switch_Node_1 1 "ACTIVE" 0 "INACTIVE" ;
+

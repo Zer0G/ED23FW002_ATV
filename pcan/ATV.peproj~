@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PCANExplorerProject Version="5.0" Name="ATV">
+    <Connections AutoReset="0" IgnoreRTRLength="0" ProcessRTR="1">
+        <Connection Bus="2" Enabled="0" Protocol="0" ErrorFrames="1" SymbolsFileName="ATV.sym" BitRate="28" Connection="PCAN500@pcan_usb" Name="PCAN500"/>
+        <Connection Bus="3" Enabled="0" Protocol="0" SymbolsFileName="ATV.sym" BitRate="20" Connection="PCAN1M@pcan_usb" Name="PCAN1M"/>
+        <Connection Bus="4" Enabled="0" Protocol="0" SymbolsFileName="ATV.sym" BitRate="284" Connection="PCAN250@pcan_usb" Name="PCAN250"/>
+        <Connection Bus="5" Enabled="0" Protocol="0" BitRate="284" Connection="PCAN250@pcan_usb" Name="PCAN2501"/>
+        <Connection Bus="6" Enabled="0" Protocol="0" BitRate="284" Connection="PCANFD250@pcan_usb" Name="PCANFD250"/>
+        <Connection Bus="1" Enabled="1" Protocol="0" SymbolsFileName="ATV.sym" BitRate="43" Connection="PCANLight_USB_16@pcan_usb" Name="PCANLight_USB_16"/>
+    </Connections>
+    <MessageFilters>
+        <MessageFilter Name="Filter1"/>
+    </MessageFilters>
+    <Files>
+        <File RelativePath="ATV.sym"/>
+        <File RelativePath="VSM.plt"/>
+        <File RelativePath="ATV_Panel.ipf"/>
+        <File SelectedIDs="80;703;702;701;332;331;322;321;312;311;238;237;236;235;234;228;227;226;225;224;218;217;216;215;214;" RelativePath="Oral_Engineering_CANBus.dbc"/>
+        <File RelativePath="..\..\Sevcon\prove_traccia_LOG_Gherardi_freno_1.trc"/>
+    </Files>
+</PCANExplorerProject>

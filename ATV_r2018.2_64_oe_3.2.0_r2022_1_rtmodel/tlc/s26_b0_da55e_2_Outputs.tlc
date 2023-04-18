@@ -1,0 +1,129 @@
+%implements s26_b0_da55e_2_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+uint16_T rtb_Switch2_i;
+boolean_T rtb_RelationalOperator1;
+int32_T rtb_Switch2_n;
+int96m_T tmp;
+int96m_T tmp_0;
+int96m_T tmp_1;
+int64m_T tmp_2;
+uint32_T tmp_3;
+uint32_T tmp_4;
+real_T rtb_RelationalOperator1_0;
+static int96m_T tmp_5 = { { 0U, 500U, 0U }/* chunks */ };
+%closefile localVarDecl
+/* {S!d4226}Switch: '<S43>/Switch2' incorporates:
+ *  Constant: '<S42>/ATVC_upperLimitPedalF'
+ *  RelationalOperator: '<S43>/LowerRelop1'
+ *  Switch: '<S43>/Switch'
+ */
+if (rtu_throttleX1000 > 1000) {
+    rtb_Switch2_i = 1000U;
+} else {
+    rtb_Switch2_i = rtu_throttleX1000;
+}
+/* {E!d4226}End of Switch: '<S43>/Switch2' */
+
+/* {S!d4228}RelationalOperator: '<S42>/Relational Operator1' */
+rtb_RelationalOperator1 = (rtb_Switch2_i >= 100);
+/* {S!d4246}Switch: '<S36>/Switch' incorporates:
+ *  Constant: '<S36>/Constant'
+ *  DataTypeConversion: '<S42>/Cast'
+ *  DataTypeConversion: '<S42>/Cast1'
+ *  Switch: '<S36>/Switch2'
+ *  Switch: '<S42>/Switch1'
+ */
+if (rtu_FS1) {
+    localB->Switch = 0U;
+    localB->Switch2 = 0U;
+} else {
+    if (rtb_RelationalOperator1) {
+        /* {S!d4230}Switch: '<S42>/Switch1' incorporates:
+ *  Constant: '<S42>/ATVC_throttleNeutralPoint'
+ *  Product: '<S45>/throttle positive'
+ *  Sum: '<S45>/ '
+ */
+        rtb_RelationalOperator1_0 = ((real_T)rtb_Switch2_i - 100.0) * 1.1111111111111112;
+    } else {
+        /* {S!d4232}Switch: '<S42>/Switch1' incorporates:
+ *  Constant: '<S44>/Constant'
+ */
+        rtb_RelationalOperator1_0 = 0.0;
+    }
+    /* {S!d4234}DataTypeConversion: '<S42>/Cast' */
+    rtb_Switch2_n = (int32_T)fmod((int32_T)floor(rtb_RelationalOperator1_0), 65536.0);
+    localB->Switch = (uint16_T)(rtb_Switch2_n < 0 ? (int32_T)(uint16_T)-(int16_T)(uint16_T)-(real_T)rtb_Switch2_n : (int32_T)(uint16_T)rtb_Switch2_n);
+    /* {S!d4244}Switch: '<S42>/Switch2' incorporates:
+ *  Constant: '<S45>/Constant1'
+ *  DataTypeConversion: '<S42>/Cast'
+ *  DataTypeConversion: '<S44>/Data Type Conversion3'
+ */
+    if (rtb_RelationalOperator1) {
+        rtb_Switch2_n = 0;
+    } else {
+        /* {S!d4236}Gain: '<S44>/Gain' incorporates:
+ *  DataTypeConversion: '<S44>/Data Type Conversion'
+ */
+        tmp_3 = 2147483648U;
+        tmp_4 = rtb_Switch2_i;
+        sMultiWordMul(&tmp_3, 1, &tmp_4, 1, &tmp_2.chunks[0U], 2);
+        /* {S!d4238}Product: '<S44>/throttle negative' */
+        tmp_3 = 10U;
+        sMultiWordMul(&tmp_2.chunks[0U], 2, &tmp_3, 1, &tmp_1.chunks[0U], 3);
+        /* {S!d4240}Sum: '<S44>/Subtract1' */
+        MultiWordAdd(&tmp_1.chunks[0U], &tmp_5.chunks[0U], &tmp_0.chunks[0U], 3);
+        /* {S!d4242}DataTypeConversion: '<S44>/Data Type Conversion3' */
+        sMultiWordShr(&tmp_0.chunks[0U], 3, 31U, &tmp.chunks[0U], 3);
+        rtb_Switch2_n = (uint16_T)MultiWord2uLong(&tmp.chunks[0U]);
+    }
+    /* {E!d4244}End of Switch: '<S42>/Switch2' */
+    localB->Switch2 = (uint16_T)(int32_T)fmod(rtb_Switch2_n, 65536.0);
+}
+/* {E!d4246}End of Switch: '<S36>/Switch' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[2].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(2, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(2, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_DBWREG_BRAKEFORWARD(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_FS1\
+%assign comma = ", "
+%<comma>uint16_T rtu_throttleX1000\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(2, 0, 3)
+%<comma>uint8_T rtu_mtadd\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(2, 0, 4)
+%<comma>uint8_T rtu_mtawnb\
+%assign comma = ", "
+%endif
+%<comma>B_DBWREG_BRAKEFORWARD_ATV_T *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%endfunction

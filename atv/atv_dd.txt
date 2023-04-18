@@ -1,0 +1,123 @@
+** See the OpenECU Simulink User Guide, section 'Data dictionary files' for more
+** information about the contents of this file.
+**
+** This file is best edited with Excel, import the file as 'TAB delimited'.
+**
+** Any line starting with the '**' characters is treated as a comment.
+**
+** The following line defines the order of the columns in the remaining lines.
+
+Name	Value	Units	Type	Accuracy	Min	Max	DeclFile	DefnFile	Description
+
+** The previous line must be present in all data dictionary files but
+** note that columns can be swapped around (with the exception of the
+** Name column) and some columns are optional.
+**
+** Each line uses a single TAB character to separate columns.
+**
+** The following line is an example of a DDE which maps to a Simulink signal.
+
+**atv_signal		degree_Celsius	real_T	0.01					Replace this with a useful comment.
+
+** The following line is an example of a DDE which maps to a parameter in a Simulink block.
+
+atv_param	0	kPa	real_T	0.01					Replace this with a useful comment.
+
+** The following DDEs provide information about the target ECU's status.
+
+atv_cpu_loading		%	uint8_T	1					CPU loading seen in last 50ms
+atv_cpu_loading_max		%	uint8_T	1					Maximum CPU loading seen in any 50ms period
+atv_stack_used		byte	uint32_T	1					Amount of used stack
+atv_task_duration_1s		microsecond	uint32_T	1					Duration of 1s task (last measured valued)
+atv_task_duration_1s_max		microsecond	uint32_T	1					Duration of 1s task (maximum since power up)
+
+** The following DDEs provide version information for each piece of software
+** on the target ECU.
+
+atv_boot_code_year		one	uint16_T	1					Year the boot code was built.
+atv_boot_code_month		one	uint16_T	1					Month the boot code was built.
+atv_boot_code_day		one	uint16_T	1					Day the boot code was built.
+atv_boot_code_major_ver		one	uint16_T	1					Major version of the boot code.
+atv_boot_code_minor_ver		one	uint16_T	1					Minor version of the boot code.
+atv_boot_code_subminor_ver		one	uint16_T	1					Sub-minor version of the boot code.
+
+atv_platform_code_year		one	uint16_T	1					Year the platform library code was built.
+atv_platform_code_month		one	uint16_T	1					Month the platform library code was built.
+atv_platform_code_day		one	uint16_T	1					Day the platform library code was built.
+atv_platform_code_major_ver		one	uint16_T	1					Major version of the platform library code.
+atv_platform_code_minor_ver		one	uint16_T	1					Minor version of the platform library code.
+atv_platform_code_subminor_ver		one	uint16_T	1					Sub-minor version of the platform library code.
+
+atv_prg_code_year		one	uint16_T	1					Year the reprogramming code was built.
+atv_prg_code_month		one	uint16_T	1					Month the reprogramming code was built.
+atv_prg_code_day		one	uint16_T	1					Day the reprogramming code was built.
+atv_prg_code_major_ver		one	uint16_T	1					Major version of the reprogramming code.
+atv_prg_code_minor_ver		one	uint16_T	1					Minor version of the reprogramming code.
+atv_prg_code_subminor_ver		one	uint16_T	1					Sub-minor version of the reprogramming code.
+
+atv_app_code_year		one	uint16_T	1					Year the application code was built.
+atv_app_code_month		one	uint16_T	1					Month the application code was built.
+atv_app_code_day		one	uint16_T	1					Day the application code was built.
+atv_app_code_major_ver		one	uint16_T	1					Major version of the application code.
+atv_app_code_minor_ver		one	uint16_T	1					Minor version of the application code.
+atv_app_code_subminor_ver		one	uint16_T	1					Sub-minor version of the application code.
+
+t_sample		sec	real_T	0.01					Sample time definition for fast VSM Cycle
+
+
+atvc_mtawnb	100	one	uint8_T		0	100			Maximum Torque When Braking [%]
+atvc_mtadd	100	one	uint8_T		0	100			Maximum Torque [%]
+atvc_mtadd_rev	100	one	uint8_T		0	100			Maximum Torque When Braking Reverese [%]
+atvc_mtawnb_rev	100	one	uint8_T		0	100			Maximum Torque Reverese [%]
+atvc_upperLimitPedalF	1000	one	uint16_T		550	1000			High Pedal limit [%]
+atvc_lowerLimitPedalF	0	one	uint16_T		0	450			Low Pedal Limit [%]
+atvc_throttleNeutralPoint	100	one	uint16_T		0	450			Throttle neutral position [%]
+atvc_dcMinFan	30	one	uint8_T		0	100			Minimum Fan Speed [%]
+atvc_tempSwitchOffFan	48	degree_Celsius	uint8_T		10	100			Fan Off Temp
+atvc_tempSwitchOnFan	50	degree_Celsius	uint8_T		10	100			Fan On Temp
+
+atv_xd1_key_ain		V	int32_T	1					Key Signal Voltage
+atv_xe3_ain		V	int32_T	1					
+atv_throttleX1000		V	uint16_T	1					Throttle Input 0-1000
+atv_xa1_ain_throttle_raw		V	real_T	0.001					Throttle Input V (Raw Voltage)
+atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status (RAW)
+atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status
+atv_xd3_raw_ain		V	real_T	0.001					Foot Pedal FS1 Switch (Raw Voltage)
+atv_fs1_in		one	boolean_T	1					Foot Pedal FS1 Switch Status
+
+atv_wakelock_out		one	boolean_T	1					Wakelock Status
+atv_key_signal_in		one	boolean_T	1					Key Logical Status
+atv_state_out		one	uint8_T	1					VSM State
+atv_sub_state_out		one	uint8_T	1					VSM SubState
+bms_rolling_counter		one	uint8_T	1					BMS Rolling counter
+bms_pack_soc		%	uint8_T	1					Battery SOC
+bms_pack_voltage		V	real_T	1					Battery Voltage
+atv_runLed_out		one	boolean_T	1					RUN LED Status
+atv_runLed_out		one	boolean_T	1					RUN LED Status
+atv_en_dcdc_out		one	boolean_T	1					RUN LED Status
+
+
+**bmsHVmCtrl		one	boolean_T	1					request for HVm contactor (provisional)
+**bmsHVpCtrl		one	boolean_T	1					request for HVp contactor (provisional)
+**bmsHeaterCtrl		one	boolean_T	1					request for Heater contactor (provisional)
+**bmsHeaterSsrCtrl		one	boolean_T	1					request for Heater SSR (provisional)
+**bmsChgCtrl		one	boolean_T	1					request for Charge contactor (provisional)
+atv_fan_setpoint		%	uint16_T	1					Calculated Fan Duty Cycle
+atv_fan_status		one	uint8_T	1					Fan Status (Indicates Fan running)
+atv_fan_output		one	uint16_T	1					Fan Output Status (Indicates Status of Fan output)
+
+
+**  DEBUG SIGNALS
+atv_key_signal		one	boolean_T	1					Key Logical Status
+atv_v_dbg_hv_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+atv_v_dbg_chg_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+atv_dbg_pumpA_out		one	boolean_T	1					Pump A (Debug Signal)
+atv_dbg_pumpB_out		one	boolean_T	1					Pump A (Debug Signal)
+atv_v_dbg_heater_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+atvc_maxTempInv	60	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempInv	40	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_maxTempMotor	60	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempMotor	80	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_socLimitSave	5	one	uint8_T		2	90			Min soc for pump control
+atv_dbg_FAN_in		one	real_T	1					VSM State
+atv_dbg_FAN		one	real_T	0.01					Replace this with a useful comment.

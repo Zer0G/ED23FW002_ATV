@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c5_ATV"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PumpALogic"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PumpALogic"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PumpBLogic"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PumpBLogic"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "PumpStB"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "PumpStB"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "PumpStA"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "PumpStA"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

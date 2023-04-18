@@ -1,0 +1,278 @@
+%function CGIRBlockRegisterFixPointFunctions() void
+%if !ISFIELD(FixPtUtils,"MultiWord2uLong")
+%assign tmpRet = SETFIELD(FixPtUtils,"MultiWord2uLong",1)
+%assign fcnProBuf =""
+%openfile fcnProBuf
+extern uint32_T MultiWord2uLong(const uint32_T u[]);
+%closefile fcnProBuf
+%assign fcnDefBuf =""
+%openfile fcnDefBuf
+%assign fcnRec = SLibFcnPrototypeToRec(fcnProBuf)
+%addtorecord fcnRec Abstract "" Category "utility" ...
+             GeneratedBy "" Type "Utility"
+%<SLibDumpFunctionBanner(fcnRec)>
+%undef fcnRec
+uint32_T MultiWord2uLong(const uint32_T u[])
+{
+    return u[0];
+}
+%closefile fcnDefBuf
+%<LibPushEmptyStackSharedUtils()>
+%<SLibDumpUtilsSourceCode("MultiWord2uLong",fcnProBuf,fcnDefBuf)>
+%if !EXISTS(::CompiledModel.GenUtilsSrcInSharedLocation) || (::CompiledModel.GenUtilsSrcInSharedLocation == 0)
+%assign fcnProPragmaBuf =""
+%openfile fcnProPragmaBuf
+  %<SLibGetFcnMemSecPragmaOnDecl("MultiWord2uLong", "MemSecFuncSharedUtil", "Pre")>\
+  %<fcnProBuf>
+  %<SLibGetFcnMemSecPragmaOnDecl("MultiWord2uLong", "MemSecFuncSharedUtil", "Post")>\
+%closefile fcnProPragmaBuf
+  %<LibCacheFunctionPrototype(fcnProPragmaBuf)>
+%endif
+%assign incStackBuf = LibPopStackSharedUtilsIncludes()
+%undef incStackBuf
+%undef fcnProPragmaBuf
+%undef fcnProBuf
+%undef fcnDefBuf
+%endif %% !ISFIELD(FixPtUtils,"MultiWord2uLong")
+
+
+%if !ISFIELD(FixPtUtils,"sMultiWordShr")
+%assign tmpRet = SETFIELD(FixPtUtils,"sMultiWordShr",1)
+%assign fcnProBuf =""
+%openfile fcnProBuf
+extern void sMultiWordShr(const uint32_T u1[], int32_T n1, uint32_T n2, uint32_T y[], int32_T n);
+%closefile fcnProBuf
+%assign fcnDefBuf =""
+%openfile fcnDefBuf
+%assign fcnRec = SLibFcnPrototypeToRec(fcnProBuf)
+%addtorecord fcnRec Abstract "" Category "utility" ...
+             GeneratedBy "" Type "Utility"
+%<SLibDumpFunctionBanner(fcnRec)>
+%undef fcnRec
+void sMultiWordShr(const uint32_T u1[], int32_T n1, uint32_T n2, uint32_T y[], int32_T n)
+{
+    int32_T nb;
+    int32_T i;
+    uint32_T ys;
+    uint32_T yi;
+    uint32_T u1i;
+    int32_T nc;
+    uint32_T nr;
+    uint32_T nl;
+    int32_T i1;
+    nb = (int32_T)(n2 >> 5);
+    i = 0;
+    ys = (u1[n1 - 1] & 2147483648U) != 0U ? MAX_uint32_T : 0U;
+    if (nb < n1) {
+        nc = n + nb;
+        if (nc > n1) {
+            nc = n1;
+        }
+        nr = n2 - ((uint32_T)nb << 5);
+        if (nr > 0U) {
+            nl = 32U - nr;
+            u1i = u1[nb];
+            for (i1 = nb + 1; i1 < nc; i1++) {
+                yi = u1i >> nr;
+                u1i = u1[i1];
+                y[i] = u1i << nl | yi;
+                i++;
+            }
+            yi = u1i >> nr;
+            u1i = nc < n1 ? u1[nc] : ys;
+            y[i] = u1i << nl | yi;
+            i++;
+        } else {
+            for (i1 = nb; i1 < nc; i1++) {
+                y[i] = u1[i1];
+                i++;
+            }
+        }
+    }
+    while (i < n) {
+        y[i] = ys;
+        i++;
+    }
+}
+%closefile fcnDefBuf
+%<LibPushEmptyStackSharedUtils()>
+%<SLibDumpUtilsSourceCode("sMultiWordShr",fcnProBuf,fcnDefBuf)>
+%if !EXISTS(::CompiledModel.GenUtilsSrcInSharedLocation) || (::CompiledModel.GenUtilsSrcInSharedLocation == 0)
+%assign fcnProPragmaBuf =""
+%openfile fcnProPragmaBuf
+  %<SLibGetFcnMemSecPragmaOnDecl("sMultiWordShr", "MemSecFuncSharedUtil", "Pre")>\
+  %<fcnProBuf>
+  %<SLibGetFcnMemSecPragmaOnDecl("sMultiWordShr", "MemSecFuncSharedUtil", "Post")>\
+%closefile fcnProPragmaBuf
+  %<LibCacheFunctionPrototype(fcnProPragmaBuf)>
+%endif
+%assign incStackBuf = LibPopStackSharedUtilsIncludes()
+%undef incStackBuf
+%undef fcnProPragmaBuf
+%undef fcnProBuf
+%undef fcnDefBuf
+%endif %% !ISFIELD(FixPtUtils,"sMultiWordShr")
+
+
+%if !ISFIELD(FixPtUtils,"MultiWordAdd")
+%assign tmpRet = SETFIELD(FixPtUtils,"MultiWordAdd",1)
+%assign fcnProBuf =""
+%openfile fcnProBuf
+extern void MultiWordAdd(const uint32_T u1[], const uint32_T u2[], uint32_T y[], int32_T n);
+%closefile fcnProBuf
+%assign fcnDefBuf =""
+%openfile fcnDefBuf
+%assign fcnRec = SLibFcnPrototypeToRec(fcnProBuf)
+%addtorecord fcnRec Abstract "" Category "utility" ...
+             GeneratedBy "" Type "Utility"
+%<SLibDumpFunctionBanner(fcnRec)>
+%undef fcnRec
+void MultiWordAdd(const uint32_T u1[], const uint32_T u2[], uint32_T y[], int32_T n)
+{
+    uint32_T yi;
+    uint32_T u1i;
+    uint32_T carry = 0U;
+    int32_T i;
+    for (i = 0; i < n; i++) {
+        u1i = u1[i];
+        yi = (u1i + u2[i]) + carry;
+        y[i] = yi;
+        carry = carry != 0U ? (uint32_T)(yi <= u1i) : (uint32_T)(yi < u1i);
+    }
+}
+%closefile fcnDefBuf
+%<LibPushEmptyStackSharedUtils()>
+%<SLibDumpUtilsSourceCode("MultiWordAdd",fcnProBuf,fcnDefBuf)>
+%if !EXISTS(::CompiledModel.GenUtilsSrcInSharedLocation) || (::CompiledModel.GenUtilsSrcInSharedLocation == 0)
+%assign fcnProPragmaBuf =""
+%openfile fcnProPragmaBuf
+  %<SLibGetFcnMemSecPragmaOnDecl("MultiWordAdd", "MemSecFuncSharedUtil", "Pre")>\
+  %<fcnProBuf>
+  %<SLibGetFcnMemSecPragmaOnDecl("MultiWordAdd", "MemSecFuncSharedUtil", "Post")>\
+%closefile fcnProPragmaBuf
+  %<LibCacheFunctionPrototype(fcnProPragmaBuf)>
+%endif
+%assign incStackBuf = LibPopStackSharedUtilsIncludes()
+%undef incStackBuf
+%undef fcnProPragmaBuf
+%undef fcnProBuf
+%undef fcnDefBuf
+%endif %% !ISFIELD(FixPtUtils,"MultiWordAdd")
+
+
+%if !ISFIELD(FixPtUtils,"sMultiWordMul")
+%assign tmpRet = SETFIELD(FixPtUtils,"sMultiWordMul",1)
+%assign fcnProBuf =""
+%openfile fcnProBuf
+extern void sMultiWordMul(const uint32_T u1[], int32_T n1, const uint32_T u2[], int32_T n2, uint32_T y[], int32_T n);
+%closefile fcnProBuf
+%assign fcnDefBuf =""
+%openfile fcnDefBuf
+%assign fcnRec = SLibFcnPrototypeToRec(fcnProBuf)
+%addtorecord fcnRec Abstract "" Category "utility" ...
+             GeneratedBy "" Type "Utility"
+%<SLibDumpFunctionBanner(fcnRec)>
+%undef fcnRec
+void sMultiWordMul(const uint32_T u1[], int32_T n1, const uint32_T u2[], int32_T n2, uint32_T y[], int32_T n)
+{
+    int32_T i;
+    int32_T j;
+    int32_T k;
+    int32_T nj;
+    uint32_T u1i;
+    uint32_T yk;
+    uint32_T a1;
+    uint32_T a0;
+    uint32_T b1;
+    uint32_T w10;
+    uint32_T w01;
+    uint32_T cb;
+    boolean_T isNegative1;
+    boolean_T isNegative2;
+    uint32_T cb1;
+    uint32_T cb2;
+    isNegative1 = ((u1[n1 - 1] & 2147483648U) != 0U);
+    isNegative2 = ((u2[n2 - 1] & 2147483648U) != 0U);
+    cb1 = 1U;
+    /* Initialize output to zero */
+    for (k = 0; k < n; k++) {
+        y[k] = 0U;
+    }
+    for (i = 0; i < n1; i++) {
+        cb = 0U;
+        u1i = u1[i];
+        if (isNegative1) {
+            u1i = ~u1i + cb1;
+            cb1 = (uint32_T)(u1i < cb1);
+        }
+        a1 = u1i >> 16U;
+        a0 = u1i & 65535U;
+        cb2 = 1U;
+        k = n - i;
+        nj = n2 <= k ? n2 : k;
+        k = i;
+        for (j = 0; j < nj; j++) {
+            yk = y[k];
+            u1i = u2[j];
+            if (isNegative2) {
+                u1i = ~u1i + cb2;
+                cb2 = (uint32_T)(u1i < cb2);
+            }
+            b1 = u1i >> 16U;
+            u1i &= 65535U;
+            w10 = a1 * u1i;
+            w01 = a0 * b1;
+            yk += cb;
+            cb = (uint32_T)(yk < cb);
+            u1i *= a0;
+            yk += u1i;
+            cb += (yk < u1i);
+            u1i = w10 << 16U;
+            yk += u1i;
+            cb += (yk < u1i);
+            u1i = w01 << 16U;
+            yk += u1i;
+            cb += (yk < u1i);
+            y[k] = yk;
+            cb += w10 >> 16U;
+            cb += w01 >> 16U;
+            cb += a1 * b1;
+            k++;
+        }
+        if (k < n) {
+            y[k] = cb;
+        }
+    }
+    /* Apply sign */
+    if (isNegative1 != isNegative2) {
+        cb = 1U;
+        for (k = 0; k < n; k++) {
+            yk = ~y[k] + cb;
+            y[k] = yk;
+            cb = (uint32_T)(yk < cb);
+        }
+    }
+}
+%closefile fcnDefBuf
+%<LibPushEmptyStackSharedUtils()>
+%<SLibDumpUtilsSourceCode("sMultiWordMul",fcnProBuf,fcnDefBuf)>
+%if !EXISTS(::CompiledModel.GenUtilsSrcInSharedLocation) || (::CompiledModel.GenUtilsSrcInSharedLocation == 0)
+%assign fcnProPragmaBuf =""
+%openfile fcnProPragmaBuf
+  %<SLibGetFcnMemSecPragmaOnDecl("sMultiWordMul", "MemSecFuncSharedUtil", "Pre")>\
+  %<fcnProBuf>
+  %<SLibGetFcnMemSecPragmaOnDecl("sMultiWordMul", "MemSecFuncSharedUtil", "Post")>\
+%closefile fcnProPragmaBuf
+  %<LibCacheFunctionPrototype(fcnProPragmaBuf)>
+%endif
+%assign incStackBuf = LibPopStackSharedUtilsIncludes()
+%undef incStackBuf
+%undef fcnProPragmaBuf
+%undef fcnProBuf
+%undef fcnDefBuf
+%endif %% !ISFIELD(FixPtUtils,"sMultiWordMul")
+
+
+%endfunction
+
+

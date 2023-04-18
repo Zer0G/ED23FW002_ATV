@@ -1,0 +1,2802 @@
+%implements s26_b0_da55e_TLCInterface "C"
+
+%function getOutputAddr_16_2_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_za3_StartBtn_din"
+%endfunction
+
+%function getOutput_16_2_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_za3_StartBtn_din"
+%endfunction
+
+%function getInputAddr_16_4_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_state_out"
+%endfunction
+
+%function getInput_16_4_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_state_out"
+%endfunction
+
+%function getInputAddr_16_4_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_sub_state_out"
+%endfunction
+
+%function getInput_16_4_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_sub_state_out"
+%endfunction
+
+%function getOutputAddr_16_4_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage"
+%endfunction
+
+%function getOutput_16_4_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage"
+%endfunction
+
+%function getInputAddr_16_5_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition4_b"
+%endfunction
+
+%function getInput_16_5_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition4_b"
+%endfunction
+
+%function getInputAddr_16_5_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition"
+%endfunction
+
+%function getInput_16_5_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition"
+%endfunction
+
+%function getInputAddr_16_5_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition1"
+%endfunction
+
+%function getInput_16_5_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition1"
+%endfunction
+
+%function getInputAddr_16_5_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition2"
+%endfunction
+
+%function getInput_16_5_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition2"
+%endfunction
+
+%function getInputAddr_16_5_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition2"
+%endfunction
+
+%function getInput_16_5_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition2"
+%endfunction
+
+%function getOutputAddr_16_5_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage1"
+%endfunction
+
+%function getOutput_16_5_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage1"
+%endfunction
+
+%function getInputAddr_16_33_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch3"
+%endfunction
+
+%function getInput_16_33_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch3"
+%endfunction
+
+%function getInputAddr_16_33_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch1"
+%endfunction
+
+%function getInput_16_33_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch1"
+%endfunction
+
+%function getInputAddr_16_33_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_33_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_33_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_33_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_33_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage2"
+%endfunction
+
+%function getOutput_16_33_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage2"
+%endfunction
+
+%function getInputAddr_16_38_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.LogicalOperator"
+%endfunction
+
+%function getInput_16_38_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.LogicalOperator"
+%endfunction
+
+%function getInputAddr_16_38_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_38_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage3"
+%endfunction
+
+%function getOutput_16_38_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage3"
+%endfunction
+
+%function getInputAddr_16_55_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch3_n"
+%endfunction
+
+%function getInput_16_55_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch3_n"
+%endfunction
+
+%function getInputAddr_16_55_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch1_h"
+%endfunction
+
+%function getInput_16_55_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch1_h"
+%endfunction
+
+%function getInputAddr_16_55_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_55_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_55_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_55_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_55_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage4"
+%endfunction
+
+%function getOutput_16_55_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage4"
+%endfunction
+
+%function getInputAddr_16_56_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.LogicalOperator"
+%endfunction
+
+%function getInput_16_56_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.LogicalOperator"
+%endfunction
+
+%function getInputAddr_16_56_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_56_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage5"
+%endfunction
+
+%function getOutput_16_56_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage5"
+%endfunction
+
+%function getInputAddr_16_73_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition3"
+%endfunction
+
+%function getInput_16_73_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition3"
+%endfunction
+
+%function getInputAddr_16_73_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition5_g"
+%endfunction
+
+%function getInput_16_73_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition5_g"
+%endfunction
+
+%function getInputAddr_16_73_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition6_p"
+%endfunction
+
+%function getInput_16_73_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition6_p"
+%endfunction
+
+%function getInputAddr_16_73_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition7_p"
+%endfunction
+
+%function getInput_16_73_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition7_p"
+%endfunction
+
+%function getOutputAddr_16_73_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage6"
+%endfunction
+
+%function getOutput_16_73_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage6"
+%endfunction
+
+%function getInputAddr_16_74_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_wakelock_out"
+%endfunction
+
+%function getInput_16_74_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_wakelock_out"
+%endfunction
+
+%function getOutputAddr_16_74_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput"
+%endfunction
+
+%function getOutput_16_74_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput"
+%endfunction
+
+%function getInputAddr_16_76_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Switch"
+%endfunction
+
+%function getInput_16_76_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Switch"
+%endfunction
+
+%function getInputAddr_16_76_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_76_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_76_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput_f"
+%endfunction
+
+%function getOutput_16_76_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput_f"
+%endfunction
+
+%function getInputAddr_16_77_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_dbg_pumpB_out"
+%endfunction
+
+%function getInput_16_77_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_dbg_pumpB_out"
+%endfunction
+
+%function getInputAddr_16_77_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_77_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_77_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput1"
+%endfunction
+
+%function getOutput_16_77_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput1"
+%endfunction
+
+%function getInputAddr_16_78_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Switch"
+%endfunction
+
+%function getInput_16_78_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Switch"
+%endfunction
+
+%function getInputAddr_16_78_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_78_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_78_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput2"
+%endfunction
+
+%function getOutput_16_78_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput2"
+%endfunction
+
+%function getInputAddr_16_79_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.heater_ctrl_out"
+%endfunction
+
+%function getInput_16_79_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.heater_ctrl_out"
+%endfunction
+
+%function getInputAddr_16_79_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_79_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_79_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput3"
+%endfunction
+
+%function getOutput_16_79_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput3"
+%endfunction
+
+%function getInputAddr_16_80_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_rear_out"
+%endfunction
+
+%function getInput_16_80_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_rear_out"
+%endfunction
+
+%function getInputAddr_16_80_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_80_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_80_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput4"
+%endfunction
+
+%function getOutput_16_80_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput4"
+%endfunction
+
+%function getInputAddr_16_81_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_front_out"
+%endfunction
+
+%function getInput_16_81_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_front_out"
+%endfunction
+
+%function getInputAddr_16_81_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_81_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_81_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput5"
+%endfunction
+
+%function getOutput_16_81_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput5"
+%endfunction
+
+%function getInputAddr_16_82_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_gen_out"
+%endfunction
+
+%function getInput_16_82_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_gen_out"
+%endfunction
+
+%function getInputAddr_16_82_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_82_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_82_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput6"
+%endfunction
+
+%function getOutput_16_82_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput6"
+%endfunction
+
+%function getInputAddr_16_83_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_runLed_out"
+%endfunction
+
+%function getInput_16_83_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_runLed_out"
+%endfunction
+
+%function getInputAddr_16_83_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_83_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_83_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput7"
+%endfunction
+
+%function getOutput_16_83_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput7"
+%endfunction
+
+%function getInputAddr_16_84_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Saturation"
+%endfunction
+
+%function getInput_16_84_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Saturation"
+%endfunction
+
+%function getInputAddr_16_84_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_84_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_84_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_PWMOutput"
+%endfunction
+
+%function getOutput_16_84_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_PWMOutput"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutput_16_85_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutput_16_85_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutput_16_85_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutput_16_85_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutput_16_85_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutputAddr_16_85_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutput_16_85_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutput_16_89_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutput_16_89_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutput_16_89_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutput_16_89_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutput_16_89_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutput_16_89_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutput_16_89_3_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutput_16_89_3_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutput_16_89_3_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutputAddr_16_89_3_3_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutput_16_89_3_3_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutput_16_99_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutput_16_99_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutput_16_99_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutput_16_99_3_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutput_16_99_3_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&bms_pack_voltage"
+%endfunction
+
+%function getOutput_16_99_3_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "bms_pack_voltage"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutput_16_99_3_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutput_16_99_3_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutputAddr_16_99_3_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getOutput_16_99_3_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getInputAddr_16_101_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_101_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_101_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput_b"
+%endfunction
+
+%function getOutput_16_101_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput_b"
+%endfunction
+
+%function getInputAddr_16_102_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_102_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_102_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput1_i"
+%endfunction
+
+%function getOutput_16_102_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput1_i"
+%endfunction
+
+%function getInputAddr_16_103_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_103_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_103_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput2_p"
+%endfunction
+
+%function getOutput_16_103_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput2_p"
+%endfunction
+
+%function getInputAddr_16_105_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_105_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_105_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput3_l"
+%endfunction
+
+%function getOutput_16_105_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput3_l"
+%endfunction
+
+%function getOutputAddr_16_114_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_year"
+%endfunction
+
+%function getOutput_16_114_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_year"
+%endfunction
+
+%function getOutputAddr_16_114_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_month"
+%endfunction
+
+%function getOutput_16_114_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_month"
+%endfunction
+
+%function getOutputAddr_16_114_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_day"
+%endfunction
+
+%function getOutput_16_114_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_day"
+%endfunction
+
+%function getOutputAddr_16_115_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_major_ver"
+%endfunction
+
+%function getOutput_16_115_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_115_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_minor_ver"
+%endfunction
+
+%function getOutput_16_115_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_115_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_115_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_116_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_year"
+%endfunction
+
+%function getOutput_16_116_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_year"
+%endfunction
+
+%function getOutputAddr_16_116_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_month"
+%endfunction
+
+%function getOutput_16_116_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_month"
+%endfunction
+
+%function getOutputAddr_16_116_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_day"
+%endfunction
+
+%function getOutput_16_116_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_day"
+%endfunction
+
+%function getOutputAddr_16_117_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_major_ver"
+%endfunction
+
+%function getOutput_16_117_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_117_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_minor_ver"
+%endfunction
+
+%function getOutput_16_117_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_117_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_117_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_118_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_year"
+%endfunction
+
+%function getOutput_16_118_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_year"
+%endfunction
+
+%function getOutputAddr_16_118_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_month"
+%endfunction
+
+%function getOutput_16_118_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_month"
+%endfunction
+
+%function getOutputAddr_16_118_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_day"
+%endfunction
+
+%function getOutput_16_118_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_day"
+%endfunction
+
+%function getOutputAddr_16_119_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_major_ver"
+%endfunction
+
+%function getOutput_16_119_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_119_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_minor_ver"
+%endfunction
+
+%function getOutput_16_119_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_119_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_119_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_120_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_year"
+%endfunction
+
+%function getOutput_16_120_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_year"
+%endfunction
+
+%function getOutputAddr_16_120_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_month"
+%endfunction
+
+%function getOutput_16_120_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_month"
+%endfunction
+
+%function getOutputAddr_16_120_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_day"
+%endfunction
+
+%function getOutput_16_120_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_day"
+%endfunction
+
+%function getOutputAddr_16_121_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_major_ver"
+%endfunction
+
+%function getOutput_16_121_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_121_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_minor_ver"
+%endfunction
+
+%function getOutput_16_121_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_121_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_121_3_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutput_16_85_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutput_16_85_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutput_16_85_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutput_16_85_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutput_16_85_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutputAddr_16_85_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutput_16_85_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutput_16_89_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutput_16_89_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutput_16_89_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutput_16_89_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutput_16_89_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutput_16_89_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutput_16_89_3_4_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutput_16_89_3_4_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutput_16_89_3_4_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutputAddr_16_89_3_4_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutput_16_89_3_4_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutput_16_99_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutput_16_99_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutput_16_99_3_4_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutput_16_99_3_4_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutput_16_99_3_4_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&bms_pack_voltage"
+%endfunction
+
+%function getOutput_16_99_3_4_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "bms_pack_voltage"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutput_16_99_3_4_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutput_16_99_3_4_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutputAddr_16_99_3_4_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getOutput_16_99_3_4_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getOutputAddr_16_0_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pai_BasicAnalogInput"
+%endfunction
+
+%function getOutput_16_0_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pai_BasicAnalogInput"
+%endfunction
+
+%function getOutputAddr_16_2_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_za3_StartBtn_din"
+%endfunction
+
+%function getOutput_16_2_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_za3_StartBtn_din"
+%endfunction
+
+%function getInputAddr_16_4_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_state_out"
+%endfunction
+
+%function getInput_16_4_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_state_out"
+%endfunction
+
+%function getInputAddr_16_4_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_sub_state_out"
+%endfunction
+
+%function getInput_16_4_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_sub_state_out"
+%endfunction
+
+%function getOutputAddr_16_4_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage"
+%endfunction
+
+%function getOutput_16_4_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage"
+%endfunction
+
+%function getOutputAddr_16_18_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_xd3_raw_ain"
+%endfunction
+
+%function getOutput_16_18_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_xd3_raw_ain"
+%endfunction
+
+%function getOutputAddr_16_19_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_xa1_ain_throttle_raw"
+%endfunction
+
+%function getOutput_16_19_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_xa1_ain_throttle_raw"
+%endfunction
+
+%function getInputAddr_16_33_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch3"
+%endfunction
+
+%function getInput_16_33_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch3"
+%endfunction
+
+%function getInputAddr_16_33_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch1"
+%endfunction
+
+%function getInput_16_33_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch1"
+%endfunction
+
+%function getInputAddr_16_33_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_33_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_33_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_33_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_33_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage2"
+%endfunction
+
+%function getOutput_16_33_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage2"
+%endfunction
+
+%function getInputAddr_16_38_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.LogicalOperator"
+%endfunction
+
+%function getInput_16_38_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.LogicalOperator"
+%endfunction
+
+%function getInputAddr_16_38_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_38_3_5_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_38_3_5_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_38_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage3"
+%endfunction
+
+%function getOutput_16_38_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage3"
+%endfunction
+
+%function getInputAddr_16_55_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch3_n"
+%endfunction
+
+%function getInput_16_55_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch3_n"
+%endfunction
+
+%function getInputAddr_16_55_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.MultiportSwitch1_h"
+%endfunction
+
+%function getInput_16_55_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.MultiportSwitch1_h"
+%endfunction
+
+%function getInputAddr_16_55_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_55_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_55_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_55_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_55_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage4"
+%endfunction
+
+%function getOutput_16_55_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage4"
+%endfunction
+
+%function getInputAddr_16_56_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.LogicalOperator"
+%endfunction
+
+%function getInput_16_56_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.LogicalOperator"
+%endfunction
+
+%function getInputAddr_16_56_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_5_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_5_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_16_56_3_5_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_56_3_5_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_56_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage5"
+%endfunction
+
+%function getOutput_16_56_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage5"
+%endfunction
+
+%function getInputAddr_16_74_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_wakelock_out"
+%endfunction
+
+%function getInput_16_74_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_wakelock_out"
+%endfunction
+
+%function getOutputAddr_16_74_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput"
+%endfunction
+
+%function getOutput_16_74_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput"
+%endfunction
+
+%function getInputAddr_16_76_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Switch"
+%endfunction
+
+%function getInput_16_76_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Switch"
+%endfunction
+
+%function getInputAddr_16_76_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_76_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_76_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput_f"
+%endfunction
+
+%function getOutput_16_76_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput_f"
+%endfunction
+
+%function getInputAddr_16_77_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_dbg_pumpB_out"
+%endfunction
+
+%function getInput_16_77_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_dbg_pumpB_out"
+%endfunction
+
+%function getInputAddr_16_77_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_77_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_77_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput1"
+%endfunction
+
+%function getOutput_16_77_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput1"
+%endfunction
+
+%function getInputAddr_16_78_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Switch"
+%endfunction
+
+%function getInput_16_78_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Switch"
+%endfunction
+
+%function getInputAddr_16_78_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_78_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_78_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput2"
+%endfunction
+
+%function getOutput_16_78_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput2"
+%endfunction
+
+%function getInputAddr_16_79_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.heater_ctrl_out"
+%endfunction
+
+%function getInput_16_79_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.heater_ctrl_out"
+%endfunction
+
+%function getInputAddr_16_79_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_79_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_79_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput3"
+%endfunction
+
+%function getOutput_16_79_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput3"
+%endfunction
+
+%function getInputAddr_16_80_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_rear_out"
+%endfunction
+
+%function getInput_16_80_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_rear_out"
+%endfunction
+
+%function getInputAddr_16_80_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_80_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_80_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput4"
+%endfunction
+
+%function getOutput_16_80_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput4"
+%endfunction
+
+%function getInputAddr_16_81_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_front_out"
+%endfunction
+
+%function getInput_16_81_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_front_out"
+%endfunction
+
+%function getInputAddr_16_81_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_81_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_81_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput5"
+%endfunction
+
+%function getOutput_16_81_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput5"
+%endfunction
+
+%function getInputAddr_16_82_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.en_inv_gen_out"
+%endfunction
+
+%function getInput_16_82_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.en_inv_gen_out"
+%endfunction
+
+%function getInputAddr_16_82_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_82_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_82_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput6"
+%endfunction
+
+%function getOutput_16_82_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput6"
+%endfunction
+
+%function getInputAddr_16_83_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_runLed_out"
+%endfunction
+
+%function getInput_16_83_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_runLed_out"
+%endfunction
+
+%function getInputAddr_16_83_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_83_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_83_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput7"
+%endfunction
+
+%function getOutput_16_83_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput7"
+%endfunction
+
+%function getInputAddr_16_84_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.Saturation"
+%endfunction
+
+%function getInput_16_84_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.Saturation"
+%endfunction
+
+%function getInputAddr_16_84_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_84_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_84_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_PWMOutput"
+%endfunction
+
+%function getOutput_16_84_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_PWMOutput"
+%endfunction
+
+%function getOutputAddr_16_98_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pai_BasicAnalogInput2"
+%endfunction
+
+%function getOutput_16_98_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pai_BasicAnalogInput2"
+%endfunction
+
+%function getInputAddr_16_101_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_101_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_101_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput_b"
+%endfunction
+
+%function getOutput_16_101_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput_b"
+%endfunction
+
+%function getInputAddr_16_102_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_102_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_102_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput1_i"
+%endfunction
+
+%function getOutput_16_102_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput1_i"
+%endfunction
+
+%function getInputAddr_16_103_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_103_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_103_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput2_p"
+%endfunction
+
+%function getOutput_16_103_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput2_p"
+%endfunction
+
+%function getInputAddr_16_105_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_16_105_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_16_105_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pdx_DigitalOutput3_l"
+%endfunction
+
+%function getOutput_16_105_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pdx_DigitalOutput3_l"
+%endfunction
+
+%function getOutputAddr_16_114_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_year"
+%endfunction
+
+%function getOutput_16_114_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_year"
+%endfunction
+
+%function getOutputAddr_16_114_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_month"
+%endfunction
+
+%function getOutput_16_114_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_month"
+%endfunction
+
+%function getOutputAddr_16_114_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_day"
+%endfunction
+
+%function getOutput_16_114_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_day"
+%endfunction
+
+%function getOutputAddr_16_115_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_major_ver"
+%endfunction
+
+%function getOutput_16_115_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_115_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_minor_ver"
+%endfunction
+
+%function getOutput_16_115_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_115_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_app_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_115_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_app_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_116_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_year"
+%endfunction
+
+%function getOutput_16_116_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_year"
+%endfunction
+
+%function getOutputAddr_16_116_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_month"
+%endfunction
+
+%function getOutput_16_116_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_month"
+%endfunction
+
+%function getOutputAddr_16_116_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_day"
+%endfunction
+
+%function getOutput_16_116_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_day"
+%endfunction
+
+%function getOutputAddr_16_117_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_major_ver"
+%endfunction
+
+%function getOutput_16_117_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_117_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_minor_ver"
+%endfunction
+
+%function getOutput_16_117_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_117_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_boot_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_117_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_boot_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_118_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_year"
+%endfunction
+
+%function getOutput_16_118_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_year"
+%endfunction
+
+%function getOutputAddr_16_118_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_month"
+%endfunction
+
+%function getOutput_16_118_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_month"
+%endfunction
+
+%function getOutputAddr_16_118_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_day"
+%endfunction
+
+%function getOutput_16_118_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_day"
+%endfunction
+
+%function getOutputAddr_16_119_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_major_ver"
+%endfunction
+
+%function getOutput_16_119_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_119_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_minor_ver"
+%endfunction
+
+%function getOutput_16_119_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_119_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_prg_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_119_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_prg_code_subminor_ver"
+%endfunction
+
+%function getOutputAddr_16_120_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_year"
+%endfunction
+
+%function getOutput_16_120_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_year"
+%endfunction
+
+%function getOutputAddr_16_120_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_month"
+%endfunction
+
+%function getOutput_16_120_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_month"
+%endfunction
+
+%function getOutputAddr_16_120_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_day"
+%endfunction
+
+%function getOutput_16_120_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_day"
+%endfunction
+
+%function getOutputAddr_16_121_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_major_ver"
+%endfunction
+
+%function getOutput_16_121_3_5_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_major_ver"
+%endfunction
+
+%function getOutputAddr_16_121_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_minor_ver"
+%endfunction
+
+%function getOutput_16_121_3_5_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_minor_ver"
+%endfunction
+
+%function getOutputAddr_16_121_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_platform_code_subminor_ver"
+%endfunction
+
+%function getOutput_16_121_3_5_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_platform_code_subminor_ver"
+%endfunction
+
+%function getInputAddr_16_5_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition4_b"
+%endfunction
+
+%function getInput_16_5_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition4_b"
+%endfunction
+
+%function getInputAddr_16_5_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition"
+%endfunction
+
+%function getInput_16_5_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition"
+%endfunction
+
+%function getInputAddr_16_5_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition1"
+%endfunction
+
+%function getInput_16_5_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition1"
+%endfunction
+
+%function getInputAddr_16_5_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition2"
+%endfunction
+
+%function getInput_16_5_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition2"
+%endfunction
+
+%function getInputAddr_16_5_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition2"
+%endfunction
+
+%function getInput_16_5_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition2"
+%endfunction
+
+%function getOutputAddr_16_5_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage1"
+%endfunction
+
+%function getOutput_16_5_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage1"
+%endfunction
+
+%function getInputAddr_16_73_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition3"
+%endfunction
+
+%function getInput_16_73_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition3"
+%endfunction
+
+%function getInputAddr_16_73_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition5_g"
+%endfunction
+
+%function getInput_16_73_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition5_g"
+%endfunction
+
+%function getInputAddr_16_73_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition6_p"
+%endfunction
+
+%function getInput_16_73_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition6_p"
+%endfunction
+
+%function getInputAddr_16_73_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.RateTransition7_p"
+%endfunction
+
+%function getInput_16_73_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.RateTransition7_p"
+%endfunction
+
+%function getOutputAddr_16_73_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_TransmitMessage6"
+%endfunction
+
+%function getOutput_16_73_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_TransmitMessage6"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutput_16_85_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutput_16_85_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutput_16_85_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutput_16_85_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutput_16_85_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5"
+%endfunction
+
+%function getOutputAddr_16_85_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutput_16_85_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutput_16_89_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutput_16_89_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_d"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutput_16_89_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_b"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutput_16_89_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_k"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutput_16_89_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_c"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutput_16_89_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o6_o"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutput_16_89_3_6_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o7"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutput_16_89_3_6_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o8"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutput_16_89_3_6_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9"
+%endfunction
+
+%function getOutputAddr_16_89_3_6_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutput_16_89_3_6_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o10"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutput_16_99_3_6_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o1_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutput_16_99_3_6_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o2_l"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutput_16_99_3_6_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o3_p"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutput_16_99_3_6_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o4_n"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutput_16_99_3_6_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o5_m"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&bms_pack_voltage"
+%endfunction
+
+%function getOutput_16_99_3_6_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "bms_pack_voltage"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutput_16_99_3_6_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_current"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutput_16_99_3_6_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.atv_bms_pack_soh"
+%endfunction
+
+%function getOutputAddr_16_99_3_6_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getOutput_16_99_3_6_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "ATV_B.pcx_CANdb_ReceiveMessage_o9_c"
+%endfunction
+
+%function getOutputAddr_16_109_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_cpu_loading"
+%endfunction
+
+%function getOutput_16_109_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_cpu_loading"
+%endfunction
+
+%function getOutputAddr_16_110_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_stack_used"
+%endfunction
+
+%function getOutput_16_110_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_stack_used"
+%endfunction
+
+%function getOutputAddr_16_111_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_task_duration_1s"
+%endfunction
+
+%function getOutput_16_111_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_task_duration_1s"
+%endfunction
+
+%function getOutputAddr_16_112_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_cpu_loading_max"
+%endfunction
+
+%function getOutput_16_112_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_cpu_loading_max"
+%endfunction
+
+%function getOutputAddr_16_113_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&atv_task_duration_1s_max"
+%endfunction
+
+%function getOutput_16_113_3_7_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "atv_task_duration_1s_max"
+%endfunction
+
