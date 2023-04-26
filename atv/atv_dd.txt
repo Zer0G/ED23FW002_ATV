@@ -66,37 +66,93 @@ t_sample		sec	real_T	0.01					Sample time definition for fast VSM Cycle
 
 
 
-** Drive By Wire
+
+** Drive By Wire monitor
+
+atv_throttleX1000		one	uint16_T	1					Throttle Input 0-1000
+atv_fs1_in		one	boolean_T	1					Foot Pedal FS1 Switch Status input
+atv_motoring_x1000_front		V	uint16_T	1					Throttle output front positive torque 0-1000
+atv_motoring_x1000_front_limited		V	uint16_T	1					Throttle output front positive torque limited 0-1000
+atv_regen_x1000_front		V	uint16_T	1					Throttle output front neutral braking 0-1000
+atv_motoring_x1000_rear		V	uint16_T	1					Throttle output rear positive torque 0-1000
+atv_motoring_x1000_rear_limited		V	uint16_T	1					Throttle output rear positive torque limited 0-1000
+atv_regen_x1000_rear		V	uint16_T	1					Throttle output rear neutral braking 0-1000
+atv_fs1_out		one	boolean_T	1					Foot Pedal FS1 Switch Status output
+atv_throttleRegOff		one	boolean_T	1					Disable Neutral Braking 
+
+
+
+
+** Drive By Wire calibration
+
 atvc_mtawnb	100	one	uint8_T		0	100			Maximum Torque When Braking [%]
 atvc_mtadd	100	one	uint8_T		0	100			Maximum Torque [%]
 atvc_mtadd_rev	100	one	uint8_T		0	100			Maximum Torque When Braking Reverese [%]
 atvc_mtawnb_rev	100	one	uint8_T		0	100			Maximum Torque Reverese [%]
-atvc_upperLimitPedalF	1000	one	uint16_T		550	1000			High Pedal limit [0.1%]
-atvc_lowerLimitPedalF	0	one	uint16_T		0	450			Low Pedal Limit [0.1%]
 atvc_throttleNeutralPoint	100	one	uint16_T		0	450			Throttle neutral position [0.1%]
 atvc_brakePedalOn	100	one	uint16_T		50	1000			Brake Pedal On Trheashold [0.1%]
 atvc_brakePedalHis	0	one	uint16_T		0	25			Brake Pedal Histeresis [0.1%]
 atvc_an_in_sel_th	2.5	one	real_T		1	4			Analog Selectors Threashold Pedal On Trheashold [V]
 atvc_an_in_sel_his	0.25	one	real_T		0	1			Analog Selectors Histeresis  [V]
-atvc_velocityLimitRwd	5	one	uint8_T		3	100			Speed Limit Reverse
-atvc_velocityLimitFwd	10	one	uint8_T		3	120			Speed Limit Forward
+atvc_velocityLimitRwd	5	one	uint8_T		3	100			Speed Limit Reverse [Km/h]
+atvc_velocityLimitFwd	10	one	uint8_T		3	120			Speed Limit Forward [Km/h]
 atvc_maxRegenCurr	50	one	uint16_T		30	300			Max Inbound current [A]
 atvc_maxDischCurr	100	one	uint16_T		30	900			Max Outbound current [A]
+atvc_throttleRegOff	1	one	boolean_T		0	1			disable neutral braking (Boolean)
+atvc_throttleMaxLimit	1000	one	uint16_T		100	1000			High Pedal limit [0.1%]
 
 
 
+** ICE Management monitor
+
+atv_tHROTTLEGen_X1000_out		one	uint16_T	1					Ice StartTorque [0.1%]
+atv_footBrake_X1000_out		one	uint16_T	1					footbrake Gen Out [0.1%]
+atv_IceKey_out		one	boolean_T	1					Ice Ignition  (Boolean) 
+atv_IceShutdown_out		one	boolean_T	1					Ice Status  (Boolean) 
+atv_IceOn		one	boolean_T	1					Ice Status  (Boolean) 
+atv_IceFault		one	boolean_T	1					Ice Fault  (Boolean) 
+atv_IceSM		one	uint8_T	1					Debug Start Ice
+atv_IceRG		one	uint8_T	1					Debug Reg Ice
+atv_GenCurrentSetPoint		A	int16_T	1					Generator Current Set Point
+
+
+
+
+** ICE Management calibration
+
+atvc_IceOnTh	2300	one	uint16_T		2100	4000			ICE On Detection Tresasold [RPM]
+atvc_IceOffTh	1500	one	uint16_T		200	2000			ICE Off Detection Tresasold [RPM]
+atvc_StartThrottleIce	300	one	uint16_T		100	1000			ICE StartUp GENERATOR Throttle Val [0.1%]
+atvc_IceStartRetry	2	one	uint8_T		0	10			ICE StartUp Max Retry [RPM]
+atvc_RpmEndWarmUp	3900	one	uint16_T		3000	6000			ICE Warm Up Detection Tresasold [RPM]
+atvc_footBrakeIce	300	one	uint16_T		10	1000			ICE RegTorque Val [0.1%]
+atvc_footBrakeWarmUp	200	one	uint16_T		0	1000			ICE RegTorque Val [0.1%]
+atvc_GenWarmUpCurrent	10	A	int16_T		0	100			Generator warm up current [A]
+atvc_GenTestCurrent	40	A	int16_T		0	250			Generator warm up current [A]
+
+
+
+
+** Cooling System
+
+atv_yg3_raw_ain		V	real_T	0.001					Throttle Input V (Raw Voltage)
+
+atvc_FanTest	0	one	uint8_T		0	100			 Fan Speed test [%]
 atvc_dcMinFan	30	one	uint8_T		0	100			Minimum Fan Speed [%]
 atvc_tempSwitchOffFan	48	degree_Celsius	uint8_T		10	100			Fan Off Temp
 atvc_tempSwitchOnFan	50	degree_Celsius	uint8_T		10	100			Fan On Temp
+atvc_maxTempInv	60	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempInv	40	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_maxTempMotor	80	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempMotor	60	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_socLimitSave	5	one	uint8_T		2	90			Min soc for pump control
 
 atv_xd1_key_ain		V	int32_T	1					Key Signal Voltage
 atv_xe3_ain		V	int32_T	1					
-atv_throttleX1000		V	uint16_T	1					Throttle Input 0-1000
 atv_xa1_ain_throttle_raw		V	real_T	0.001					Throttle Input V (Raw Voltage)
 atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status (RAW)
 atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status
 atv_xd3_raw_ain		V	real_T	0.001					Foot Pedal FS1 Switch (Raw Voltage)
-atv_fs1_in		one	boolean_T	1					Foot Pedal FS1 Switch Status
 atv_xa3_brake_pedal_raw_ain		V	real_T	0.001					Brake Pedal (Raw Voltage)
 atv_brake_pedalX1000		V	uint16_T	1					Brake Input 0-1000
 atv_brake_pedal_digital_in		one	boolean_T	1					Brake Pedal In Digital
@@ -137,10 +193,6 @@ atv_v_dbg_chg_req		one	boolean_T	1					HV Relay Control (Debug Signal)
 atv_dbg_pumpA_out		one	boolean_T	1					Pump A (Debug Signal)
 atv_dbg_pumpB_out		one	boolean_T	1					Pump A (Debug Signal)
 atv_v_dbg_heater_req		one	boolean_T	1					HV Relay Control (Debug Signal)
-atvc_maxTempInv	60	degree_Celsius	uint8_T		10	200			Max Inverter Temp
-atvc_minTempInv	40	degree_Celsius	uint8_T		10	200			Min Inverter Temp
-atvc_maxTempMotor	60	degree_Celsius	uint8_T		10	200			Max Inverter Temp
-atvc_minTempMotor	80	degree_Celsius	uint8_T		10	200			Min Inverter Temp
-atvc_socLimitSave	5	one	uint8_T		2	90			Min soc for pump control
+
 atv_dbg_FAN_in		one	real_T	1					VSM State
 atv_dbg_FAN		one	real_T	0.01					Replace this with a useful comment.
