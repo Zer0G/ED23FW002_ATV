@@ -1,11 +1,26 @@
+/ByDataDictionaryPrefix/atv:atv_12v
 /ByDataDictionaryPrefix/atv:atv_4wd_din
 /ByDataDictionaryPrefix/atv:atv_GenCurrentSetPoint
+/ByDataDictionaryPrefix/atv:atv_GenSelProcessed
+/ByDataDictionaryPrefix/atv:atv_HandBrakePos
+/ByDataDictionaryPrefix/atv:atv_HandBrakeStatus
+/ByDataDictionaryPrefix/atv:atv_ICE_Start_Timer
+/ByDataDictionaryPrefix/atv:atv_ICE_Start_Timer_Valid
 /ByDataDictionaryPrefix/atv:atv_IceFault
 /ByDataDictionaryPrefix/atv:atv_IceKey_out
 /ByDataDictionaryPrefix/atv:atv_IceOn
 /ByDataDictionaryPrefix/atv:atv_IceRG
 /ByDataDictionaryPrefix/atv:atv_IceSM
 /ByDataDictionaryPrefix/atv:atv_IceShutdown_out
+/ByDataDictionaryPrefix/atv:atv_PumpAFault
+/ByDataDictionaryPrefix/atv:atv_PumpBFault
+/ByDataDictionaryPrefix/atv:atv_RPM_Gen
+/ByDataDictionaryPrefix/atv:atv_RegMapSelProcessed
+/ByDataDictionaryPrefix/atv:atv_TRad_in
+/ByDataDictionaryPrefix/atv:atv_TRad_out
+/ByDataDictionaryPrefix/atv:atv_T_Air
+/ByDataDictionaryPrefix/atv:atv_T_ICE
+/ByDataDictionaryPrefix/atv:atv_TrqGen_Actual
 /ByDataDictionaryPrefix/atv:atv_app_code_day
 /ByDataDictionaryPrefix/atv:atv_app_code_major_ver
 /ByDataDictionaryPrefix/atv:atv_app_code_minor_ver
@@ -13,14 +28,19 @@
 /ByDataDictionaryPrefix/atv:atv_app_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_app_code_year
 /ByDataDictionaryPrefix/atv:atv_apu_req_in
+/ByDataDictionaryPrefix/atv:atv_bmsMaxChgCurr
+/ByDataDictionaryPrefix/atv:atv_bmsMaxDisCurr
 /ByDataDictionaryPrefix/atv:atv_boot_code_day
 /ByDataDictionaryPrefix/atv:atv_boot_code_major_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_minor_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_month
 /ByDataDictionaryPrefix/atv:atv_boot_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_boot_code_year
+/ByDataDictionaryPrefix/atv:atv_brake2epedal_split_actual
 /ByDataDictionaryPrefix/atv:atv_brake_pedalX1000
 /ByDataDictionaryPrefix/atv:atv_brake_pedal_digital_in
+/ByDataDictionaryPrefix/atv:atv_can_wakeup
+/ByDataDictionaryPrefix/atv:atv_chg_present
 /ByDataDictionaryPrefix/atv:atv_cpu_loading
 /ByDataDictionaryPrefix/atv:atv_cpu_loading_max
 /ByDataDictionaryPrefix/atv:atv_dbg_FAN
@@ -31,15 +51,26 @@
 /ByDataDictionaryPrefix/atv:atv_fan_output
 /ByDataDictionaryPrefix/atv:atv_fan_setpoint
 /ByDataDictionaryPrefix/atv:atv_fan_status
+/ByDataDictionaryPrefix/atv:atv_fmot_run_timer
 /ByDataDictionaryPrefix/atv:atv_footBrake_X1000_out
 /ByDataDictionaryPrefix/atv:atv_fs1_in
 /ByDataDictionaryPrefix/atv:atv_fs1_out
+/ByDataDictionaryPrefix/atv:atv_fuel_level
+/ByDataDictionaryPrefix/atv:atv_fuel_qty
+/ByDataDictionaryPrefix/atv:atv_fuel_reserve
+/ByDataDictionaryPrefix/atv:atv_ice_rpm_req
+/ByDataDictionaryPrefix/atv:atv_ice_run_timer
 /ByDataDictionaryPrefix/atv:atv_key_signal
 /ByDataDictionaryPrefix/atv:atv_key_signal_in
+/ByDataDictionaryPrefix/atv:atv_map
+/ByDataDictionaryPrefix/atv:atv_max_cell
+/ByDataDictionaryPrefix/atv:atv_min_cell
 /ByDataDictionaryPrefix/atv:atv_motoring_x1000_front
-/ByDataDictionaryPrefix/atv:atv_motoring_x1000_front_limited
+/ByDataDictionaryPrefix/atv:atv_motoring_x1000_front_final
 /ByDataDictionaryPrefix/atv:atv_motoring_x1000_rear
-/ByDataDictionaryPrefix/atv:atv_motoring_x1000_rear_limited
+/ByDataDictionaryPrefix/atv:atv_motoring_x1000_rear_final
+/ByDataDictionaryPrefix/atv:atv_mtr_current_limit
+/ByDataDictionaryPrefix/atv:atv_odometer
 /ByDataDictionaryPrefix/atv:atv_param
 /ByDataDictionaryPrefix/atv:atv_platform_code_day
 /ByDataDictionaryPrefix/atv:atv_platform_code_major_ver
@@ -47,85 +78,227 @@
 /ByDataDictionaryPrefix/atv:atv_platform_code_month
 /ByDataDictionaryPrefix/atv:atv_platform_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_platform_code_year
+/ByDataDictionaryPrefix/atv:atv_pm_0
+/ByDataDictionaryPrefix/atv:atv_pm_1
+/ByDataDictionaryPrefix/atv:atv_pm_2
+/ByDataDictionaryPrefix/atv:atv_pm_APU
+/ByDataDictionaryPrefix/atv:atv_pm_Electric
+/ByDataDictionaryPrefix/atv:atv_pm_Hybrid
+/ByDataDictionaryPrefix/atv:atv_pm_PreOp
+/ByDataDictionaryPrefix/atv:atv_pm_Stealth
+/ByDataDictionaryPrefix/atv:atv_pm_g
+/ByDataDictionaryPrefix/atv:atv_pm_s1
+/ByDataDictionaryPrefix/atv:atv_pm_s2
+/ByDataDictionaryPrefix/atv:atv_pm_s3
 /ByDataDictionaryPrefix/atv:atv_prg_code_day
 /ByDataDictionaryPrefix/atv:atv_prg_code_major_ver
 /ByDataDictionaryPrefix/atv:atv_prg_code_minor_ver
 /ByDataDictionaryPrefix/atv:atv_prg_code_month
 /ByDataDictionaryPrefix/atv:atv_prg_code_subminor_ver
 /ByDataDictionaryPrefix/atv:atv_prg_code_year
+/ByDataDictionaryPrefix/atv:atv_reg_current_limit
 /ByDataDictionaryPrefix/atv:atv_regen_x1000_front
 /ByDataDictionaryPrefix/atv:atv_regen_x1000_rear
+/ByDataDictionaryPrefix/atv:atv_regmap
+/ByDataDictionaryPrefix/atv:atv_rmot_run_timer
 /ByDataDictionaryPrefix/atv:atv_runLed_out
 /ByDataDictionaryPrefix/atv:atv_stack_used
+/ByDataDictionaryPrefix/atv:atv_startBtnArmed
+/ByDataDictionaryPrefix/atv:atv_startConditions
 /ByDataDictionaryPrefix/atv:atv_state_out
 /ByDataDictionaryPrefix/atv:atv_sub_state_out
-/ByDataDictionaryPrefix/atv:atv_tHROTTLEGen_X1000_out
 /ByDataDictionaryPrefix/atv:atv_task_duration_1s
 /ByDataDictionaryPrefix/atv:atv_task_duration_1s_max
+/ByDataDictionaryPrefix/atv:atv_throttleGen_X1000_out
 /ByDataDictionaryPrefix/atv:atv_throttleRegOff
 /ByDataDictionaryPrefix/atv:atv_throttleX1000
 /ByDataDictionaryPrefix/atv:atv_v_dbg_chg_req
 /ByDataDictionaryPrefix/atv:atv_v_dbg_heater_req
 /ByDataDictionaryPrefix/atv:atv_v_dbg_hv_req
+/ByDataDictionaryPrefix/atv:atv_vehicle_SOC
 /ByDataDictionaryPrefix/atv:atv_wakelock_out
 /ByDataDictionaryPrefix/atv:atv_xa1_ain_throttle_raw
 /ByDataDictionaryPrefix/atv:atv_xa3_brake_pedal_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xc1_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xc4_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xd1_key_ain
+/ByDataDictionaryPrefix/atv:atv_xd2
 /ByDataDictionaryPrefix/atv:atv_xd3_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xe2_raw_ain
 /ByDataDictionaryPrefix/atv:atv_xe3_ain
 /ByDataDictionaryPrefix/atv:atv_xe4_raw_ain
+/ByDataDictionaryPrefix/atv:atv_xf4
+/ByDataDictionaryPrefix/atv:atv_yb3_raw_ain
+/ByDataDictionaryPrefix/atv:atv_ye2
+/ByDataDictionaryPrefix/atv:atv_yg1
+/ByDataDictionaryPrefix/atv:atv_yg2
 /ByDataDictionaryPrefix/atv:atv_yg3_raw_ain
+/ByDataDictionaryPrefix/atv:atv_yh2
+/ByDataDictionaryPrefix/atv:atv_yj2
+/ByDataDictionaryPrefix/atv:atv_za2
 /ByDataDictionaryPrefix/atv:atv_za3_StartBtn_din
-/ByDataDictionaryPrefix/atv:atvc_FanTest
+/ByDataDictionaryPrefix/atv:atv_zb2
+/ByDataDictionaryPrefix/atv:atv_zb3
+/ByDataDictionaryPrefix/atv:atv_zc2
+/ByDataDictionaryPrefix/atv:atv_zc4
+/ByDataDictionaryPrefix/atv:atv_zd1_ain
+/ByDataDictionaryPrefix/atv:atv_ze3
+/ByDataDictionaryPrefix/atv:atv_ze4
+/ByDataDictionaryPrefix/atv:atvc_ChargeOverride
+/ByDataDictionaryPrefix/atv:atvc_EndWarmUpTemp
+/ByDataDictionaryPrefix/atv:atvc_ErrTempInv
+/ByDataDictionaryPrefix/atv:atvc_ErrTempMot
+/ByDataDictionaryPrefix/atv:atvc_GenCurrent0
+/ByDataDictionaryPrefix/atv:atvc_GenCurrent1
+/ByDataDictionaryPrefix/atv:atvc_GenCurrent2
 /ByDataDictionaryPrefix/atv:atvc_GenTestCurrent
 /ByDataDictionaryPrefix/atv:atvc_GenWarmUpCurrent
+/ByDataDictionaryPrefix/atv:atvc_GenWarmUpRPM
+/ByDataDictionaryPrefix/atv:atvc_HeatingMat_thr
+/ByDataDictionaryPrefix/atv:atvc_HybridMode
+/ByDataDictionaryPrefix/atv:atvc_ICE_ReserveFuel
+/ByDataDictionaryPrefix/atv:atvc_ICE_Tank_Volume
+/ByDataDictionaryPrefix/atv:atvc_ICE_dragging_time
+/ByDataDictionaryPrefix/atv:atvc_IceMaxSOC
+/ByDataDictionaryPrefix/atv:atvc_IceMaxTemp
 /ByDataDictionaryPrefix/atv:atvc_IceOffTh
 /ByDataDictionaryPrefix/atv:atvc_IceOnTh
 /ByDataDictionaryPrefix/atv:atvc_IceStartRetry
+/ByDataDictionaryPrefix/atv:atvc_IceStartSOC
+/ByDataDictionaryPrefix/atv:atvc_IceStopSOC
+/ByDataDictionaryPrefix/atv:atvc_OverrideFan
+/ByDataDictionaryPrefix/atv:atvc_OverridePumpA
+/ByDataDictionaryPrefix/atv:atvc_OverridePumpB
 /ByDataDictionaryPrefix/atv:atvc_RpmEndWarmUp
 /ByDataDictionaryPrefix/atv:atvc_StartThrottleIce
 /ByDataDictionaryPrefix/atv:atvc_an_in_sel_his
 /ByDataDictionaryPrefix/atv:atvc_an_in_sel_th
+/ByDataDictionaryPrefix/atv:atvc_brake2epedal_split
+/ByDataDictionaryPrefix/atv:atvc_brake2epedal_split_0
+/ByDataDictionaryPrefix/atv:atvc_brake2epedal_split_1
+/ByDataDictionaryPrefix/atv:atvc_brake2epedal_split_2
+/ByDataDictionaryPrefix/atv:atvc_brake2epedal_split_3
 /ByDataDictionaryPrefix/atv:atvc_brakePedalHis
 /ByDataDictionaryPrefix/atv:atvc_brakePedalOn
+/ByDataDictionaryPrefix/atv:atvc_brake_pedal_gain
+/ByDataDictionaryPrefix/atv:atvc_brake_pedal_thr
+/ByDataDictionaryPrefix/atv:atvc_brake_pedal_zero
+/ByDataDictionaryPrefix/atv:atvc_cell_ot
+/ByDataDictionaryPrefix/atv:atvc_cell_ov
+/ByDataDictionaryPrefix/atv:atvc_cell_ut
+/ByDataDictionaryPrefix/atv:atvc_cell_uv
+/ByDataDictionaryPrefix/atv:atvc_chg_complete
+/ByDataDictionaryPrefix/atv:atvc_chg_target_v
 /ByDataDictionaryPrefix/atv:atvc_dcMinFan
+/ByDataDictionaryPrefix/atv:atvc_fmot_run_timer
+/ByDataDictionaryPrefix/atv:atvc_fmot_run_timer_reset
 /ByDataDictionaryPrefix/atv:atvc_footBrakeIce
 /ByDataDictionaryPrefix/atv:atvc_footBrakeWarmUp
+/ByDataDictionaryPrefix/atv:atvc_force_inv_preop
+/ByDataDictionaryPrefix/atv:atvc_fs1_throttle_coherency
+/ByDataDictionaryPrefix/atv:atvc_gear_ratio
+/ByDataDictionaryPrefix/atv:atvc_gen_CURRENT_KD
+/ByDataDictionaryPrefix/atv:atvc_gen_PWM_Override
+/ByDataDictionaryPrefix/atv:atvc_gen_TEST_PWM
+/ByDataDictionaryPrefix/atv:atvc_gen_ramp_up
+/ByDataDictionaryPrefix/atv:atvc_gen_start_PID_KI
+/ByDataDictionaryPrefix/atv:atvc_gen_start_PID_KP
+/ByDataDictionaryPrefix/atv:atvc_gen_start_rpm
+/ByDataDictionaryPrefix/atv:atvc_ice_run_timer
+/ByDataDictionaryPrefix/atv:atvc_ice_run_timer_reset
 /ByDataDictionaryPrefix/atv:atvc_maxDischCurr
 /ByDataDictionaryPrefix/atv:atvc_maxRegenCurr
 /ByDataDictionaryPrefix/atv:atvc_maxTempInv
 /ByDataDictionaryPrefix/atv:atvc_maxTempMotor
+/ByDataDictionaryPrefix/atv:atvc_max_footbrake_trq
+/ByDataDictionaryPrefix/atv:atvc_max_gen_neutral_trq
+/ByDataDictionaryPrefix/atv:atvc_max_gen_reg_trq
+/ByDataDictionaryPrefix/atv:atvc_max_gen_trq
+/ByDataDictionaryPrefix/atv:atvc_max_neutralbrake_trq
+/ByDataDictionaryPrefix/atv:atvc_max_soc
+/ByDataDictionaryPrefix/atv:atvc_max_trq_front
+/ByDataDictionaryPrefix/atv:atvc_max_trq_rear
 /ByDataDictionaryPrefix/atv:atvc_minTempInv
 /ByDataDictionaryPrefix/atv:atvc_minTempMotor
+/ByDataDictionaryPrefix/atv:atvc_min_soc
 /ByDataDictionaryPrefix/atv:atvc_mtadd
 /ByDataDictionaryPrefix/atv:atvc_mtadd_rev
 /ByDataDictionaryPrefix/atv:atvc_mtawnb
 /ByDataDictionaryPrefix/atv:atvc_mtawnb_rev
+/ByDataDictionaryPrefix/atv:atvc_odometer
+/ByDataDictionaryPrefix/atv:atvc_odometer_reset
+/ByDataDictionaryPrefix/atv:atvc_rmot_run_timer
+/ByDataDictionaryPrefix/atv:atvc_rmot_run_timer_reset
 /ByDataDictionaryPrefix/atv:atvc_socLimitSave
 /ByDataDictionaryPrefix/atv:atvc_tempSwitchOffFan
 /ByDataDictionaryPrefix/atv:atvc_tempSwitchOnFan
-/ByDataDictionaryPrefix/atv:atvc_throttleMaxLimit
+/ByDataDictionaryPrefix/atv:atvc_test_rpm
+/ByDataDictionaryPrefix/atv:atvc_throttleFull
 /ByDataDictionaryPrefix/atv:atvc_throttleNeutralPoint
-/ByDataDictionaryPrefix/atv:atvc_throttleRegOff
+/ByDataDictionaryPrefix/atv:atvc_throttleZero
 /ByDataDictionaryPrefix/atv:atvc_velocityLimitFwd
 /ByDataDictionaryPrefix/atv:atvc_velocityLimitRwd
+/ByDataDictionaryPrefix/atv:atvc_wheel_radius
+/ByDataDictionaryPrefix/atv:atvm_currentfromrpm_x
+/ByDataDictionaryPrefix/atv:atvm_currentfromrpm_z
+/ByDataDictionaryPrefix/atv:atvm_rpmfromcurrent_x
+/ByDataDictionaryPrefix/atv:atvm_rpmfromcurrent_z
+/ByDataDictionaryPrefix/atv:atvv_map
 /ByDataDictionaryPrefix/bms:bms_pack_soc
 /ByDataDictionaryPrefix/bms:bms_pack_voltage
 /ByDataDictionaryPrefix/bms:bms_rolling_counter
 /ByDataDictionaryPrefix/t_s:t_sample
+/ByModelHeirarchy/ATV/Atomic Subsystem1:atv_pm_Electric
+/ByModelHeirarchy/ATV/Atomic Subsystem1:atv_pm_Hybrid
+/ByModelHeirarchy/ATV/Atomic Subsystem1:atv_pm_PreOp
+/ByModelHeirarchy/ATV/Atomic Subsystem1:atv_pm_Stealth
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_gen_ramp_up
 /ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_maxDischCurr
 /ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_maxRegenCurr
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_footbrake_trq
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_gen_neutral_trq
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_gen_reg_trq
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_gen_trq
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_neutralbrake_trq
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_trq_front
+/ByModelHeirarchy/ATV/CANBUS_Output_Processing:atvc_max_trq_rear
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_pack_soc
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_pack_voltage
 /ByModelHeirarchy/ATV/CANBUS_Reception_BMS:bms_rolling_counter
+/ByModelHeirarchy/ATV/CANBUS_Reception_BMS_CELL_V:atv_max_cell
+/ByModelHeirarchy/ATV/CANBUS_Reception_BMS_CELL_V:atv_min_cell
+/ByModelHeirarchy/ATV/CANBUS_Reception_C_MONITOR:atv_can_wakeup
+/ByModelHeirarchy/ATV/CANBUS_Reception_C_MONITOR:atv_chg_present
+/ByModelHeirarchy/ATV/CANBUS_Reception_D_STATUS2_REAR1/Triggered Subsystem/Switch Case Action Subsystem/If Action Subsystem/If Action Subsystem:atvv_map
+/ByModelHeirarchy/ATV/CANBUS_Reception_D_STATUS2_REAR1/Triggered Subsystem/Switch Case Action Subsystem/If Action Subsystem1:atvv_map
 /ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL:atv_v_dbg_chg_req
 /ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL:atv_v_dbg_heater_req
+/ByModelHeirarchy/ATV/CHARGER_CONTROL:atvc_chg_target_v
+/ByModelHeirarchy/ATV/CheckTempMotori//Inverter:atvc_ErrTempInv
+/ByModelHeirarchy/ATV/CheckTempMotori//Inverter:atvc_ErrTempMot
+/ByModelHeirarchy/ATV/CheckTempMotori//Inverter:atvc_maxTempInv
+/ByModelHeirarchy/ATV/CheckTempMotori//Inverter:atvc_maxTempMotor
+/ByModelHeirarchy/ATV/Digital_Output_Processing:atv_dbg_pumpA_out
 /ByModelHeirarchy/ATV/Digital_Output_Processing:atv_dbg_pumpB_out
-/ByModelHeirarchy/ATV/Digital_Output_Processing:atvc_FanTest
+/ByModelHeirarchy/ATV/Digital_Output_Processing:atv_ye2
+/ByModelHeirarchy/ATV/Digital_Output_Processing:atv_yg1
+/ByModelHeirarchy/ATV/ErrBattery:atvc_cell_ot
+/ByModelHeirarchy/ATV/ErrBattery:atvc_cell_ov
+/ByModelHeirarchy/ATV/ErrBattery:atvc_cell_ut
+/ByModelHeirarchy/ATV/ErrBattery:atvc_cell_uv
+/ByModelHeirarchy/ATV/Input_Processing/INPUT ANALOGICI1:atv_T_Air
+/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation1:atvc_brake_pedal_gain
+/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation1:atvc_brake_pedal_zero
+/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation:atvc_throttleFull
+/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation:atvc_throttleZero
+/ByModelHeirarchy/ATV/Input_Processing:atv_12v
 /ByModelHeirarchy/ATV/Input_Processing:atv_4wd_din
+/ByModelHeirarchy/ATV/Input_Processing:atv_GenSelProcessed
+/ByModelHeirarchy/ATV/Input_Processing:atv_HandBrakePos
+/ByModelHeirarchy/ATV/Input_Processing:atv_HandBrakeStatus
+/ByModelHeirarchy/ATV/Input_Processing:atv_RegMapSelProcessed
+/ByModelHeirarchy/ATV/Input_Processing:atv_TRad_in
+/ByModelHeirarchy/ATV/Input_Processing:atv_TRad_out
 /ByModelHeirarchy/ATV/Input_Processing:atv_apu_req_in
 /ByModelHeirarchy/ATV/Input_Processing:atv_brake_pedalX1000
 /ByModelHeirarchy/ATV/Input_Processing:atv_brake_pedal_digital_in
@@ -136,12 +309,34 @@
 /ByModelHeirarchy/ATV/Input_Processing:atv_xc1_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xc4_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xd1_key_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xd2
 /ByModelHeirarchy/ATV/Input_Processing:atv_xd3_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xe2_raw_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xe3_ain
 /ByModelHeirarchy/ATV/Input_Processing:atv_xe4_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_xf4
+/ByModelHeirarchy/ATV/Input_Processing:atv_yb3_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_yg2
 /ByModelHeirarchy/ATV/Input_Processing:atv_yg3_raw_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_yh2
+/ByModelHeirarchy/ATV/Input_Processing:atv_yj2
+/ByModelHeirarchy/ATV/Input_Processing:atv_za2
 /ByModelHeirarchy/ATV/Input_Processing:atv_za3_StartBtn_din
+/ByModelHeirarchy/ATV/Input_Processing:atv_zb2
+/ByModelHeirarchy/ATV/Input_Processing:atv_zb3
+/ByModelHeirarchy/ATV/Input_Processing:atv_zc2
+/ByModelHeirarchy/ATV/Input_Processing:atv_zc4
+/ByModelHeirarchy/ATV/Input_Processing:atv_zd1_ain
+/ByModelHeirarchy/ATV/Input_Processing:atv_ze3
+/ByModelHeirarchy/ATV/Input_Processing:atv_ze4
+/ByModelHeirarchy/ATV/Subsystem1:atv_mtr_current_limit
+/ByModelHeirarchy/ATV/Subsystem1:atv_reg_current_limit
+/ByModelHeirarchy/ATV/Subsystem2:atv_vehicle_SOC
+/ByModelHeirarchy/ATV/Subsystem2:atvc_max_soc
+/ByModelHeirarchy/ATV/Subsystem2:atvc_min_soc
+/ByModelHeirarchy/ATV/Subsystem3:atv_ICE_Start_Timer
+/ByModelHeirarchy/ATV/Subsystem3:atv_ICE_Start_Timer_Valid
+/ByModelHeirarchy/ATV/Subsystem3:atvc_IceStartSOC
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_cpu_loading
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_cpu_loading_max
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status:atv_stack_used
@@ -171,30 +366,68 @@
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_month
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_subminor_ver
 /ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code:atv_platform_code_year
-/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_dcMinFan
-/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_tempSwitchOffFan
-/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC:atvc_tempSwitchOnFan
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT:atvc_dcMinFan
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT:atvc_tempSwitchOffFan
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT:atvc_tempSwitchOnFan
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_OverrideFan
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_OverridePumpA
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_OverridePumpB
+/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_dcMinFan
 /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento:atvc_tempSwitchOnFan
 /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM:atvc_maxTempInv
 /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM:atvc_maxTempMotor
 /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM:atvc_minTempInv
 /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM:atvc_minTempMotor
-/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM:atvc_socLimitSave
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_fs1_out
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_brake2epedal_split_actual
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_map
 /ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_front
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_front_limited
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_front_final
 /ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_rear
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_rear_limited
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_regen_x1000_front
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_regen_x1000_rear
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_throttleRegOff
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_throttleMaxLimit
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_motoring_x1000_rear_final
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atv_regmap
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_brake2epedal_split_0
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_brake2epedal_split_1
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_brake2epedal_split_2
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_brake2epedal_split_3
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_force_inv_preop
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_fs1_throttle_coherency
 /ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_throttleNeutralPoint
-/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvc_throttleRegOff
+/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE:atvv_map
+/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER:atv_fmot_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER:atvc_fmot_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER:atvc_fmot_run_timer_reset
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice:atvc_gen_start_PID_KI
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice:atvc_gen_start_PID_KP
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice:atvc_gen_start_rpm
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atv_T_ICE
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atv_fuel_qty
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_EndWarmUpTemp
 /ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_GenWarmUpCurrent
-/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_RpmEndWarmUp
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_GenWarmUpRPM
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_ICE_ReserveFuel
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_ICE_Tank_Volume
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_IceMaxTemp
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_gen_PWM_Override
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_gen_TEST_PWM
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvc_test_rpm
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvm_currentfromrpm_x
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvm_currentfromrpm_z
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvm_rpmfromcurrent_x
+/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1:atvm_rpmfromcurrent_z
+/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER:atv_ice_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER:atvc_ice_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER:atvc_ice_run_timer_reset
+/ByModelHeirarchy/ATV/loop_10ms/ODOMETER:atvc_gear_ratio
+/ByModelHeirarchy/ATV/loop_10ms/ODOMETER:atvc_odometer
+/ByModelHeirarchy/ATV/loop_10ms/ODOMETER:atvc_odometer_reset
+/ByModelHeirarchy/ATV/loop_10ms/ODOMETER:atvc_wheel_radius
+/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER:atv_rmot_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER:atvc_rmot_run_timer
+/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER:atvc_rmot_run_timer_reset
+/ByModelHeirarchy/ATV/loop_10ms/SPEED LIMITER:atvc_wheel_radius
 /ByModelHeirarchy/ATV/loop_10ms/TORQUE SPLITTER:atvc_mtawnb
 /ByModelHeirarchy/ATV/loop_10ms/VSM:atv_wakelock_out
+/ByModelHeirarchy/ATV/loop_10ms/VSM:atvc_HeatingMat_thr
 /ByModelHeirarchy/ATV/loop_10ms:atv_GenCurrentSetPoint
 /ByModelHeirarchy/ATV/loop_10ms:atv_IceFault
 /ByModelHeirarchy/ATV/loop_10ms:atv_IceKey_out
@@ -202,54 +435,156 @@
 /ByModelHeirarchy/ATV/loop_10ms:atv_IceRG
 /ByModelHeirarchy/ATV/loop_10ms:atv_IceSM
 /ByModelHeirarchy/ATV/loop_10ms:atv_IceShutdown_out
+/ByModelHeirarchy/ATV/loop_10ms:atv_PumpAFault
+/ByModelHeirarchy/ATV/loop_10ms:atv_PumpBFault
+/ByModelHeirarchy/ATV/loop_10ms:atv_RPM_Gen
+/ByModelHeirarchy/ATV/loop_10ms:atv_TrqGen_Actual
 /ByModelHeirarchy/ATV/loop_10ms:atv_en_dcdc_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_footBrake_X1000_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_fs1_in
 /ByModelHeirarchy/ATV/loop_10ms:atv_fs1_out
-/ByModelHeirarchy/ATV/loop_10ms:atv_key_signal
-/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_front
-/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_front_limited
-/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_rear
-/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_rear_limited
+/ByModelHeirarchy/ATV/loop_10ms:atv_fuel_reserve
+/ByModelHeirarchy/ATV/loop_10ms:atv_ice_rpm_req
+/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_front_final
+/ByModelHeirarchy/ATV/loop_10ms:atv_motoring_x1000_rear_final
+/ByModelHeirarchy/ATV/loop_10ms:atv_odometer
 /ByModelHeirarchy/ATV/loop_10ms:atv_regen_x1000_front
 /ByModelHeirarchy/ATV/loop_10ms:atv_regen_x1000_rear
 /ByModelHeirarchy/ATV/loop_10ms:atv_runLed_out
+/ByModelHeirarchy/ATV/loop_10ms:atv_startBtnArmed
+/ByModelHeirarchy/ATV/loop_10ms:atv_startConditions
 /ByModelHeirarchy/ATV/loop_10ms:atv_state_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_sub_state_out
-/ByModelHeirarchy/ATV/loop_10ms:atv_tHROTTLEGen_X1000_out
+/ByModelHeirarchy/ATV/loop_10ms:atv_throttleGen_X1000_out
 /ByModelHeirarchy/ATV/loop_10ms:atv_throttleX1000
 /ByModelHeirarchy/ATV/loop_10ms:atv_wakelock_out
+/ByModelHeirarchy/ATV/loop_10ms:atvc_GenCurrent0
+/ByModelHeirarchy/ATV/loop_10ms:atvc_GenCurrent1
+/ByModelHeirarchy/ATV/loop_10ms:atvc_GenCurrent2
 /ByModelHeirarchy/ATV/loop_10ms:atvc_GenTestCurrent
+/ByModelHeirarchy/ATV/loop_10ms:atvc_IceMaxSOC
+/ByModelHeirarchy/ATV/loop_10ms:atvc_IceStartSOC
+/ByModelHeirarchy/ATV/loop_10ms:atvc_IceStopSOC
+/ByModelHeirarchy/ATV/loop_10ms:atvc_force_inv_preop
 /ByModelHeirarchy/ATV/loop_10ms:atvc_velocityLimitFwd
 /ByModelHeirarchy/ATV/loop_10ms:atvc_velocityLimitRwd
-/ByType/Scalars:atvc_FanTest
+/ByModelHeirarchy/ATV:atv_bmsMaxChgCurr
+/ByModelHeirarchy/ATV:atv_bmsMaxDisCurr
+/ByModelHeirarchy/ATV:atv_fuel_level
+/ByModelHeirarchy/ATV:atv_pm_0
+/ByModelHeirarchy/ATV:atv_pm_1
+/ByModelHeirarchy/ATV:atv_pm_2
+/ByModelHeirarchy/ATV:atv_pm_g
+/ByModelHeirarchy/ATV:atv_pm_s1
+/ByModelHeirarchy/ATV:atv_pm_s2
+/ByModelHeirarchy/ATV:atv_pm_s3
+/ByModelHeirarchy/ATV:atvc_ChargeOverride
+/ByModelHeirarchy/ATV:atvc_HybridMode
+/ByModelHeirarchy/ATV:atvc_chg_complete
+/ByType/Adaptives:atvc_fmot_run_timer
+/ByType/Adaptives:atvc_ice_run_timer
+/ByType/Adaptives:atvc_odometer
+/ByType/Adaptives:atvc_rmot_run_timer
+/ByType/Adaptives:atvv_map
+/ByType/Maps:atvm_currentfromrpm_x
+/ByType/Maps:atvm_currentfromrpm_z
+/ByType/Maps:atvm_rpmfromcurrent_x
+/ByType/Maps:atvm_rpmfromcurrent_z
+/ByType/Scalars:atvc_ChargeOverride
+/ByType/Scalars:atvc_EndWarmUpTemp
+/ByType/Scalars:atvc_ErrTempInv
+/ByType/Scalars:atvc_ErrTempMot
+/ByType/Scalars:atvc_GenCurrent0
+/ByType/Scalars:atvc_GenCurrent1
+/ByType/Scalars:atvc_GenCurrent2
 /ByType/Scalars:atvc_GenTestCurrent
 /ByType/Scalars:atvc_GenWarmUpCurrent
-/ByType/Scalars:atvc_RpmEndWarmUp
+/ByType/Scalars:atvc_GenWarmUpRPM
+/ByType/Scalars:atvc_HeatingMat_thr
+/ByType/Scalars:atvc_HybridMode
+/ByType/Scalars:atvc_ICE_ReserveFuel
+/ByType/Scalars:atvc_ICE_Tank_Volume
+/ByType/Scalars:atvc_IceMaxSOC
+/ByType/Scalars:atvc_IceMaxTemp
+/ByType/Scalars:atvc_IceStartSOC
+/ByType/Scalars:atvc_IceStopSOC
+/ByType/Scalars:atvc_OverrideFan
+/ByType/Scalars:atvc_OverridePumpA
+/ByType/Scalars:atvc_OverridePumpB
+/ByType/Scalars:atvc_brake2epedal_split_0
+/ByType/Scalars:atvc_brake2epedal_split_1
+/ByType/Scalars:atvc_brake2epedal_split_2
+/ByType/Scalars:atvc_brake2epedal_split_3
+/ByType/Scalars:atvc_brake_pedal_gain
+/ByType/Scalars:atvc_brake_pedal_zero
+/ByType/Scalars:atvc_cell_ot
+/ByType/Scalars:atvc_cell_ov
+/ByType/Scalars:atvc_cell_ut
+/ByType/Scalars:atvc_cell_uv
+/ByType/Scalars:atvc_chg_complete
+/ByType/Scalars:atvc_chg_target_v
 /ByType/Scalars:atvc_dcMinFan
+/ByType/Scalars:atvc_fmot_run_timer_reset
+/ByType/Scalars:atvc_force_inv_preop
+/ByType/Scalars:atvc_fs1_throttle_coherency
+/ByType/Scalars:atvc_gear_ratio
+/ByType/Scalars:atvc_gen_PWM_Override
+/ByType/Scalars:atvc_gen_TEST_PWM
+/ByType/Scalars:atvc_gen_ramp_up
+/ByType/Scalars:atvc_gen_start_PID_KI
+/ByType/Scalars:atvc_gen_start_PID_KP
+/ByType/Scalars:atvc_gen_start_rpm
+/ByType/Scalars:atvc_ice_run_timer_reset
 /ByType/Scalars:atvc_maxDischCurr
 /ByType/Scalars:atvc_maxRegenCurr
 /ByType/Scalars:atvc_maxTempInv
 /ByType/Scalars:atvc_maxTempMotor
+/ByType/Scalars:atvc_max_footbrake_trq
+/ByType/Scalars:atvc_max_gen_neutral_trq
+/ByType/Scalars:atvc_max_gen_reg_trq
+/ByType/Scalars:atvc_max_gen_trq
+/ByType/Scalars:atvc_max_neutralbrake_trq
+/ByType/Scalars:atvc_max_soc
+/ByType/Scalars:atvc_max_trq_front
+/ByType/Scalars:atvc_max_trq_rear
 /ByType/Scalars:atvc_minTempInv
 /ByType/Scalars:atvc_minTempMotor
+/ByType/Scalars:atvc_min_soc
 /ByType/Scalars:atvc_mtawnb
-/ByType/Scalars:atvc_socLimitSave
+/ByType/Scalars:atvc_odometer_reset
+/ByType/Scalars:atvc_rmot_run_timer_reset
 /ByType/Scalars:atvc_tempSwitchOffFan
 /ByType/Scalars:atvc_tempSwitchOnFan
-/ByType/Scalars:atvc_throttleMaxLimit
+/ByType/Scalars:atvc_test_rpm
+/ByType/Scalars:atvc_throttleFull
 /ByType/Scalars:atvc_throttleNeutralPoint
-/ByType/Scalars:atvc_throttleRegOff
+/ByType/Scalars:atvc_throttleZero
 /ByType/Scalars:atvc_velocityLimitFwd
 /ByType/Scalars:atvc_velocityLimitRwd
+/ByType/Scalars:atvc_wheel_radius
+/ByType/Signals:atv_12v
 /ByType/Signals:atv_4wd_din
 /ByType/Signals:atv_GenCurrentSetPoint
+/ByType/Signals:atv_GenSelProcessed
+/ByType/Signals:atv_HandBrakePos
+/ByType/Signals:atv_HandBrakeStatus
+/ByType/Signals:atv_ICE_Start_Timer
+/ByType/Signals:atv_ICE_Start_Timer_Valid
 /ByType/Signals:atv_IceFault
 /ByType/Signals:atv_IceKey_out
 /ByType/Signals:atv_IceOn
 /ByType/Signals:atv_IceRG
 /ByType/Signals:atv_IceSM
 /ByType/Signals:atv_IceShutdown_out
+/ByType/Signals:atv_PumpAFault
+/ByType/Signals:atv_PumpBFault
+/ByType/Signals:atv_RPM_Gen
+/ByType/Signals:atv_RegMapSelProcessed
+/ByType/Signals:atv_TRad_in
+/ByType/Signals:atv_TRad_out
+/ByType/Signals:atv_T_Air
+/ByType/Signals:atv_T_ICE
+/ByType/Signals:atv_TrqGen_Actual
 /ByType/Signals:atv_app_code_day
 /ByType/Signals:atv_app_code_major_ver
 /ByType/Signals:atv_app_code_minor_ver
@@ -257,86 +592,142 @@
 /ByType/Signals:atv_app_code_subminor_ver
 /ByType/Signals:atv_app_code_year
 /ByType/Signals:atv_apu_req_in
+/ByType/Signals:atv_bmsMaxChgCurr
+/ByType/Signals:atv_bmsMaxDisCurr
 /ByType/Signals:atv_boot_code_day
 /ByType/Signals:atv_boot_code_major_ver
 /ByType/Signals:atv_boot_code_minor_ver
 /ByType/Signals:atv_boot_code_month
 /ByType/Signals:atv_boot_code_subminor_ver
 /ByType/Signals:atv_boot_code_year
+/ByType/Signals:atv_brake2epedal_split_actual
 /ByType/Signals:atv_brake_pedalX1000
 /ByType/Signals:atv_brake_pedal_digital_in
+/ByType/Signals:atv_can_wakeup
+/ByType/Signals:atv_chg_present
 /ByType/Signals:atv_cpu_loading
 /ByType/Signals:atv_cpu_loading_max
+/ByType/Signals:atv_dbg_pumpA_out
 /ByType/Signals:atv_dbg_pumpB_out
 /ByType/Signals:atv_en_dcdc_out
+/ByType/Signals:atv_fmot_run_timer
 /ByType/Signals:atv_footBrake_X1000_out
 /ByType/Signals:atv_fs1_in
 /ByType/Signals:atv_fs1_out
-/ByType/Signals:atv_key_signal
+/ByType/Signals:atv_fuel_level
+/ByType/Signals:atv_fuel_qty
+/ByType/Signals:atv_fuel_reserve
+/ByType/Signals:atv_ice_rpm_req
+/ByType/Signals:atv_ice_run_timer
+/ByType/Signals:atv_map
+/ByType/Signals:atv_max_cell
+/ByType/Signals:atv_min_cell
 /ByType/Signals:atv_motoring_x1000_front
-/ByType/Signals:atv_motoring_x1000_front_limited
+/ByType/Signals:atv_motoring_x1000_front_final
 /ByType/Signals:atv_motoring_x1000_rear
-/ByType/Signals:atv_motoring_x1000_rear_limited
+/ByType/Signals:atv_motoring_x1000_rear_final
+/ByType/Signals:atv_mtr_current_limit
+/ByType/Signals:atv_odometer
 /ByType/Signals:atv_platform_code_day
 /ByType/Signals:atv_platform_code_major_ver
 /ByType/Signals:atv_platform_code_minor_ver
 /ByType/Signals:atv_platform_code_month
 /ByType/Signals:atv_platform_code_subminor_ver
 /ByType/Signals:atv_platform_code_year
+/ByType/Signals:atv_pm_0
+/ByType/Signals:atv_pm_1
+/ByType/Signals:atv_pm_2
+/ByType/Signals:atv_pm_Electric
+/ByType/Signals:atv_pm_Hybrid
+/ByType/Signals:atv_pm_PreOp
+/ByType/Signals:atv_pm_Stealth
+/ByType/Signals:atv_pm_g
+/ByType/Signals:atv_pm_s1
+/ByType/Signals:atv_pm_s2
+/ByType/Signals:atv_pm_s3
 /ByType/Signals:atv_prg_code_day
 /ByType/Signals:atv_prg_code_major_ver
 /ByType/Signals:atv_prg_code_minor_ver
 /ByType/Signals:atv_prg_code_month
 /ByType/Signals:atv_prg_code_subminor_ver
 /ByType/Signals:atv_prg_code_year
+/ByType/Signals:atv_reg_current_limit
 /ByType/Signals:atv_regen_x1000_front
 /ByType/Signals:atv_regen_x1000_rear
+/ByType/Signals:atv_regmap
+/ByType/Signals:atv_rmot_run_timer
 /ByType/Signals:atv_runLed_out
 /ByType/Signals:atv_stack_used
+/ByType/Signals:atv_startBtnArmed
+/ByType/Signals:atv_startConditions
 /ByType/Signals:atv_state_out
 /ByType/Signals:atv_sub_state_out
-/ByType/Signals:atv_tHROTTLEGen_X1000_out
 /ByType/Signals:atv_task_duration_1s
 /ByType/Signals:atv_task_duration_1s_max
-/ByType/Signals:atv_throttleRegOff
+/ByType/Signals:atv_throttleGen_X1000_out
 /ByType/Signals:atv_throttleX1000
 /ByType/Signals:atv_v_dbg_chg_req
 /ByType/Signals:atv_v_dbg_heater_req
+/ByType/Signals:atv_vehicle_SOC
 /ByType/Signals:atv_wakelock_out
 /ByType/Signals:atv_xa1_ain_throttle_raw
 /ByType/Signals:atv_xa3_brake_pedal_raw_ain
 /ByType/Signals:atv_xc1_raw_ain
 /ByType/Signals:atv_xc4_raw_ain
 /ByType/Signals:atv_xd1_key_ain
+/ByType/Signals:atv_xd2
 /ByType/Signals:atv_xd3_raw_ain
 /ByType/Signals:atv_xe2_raw_ain
 /ByType/Signals:atv_xe3_ain
 /ByType/Signals:atv_xe4_raw_ain
+/ByType/Signals:atv_xf4
+/ByType/Signals:atv_yb3_raw_ain
+/ByType/Signals:atv_ye2
+/ByType/Signals:atv_yg1
+/ByType/Signals:atv_yg2
 /ByType/Signals:atv_yg3_raw_ain
+/ByType/Signals:atv_yh2
+/ByType/Signals:atv_yj2
+/ByType/Signals:atv_za2
 /ByType/Signals:atv_za3_StartBtn_din
+/ByType/Signals:atv_zb2
+/ByType/Signals:atv_zb3
+/ByType/Signals:atv_zc2
+/ByType/Signals:atv_zc4
+/ByType/Signals:atv_zd1_ain
+/ByType/Signals:atv_ze3
+/ByType/Signals:atv_ze4
 /ByType/Signals:bms_pack_soc
 /ByType/Signals:bms_pack_voltage
 /ByType/Signals:bms_rolling_counter
 /Others:atv_dbg_FAN
 /Others:atv_dbg_FAN_in
-/Others:atv_dbg_pumpA_out
 /Others:atv_fan_output
 /Others:atv_fan_setpoint
 /Others:atv_fan_status
+/Others:atv_key_signal
 /Others:atv_key_signal_in
 /Others:atv_param
+/Others:atv_pm_APU
+/Others:atv_throttleRegOff
 /Others:atv_v_dbg_hv_req
+/Others:atvc_ICE_dragging_time
 /Others:atvc_IceOffTh
 /Others:atvc_IceOnTh
 /Others:atvc_IceStartRetry
+/Others:atvc_RpmEndWarmUp
 /Others:atvc_StartThrottleIce
 /Others:atvc_an_in_sel_his
 /Others:atvc_an_in_sel_th
+/Others:atvc_brake2epedal_split
 /Others:atvc_brakePedalHis
 /Others:atvc_brakePedalOn
+/Others:atvc_brake_pedal_thr
 /Others:atvc_footBrakeIce
 /Others:atvc_footBrakeWarmUp
+/Others:atvc_gen_CURRENT_KD
 /Others:atvc_mtadd
 /Others:atvc_mtadd_rev
 /Others:atvc_mtawnb_rev
+/Others:atvc_socLimitSave
 /Others:t_sample

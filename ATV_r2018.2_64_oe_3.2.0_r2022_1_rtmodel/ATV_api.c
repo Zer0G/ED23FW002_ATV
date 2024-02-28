@@ -9,7 +9,7 @@
  *
  *  Notes:          Automatically generated as part of the build process.
  *                  Do not modify.
- *                  Created on: Wed Apr 26 22:22:13 2023 
+ *                  Created on: Wed Feb 21 16:56:20 2024 
  *
  *****************************************************************************
  */
@@ -48,7 +48,9 @@ enum
     PKNL_PMIOS_CLIENTTASK_IDX,
     PKNL_PUART_LINFLEXD_PERIODICTASK_IDX,
     PKNL_TASK_10MSTASK_IDX,
+    PKNL_TASK_20MSTASK_IDX,
     PKNL_TASK_100MSTASK_IDX,
+    PKNL_TASK_500MSTASK_IDX,
     PKNL_TASK_1000MSTASK_IDX,
     PKNL_PDTC_CLIENTTASK_IDX,
     PKNL_PCX_PERIODICTASK_IDX,
@@ -81,7 +83,9 @@ enum
     PKNL_PMIOS_CLIENTTASK_PIDX,
     PKNL_PUART_LINFLEXD_PERIODICTASK_PIDX,
     PKNL_TASK_10MSTASK_PIDX,
+    PKNL_TASK_20MSTASK_PIDX,
     PKNL_TASK_100MSTASK_PIDX,
+    PKNL_TASK_500MSTASK_PIDX,
     PKNL_TASK_1000MSTASK_PIDX,
     PKNL_PDTC_CLIENTTASK_PIDX,
     PKNL_PCX_PERIODICTASK_PIDX,
@@ -127,8 +131,12 @@ enum
 #define PKNL_PUART_LINFLEXD_PERIODICTASK_CEIL (PKNL_PUART_LINFLEXD_PERIODICTASK_PRI | (PKNL_PUART_LINFLEXD_PERIODICTASK_PRI-1))
 #define PKNL_TASK_10MSTASK_PRI  (1UL << (31 - PKNL_TASK_10MSTASK_IDX))
 #define PKNL_TASK_10MSTASK_CEIL (PKNL_TASK_10MSTASK_PRI | (PKNL_TASK_10MSTASK_PRI-1))
+#define PKNL_TASK_20MSTASK_PRI  (1UL << (31 - PKNL_TASK_20MSTASK_IDX))
+#define PKNL_TASK_20MSTASK_CEIL (PKNL_TASK_20MSTASK_PRI | (PKNL_TASK_20MSTASK_PRI-1))
 #define PKNL_TASK_100MSTASK_PRI  (1UL << (31 - PKNL_TASK_100MSTASK_IDX))
 #define PKNL_TASK_100MSTASK_CEIL (PKNL_TASK_100MSTASK_PRI | (PKNL_TASK_100MSTASK_PRI-1))
+#define PKNL_TASK_500MSTASK_PRI  (1UL << (31 - PKNL_TASK_500MSTASK_IDX))
+#define PKNL_TASK_500MSTASK_CEIL (PKNL_TASK_500MSTASK_PRI | (PKNL_TASK_500MSTASK_PRI-1))
 #define PKNL_TASK_1000MSTASK_PRI  (1UL << (31 - PKNL_TASK_1000MSTASK_IDX))
 #define PKNL_TASK_1000MSTASK_CEIL (PKNL_TASK_1000MSTASK_PRI | (PKNL_TASK_1000MSTASK_PRI-1))
 #define PKNL_PDTC_CLIENTTASK_PRI  (1UL << (31 - PKNL_PDTC_CLIENTTASK_IDX))
@@ -187,8 +195,8 @@ enum
 /* These are the application version numbers.
  */
 const U16 psc_app_major_ver_num     = 1;
-const U16 psc_app_minor_ver_num     = 1;
-const U16 psc_app_sub_minor_ver_num = 0;
+const U16 psc_app_minor_ver_num     = 8;
+const U16 psc_app_sub_minor_ver_num = 2;
 
 
 /* These are the copyright text, app. description text, app. name and version string to be
@@ -196,31 +204,31 @@ const U16 psc_app_sub_minor_ver_num = 0;
  */
 const U8 psc_app_copyright[]      = {"(none)"};
 const U8 psc_app_desc[]           = {"(none)"};
-const U8 psc_app_name[]           = {"New_model_v1.1.0_M560_000"};
-const U8 psc_app_ver[]            = {"1.1.0"};
+const U8 psc_app_name[]           = {"New_model_v1.8.2_M560_000"};
+const U8 psc_app_ver[]            = {"1.8.2"};
 
 
 #if !defined(__GCC__)
 #pragma section CONST ".text" ".text"
 #pragma section SCONST ".text" ".text"
-const U16 psc_app_build_sec = 13;
-const U16 psc_app_build_min = 22;
-const U16 psc_app_build_hour = 22;
-const U16 psc_app_build_day = 26;
-const U16 psc_app_build_month = 4;
-const U16 psc_app_build_year = 2023;
+const U16 psc_app_build_sec = 20;
+const U16 psc_app_build_min = 56;
+const U16 psc_app_build_hour = 16;
+const U16 psc_app_build_day = 21;
+const U16 psc_app_build_month = 2;
+const U16 psc_app_build_year = 2024;
 #pragma section CONST
 #pragma section SCONST
 #else
-const U16 psc_app_build_sec  __attribute__ ((section(".text_data"))) = 13;
-const U16 psc_app_build_min  __attribute__ ((section(".text_data"))) = 22;
-const U16 psc_app_build_hour  __attribute__ ((section(".text_data"))) = 22;
-const U16 psc_app_build_day  __attribute__ ((section(".text_data"))) = 26;
-const U16 psc_app_build_month  __attribute__ ((section(".text_data"))) = 4;
-const U16 psc_app_build_year  __attribute__ ((section(".text_data"))) = 2023;
+const U16 psc_app_build_sec  __attribute__ ((section(".text_data"))) = 20;
+const U16 psc_app_build_min  __attribute__ ((section(".text_data"))) = 56;
+const U16 psc_app_build_hour  __attribute__ ((section(".text_data"))) = 16;
+const U16 psc_app_build_day  __attribute__ ((section(".text_data"))) = 21;
+const U16 psc_app_build_month  __attribute__ ((section(".text_data"))) = 2;
+const U16 psc_app_build_year  __attribute__ ((section(".text_data"))) = 2024;
 #endif
 
-const U8 psc_app_build_str[]         = {"Wed, 26 Apr 2023, 22:22:13"};
+const U8 psc_app_build_str[]         = {"Wed, 21 Feb 2024, 16:56:20"};
 
 
 
@@ -554,7 +562,9 @@ const PKN_TASK_T pkn_task_table[PKNL_NUM_TASKS] =
     { pmios_client_task, PKNL_PMIOS_CLIENTTASK_PRI, PKNL_PMIOS_CLIENTTASK_CEIL },
     { puart_linflexd_periodic_task, PKNL_PUART_LINFLEXD_PERIODICTASK_PRI, PKNL_PUART_LINFLEXD_PERIODICTASK_CEIL },
     { task_10ms, PKNL_TASK_10MSTASK_PRI, PKNL_TASK_10MSTASK_CEIL },
+    { task_20ms, PKNL_TASK_20MSTASK_PRI, PKNL_TASK_20MSTASK_CEIL },
     { task_100ms, PKNL_TASK_100MSTASK_PRI, PKNL_TASK_100MSTASK_CEIL },
+    { task_500ms, PKNL_TASK_500MSTASK_PRI, PKNL_TASK_500MSTASK_CEIL },
     { task_1000ms, PKNL_TASK_1000MSTASK_PRI, PKNL_TASK_1000MSTASK_CEIL },
     { pdtc_client_task, PKNL_PDTC_CLIENTTASK_PRI, PKNL_PDTC_CLIENTTASK_CEIL },
     { pcx_periodic_task, PKNL_PCX_PERIODICTASK_PRI, PKNL_PCX_PERIODICTASK_CEIL },
@@ -583,7 +593,9 @@ const PKN_TASK_HANDLE_T pkn_pdg_client_task_task_hdl = &pkn_task_table[PKNL_PDG_
 const PKN_TASK_HANDLE_T pkn_pmios_client_task_task_hdl = &pkn_task_table[PKNL_PMIOS_CLIENTTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_puart_linflexd_periodic_task_hdl = &pkn_task_table[PKNL_PUART_LINFLEXD_PERIODICTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_task_10ms_task_hdl = &pkn_task_table[PKNL_TASK_10MSTASK_IDX];
+const PKN_TASK_HANDLE_T pkn_task_20ms_task_hdl = &pkn_task_table[PKNL_TASK_20MSTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_task_100ms_task_hdl = &pkn_task_table[PKNL_TASK_100MSTASK_IDX];
+const PKN_TASK_HANDLE_T pkn_task_500ms_task_hdl = &pkn_task_table[PKNL_TASK_500MSTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_task_1000ms_task_hdl = &pkn_task_table[PKNL_TASK_1000MSTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_pdtc_client_task_task_hdl = &pkn_task_table[PKNL_PDTC_CLIENTTASK_IDX];
 const PKN_TASK_HANDLE_T pkn_pcx_periodic_task_hdl = &pkn_task_table[PKNL_PCX_PERIODICTASK_IDX];
@@ -606,7 +618,9 @@ const U8 pkn_pdg_client_task_task_idx = PKNL_PDG_CLIENTTASK_IDX;
 const U8 pkn_pmios_client_task_task_idx = PKNL_PMIOS_CLIENTTASK_IDX;
 const U8 pkn_puart_linflexd_periodic_task_idx = PKNL_PUART_LINFLEXD_PERIODICTASK_IDX;
 const U8 pkn_task_10ms_task_idx = PKNL_TASK_10MSTASK_IDX;
+const U8 pkn_task_20ms_task_idx = PKNL_TASK_20MSTASK_IDX;
 const U8 pkn_task_100ms_task_idx = PKNL_TASK_100MSTASK_IDX;
+const U8 pkn_task_500ms_task_idx = PKNL_TASK_500MSTASK_IDX;
 const U8 pkn_task_1000ms_task_idx = PKNL_TASK_1000MSTASK_IDX;
 const U8 pkn_pdtc_client_task_task_idx = PKNL_PDTC_CLIENTTASK_IDX;
 const U8 pkn_pcx_periodic_task_idx = PKNL_PCX_PERIODICTASK_IDX;
@@ -775,12 +789,28 @@ const PKN_PERIODIC_TASK_T pkn_periodic_task_table[PKNL_NUM_PERIODIC_TASKS] =
         &pkn_task_table[PKNL_TASK_10MSTASK_IDX]
     },
     {
+        &pkn_periodic_records[PKNL_TASK_20MSTASK_PIDX],
+        &pkn_task_overrun_count[PKNL_TASK_20MSTASK_IDX],
+        TRUE,
+        0,
+        20,
+        &pkn_task_table[PKNL_TASK_20MSTASK_IDX]
+    },
+    {
         &pkn_periodic_records[PKNL_TASK_100MSTASK_PIDX],
         &pkn_task_overrun_count[PKNL_TASK_100MSTASK_IDX],
         TRUE,
         0,
         100,
         &pkn_task_table[PKNL_TASK_100MSTASK_IDX]
+    },
+    {
+        &pkn_periodic_records[PKNL_TASK_500MSTASK_PIDX],
+        &pkn_task_overrun_count[PKNL_TASK_500MSTASK_IDX],
+        TRUE,
+        0,
+        500,
+        &pkn_task_table[PKNL_TASK_500MSTASK_IDX]
     },
     {
         &pkn_periodic_records[PKNL_TASK_1000MSTASK_PIDX],
@@ -848,7 +878,9 @@ const PKN_PERIODIC_TASK_HANDLE_T pkn_pdg_client_task_periodic_hdl = &pkn_periodi
 const PKN_PERIODIC_TASK_HANDLE_T pkn_pmios_client_task_periodic_hdl = &pkn_periodic_task_table[PKNL_PMIOS_CLIENTTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_puart_linflexd_periodic_periodic_hdl = &pkn_periodic_task_table[PKNL_PUART_LINFLEXD_PERIODICTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_task_10ms_periodic_hdl = &pkn_periodic_task_table[PKNL_TASK_10MSTASK_PIDX];
+const PKN_PERIODIC_TASK_HANDLE_T pkn_task_20ms_periodic_hdl = &pkn_periodic_task_table[PKNL_TASK_20MSTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_task_100ms_periodic_hdl = &pkn_periodic_task_table[PKNL_TASK_100MSTASK_PIDX];
+const PKN_PERIODIC_TASK_HANDLE_T pkn_task_500ms_periodic_hdl = &pkn_periodic_task_table[PKNL_TASK_500MSTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_task_1000ms_periodic_hdl = &pkn_periodic_task_table[PKNL_TASK_1000MSTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_pdtc_client_task_periodic_hdl = &pkn_periodic_task_table[PKNL_PDTC_CLIENTTASK_PIDX];
 const PKN_PERIODIC_TASK_HANDLE_T pkn_pcx_periodic_periodic_hdl = &pkn_periodic_task_table[PKNL_PCX_PERIODICTASK_PIDX];
@@ -874,43 +906,43 @@ const PKN_RESOURCE_T pkn_resource_table[PKNL_NUM_RESOURCES] =
 {
     {
         &pkn_ceiling_records[PKNL_SPI_QUEUE_RESOURCE],
-        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PQCA_CLIENTTASK_PRI | PKNL_PCX_QEMPTIERTASK_PRI | PKNL_PPM_TASKTASK_PRI,
-        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL | PKNL_PCX_QEMPTIERTASK_CEIL | PKNL_PPM_TASKTASK_CEIL,
+        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PQCA_CLIENTTASK_PRI | PKNL_PCX_QEMPTIERTASK_PRI | PKNL_PPM_TASKTASK_PRI,
+        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL | PKNL_PCX_QEMPTIERTASK_CEIL | PKNL_PPM_TASKTASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_CAN_QUEUE_RESOURCE],
-        PKNL_PCX_QEMPTIERTASK_PRI | PKNL_PCX_CAN_CALLBACKTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PCP_CLIENTTASK_PRI | PKNL_PJ1939_CLIENTTASK_PRI | PKNL_PISO_CLIENTTASK_PRI | PKNL_PDG_CLIENTTASK_PRI,
-        PKNL_PCX_QEMPTIERTASK_CEIL | PKNL_PCX_CAN_CALLBACKTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PCP_CLIENTTASK_CEIL | PKNL_PJ1939_CLIENTTASK_CEIL | PKNL_PISO_CLIENTTASK_CEIL | PKNL_PDG_CLIENTTASK_CEIL,
+        PKNL_PCX_QEMPTIERTASK_PRI | PKNL_PCX_CAN_CALLBACKTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PCP_CLIENTTASK_PRI | PKNL_PJ1939_CLIENTTASK_PRI | PKNL_PISO_CLIENTTASK_PRI | PKNL_PDG_CLIENTTASK_PRI,
+        PKNL_PCX_QEMPTIERTASK_CEIL | PKNL_PCX_CAN_CALLBACKTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PCP_CLIENTTASK_CEIL | PKNL_PJ1939_CLIENTTASK_CEIL | PKNL_PISO_CLIENTTASK_CEIL | PKNL_PDG_CLIENTTASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_J1939_BUF_RESOURCE],
-        PKNL_PJ1939_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
-        PKNL_PJ1939_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
+        PKNL_PJ1939_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
+        PKNL_PJ1939_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_PPID_BUF_RESOURCE],
-        PKNL_PDG_CLIENTTASK_PRI | PKNL_PISO_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
-        PKNL_PDG_CLIENTTASK_CEIL | PKNL_PISO_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
+        PKNL_PDG_CLIENTTASK_PRI | PKNL_PISO_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
+        PKNL_PDG_CLIENTTASK_CEIL | PKNL_PISO_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_PFS_STRUCTS_RESOURCE],
-        PKNL_PFS_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PFF_CLIENTTASK_PRI | PKNL_PDG_CLIENTTASK_PRI | PKNL_PDTC_CLIENTTASK_PRI | PKNL_PCP_CLIENTTASK_PRI,
-        PKNL_PFS_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PFF_CLIENTTASK_CEIL | PKNL_PDG_CLIENTTASK_CEIL | PKNL_PDTC_CLIENTTASK_CEIL | PKNL_PCP_CLIENTTASK_CEIL,
+        PKNL_PFS_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PFF_CLIENTTASK_PRI | PKNL_PDG_CLIENTTASK_PRI | PKNL_PDTC_CLIENTTASK_PRI | PKNL_PCP_CLIENTTASK_PRI,
+        PKNL_PFS_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PFF_CLIENTTASK_CEIL | PKNL_PDG_CLIENTTASK_CEIL | PKNL_PDTC_CLIENTTASK_CEIL | PKNL_PCP_CLIENTTASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_PFF_BUF_RESOURCE],
-        PKNL_PFF_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
-        PKNL_PFF_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
+        PKNL_PFF_CLIENTTASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI,
+        PKNL_PFF_CLIENTTASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_PQCA_QUEUES_RESOURCE],
-        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PQCA_CLIENTTASK_PRI | PKNL_PV2G_CLIENTTASK_PRI,
-        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL | PKNL_PV2G_CLIENTTASK_CEIL,
+        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PQCA_CLIENTTASK_PRI | PKNL_PV2G_CLIENTTASK_PRI,
+        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL | PKNL_PV2G_CLIENTTASK_CEIL,
     },
     {
         &pkn_ceiling_records[PKNL_PV2G_QUEUES_RESOURCE],
-        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PV2G_CLIENTTASK_PRI | PKNL_PQCA_CLIENTTASK_PRI,
-        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PV2G_CLIENTTASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL,
+        PKNL_PSP_RECEIVETASK_PRI | PKNL_TASK_10MSTASK_PRI | PKNL_TASK_20MSTASK_PRI | PKNL_TASK_100MSTASK_PRI | PKNL_TASK_500MSTASK_PRI | PKNL_TASK_1000MSTASK_PRI | PKNL_PKN_IDLETASK_PRI | PKNL_PV2G_CLIENTTASK_PRI | PKNL_PQCA_CLIENTTASK_PRI,
+        PKNL_PSP_RECEIVETASK_CEIL | PKNL_TASK_10MSTASK_CEIL | PKNL_TASK_20MSTASK_CEIL | PKNL_TASK_100MSTASK_CEIL | PKNL_TASK_500MSTASK_CEIL | PKNL_TASK_1000MSTASK_CEIL | PKNL_PKN_IDLETASK_CEIL | PKNL_PV2G_CLIENTTASK_CEIL | PKNL_PQCA_CLIENTTASK_CEIL,
     },
 
 };
@@ -943,14 +975,14 @@ const PHDR_HEADER_T psc_calibration_header  __attribute__ ((section(".cal_header
 #endif
 
 
-const PCX_HANDLE_T pcx_tot_allow_msg_tx = 10;
-const PCX_HANDLE_T pcx_tot_allow_msg_rx = 5;
+const PCX_HANDLE_T pcx_tot_allow_msg_tx = 36;
+const PCX_HANDLE_T pcx_tot_allow_msg_rx = 17;
 
-PCX_RX_MSG_T pcx_rx_msg[5];
-PCX_HANDLE_T pcx_sorted_rx_msg[5];
+PCX_RX_MSG_T pcx_rx_msg[17];
+PCX_HANDLE_T pcx_sorted_rx_msg[17];
 
-PCX_TX_MSG_T pcx_tx_msg[10];
-PCX_HANDLE_T pcx_queued_tx_list[11][PCX_NUM_CAN_DEVICES];
+PCX_TX_MSG_T pcx_tx_msg[36];
+PCX_HANDLE_T pcx_queued_tx_list[37][PCX_NUM_CAN_DEVICES];
 
 
 
@@ -1427,9 +1459,43 @@ void task_10ms(void)
  *  Notes:          None.
  *****************************************************************************
  */
+void task_20ms(void)
+{
+    pkn_20ms_model_task();
+    psp_spi_trigger();
+}
+
+
+
+/*
+ *****************************************************************************
+ *  Purpose:        Complete a periodic rate iteration of the application,
+ *                  pass all data consistently and trigger any SPI
+ *                  I/O for this rate.
+ *  Returns:        void
+ *  Notes:          None.
+ *****************************************************************************
+ */
 void task_100ms(void)
 {
     pkn_100ms_model_task();
+    psp_spi_trigger();
+}
+
+
+
+/*
+ *****************************************************************************
+ *  Purpose:        Complete a periodic rate iteration of the application,
+ *                  pass all data consistently and trigger any SPI
+ *                  I/O for this rate.
+ *  Returns:        void
+ *  Notes:          None.
+ *****************************************************************************
+ */
+void task_500ms(void)
+{
+    pkn_500ms_model_task();
     psp_spi_trigger();
 }
 

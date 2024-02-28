@@ -1,0 +1,231 @@
+(capi.py): OpenECU interface tool (version 3.2.0-FS r2022-1, built 21-Jan-2022)
+(capi.py): (warning 5001): the DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_param' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 5001): the DDE 't_sample' is not defined by 'ATV.elf.ddump' and may be redundant, consider removing from DD file.
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_ovrc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_ovrc_puart_linflexd_period0' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_skipc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_skipc_puart_linflexd_perio0' for ASAP2 file generation
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_param' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_generic.a2l': DDE 't_sample' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3009): the group name 'Atomic Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Atomic_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'CANBUS_Reception_D_STATUS2_REAR1' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'CANBUS_Reception_D_STATUS2_REA0' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Triggered Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Triggered_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Switch Case Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Switch_Case_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'INPUT ANALOGICI1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'INPUT_ANALOGICI1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name ' COOLING SYSTEM' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to '_COOLING_SYSTEM' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'FAN MANAGEMENT' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'FAN_MANAGEMENT' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'DRIVE BY WIRE' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'DRIVE_BY_WIRE' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'HYBRID MANAGEMENT_Rev1_1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'HYBRID_MANAGEMENT_Rev1_1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'SPEED LIMITER' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'SPEED_LIMITER' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_ovrc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_ovrc_puart_linflexd_period0' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_skipc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_skipc_puart_linflexd_perio0' for ASAP2 file generation
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_param' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_inca.a2l': DDE 't_sample' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3009): the group name 'Atomic Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Atomic_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'CANBUS_Reception_D_STATUS2_REAR1' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'CANBUS_Reception_D_STATUS2_REA0' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Triggered Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Triggered_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Switch Case Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Switch_Case_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'INPUT ANALOGICI1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'INPUT_ANALOGICI1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name ' COOLING SYSTEM' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to '_COOLING_SYSTEM' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'FAN MANAGEMENT' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'FAN_MANAGEMENT' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'DRIVE BY WIRE' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'DRIVE_BY_WIRE' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'HYBRID MANAGEMENT_Rev1_1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'HYBRID_MANAGEMENT_Rev1_1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'SPEED LIMITER' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'SPEED_LIMITER' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_ovrc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_ovrc_puart_linflexd_period0' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_skipc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_skipc_puart_linflexd_perio0' for ASAP2 file generation
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_param' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_vision.a2l': DDE 't_sample' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3009): the group name 'Atomic Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Atomic_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'CANBUS_Reception_D_STATUS2_REAR1' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'CANBUS_Reception_D_STATUS2_REA0' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Triggered Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Triggered_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Switch Case Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Switch_Case_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'INPUT ANALOGICI1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'INPUT_ANALOGICI1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name ' COOLING SYSTEM' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to '_COOLING_SYSTEM' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'FAN MANAGEMENT' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'FAN_MANAGEMENT' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'DRIVE BY WIRE' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'DRIVE_BY_WIRE' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'HYBRID MANAGEMENT_Rev1_1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'HYBRID_MANAGEMENT_Rev1_1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'SPEED LIMITER' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'SPEED_LIMITER' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_ovrc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_ovrc_puart_linflexd_period0' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_skipc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_skipc_puart_linflexd_perio0' for ASAP2 file generation
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_param' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_canape.a2l': DDE 't_sample' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3009): the group name 'Atomic Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Atomic_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'CANBUS_Reception_D_STATUS2_REAR1' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'CANBUS_Reception_D_STATUS2_REA0' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Triggered Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Triggered_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Switch Case Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Switch_Case_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'INPUT ANALOGICI1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'INPUT_ANALOGICI1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name ' COOLING SYSTEM' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to '_COOLING_SYSTEM' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'FAN MANAGEMENT' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'FAN_MANAGEMENT' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'DRIVE BY WIRE' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'DRIVE_BY_WIRE' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'HYBRID MANAGEMENT_Rev1_1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'HYBRID_MANAGEMENT_Rev1_1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'SPEED LIMITER' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'SPEED_LIMITER' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_ovrc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_ovrc_puart_linflexd_period0' for ASAP2 file generation
+(capi.py): (warning 3009): line 1 of 'automatic library DDEs': the DDE name 'mpl_skipc_puart_linflexd_periodic' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another identifier, and has been changed to 'mpl_skipc_puart_linflexd_perio0' for ASAP2 file generation
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_TrqGen_Actual' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_dbg_FAN' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_dbg_FAN_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_fan_output' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_fan_setpoint' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_fan_status' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_key_signal' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_key_signal_in' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_param' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_pm_APU' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_throttleRegOff' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atv_v_dbg_hv_req' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_GenTestCurrent' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_HybridMode' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_RpmEndWarmUp' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_brake2epedal_split' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_brake_pedal_thr' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_gen_CURRENT_KD' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_mtadd' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_mtadd_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_mtawnb' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_mtawnb_rev' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_socLimitSave' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 'atvc_test_rpm' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3010): file 'ATV_tool_controldesk.a2l': DDE 't_sample' is not defined by 'ATV.elf.ddump' but is required for ASAP2 generation, DDE not added to ASAP2 file.
+(capi.py): (warning 3009): the group name 'Atomic Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Atomic_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'CANBUS_Reception_D_STATUS2_REAR1' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'CANBUS_Reception_D_STATUS2_REA0' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Triggered Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Triggered_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'Switch Case Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'Switch_Case_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem' is either too long for an ASAP2 identifier (max 31 characters), or clashes with another group name, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'If Action Subsystem1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'If_Action_Subsystem1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'INPUT ANALOGICI1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'INPUT_ANALOGICI1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name ' COOLING SYSTEM' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to '_COOLING_SYSTEM' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'FAN MANAGEMENT' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'FAN_MANAGEMENT' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'DRIVE BY WIRE' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'DRIVE_BY_WIRE' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'HYBRID MANAGEMENT_Rev1_1' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'HYBRID_MANAGEMENT_Rev1_1' for ASAP2 file generation
+(capi.py): (warning 3009): the group name 'SPEED LIMITER' uses characters not allowed by the ASAP2 standard for identifiers, and has been changed to 'SPEED_LIMITER' for ASAP2 file generation

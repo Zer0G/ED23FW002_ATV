@@ -1,0 +1,342 @@
+** See the OpenECU Simulink User Guide, section 'Data dictionary files' for more
+** information about the contents of this file.
+**
+** This file is best edited with Excel, import the file as 'TAB delimited'.
+**
+** Any line starting with the '**' characters is treated as a comment.
+**
+** The following line defines the order of the columns in the remaining lines.
+
+Name	Value	Units	Type	Accuracy	Min	Max	DeclFile	DefnFile	Description
+
+** The previous line must be present in all data dictionary files but
+** note that columns can be swapped around (with the exception of the
+** Name column) and some columns are optional.
+**
+** Each line uses a single TAB character to separate columns.
+**
+** The following line is an example of a DDE which maps to a Simulink signal.
+
+**atv_signal		degree_Celsius	real_T	0.01					Replace this with a useful comment.
+
+** The following line is an example of a DDE which maps to a parameter in a Simulink block.
+
+atv_param	0	kPa	real_T	0.01					Replace this with a useful comment.
+
+** The following DDEs provide information about the target ECU's status.
+
+atv_cpu_loading		%	uint8_T	1					CPU loading seen in last 50ms
+atv_cpu_loading_max		%	uint8_T	1					Maximum CPU loading seen in any 50ms period
+atv_stack_used		byte	uint32_T	1					Amount of used stack
+atv_task_duration_1s		microsecond	uint32_T	1					Duration of 1s task (last measured valued)
+atv_task_duration_1s_max		microsecond	uint32_T	1					Duration of 1s task (maximum since power up)
+
+** The following DDEs provide version information for each piece of software
+** on the target ECU.
+
+atv_boot_code_year		one	uint16_T	1					Year the boot code was built.
+atv_boot_code_month		one	uint16_T	1					Month the boot code was built.
+atv_boot_code_day		one	uint16_T	1					Day the boot code was built.
+atv_boot_code_major_ver		one	uint16_T	1					Major version of the boot code.
+atv_boot_code_minor_ver		one	uint16_T	1					Minor version of the boot code.
+atv_boot_code_subminor_ver		one	uint16_T	1					Sub-minor version of the boot code.
+
+atv_platform_code_year		one	uint16_T	1					Year the platform library code was built.
+atv_platform_code_month		one	uint16_T	1					Month the platform library code was built.
+atv_platform_code_day		one	uint16_T	1					Day the platform library code was built.
+atv_platform_code_major_ver		one	uint16_T	1					Major version of the platform library code.
+atv_platform_code_minor_ver		one	uint16_T	1					Minor version of the platform library code.
+atv_platform_code_subminor_ver		one	uint16_T	1					Sub-minor version of the platform library code.
+
+atv_prg_code_year		one	uint16_T	1					Year the reprogramming code was built.
+atv_prg_code_month		one	uint16_T	1					Month the reprogramming code was built.
+atv_prg_code_day		one	uint16_T	1					Day the reprogramming code was built.
+atv_prg_code_major_ver		one	uint16_T	1					Major version of the reprogramming code.
+atv_prg_code_minor_ver		one	uint16_T	1					Minor version of the reprogramming code.
+atv_prg_code_subminor_ver		one	uint16_T	1					Sub-minor version of the reprogramming code.
+
+atv_app_code_year		one	uint16_T	1					Year the application code was built.
+atv_app_code_month		one	uint16_T	1					Month the application code was built.
+atv_app_code_day		one	uint16_T	1					Day the application code was built.
+atv_app_code_major_ver		one	uint16_T	1					Major version of the application code.
+atv_app_code_minor_ver		one	uint16_T	1					Minor version of the application code.
+atv_app_code_subminor_ver		one	uint16_T	1					Sub-minor version of the application code.
+
+t_sample		sec	real_T	0.01					Sample time definition for fast VSM Cycle
+
+
+
+atvc_ice_run_timer	0	m	real_T		0	2000000000			ICE Run Timer [sec]
+atvc_ice_run_timer_reset	0	one	boolean_T		0	1			ICE Run Timer reset
+atv_ice_run_timer	0	m	uint32_T		0	2000000000			ICE Run Timer [sec]
+
+atvc_fmot_run_timer	0	m	real_T		0	2000000000			ICE Run Timer [sec]
+atvc_fmot_run_timer_reset	0	one	boolean_T		0	1			ICE Run Timer reset
+atv_fmot_run_timer	0	m	uint32_T		0	2000000000			ICE Run Timer [sec]
+
+atvc_rmot_run_timer	0	m	real_T		0	2000000000			ICE Run Timer [sec]
+atvc_rmot_run_timer_reset	0	one	boolean_T		0	1			ICE Run Timer reset
+atv_rmot_run_timer	0	m	uint32_T		0	2000000000			ICE Run Timer [sec]
+
+atvc_odometer	0	m	real_T		0	2000000000			Odometer [m]
+atvc_odometer_reset	0	one	boolean_T		0	1			Odometer reset
+atv_odometer		m	uint32_T	1					Odometer [m*100]
+
+atv_vehicle_SOC		%	uint8_T	1					Vehicle SOC [%]
+
+atvc_HybridMode	1	one	boolean_T		0	1			Odometer reset
+
+
+atv_xd1_key_ain		V	real_T	0.001					Key Input (V)
+atv_xe3_ain		V	int32_T	1					
+atv_xa1_ain_throttle_raw		V	real_T	0.001					Throttle Input V (Raw Voltage)
+atv_za3_StartBtn_din		one	boolean_T	1					Start Button Status (RAW)
+atv_xd3_raw_ain		V	real_T	0.001					Foot Pedal FS1 Switch (Raw Voltage)
+atv_xa3_brake_pedal_raw_ain		V	real_T	0.001					Brake Pedal (Raw Voltage)
+atv_brake_pedalX1000		V	uint16_T	1					Brake Input 0-1000
+atv_brake_pedal_digital_in		one	boolean_T	1					Brake Pedal In Digital
+atv_xe4_raw_ain		V	real_T	0.001					2WD/4WD  Selector (Raw Voltage)
+atv_4wd_din		one	boolean_T	1					2WD/4WD Selector
+atv_xc1_raw_ain		V	real_T	0.001					Fwd Selector (Raw Voltage)
+atv_xc4_raw_ain		V	real_T	0.001					Rwd Selector (Raw Voltage)
+atv_xe2_raw_ain		V	real_T	0.001					APU Button (Raw Voltage)
+atv_apu_req_in		one	boolean_T	1					APU Button (Boolean) 
+atv_zd1_ain		V	real_T	0.001					12V level (Raw in)
+atv_12v		V	real_T	0.001					12V level (V)
+atv_T_Air		degree_Celsius	int16_T	1					Air Temperature
+atv_HandBrakePos		V	real_T	0.001					Hand Brake Lock Position
+atv_HandBrakeStatus		one	boolean_T	1					Hand Brake Status
+atv_yg2		one	boolean_T	1					RegMap Sel 0
+atv_yh2		one	boolean_T	1					RegMap Sel 1
+atv_yj2		one	boolean_T	1					RegMap Sel 2
+atv_zb2		one	boolean_T	1					Generator Sel 1
+atv_zb3		one	boolean_T	1					Generator Sel 2
+atv_RegMapSelProcessed		one	uint8_T	1					Regen Map Selector Position
+atv_GenSelProcessed		one	uint8_T	1					Generator Selector Position
+atv_xf4		one	boolean_T	1					PumpA Fault
+atv_za2		one	boolean_T	1					PumpB Fault
+atv_zc4		one	boolean_T	1					Power Mode Selector 56
+atv_zc2		one	boolean_T	1					Power Mode Selector 58
+atv_xd2		V	real_T	0.001					Power Mode Selector s56
+atv_ze4		V	real_T	0.001					Power Mode Selector 15a
+atv_ze3		V	real_T	0.001					Power Mode Selector s54
+atv_ye2		V	real_T	0.001					Active Suspension Ctrl
+atv_yg1		one	boolean_T	1					Stealth mode out
+atv_pm_2		one	boolean_T	1					Power Mode Selector Pos 2
+atv_pm_1		one	boolean_T	1					Power Mode Selector Pos 1
+atv_pm_g		one	boolean_T	1					Power Mode Selector Pos Giorno
+atv_pm_0		one	boolean_T	1					Power Mode Selector Pos 0
+atv_pm_s1		one	boolean_T	1					Power Mode Selector Pos S1
+atv_pm_s2		one	boolean_T	1					Power Mode Selector Pos S2
+atv_pm_s3		one	boolean_T	1					Power Mode Selector Pos S3
+atv_pm_s3		one	boolean_T	1					Power Mode Selector Pos S3
+atv_pm_Electric		one	boolean_T	1					Power Mode Selector Electric Mode
+atv_pm_Stealth		one	boolean_T	1					Power Mode Selector Stealth Electric Mode
+atv_pm_Hybrid		one	uint8_T	1					Power Mode Selector Hybrid Mode
+atv_pm_APU		one	boolean_T	1					Power Mode Selector APU Mode
+atv_pm_PreOp		one	boolean_T	1					Power Mode Selector PreOp Mode
+
+
+
+
+
+** VSM 
+atv_max_cell		one	uint16_T	1					Max Cell
+atv_min_cell		one	uint16_T	1					Max Cell
+atv_chg_present		one	boolean_T	1					Battery Charger Detected
+atv_can_wakeup		one	boolean_T	1					Wake On Can
+atv_startConditions		one	boolean_T	1					Start Conditions Verified
+atv_startBtnArmed		one	boolean_T	1					Start Conditions Verified
+
+
+** BATTERY Calibration
+
+atvc_ChargeOverride	0	one	boolean_T		0	1			 Start charge override
+atvc_cell_ov	4200	mV	uint16_T		3600	4250			Cell Overvoltage [mV]
+atvc_cell_uv	3000	mV	uint16_T		2500	3600			Cell Undervoltage [mV]
+atvc_chg_complete	4050	mV	uint16_T		3700	4250			Cell Charge Complete Voltage [mV]
+atvc_cell_ot	70	mV	int8_T		40	65			Cell Overtemp [°C]
+atvc_cell_ut	-30	mV	int8_T		-40	20			Cell Undertemp [°C]
+atvc_chg_target_v	4150	mV	uint16_T		3000	4200			Cell Chg Target [mV]
+atvc_min_soc	10	%	uint8_T		0	40			Minimum battery soc point for vehicle 0 soc [%]
+atvc_max_soc	90	%	uint8_T		60	100			Maximum battery soc point for vehicle 100 soc [%]
+
+
+** Drive By Wire monitor
+
+atv_throttleX1000		one	uint16_T	1					Throttle Input 0-1000
+atv_fs1_in		one	boolean_T	1					Foot Pedal FS1 Switch Status input
+atv_motoring_x1000_front		V	uint16_T	1					Throttle output front positive torque 0-1000
+atv_motoring_x1000_front_final		V	uint16_T	1					Throttle output front positive torque limited 0-1000
+atv_regen_x1000_front		V	uint16_T	1					Throttle output front neutral braking 0-1000
+atv_motoring_x1000_rear		V	uint16_T	1					Throttle output rear positive torque 0-1000
+atv_motoring_x1000_rear_final		V	uint16_T	1					Throttle output rear positive torque limited 0-1000
+atv_regen_x1000_rear		V	uint16_T	1					Throttle output rear neutral braking 0-1000
+atv_fs1_out		one	boolean_T	1					Foot Pedal FS1 Switch Status output
+atv_throttleRegOff		one	boolean_T	1					Disable Neutral Braking 
+atv_yb3_raw_ain		V	real_T	0.001					Fuel Sensor [V]
+atv_brake2epedal_split_actual		one	int16_T	1					Actual epedal split (map based)
+atv_map		one	uint8_T	1					Actual map
+atv_regmap		one	uint8_T	1					Actual regeneration map
+atv_mtr_current_limit		A	uint16_T	1					Motoring Current Limit
+atv_reg_current_limit		A	uint16_T	1					Regen Current Limit
+
+
+** Drive By Wire calibration
+
+atvc_mtawnb	1000	one	uint16_T		0	1000			Maximum Torque When Braking [%]
+atvc_mtadd	1000	one	uint16_T		0	1000			Maximum Torque [%]
+atvc_mtadd_rev	1000	one	uint16_T		0	1000			Maximum Torque When Braking Reverese [%]
+atvc_mtawnb_rev	1000	one	uint16_T		0	1000			Maximum Torque Reverese [%]
+atvc_throttleNeutralPoint	100	one	uint16_T		0	450			Throttle neutral position [0.1%]
+atvc_brakePedalOn	100	one	uint16_T		50	1000			Brake Pedal On Trheashold [0.1%]
+atvc_brakePedalHis	0	one	uint16_T		0	25			Brake Pedal Histeresis [0.1%]
+atvc_an_in_sel_th	2.5	one	real_T		1	4			Analog Selectors Threashold Pedal On Trheashold [V]
+atvc_an_in_sel_his	0.25	one	real_T		0	1			Analog Selectors Histeresis  [V]
+atvc_velocityLimitRwd	30	one	uint8_T		3	100			Speed Limit Reverse [Km/h]
+atvc_velocityLimitFwd	105	one	uint8_T		3	120			Speed Limit Forward [Km/h]
+atvc_maxRegenCurr	150	one	uint16_T		30	300			Max Inbound current [A]
+atvc_maxDischCurr	450	one	uint16_T		30	900			Max Outbound current [A]
+atvc_throttleZero	300	one	uint16_T		0	400			Low Pedal limit [0.1%]
+atvc_throttleFull	770	one	uint16_T		700	1000			High Pedal limit [0.1%]
+atvc_max_trq_front	1000	one	uint16_T		10	1000			Max Drive Torque Front [0.1%]
+atvc_max_trq_rear	1000	one	uint16_T		10	1000			Max Drive Torque Front [0.1%]
+atvc_max_neutralbrake_trq	0	one	uint16_T		0	1000			Brake Pedal On Trheashold [0.1%]
+atvc_max_footbrake_trq	500	one	uint16_T		0	1000			Brake Pedal On Trheashold [0.1%]
+atvc_brake_pedal_thr	150	one	uint16_T		0	500			brake pedal threshold [0.1%]
+atvc_brake2epedal_split	100	one	int16_T		0	1000			brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]
+atvc_brake2epedal_split_0	0	one	int16_T		0	1000			brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]
+atvc_brake2epedal_split_1	80	one	int16_T		0	1000			brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]
+atvc_brake2epedal_split_2	175	one	int16_T		0	1000			brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]
+atvc_brake2epedal_split_3	275	one	int16_T		0	1000			brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]
+atvc_brake_pedal_gain	1.5	one	real_T		0.5	4			Brake pedal gain (for eBrake calculation)
+atvc_brake_pedal_zero	0.9	one	real_T		0.455	1.5			Brake pedal zero threashold (V)
+atvc_fs1_throttle_coherency	150	one	uint16_T		10	1000			Max fs1 on [0.1%]
+atvv_map	[0 0]	one	uint8_T		0	3		Motoring and Regen Map
+atvc_force_inv_preop	0	one	boolean_T		0	1			 Force Inverter Preop for config
+atvc_wheel_radius	0.3907	m	real_T		0.34	0.44			Wheel Rolling Radius[m]
+atvc_gear_ratio	5.88	one	real_T		3	7			Primary Gear Ratio []
+
+** ICE Management monitor
+
+atv_throttleGen_X1000_out		one	uint16_T	1					Ice StartTorque [0.1%]
+atv_footBrake_X1000_out		one	uint16_T	1					footbrake Gen Out [0.1%]
+atv_IceKey_out		one	boolean_T	1					Ice Ignition  (Boolean) 
+atv_IceShutdown_out		one	boolean_T	1					Ice Status  (Boolean) 
+atv_IceOn		one	boolean_T	1					Ice Status  (Boolean) 
+atv_IceFault		one	boolean_T	1					Ice Fault  (Boolean) 
+atv_IceSM		one	uint8_T	1					Debug Start Ice
+atv_IceRG		one	uint8_T	1					Debug Reg Ice
+atv_GenCurrentSetPoint		A	int16_T	1					Generator Current Set Point
+atv_TrqGen_Actual		one	int16_T	1					Generator Actual Torque [Nm]
+atv_RPM_Gen		RPM	int16_T	1					Generator Speed [RPM]
+atv_T_ICE		degree_Celsius	int16_T	1					Generator Motor Temperature [°C]
+atv_ice_rpm_req		rpm	int16_T	1					ICE PWM RPM request [%]
+atv_ICE_Start_Timer		sec	int32_T	1					ICE restart Timer [s]
+atv_ICE_Start_Timer_Valid		one	boolean_T	1					ICE restart Timer Valid (Boolean) 
+atv_fuel_qty		l	real_T	0.001					Fuel Quantity [liters]
+atv_fuel_reserve		one	boolean_T	1					Fuel Reserve  (Boolean) 
+
+** ICE Management calibration
+
+atvc_IceOnTh	2300	one	uint16_T		2100	4000			ICE On Detection Tresasold [RPM]
+atvc_IceOffTh	1500	one	uint16_T		200	2000			ICE Off Detection Tresasold [RPM]
+atvc_StartThrottleIce	300	one	uint16_T		100	1000			ICE StartUp GENERATOR Throttle Val [0.1%]
+atvc_IceStartRetry	3	one	uint8_T		0	10			ICE StartUp Max Retry [RPM]
+atvc_RpmEndWarmUp	3900	one	uint16_T		3000	6000			ICE Warm Up Detection Tresasold [RPM]
+atvc_footBrakeIce	1000	one	uint16_T		10	1000			ICE RegTorque Val [0.1%]
+atvc_footBrakeWarmUp	1000	one	uint16_T		0	1000			ICE RegTorque Val [0.1%]
+atvc_GenWarmUpCurrent	-20	A	int16_T		-100	100			Generator warm up current [A]
+atvc_GenTestCurrent	-45	A	int16_T		-250	250			Generator warm up current [A]
+atvc_max_gen_trq	450	one	uint16_T		10	1000			Max generator inverter torque [0.1%]
+atvc_max_gen_reg_trq	1000	one	uint16_T		10	1000			Max genertor inverter regenertion torque [0.1%]
+atvc_max_gen_neutral_trq	0	one	uint16_T		0	1000			Max genertor inverter neutral braking torque [0.1%]
+atvc_gen_ramp_up	300	one	uint16_T		100	30000			ICE rampup torque [RPM]
+atvc_gen_start_rpm	950	one	uint16_T		700	3000			ICE start speed [RPM]
+atvc_gen_start_PID_KP	0.48	one	real_T		0.001	10			ICE Start PID KP
+atvc_gen_start_PID_KI	0.10	one	real_T		0.001	10			ICE Start PID KI
+atvm_currentfromrpm_x	[2800 4000 5000 6200]	rpm	real_T		1000	7500		generator RPM lookup table (RPM > CURRENT)
+atvm_currentfromrpm_z	[45 65 85 105]	A	real_T		0	200		generator RPM lookup table (RPM > CURRENT)
+atvm_rpmfromcurrent_x	[40 60 80 105]	A	real_T		0	200		generator RPM lookup table (CURRENT > RPM)
+atvm_rpmfromcurrent_z	[2800 4000 5000 6200]	rpm	real_T		1000	7500		generator RPM lookup table (CURRENT > RPM)
+atvc_test_rpm	3800	one	uint16_T		2000	7000			ICE test rpm [RPM]
+atvc_GenWarmUpRPM	2600	one	uint16_T		2000	7000			ICE warmup rpm [RPM]
+atvc_EndWarmUpTemp	50	deg	int16_T		25	80			Generator warm up current [°C]
+atvc_IceMaxTemp	105	deg	int16_T		70	150			Max ICE working temperature [°C]
+atvc_gen_CURRENT_KD	0.0	one	real_T		0.000	10			GEN RPM Stabilization KD
+atvc_GenCurrent0	-40	A	int16_T		-250	250			Generator warm up current [A]
+atvc_GenCurrent1	-60	A	int16_T		-250	250			Generator warm up current [A]
+atvc_GenCurrent2	-80	A	int16_T		-250	250			Generator warm up current [A]
+atvc_gen_TEST_PWM	0.0	one	real_T		0.000	10			GEN TEST PWM RPM CONTROL
+atvc_gen_PWM_Override	0	one	boolean_T		0	1			 GEN TEST PWM RPM CONTROL OVERRIDE
+atvc_IceStartSOC	50	%	uint8_T		0	75			ICE Auto Start SOC [%]
+atvc_IceStopSOC	90	%	uint8_T		80	99			ICE Auto Stop SOC [%]
+atvc_IceMaxSOC	96	%	uint8_T		50	99			ICE Auto Stop (static mode SOC )[%]
+atvc_ICE_dragging_time	8.5	one	real_T		5.000	15			ICE StartUp Draging Time
+atvc_ICE_Tank_Volume	20	one	real_T		5.000	120			ICE Tank Size [liters]
+atvc_ICE_ReserveFuel	2.5	one	real_T		0.000	100			ICE Tank Size [Liters]
+
+
+** Cooling System
+
+atv_yg3_raw_ain		V	real_T	0.001					Throttle Input V (Raw Voltage)
+atv_TRad_out		degree_Celsius	int16_T	1					Radiator Temperature
+atv_TRad_in		degree_Celsius	int16_T	1					Radiator Temperature
+atv_PumpAFault		one	boolean_T	1					Pump A Disabled
+atv_PumpBFault		one	boolean_T	1					Pump B Disabled
+
+
+
+atvc_dcMinFan	30	one	uint8_T		0	100			Minimum Fan Speed [%]
+atvc_tempSwitchOffFan	42	degree_Celsius	uint8_T		10	100			Fan Off Temp
+atvc_tempSwitchOnFan	44	degree_Celsius	uint8_T		10	100			Fan On Temp
+atvc_maxTempInv	40	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempInv	30	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_ErrTempInv	85	degree_Celsius	uint8_T		10	200			Err Inverter Temp
+atvc_ErrTempMot	85	degree_Celsius	uint8_T		10	200			Err Inverter Temp
+atvc_maxTempMotor	65	degree_Celsius	uint8_T		10	200			Max Inverter Temp
+atvc_minTempMotor	60	degree_Celsius	uint8_T		10	200			Min Inverter Temp
+atvc_socLimitSave	5	one	uint8_T		2	90			Min soc for pump control
+atvc_OverridePumpA	0	one	boolean_T		0	1			 Pump A Override
+atvc_OverridePumpB	0	one	boolean_T		0	1			 Pump B Override
+atvc_OverrideFan	0	one	uint8_T		0	100			 Fan  Override
+
+
+
+
+atv_wakelock_out		one	boolean_T	1					Wakelock Status
+atv_key_signal_in		one	boolean_T	1					Key Logical Status
+atv_state_out		one	uint8_T	1					VSM State
+atv_sub_state_out		one	uint8_T	1					VSM SubState
+bms_rolling_counter		one	uint8_T	1					BMS Rolling counter
+bms_pack_soc		%	uint8_T	1					Battery SOC
+atv_bmsMaxDisCurr		A	int16_T	1					BMS Max allowed discharge current
+atv_bmsMaxChgCurr		A	int16_T	1					BMS Max allowed charge current
+bms_pack_voltage		V	real_T	1					Battery Voltage
+atv_runLed_out		one	boolean_T	1					RUN LED Status
+atv_runLed_out		one	boolean_T	1					RUN LED Status
+atv_en_dcdc_out		one	boolean_T	1					RUN LED Status
+
+
+**bmsHVmCtrl		one	boolean_T	1					request for HVm contactor (provisional)
+**bmsHVpCtrl		one	boolean_T	1					request for HVp contactor (provisional)
+**bmsHeaterCtrl		one	boolean_T	1					request for Heater contactor (provisional)
+**bmsHeaterSsrCtrl		one	boolean_T	1					request for Heater SSR (provisional)
+**bmsChgCtrl		one	boolean_T	1					request for Charge contactor (provisional)
+atv_fan_setpoint		%	uint16_T	1					Calculated Fan Duty Cycle
+atv_fan_status		one	uint8_T	1					Fan Status (Indicates Fan running)
+atv_fan_output		one	uint16_T	1					Fan Output Status (Indicates Status of Fan output)
+
+atvc_HeatingMat_thr	0	one	int8_T		-10	20			 Heating Mat Activaton Temperature [C]
+
+
+**  DEBUG SIGNALS
+atv_key_signal		one	boolean_T	1					Key Logical Status
+atv_v_dbg_hv_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+atv_v_dbg_chg_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+atv_dbg_pumpA_out		one	boolean_T	1					Pump A (Debug Signal)
+atv_dbg_pumpB_out		one	boolean_T	1					Pump A (Debug Signal)
+atv_v_dbg_heater_req		one	boolean_T	1					HV Relay Control (Debug Signal)
+
+atv_dbg_FAN_in		one	real_T	1					VSM State
+atv_dbg_FAN		one	real_T	0.01					Replace this with a useful comment.

@@ -1,0 +1,60 @@
+%implements s91_b0_790xc_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef typedef_dsp_private_SlidingWindowAver_T
+#define typedef_dsp_private_SlidingWindowAver_T
+typedef struct
+{
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    real_T pCumSum;
+    real_T pCumSumRev[99];
+    real_T pCumRevIndex;
+} dsp_private_SlidingWindowAver_T;
+#endif /*typedef_dsp_private_SlidingWindowAver_T*/
+#ifndef typedef_dsp_private_SlidingWindowAv_p_T
+#define typedef_dsp_private_SlidingWindowAv_p_T
+typedef struct
+{
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    real32_T pCumSum;
+    real32_T pCumSumRev[19];
+    real32_T pCumRevIndex;
+} dsp_private_SlidingWindowAv_p_T;
+#endif /*typedef_dsp_private_SlidingWindowAv_p_T*/
+#ifndef typedef_cell_wrap_ATV_T
+#define typedef_cell_wrap_ATV_T
+typedef struct
+{
+    uint32_T f1[8];
+} cell_wrap_ATV_T;
+#endif /*typedef_cell_wrap_ATV_T*/
+#ifndef typedef_dsp_simulink_MovingAverage_AT_T
+#define typedef_dsp_simulink_MovingAverage_AT_T
+typedef struct
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    boolean_T TunablePropsChanged;
+    cell_wrap_ATV_T inputVarSize;
+    dsp_private_SlidingWindowAver_T *pStatistic;
+    int32_T NumChannels;
+} dsp_simulink_MovingAverage_AT_T;
+#endif /*typedef_dsp_simulink_MovingAverage_AT_T*/
+#ifndef typedef_dsp_simulink_MovingAverage_p_T
+#define typedef_dsp_simulink_MovingAverage_p_T
+typedef struct
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    boolean_T TunablePropsChanged;
+    cell_wrap_ATV_T inputVarSize;
+    dsp_private_SlidingWindowAv_p_T *pStatistic;
+    int32_T NumChannels;
+} dsp_simulink_MovingAverage_p_T;
+#endif /*typedef_dsp_simulink_MovingAverage_p_T*/
+%endfunction

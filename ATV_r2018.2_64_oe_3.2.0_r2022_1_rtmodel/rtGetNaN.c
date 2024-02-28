@@ -3,9 +3,9 @@
  *
  * Code generation for model "ATV".
  *
- * Model version              : 6.151
+ * Model version              : 6.673
  * Simulink Coder version : 9.0 (R2018b) 24-May-2018
- * C source code generated on : Wed Apr 26 22:21:58 2023
+ * C source code generated on : Wed Feb 21 16:55:40 2024
  *
  * Target selection: openecu_grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

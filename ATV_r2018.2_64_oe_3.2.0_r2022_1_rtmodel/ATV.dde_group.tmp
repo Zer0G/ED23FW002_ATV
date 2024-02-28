@@ -1,119 +1,251 @@
 Name	Cref	Value	Units	Description	Type	Accuracy	Min	Max	Enums	Scale	Offset	Lookup	Rate	Group
-atv_fs1_out	atv_fs1_out		one	Foot Pedal FS1 Switch Status output	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_tempSwitchOffFan	atvc_tempSwitchOffFan	48	degree_Celsius	Fan Off Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByType/Scalars
+atv_fs1_out	atv_fs1_out		one	Foot Pedal FS1 Switch Status output	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_pm_Stealth	atv_pm_Stealth		one	Power Mode Selector Stealth Electric Mode	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Atomic Subsystem1,/ByType/Signals
+atvc_tempSwitchOffFan	atvc_tempSwitchOffFan	42	degree_Celsius	Fan Off Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT,/ByType/Scalars
 atv_task_duration_1s_max	atv_task_duration_1s_max		microsecond	Duration of 1s task (maximum since power up)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
-atv_regen_x1000_rear	atv_regen_x1000_rear		V	Throttle output rear neutral braking 0-1000	uint16_T	1	0	0					-1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_zd1_ain	atv_zd1_ain		V	12V level (Raw in)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_yh2	atv_yh2		one	RegMap Sel 1	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_GenWarmUpCurrent	atvc_GenWarmUpCurrent	-20	A	Generator warm up current [A]	int16_T	1	-100	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atvc_brake_pedal_thr	atvc_brake_pedal_thr	150	one	brake pedal threshold [0.1%]	uint16_T	1	0	500					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_throttleZero	atvc_throttleZero	300	one	Low Pedal limit [0.1%]	uint16_T	1	0	400					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation,/ByType/Scalars
+atv_can_wakeup	atv_can_wakeup		one	Wake On Can	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_C_MONITOR,/ByType/Signals
+atvc_odometer_reset	atvc_odometer_reset	0	one	Odometer reset	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ODOMETER,/ByType/Scalars
+atv_regen_x1000_rear	atv_regen_x1000_rear		V	Throttle output rear neutral braking 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 t_sample	t_sample		sec	Sample time definition for fast VSM Cycle	real_T	0.01	0	0					0	/ByDataDictionaryPrefix/t_s,/Others
 atvc_brakePedalOn	atvc_brakePedalOn	100	one	Brake Pedal On Trheashold [0.1%]	uint16_T	1	50	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_brake_pedal_digital_in	atv_brake_pedal_digital_in		one	Brake Pedal In Digital	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_motoring_x1000_front	atv_motoring_x1000_front		V	Throttle output front positive torque 0-1000	uint16_T	1	0	0					-1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_gen_TEST_PWM	atvc_gen_TEST_PWM	0.0	one	GEN TEST PWM RPM CONTROL	real_T	0.0001	0.000	10					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_motoring_x1000_front	atv_motoring_x1000_front		V	Throttle output front positive torque 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
+atv_ze3	atv_ze3		V	Power Mode Selector s54	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_ze4	atv_ze4		V	Power Mode Selector 15a	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_cell_uv	atvc_cell_uv	3000	mV	Cell Undervoltage [mV]	uint16_T	1	2500	3600					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/ErrBattery,/ByType/Scalars
+atv_GenSelProcessed	atv_GenSelProcessed		one	Generator Selector Position	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_gen_CURRENT_KD	atvc_gen_CURRENT_KD	0.0	one	GEN RPM Stabilization KD	real_T	0.0001	0.000	10					0	/ByDataDictionaryPrefix/atv,/Others
+atv_T_Air	atv_T_Air		degree_Celsius	Air Temperature	int16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing/INPUT ANALOGICI1,/ByType/Signals
 atv_platform_code_month	atv_platform_code_month		one	Month the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvm_rpmfromcurrent_z	atvm_rpmfromcurrent_z	[2800 4000 5000 6200]	rpm	(not defined)	real_T	0.0001	1000	7500					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Maps
 atvc_brakePedalHis	atvc_brakePedalHis	0	one	Brake Pedal Histeresis [0.1%]	uint16_T	1	0	25					0	/ByDataDictionaryPrefix/atv,/Others
 atv_prg_code_subminor_ver	atv_prg_code_subminor_ver		one	Sub-minor version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_fuel_level	atv_fuel_level		one	Fuel Level [%]	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
 atv_IceFault	atv_IceFault		one	Ice Fault  (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_throttleX1000	atv_throttleX1000		one	Throttle Input 0-1000	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_throttleMaxLimit	atvc_throttleMaxLimit	1000	one	High Pedal limit [0.1%]	uint16_T	1	100	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atvc_GenWarmUpRPM	atvc_GenWarmUpRPM	2600	one	ICE warmup rpm [RPM]	uint16_T	1	2000	7000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atvc_OverrideFan	atvc_OverrideFan	0	one	Fan  Override	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
 atv_v_dbg_heater_req	atv_v_dbg_heater_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL,/ByType/Signals
-atvc_maxTempInv	atvc_maxTempInv	60	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
+atv_bmsMaxDisCurr	atv_bmsMaxDisCurr		A	BMS Max allowed discharge current	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atvc_max_footbrake_trq	atvc_max_footbrake_trq	500	one	Brake Pedal On Trheashold [0.1%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_motoring_x1000_front_final	atv_motoring_x1000_front_final		V	Throttle output front positive torque limited 0-1000	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_TrqGen_Actual	atv_TrqGen_Actual		one	Generator Actual Torque [Nm]	int16_T	1	0	0					Inf	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_xe4_raw_ain	atv_xe4_raw_ain		V	2WD/4WD  Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_dbg_pumpA_out	atv_dbg_pumpA_out		one	Pump A (Debug Signal)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_wheel_radius	atvc_wheel_radius	0.3907	m	Wheel Rolling Radius[m]	real_T	0.0001	0.34	0.44					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ODOMETER,/ByModelHeirarchy/ATV/loop_10ms/SPEED LIMITER,/ByType/Scalars
+atvm_currentfromrpm_z	atvm_currentfromrpm_z	[45 65 85 105]	A	(not defined)	real_T	0.0001	0	200				atv_RPM_Gen	0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Maps
+atv_dbg_pumpA_out	atv_dbg_pumpA_out		one	Pump A (Debug Signal)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Signals
 atv_prg_code_year	atv_prg_code_year		one	Year the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
-atv_boot_code_major_ver	atv_boot_code_major_ver		one	Major version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atv_reg_current_limit	atv_reg_current_limit		A	Regen Current Limit	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem1,/ByType/Signals
 atv_dbg_pumpB_out	atv_dbg_pumpB_out		one	Pump A (Debug Signal)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Signals
 atv_boot_code_subminor_ver	atv_boot_code_subminor_ver		one	Sub-minor version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atv_throttleGen_X1000_out	atv_throttleGen_X1000_out		one	Ice StartTorque [0.1%]	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_IceKey_out	atv_IceKey_out		one	Ice Ignition  (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_fmot_run_timer_reset	atvc_fmot_run_timer_reset	0	one	ICE Run Timer reset	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER,/ByType/Scalars
+atvc_OverridePumpB	atvc_OverridePumpB	0	one	Pump B Override	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
 atv_yg3_raw_ain	atv_yg3_raw_ain		V	Throttle Input V (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atvc_mtawnb	atvc_mtawnb	100	one	Maximum Torque When Braking [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/TORQUE SPLITTER,/ByType/Scalars
+atv_startBtnArmed	atv_startBtnArmed		one	Start Conditions Verified	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_maxDischCurr	atvc_maxDischCurr	450	one	Max Outbound current [A]	uint16_T	1	30	900					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atvc_gen_PWM_Override	atvc_gen_PWM_Override	0	one	GEN TEST PWM RPM CONTROL OVERRIDE	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_ICE_Start_Timer_Valid	atv_ICE_Start_Timer_Valid		one	ICE restart Timer Valid (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem3,/ByType/Signals
+atv_bmsMaxChgCurr	atv_bmsMaxChgCurr		A	BMS Max allowed charge current	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atvc_mtawnb	atvc_mtawnb	1000	one	Maximum Torque When Braking [%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/TORQUE SPLITTER,/ByType/Scalars
 atv_platform_code_major_ver	atv_platform_code_major_ver		one	Major version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
 atvc_an_in_sel_his	atvc_an_in_sel_his	0.25	one	Analog Selectors Histeresis  [V]	real_T	0.0001	0	1					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_GenWarmUpCurrent	atvc_GenWarmUpCurrent	10	A	Generator warm up current [A]	int16_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_boot_code_major_ver	atv_boot_code_major_ver		one	Major version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
+atv_fmot_run_timer	atv_fmot_run_timer		m	ICE Run Timer [sec]	uint32_T	1	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER,/ByType/Signals
 atv_xc1_raw_ain	atv_xc1_raw_ain		V	Fwd Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_max_soc	atvc_max_soc	90	%	Maximum battery soc point for vehicle 100 soc [%]	uint8_T	1	60	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem2,/ByType/Scalars
+atv_xf4	atv_xf4		one	PumpA Fault	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_fan_status	atv_fan_status		one	Fan Status (Indicates Fan running)	uint8_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
+atv_odometer	atv_odometer		m	Odometer [m*100]	uint32_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_dbg_FAN	atv_dbg_FAN		one	Replace this with a useful comment.	real_T	0.01	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_GenTestCurrent	atvc_GenTestCurrent	40	A	Generator warm up current [A]	int16_T	1	0	250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
-atv_key_signal	atv_key_signal		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_app_code_subminor_ver	atv_app_code_subminor_ver		one	Sub-minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atv_max_cell	atv_max_cell		one	Max Cell	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS_CELL_V,/ByType/Signals
+atv_TRad_in	atv_TRad_in		degree_Celsius	Radiator Temperature	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_ICE_ReserveFuel	atvc_ICE_ReserveFuel	2.5	one	ICE Tank Size [Liters]	real_T	0.0001	0.000	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_key_signal	atv_key_signal		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+atv_TRad_out	atv_TRad_out		degree_Celsius	Radiator Temperature	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xc4_raw_ain	atv_xc4_raw_ain		V	Rwd Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_mtr_current_limit	atv_mtr_current_limit		A	Motoring Current Limit	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem1,/ByType/Signals
 atv_GenCurrentSetPoint	atv_GenCurrentSetPoint		A	Generator Current Set Point	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_task_duration_1s	atv_task_duration_1s		microsecond	Duration of 1s task (last measured valued)	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
 atv_apu_req_in	atv_apu_req_in		one	APU Button (Boolean)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_sub_state_out	atv_sub_state_out		one	VSM SubState	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_tempSwitchOnFan	atvc_tempSwitchOnFan	50	degree_Celsius	Fan On Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
+atv_T_ICE	atv_T_ICE		degree_Celsius	Generator Motor Temperature [°C]	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Signals
 atv_app_code_year	atv_app_code_year		one	Year the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atvc_mtadd_rev	atvc_mtadd_rev	1000	one	Maximum Torque When Braking Reverese [%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_4wd_din	atv_4wd_din		one	2WD/4WD Selector	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_12v	atv_12v		V	12V level (V)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 bms_pack_voltage	bms_pack_voltage		V	Battery Voltage	real_T	1	0	0					100	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
-atv_regen_x1000_front	atv_regen_x1000_front		V	Throttle output front neutral braking 0-1000	uint16_T	1	0	0					-1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_ice_run_timer	atv_ice_run_timer		m	ICE Run Timer [sec]	uint32_T	1	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER,/ByType/Signals
+atvc_min_soc	atvc_min_soc	10	%	Minimum battery soc point for vehicle 0 soc [%]	uint8_T	1	0	40					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem2,/ByType/Scalars
+atvc_max_gen_reg_trq	atvc_max_gen_reg_trq	1000	one	Max genertor inverter regenertion torque [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_regen_x1000_front	atv_regen_x1000_front		V	Throttle output front neutral braking 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_IceRG	atv_IceRG		one	Debug Reg Ice	uint8_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atv_tHROTTLEGen_X1000_out	atv_tHROTTLEGen_X1000_out		one	Ice StartTorque [0.1%]	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_cell_ot	atvc_cell_ot	70	mV	Cell Overtemp [°C]	int8_T	1	40	70.0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/ErrBattery,/ByType/Scalars
+atvc_cell_ov	atvc_cell_ov	4200	mV	Cell Overvoltage [mV]	uint16_T	1	3600	4250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/ErrBattery,/ByType/Scalars
 atv_state_out	atv_state_out		one	VSM State	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_OverridePumpA	atvc_OverridePumpA	0	one	Pump A Override	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
 atv_prg_code_major_ver	atv_prg_code_major_ver		one	Major version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_pm_APU	atv_pm_APU		one	Power Mode Selector APU Mode	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_max_neutralbrake_trq	atvc_max_neutralbrake_trq	0	one	Brake Pedal On Trheashold [0.1%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
 atv_app_code_minor_ver	atv_app_code_minor_ver		one	Minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atvc_maxRegenCurr	atvc_maxRegenCurr	50	one	Max Inbound current [A]	uint16_T	1	30	300					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
-atvc_maxDischCurr	atvc_maxDischCurr	100	one	Max Outbound current [A]	uint16_T	1	30	900					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atvc_max_gen_neutral_trq	atvc_max_gen_neutral_trq	0	one	Max genertor inverter neutral braking torque [0.1%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atvc_HeatingMat_thr	atvc_HeatingMat_thr	0	one	Heating Mat Activaton Temperature [C]	int8_T	1	-10	20					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/VSM,/ByType/Scalars
+atvc_IceMaxTemp	atvc_IceMaxTemp	105	deg	Max ICE working temperature [°C]	int16_T	1	70	150					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atvc_maxRegenCurr	atvc_maxRegenCurr	150	one	Max Inbound current [A]	uint16_T	1	30	300					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_fuel_reserve	atv_fuel_reserve		one	Fuel Reserve  (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_PumpAFault	atv_PumpAFault		one	Pump A Disabled	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_cpu_loading	atv_cpu_loading		%	CPU loading seen in last 50ms	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
 atv_boot_code_day	atv_boot_code_day		one	Day the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atv_xd1_key_ain	atv_xd1_key_ain		V	Key Signal Voltage	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xa3_brake_pedal_raw_ain	atv_xa3_brake_pedal_raw_ain		V	Brake Pedal (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_pm_PreOp	atv_pm_PreOp		one	Power Mode Selector PreOp Mode	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Atomic Subsystem1,/ByType/Signals
+atv_ye2	atv_ye2		V	Active Suspension Ctrl	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Signals
 atv_IceSM	atv_IceSM		one	Debug Start Ice	uint8_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_dbg_FAN_in	atv_dbg_FAN_in		one	VSM State	real_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atv_fs1_in	atv_fs1_in		one	Foot Pedal FS1 Switch Status input	boolean_T	1	0	1					-1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_fs1_in	atv_fs1_in		one	Foot Pedal FS1 Switch Status input	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_brake_pedalX1000	atv_brake_pedalX1000		V	Brake Input 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_ice_run_timer	atvc_ice_run_timer	0	m	ICE Run Timer [sec]	real_T	0.0001	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER,/ByType/Adaptives
+atvc_dcMinFan	atvc_dcMinFan	30	one	Minimum Fan Speed [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
+atv_motoring_x1000_rear_final	atv_motoring_x1000_rear_final		V	Throttle output rear positive torque limited 0-1000	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_brake2epedal_split	atvc_brake2epedal_split	100	one	brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]	int16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_prg_code_day	atv_prg_code_day		one	Day the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atvc_cell_ut	atvc_cell_ut	-30	mV	Cell Undertemp [°C]	int8_T	1	-40	20					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/ErrBattery,/ByType/Scalars
+atvc_gen_start_rpm	atvc_gen_start_rpm	950	one	ICE start speed [RPM]	uint16_T	1	700	3000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice,/ByType/Scalars
+atvc_brake_pedal_gain	atvc_brake_pedal_gain	1.5	one	Brake pedal gain (for eBrake calculation)	real_T	0.0001	0.5	4					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation1,/ByType/Scalars
 atv_IceShutdown_out	atv_IceShutdown_out		one	Ice Status  (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_boot_code_year	atv_boot_code_year		one	Year the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-atv_motoring_x1000_front_limited	atv_motoring_x1000_front_limited		V	Throttle output front positive torque limited 0-1000	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_minTempInv	atvc_minTempInv	40	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
-atv_xa3_brake_pedal_raw_ain	atv_xa3_brake_pedal_raw_ain		V	Brake Pedal (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_xd2	atv_xd2		V	Power Mode Selector s56	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_test_rpm	atvc_test_rpm	3800	one	ICE test rpm [RPM]	uint16_T	1	2000	7000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_xd1_key_ain	atv_xd1_key_ain		V	Key Input (V)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvm_rpmfromcurrent_x	atvm_rpmfromcurrent_x	[40 60 80 105]	A	(not defined)	real_T	0.0001	0	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Maps
+atvc_minTempInv	atvc_minTempInv	30	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
 atv_platform_code_minor_ver	atv_platform_code_minor_ver		one	Minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
 atvc_an_in_sel_th	atvc_an_in_sel_th	2.5	one	Analog Selectors Threashold Pedal On Trheashold [V]	real_T	0.0001	1	4					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_chg_target_v	atvc_chg_target_v	4150	mV	Cell Chg Target [mV]	uint16_T	1	3000	4200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CHARGER_CONTROL,/ByType/Scalars
+atvc_gen_ramp_up	atvc_gen_ramp_up	300	one	ICE rampup torque [RPM]	uint16_T	1	100	30000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atvc_odometer	atvc_odometer	0	m	Odometer [m]	real_T	0.0001	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ODOMETER,/ByType/Adaptives
 atv_stack_used	atv_stack_used		byte	Amount of used stack	uint32_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
 atv_key_signal_in	atv_key_signal_in		one	Key Logical Status	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_mtawnb_rev	atvc_mtawnb_rev	100	one	Maximum Torque Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_mtawnb_rev	atvc_mtawnb_rev	1000	one	Maximum Torque Reverese [%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_param	atv_param		kPa	Replace this with a useful comment.	real_T	0.01	0.0	0.0					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_maxTempMotor	atvc_maxTempMotor	65	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CheckTempMotori//Inverter,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
+atvc_ChargeOverride	atvc_ChargeOverride	0	one	Start charge override	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Scalars
 atv_fan_setpoint	atv_fan_setpoint		%	Calculated Fan Duty Cycle	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_mtadd	atvc_mtadd	100	one	Maximum Torque [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_RpmEndWarmUp	atvc_RpmEndWarmUp	3900	one	ICE Warm Up Detection Tresasold [RPM]	uint16_T	1	3000	6000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
-atv_brake_pedalX1000	atv_brake_pedalX1000		V	Brake Input 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_motoring_x1000_rear	atv_motoring_x1000_rear		V	Throttle output rear positive torque 0-1000	uint16_T	1	0	0					-1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_regmap	atv_regmap		one	Actual regeneration map	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
+atvc_mtadd	atvc_mtadd	1000	one	Maximum Torque [%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_ErrTempInv	atvc_ErrTempInv	85	degree_Celsius	Err Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CheckTempMotori//Inverter,/ByType/Scalars
+atv_chg_present	atv_chg_present		one	Battery Charger Detected	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_C_MONITOR,/ByType/Signals
+atvc_GenCurrent1	atvc_GenCurrent1	-60	A	Generator warm up current [A]	int16_T	1	-250	250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atvc_max_trq_rear	atvc_max_trq_rear	1000	one	Max Drive Torque Front [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_HandBrakeStatus	atv_HandBrakeStatus		one	Hand Brake Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_GenCurrent0	atvc_GenCurrent0	-40	A	Generator warm up current [A]	int16_T	1	-250	250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atv_motoring_x1000_rear	atv_motoring_x1000_rear		V	Throttle output rear positive torque 0-1000	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
+atvc_GenCurrent2	atvc_GenCurrent2	-80	A	Generator warm up current [A]	int16_T	1	-250	250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
 atv_cpu_loading_max	atv_cpu_loading_max		%	Maximum CPU loading seen in any 50ms period	uint8_T	1	0	0					1000	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/CPU_Status,/ByType/Signals
 atv_app_code_day	atv_app_code_day		one	Day the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atvc_rmot_run_timer_reset	atvc_rmot_run_timer_reset	0	one	ICE Run Timer reset	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER,/ByType/Scalars
+atvc_GenTestCurrent	atvc_GenTestCurrent	-45	A	Generator warm up current [A]	int16_T	1	-250	250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atv_za2	atv_za2		one	PumpB Fault	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_ICE_dragging_time	atvc_ICE_dragging_time	8.5	one	ICE StartUp Draging Time	real_T	0.0001	5.000	15					0	/ByDataDictionaryPrefix/atv,/Others
 atv_xe2_raw_ain	atv_xe2_raw_ain		V	APU Button (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_yg1	atv_yg1		one	Stealth mode out	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Signals
+atv_yg2	atv_yg2		one	RegMap Sel 0	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_rmot_run_timer	atv_rmot_run_timer		m	ICE Run Timer [sec]	uint32_T	1	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER,/ByType/Signals
 atvc_throttleNeutralPoint	atvc_throttleNeutralPoint	100	one	Throttle neutral position [0.1%]	uint16_T	1	0	450					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
 atv_prg_code_minor_ver	atv_prg_code_minor_ver		one	Minor version of the reprogramming code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
 atv_boot_code_minor_ver	atv_boot_code_minor_ver		one	Minor version of the boot code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
 atv_v_dbg_hv_req	atv_v_dbg_hv_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
-bms_rolling_counter	bms_rolling_counter		one	BMS Rolling counter	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atv_pm_Hybrid	atv_pm_Hybrid		one	Power Mode Selector Hybrid Mode	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Atomic Subsystem1,/ByType/Signals
+bms_rolling_counter	bms_rolling_counter		one	BMS Rolling counter	uint8_T	1	0	0					100	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
 atv_runLed_out	atv_runLed_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atvc_StartThrottleIce	atvc_StartThrottleIce	300	one	ICE StartUp GENERATOR Throttle Val [0.1%]	uint16_T	1	100	1000					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_maxTempMotor	atvc_maxTempMotor	80	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
+atv_ice_rpm_req	atv_ice_rpm_req		rpm	ICE PWM RPM request [%]	int16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atv_za3_StartBtn_din	atv_za3_StartBtn_din		one	Start Button Status (RAW)	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_vehicle_SOC	atv_vehicle_SOC		%	Vehicle SOC [%]	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem2,/ByType/Signals
 atvc_IceOffTh	atvc_IceOffTh	1500	one	ICE Off Detection Tresasold [RPM]	uint16_T	1	200	2000					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_socLimitSave	atvc_socLimitSave	5	one	Min soc for pump control	uint8_T	1	2	90					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
-atvc_velocityLimitRwd	atvc_velocityLimitRwd	5	one	Speed Limit Reverse [Km/h]	uint8_T	1	3	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atvc_IceStopSOC	atvc_IceStopSOC	90	%	ICE Auto Stop SOC [%]	uint8_T	1	80	99					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atvc_socLimitSave	atvc_socLimitSave	5	one	Min soc for pump control	uint8_T	1	2	90					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_gear_ratio	atvc_gear_ratio	5.88	one	Primary Gear Ratio []	real_T	0.0001	3	7					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ODOMETER,/ByType/Scalars
+atvc_velocityLimitRwd	atvc_velocityLimitRwd	30	one	Speed Limit Reverse [Km/h]	uint8_T	1	3	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
 atv_platform_code_subminor_ver	atv_platform_code_subminor_ver		one	Sub-minor version of the platform library code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atv_motoring_x1000_rear_limited	atv_motoring_x1000_rear_limited		V	Throttle output rear positive torque limited 0-1000	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_mtadd_rev	atvc_mtadd_rev	100	one	Maximum Torque When Braking Reverese [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_footBrakeIce	atvc_footBrakeIce	300	one	ICE RegTorque Val [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/Others
+atv_startConditions	atv_startConditions		one	Start Conditions Verified	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_brake2epedal_split_2	atvc_brake2epedal_split_2	175	one	brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]	int16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atvc_brake2epedal_split_3	atvc_brake2epedal_split_3	275	one	brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]	int16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atvc_brake2epedal_split_0	atvc_brake2epedal_split_0	0	one	brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]	int16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atvc_brake2epedal_split_1	atvc_brake2epedal_split_1	80	one	brake to epedal quota (200 -> total brake 20% epedal 80% brake pedal) [0.1%]	int16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atvc_footBrakeIce	atvc_footBrakeIce	1000	one	ICE RegTorque Val [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_footBrake_X1000_out	atv_footBrake_X1000_out		one	footbrake Gen Out [0.1%]	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atv_zb3	atv_zb3		one	Generator Sel 2	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_zb2	atv_zb2		one	Generator Sel 1	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_HybridMode	atvc_HybridMode	1	one	Odometer reset	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Scalars
 atv_platform_code_year	atv_platform_code_year		one	Year the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
-atvc_IceStartRetry	atvc_IceStartRetry	2	one	ICE StartUp Max Retry [RPM]	uint8_T	1	0	10					0	/ByDataDictionaryPrefix/atv,/Others
+atv_pm_2	atv_pm_2		one	Power Mode Selector Pos 2	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atv_pm_0	atv_pm_0		one	Power Mode Selector Pos 0	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atv_pm_1	atv_pm_1		one	Power Mode Selector Pos 1	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atvc_IceStartRetry	atvc_IceStartRetry	3	one	ICE StartUp Max Retry [RPM]	uint8_T	1	0	10					0	/ByDataDictionaryPrefix/atv,/Others
+atv_fuel_qty	atv_fuel_qty		l	Fuel Quantity [liters]	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Signals
+atvc_max_gen_trq	atvc_max_gen_trq	450	one	Max generator inverter torque [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atvc_tempSwitchOnFan	atvc_tempSwitchOnFan	44	degree_Celsius	Fan On Temp	uint8_T	1	10	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN MANAGEMENT,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento,/ByType/Scalars
+atv_ICE_Start_Timer	atv_ICE_Start_Timer		sec	ICE restart Timer [s]	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem3,/ByType/Signals
+atvc_EndWarmUpTemp	atvc_EndWarmUpTemp	50	deg	Generator warm up current [°C]	int16_T	1	25	80					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atvc_brake_pedal_zero	atvc_brake_pedal_zero	0.9	one	Brake pedal zero threashold (V)	real_T	0.0001	0.455	1.5					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation1,/ByType/Scalars
 atv_en_dcdc_out	atv_en_dcdc_out		one	RUN LED Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_chg_complete	atvc_chg_complete	4050	mV	Cell Charge Complete Voltage [mV]	uint16_T	1	3700	4250					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Scalars
 atv_platform_code_day	atv_platform_code_day		one	Day the platform library code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code,/ByType/Signals
+atvc_rmot_run_timer	atvc_rmot_run_timer	0	m	ICE Run Timer [sec]	real_T	0.0001	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/RMOT_TIMER,/ByType/Adaptives
 atv_v_dbg_chg_req	atv_v_dbg_chg_req		one	HV Relay Control (Debug Signal)	boolean_T	1	0	1					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_V_DBG_CTRL,/ByType/Signals
+atvm_currentfromrpm_x	atvm_currentfromrpm_x	[2800 4000 5000 6200]	rpm	(not defined)	real_T	0.0001	1000	7500					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Maps
+atv_pm_s2	atv_pm_s2		one	Power Mode Selector Pos S2	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atv_pm_s3	atv_pm_s3		one	Power Mode Selector Pos S3	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atv_zc4	atv_zc4		one	Power Mode Selector 56	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_map	atv_map		one	Actual map	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
+atv_zc2	atv_zc2		one	Power Mode Selector 58	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_IceOn	atv_IceOn		one	Ice Status  (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvv_map	atvv_map	[0 0]	one	(not defined)	uint8_T	1	0	3					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_D_STATUS2_REAR1/Triggered Subsystem/Switch Case Action Subsystem/If Action Subsystem/If Action Subsystem,/ByModelHeirarchy/ATV/CANBUS_Reception_D_STATUS2_REAR1/Triggered Subsystem/Switch Case Action Subsystem/If Action Subsystem1,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Adaptives
+atvc_maxTempInv	atvc_maxTempInv	40	degree_Celsius	Max Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CheckTempMotori//Inverter,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
 atv_app_code_major_ver	atv_app_code_major_ver		one	Major version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
-atvc_footBrakeWarmUp	atvc_footBrakeWarmUp	200	one	ICE RegTorque Val [0.1%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
+atvc_gen_start_PID_KI	atvc_gen_start_PID_KI	0.10	one	ICE Start PID KI	real_T	0.0001	0.001	10					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice,/ByType/Scalars
+atv_RPM_Gen	atv_RPM_Gen		RPM	Generator Speed [RPM]	int16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
+atvc_footBrakeWarmUp	atvc_footBrakeWarmUp	1000	one	ICE RegTorque Val [0.1%]	uint16_T	1	0	1000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_app_code_month	atv_app_code_month		one	Month the application code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
 atv_boot_code_month	atv_boot_code_month		one	Month the boot code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code,/ByType/Signals
-bms_pack_soc	bms_pack_soc		%	Battery SOC	uint8_T	1	0	0					Inf	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
+atvc_throttleFull	atvc_throttleFull	770	one	High Pedal limit [0.1%]	uint16_T	1	700	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing/Throttle_validation,/ByType/Scalars
+atvc_gen_start_PID_KP	atvc_gen_start_PID_KP	0.48	one	ICE Start PID KP	real_T	0.0001	0.001	10					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido/IceSM.speed_pid_ice,/ByType/Scalars
+atvc_ice_run_timer_reset	atvc_ice_run_timer_reset	0	one	ICE Run Timer reset	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ICE_TIMER,/ByType/Scalars
+atvc_max_trq_front	atvc_max_trq_front	1000	one	Max Drive Torque Front [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Output_Processing,/ByType/Scalars
+atv_yj2	atv_yj2		one	RegMap Sel 2	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+bms_pack_soc	bms_pack_soc		%	Battery SOC	uint8_T	1	0	0					100	/ByDataDictionaryPrefix/bms,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS,/ByType/Signals
 atvc_minTempMotor	atvc_minTempMotor	60	degree_Celsius	Min Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM,/ByType/Scalars
 atv_xe3_ain	atv_xe3_ain		V	(not defined)	int32_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
-atv_xc4_raw_ain	atv_xc4_raw_ain		V	Rwd Selector (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_RegMapSelProcessed	atv_RegMapSelProcessed		one	Regen Map Selector Position	uint8_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atv_app_code_subminor_ver	atv_app_code_subminor_ver		one	Sub-minor version of the application code.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode,/ByType/Signals
+atvc_IceStartSOC	atvc_IceStartSOC	50	%	ICE Auto Start SOC [%]	uint8_T	1	0	75					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Subsystem3,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
 atv_xa1_ain_throttle_raw	atv_xa1_ain_throttle_raw		V	Throttle Input V (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_force_inv_preop	atvc_force_inv_preop	0	one	Force Inverter Preop for config	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
 atv_xd3_raw_ain	atv_xd3_raw_ain		V	Foot Pedal FS1 Switch (Raw Voltage)	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
 atv_wakelock_out	atv_wakelock_out		one	Wakelock Status	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/VSM,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
-atvc_dcMinFan	atvc_dcMinFan	30	one	Minimum Fan Speed [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC,/ByType/Scalars
-atvc_throttleRegOff	atvc_throttleRegOff	1	one	disable neutral braking (Boolean)	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atv_HandBrakePos	atv_HandBrakePos		V	Hand Brake Lock Position	real_T	0.001	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals
+atvc_ICE_Tank_Volume	atvc_ICE_Tank_Volume	20	one	ICE Tank Size [liters]	real_T	0.0001	5.000	120					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1,/ByType/Scalars
+atv_pm_s1	atv_pm_s1		one	Power Mode Selector Pos S1	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atvc_fs1_throttle_coherency	atvc_fs1_throttle_coherency	150	one	Max fs1 on [0.1%]	uint16_T	1	10	1000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Scalars
+atv_pm_g	atv_pm_g		one	Power Mode Selector Pos Giorno	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV,/ByType/Signals
+atvc_IceMaxSOC	atvc_IceMaxSOC	96	%	ICE Auto Stop (static mode SOC )[%]	uint8_T	1	50	99					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atvc_fmot_run_timer	atvc_fmot_run_timer	0	m	ICE Run Timer [sec]	real_T	0.0001	0	2000000000					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/FMOT_TIMER,/ByType/Adaptives
+atv_pm_Electric	atv_pm_Electric		one	Power Mode Selector Electric Mode	boolean_T	1	0	1					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Atomic Subsystem1,/ByType/Signals
+atvc_RpmEndWarmUp	atvc_RpmEndWarmUp	3900	one	ICE Warm Up Detection Tresasold [RPM]	uint16_T	1	3000	6000					0	/ByDataDictionaryPrefix/atv,/Others
 atv_fan_output	atv_fan_output		one	Fan Output Status (Indicates Status of Fan output)	uint16_T	1	0	0					0	/ByDataDictionaryPrefix/atv,/Others
 atv_prg_code_month	atv_prg_code_month		one	Month the reprogramming code was built.	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code,/ByType/Signals
+atv_min_cell	atv_min_cell		one	Max Cell	uint16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CANBUS_Reception_BMS_CELL_V,/ByType/Signals
+atv_PumpBFault	atv_PumpBFault		one	Pump B Disabled	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Signals
 atvc_IceOnTh	atvc_IceOnTh	2300	one	ICE On Detection Tresasold [RPM]	uint16_T	1	2100	4000					0	/ByDataDictionaryPrefix/atv,/Others
-atvc_velocityLimitFwd	atvc_velocityLimitFwd	10	one	Speed Limit Forward [Km/h]	uint8_T	1	3	120					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
-atv_throttleRegOff	atv_throttleRegOff		one	Disable Neutral Braking	boolean_T	1	0	1					Inf	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
-atvc_FanTest	atvc_FanTest	0	one	Fan Speed test [%]	uint8_T	1	0	100					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Digital_Output_Processing,/ByType/Scalars
+atvc_ErrTempMot	atvc_ErrTempMot	85	degree_Celsius	Err Inverter Temp	uint8_T	1	10	200					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/CheckTempMotori//Inverter,/ByType/Scalars
+atvc_velocityLimitFwd	atvc_velocityLimitFwd	105	one	Speed Limit Forward [Km/h]	uint8_T	1	3	120					0	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms,/ByType/Scalars
+atv_brake2epedal_split_actual	atv_brake2epedal_split_actual		one	Actual epedal split (map based)	int16_T	1	0	0					10	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE,/ByType/Signals
+atv_throttleRegOff	atv_throttleRegOff		one	Disable Neutral Braking	boolean_T	1	0	1					0	/ByDataDictionaryPrefix/atv,/Others
+atv_yb3_raw_ain	atv_yb3_raw_ain		V	Fuel Sensor [V]	real_T	0.001	0	0					100	/ByDataDictionaryPrefix/atv,/ByModelHeirarchy/ATV/Input_Processing,/ByType/Signals

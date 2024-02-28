@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   10 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,38 +21,10 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_IceSM"\
+      Name         "is_c7_ATV"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "GestioneIbrido.IceSM"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_WarmUpIce"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "WarmUpIce"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_RegenerativeMode"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "WarmUpIce.RegenerativeMode"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_MonitoraggioStatoICE"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "GestioneIbrido.IceSM.MonitoraggioStatoICE"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "atvc_IceStartAttempCnt"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "atvc_IceStartAttempCnt"\
+      Path         ""\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -60,27 +32,6 @@
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "temporalCounter_i2"\
-      Description  "TemporalCounter"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "ReqGen_prev"\
-      Description  "ChangeDetectionDoubleBuffer"\
-      SFName       ""\
-      Path         "ReqGen"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "ReqGen_start"\
-      Description  "ChangeDetectionDoubleBuffer"\
-      SFName       ""\
-      Path         "ReqGen"\
       SrcLocation  ""\
     }\
   }

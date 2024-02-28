@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   6 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,31 +21,10 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_PumpALogic"\
+      Name         "is_c5_ATV"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "PumpALogic"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_PumpBLogic"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "PumpBLogic"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "PumpStB"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "PumpStB"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "PumpStA"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "PumpStA"\
+      Path         ""\
       SrcLocation  ""\
     }\
     ChartData {\

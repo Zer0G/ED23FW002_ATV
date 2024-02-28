@@ -1,0 +1,11 @@
+%implements s91_b0_790xc_4_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S157>/Chart' */
+#define ATV_IN_DEB ((uint8_T)1U)
+#define ATV_IN_NO_ACTIVE_CHILD_m ((uint8_T)0U)
+#define ATV_IN_OFF ((uint8_T)2U)
+#define ATV_IN_ON ((uint8_T)3U)
+%endfunction

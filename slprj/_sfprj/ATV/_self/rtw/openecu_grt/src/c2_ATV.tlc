@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   9 \
+    NumChartData   11 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -24,14 +24,21 @@
       Name         "is_IceSM"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "GestioneIbrido.IceSM"\
+      Path         "IceSM"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_IceSM"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "IceSM"\
       SrcLocation  ""\
     }\
     ChartData {\
       Name         "is_MonitoraggioStatoICE"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "GestioneIbrido.IceSM.MonitoraggioStatoICE"\
+      Path         "IceSM.MonitoraggioStatoICE"\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -46,6 +53,13 @@
       Description  "ChartLocal"\
       SFName       ""\
       Path         "IceStartAttempCnt"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "reset_PID"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "reset_PID"\
       SrcLocation  ""\
     }\
     ChartData {\

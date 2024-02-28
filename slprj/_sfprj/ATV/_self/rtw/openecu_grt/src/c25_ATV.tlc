@@ -1,0 +1,158 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   20 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c25_ATV"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KEY_ON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ICE_START_STOP.KEY_ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RUN_MODE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ICE_START_STOP.RUN_MODE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HYBRID"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ICE_START_STOP.RUN_MODE.HYBRID"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ICE_START_STOP"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ICE_START_STOP"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAULT_DETECTION"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ice_fault"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ice_fault"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_btn_in_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_btn_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_btn_in_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_btn_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_off_in_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_off_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_off_in_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_off_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "low_soc_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "low_soc"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "low_soc_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "low_soc"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "key_signal_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "key_signal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "key_signal_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "key_signal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ice_fault_in_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "ice_fault_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ice_fault_in_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "ice_fault_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_sel_in_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_sel_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_sel_in_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_sel_in"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

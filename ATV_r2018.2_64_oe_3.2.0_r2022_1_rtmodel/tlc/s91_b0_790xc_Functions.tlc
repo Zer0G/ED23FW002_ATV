@@ -1,0 +1,2021 @@
+%implements s91_b0_790xc_Functions "C"
+
+%function rt_urand_Upu32_Yd_f_pw_snf_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+uint32_T lo;
+uint32_T hi;
+/* Uniform random number generator (random number between 0 and 1)
+
+#define IA      16807                      magic multiplier = 7^5
+#define IM      2147483647                 modulus = 2^31-1
+#define IQ      127773                     IM div IA
+#define IR      2836                       IM modulo IA
+#define S       4.656612875245797e-10      reciprocal of 2^31-1
+test = IA * (seed %<"\% IQ) - IR * (seed/IQ)\
+seed = test < 0 ? (test + IM) : test\
+return (seed*S)\
+"> */
+lo = *u % 127773U * 16807U;
+hi = *u / 127773U * 2836U;
+if (lo < hi) {
+    *u = 2147483647U - (hi - lo);
+} else {
+    *u = lo - hi;
+}
+return (real_T)*u * 4.6566128752457969E-10;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_urand_Upu32_Yd_f_pw_snf(\
+%assign comma = ""
+%<comma>uint32_T *u\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function rt_nrand_Upu32_Yd_f_pw_snf_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T y;
+real_T sr;
+real_T si;
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,1,1,0)
+%<SLibCG_AccessArg(5 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(5,1,0,0)
+%<SLibCG_AccessArg(5 ,1, 0)>
+%endif
+
+/* Normal (Gaussian) random number generator */
+do {
+    sr = 2.0 * %<(SLibCGCallSubFcn("rt_urand_Upu32_Yd_f_pw_snf", ["u"], 5, 1, 0))> - 1.0;
+    si = 2.0 * %<(SLibCGCallSubFcn("rt_urand_Upu32_Yd_f_pw_snf", ["u"], 5, 1, 1))> - 1.0;
+    si = sr * sr + si * si;
+} while (si > 1.0);
+y = sqrt(-2.0 * log(si) / si) * sr;
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_nrand_Upu32_Yd_f_pw_snf(\
+%assign comma = ""
+%<comma>uint32_T *u\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_enter_internal_HYBRID_Fcn2(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* Entry Internal 'HYBRID': '<S125>:29' */
+/* Transition: '<S125>:25' */
+if (ATV_B.Switch_k || ATV_B.apu_req_out) {
+    /* Transition: '<S125>:27' */
+    /* Transition: '<S125>:37' */
+    ATV_DW.is_HYBRID = ATV_IN_APU_ON;
+    /* Entry 'APU_ON': '<S125>:24' */
+    ATV_B.apu_req_out = true;
+    ATV_B.warn_low_soc = false;
+} else {
+    /* Transition: '<S125>:28' */
+    ATV_DW.is_HYBRID = ATV_IN_APU_OFF;
+    /* Entry 'APU_OFF': '<S125>:23' */
+    ATV_B.apu_req_out = false;
+    ATV_B.warn_high_soc = false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_enter_internal_HYBRID(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 2, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_ICE_START_STOP_Fcn3(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* During 'ICE_START_STOP': '<S125>:40' */
+if (ATV_DW.is_ICE_START_STOP == ATV_IN_KEY_ON) {
+    /* During 'KEY_ON': '<S125>:12' */
+    if (ATV_B.Memory4) {
+        /* Transition: '<S125>:15' */
+        /* Exit Internal 'KEY_ON': '<S125>:12' */
+        ATV_DW.is_KEY_ON = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_ICE_START_STOP = ATV_IN_RUN_MODE;
+        /* Entry Internal 'RUN_MODE': '<S125>:13' */
+        /* Transition: '<S125>:32' */
+        ATV_DW.is_RUN_MODE = ATV_IN_init;
+    } else {
+        switch (ATV_DW.is_KEY_ON) {
+          case ATV_IN_APU_OFF:
+            /* During 'APU_OFF': '<S125>:1' */
+            if ((ATV_DW.apu_req_btn_in_prev != ATV_DW.apu_req_btn_in_start) && ATV_DW.apu_req_btn_in_start) {
+                /* Transition: '<S125>:8' */
+                ATV_DW.is_KEY_ON = ATV_IN_VAL;
+            } else {
+                if ((ATV_DW.apu_off_in_prev != ATV_DW.apu_off_in_start) && ATV_DW.apu_off_in_start) {
+                    /* Transition: '<S125>:94' */
+                    ATV_DW.is_KEY_ON = ATV_IN_VAL1;
+                }
+            }
+            break;
+          case ATV_IN_APU_ON:
+            /* During 'APU_ON': '<S125>:2' */
+            if (((ATV_DW.apu_req_btn_in_prev != ATV_DW.apu_req_btn_in_start) && ATV_DW.apu_req_btn_in_start) || ATV_B.Compare_b || (((ATV_DW.apu_off_in_prev != ATV_DW.apu_off_in_start) && (!ATV_DW.apu_off_in_start)) || ATV_B.Compare_b || ((ATV_DW.low_soc_prev != ATV_DW.low_soc_start) && ATV_DW.low_soc_start))) {
+                /* Transition: '<S125>:6' */
+                /* Transition: '<S125>:93' */
+                /* Transition: '<S125>:7' */
+                ATV_DW.is_KEY_ON = ATV_IN_APU_OFF;
+                /* Entry 'APU_OFF': '<S125>:1' */
+                ATV_B.apu_req_out = false;
+                ATV_B.warn_high_soc = false;
+            }
+            break;
+          case ATV_IN_DEB_b:
+            /* During 'DEB': '<S125>:63' */
+            if (ATV_DW.temporalCounter_i1_b >= 25U) {
+                /* Transition: '<S125>:64' */
+                ATV_DW.is_KEY_ON = ATV_IN_APU_OFF;
+                /* Entry 'APU_OFF': '<S125>:1' */
+                ATV_B.apu_req_out = false;
+                ATV_B.warn_high_soc = false;
+            }
+            break;
+          case ATV_IN_DEB1:
+            /* During 'DEB1': '<S125>:97' */
+            if (ATV_DW.temporalCounter_i1_b >= 25U) {
+                /* Transition: '<S125>:99' */
+                ATV_DW.is_KEY_ON = ATV_IN_APU_OFF;
+                /* Entry 'APU_OFF': '<S125>:1' */
+                ATV_B.apu_req_out = false;
+                ATV_B.warn_high_soc = false;
+            }
+            break;
+          case ATV_IN_VAL:
+            /* During 'VAL': '<S125>:58' */
+            if (ATV_B.Compare_b) {
+                /* Transition: '<S125>:60' */
+                ATV_B.warn_high_soc = true;
+                ATV_DW.is_KEY_ON = ATV_IN_DEB_b;
+                ATV_DW.temporalCounter_i1_b = 0U;
+            } else {
+                /* Transition: '<S125>:59' */
+                ATV_DW.is_KEY_ON = ATV_IN_APU_ON;
+                /* Entry 'APU_ON': '<S125>:2' */
+                ATV_B.apu_req_out = true;
+            }
+            break;
+          default:
+            /* During 'VAL1': '<S125>:96' */
+            if (ATV_B.Compare_b) {
+                /* Transition: '<S125>:95' */
+                ATV_B.warn_high_soc = true;
+                ATV_DW.is_KEY_ON = ATV_IN_DEB1;
+                ATV_DW.temporalCounter_i1_b = 0U;
+            } else {
+                /* Transition: '<S125>:98' */
+                ATV_DW.is_KEY_ON = ATV_IN_APU_ON;
+                /* Entry 'APU_ON': '<S125>:2' */
+                ATV_B.apu_req_out = true;
+            }
+            break;
+        }
+    }
+} else {
+    /* During 'RUN_MODE': '<S125>:13' */
+    if (!ATV_B.Memory4) {
+        /* Transition: '<S125>:19' */
+        /* Exit Internal 'RUN_MODE': '<S125>:13' */
+        /* Exit Internal 'HYBRID': '<S125>:29' */
+        ATV_DW.is_HYBRID = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_RUN_MODE = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_ICE_START_STOP = ATV_IN_KEY_ON;
+        /* Entry Internal 'KEY_ON': '<S125>:12' */
+        /* Transition: '<S125>:5' */
+        ATV_DW.is_KEY_ON = ATV_IN_APU_OFF;
+        /* Entry 'APU_OFF': '<S125>:1' */
+        ATV_B.apu_req_out = false;
+        ATV_B.warn_high_soc = false;
+    } else {
+        switch (ATV_DW.is_RUN_MODE) {
+          case ATV_IN_APU_OFF:
+            /* During 'APU_OFF': '<S125>:34' */
+            if (ATV_B.Compare_l) {
+                /* Transition: '<S125>:49' */
+                ATV_DW.is_RUN_MODE = ATV_IN_HYBRID;
+                %<(SLibCGCallSubFcn("ATV_enter_internal_HYBRID", [], 5, 3, 1))>;
+            }
+            break;
+          case ATV_IN_HYBRID:
+            /* During 'HYBRID': '<S125>:29' */
+            if (!ATV_B.Compare_l) {
+                /* Transition: '<S125>:48' */
+                /* Exit Internal 'HYBRID': '<S125>:29' */
+                ATV_DW.is_HYBRID = ATV_IN_NO_ACTIVE_CHILD_c;
+                ATV_DW.is_RUN_MODE = ATV_IN_APU_OFF;
+                /* Entry 'APU_OFF': '<S125>:34' */
+                ATV_B.apu_req_out = false;
+            } else {
+                switch (ATV_DW.is_HYBRID) {
+                  case ATV_IN_APU_OFF:
+                    /* During 'APU_OFF': '<S125>:23' */
+                    if (ATV_B.Switch_k && (!ATV_DW.ice_fault)) {
+                        /* Transition: '<S125>:22' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_ON;
+                        /* Entry 'APU_ON': '<S125>:24' */
+                        ATV_B.apu_req_out = true;
+                        ATV_B.warn_low_soc = false;
+                    } else {
+                        if ((ATV_DW.apu_req_btn_in_prev != ATV_DW.apu_req_btn_in_start) && ATV_DW.apu_req_btn_in_start) {
+                            /* Transition: '<S125>:66' */
+                            /* Transition: '<S125>:72' */
+                            ATV_DW.is_HYBRID = ATV_IN_VAL;
+                        }
+                    }
+                    break;
+                  case ATV_IN_APU_ON:
+                    /* During 'APU_ON': '<S125>:24' */
+                    if (ATV_B.Compare || ((ATV_DW.low_soc_prev != ATV_DW.low_soc_start) && ATV_DW.low_soc_start)) {
+                        /* Transition: '<S125>:20' */
+                        /* Transition: '<S125>:21' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_OFF;
+                        /* Entry 'APU_OFF': '<S125>:23' */
+                        ATV_B.apu_req_out = false;
+                        ATV_B.warn_high_soc = false;
+                    } else {
+                        if ((ATV_DW.apu_req_btn_in_prev != ATV_DW.apu_req_btn_in_start) && ATV_DW.apu_req_btn_in_start) {
+                            /* Transition: '<S125>:81' */
+                            /* Transition: '<S125>:78' */
+                            ATV_DW.is_HYBRID = ATV_IN_VAL1;
+                        }
+                    }
+                    break;
+                  case ATV_IN_DEB_b:
+                    /* During 'DEB': '<S125>:67' */
+                    if (ATV_DW.temporalCounter_i1_b >= 25U) {
+                        /* Transition: '<S125>:90' */
+                        /* Transition: '<S125>:75' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_OFF;
+                        /* Entry 'APU_OFF': '<S125>:23' */
+                        ATV_B.apu_req_out = false;
+                        ATV_B.warn_high_soc = false;
+                    }
+                    break;
+                  case ATV_IN_DEB1:
+                    /* During 'DEB1': '<S125>:80' */
+                    if (ATV_DW.temporalCounter_i1_b >= 25U) {
+                        /* Transition: '<S125>:91' */
+                        /* Transition: '<S125>:87' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_ON;
+                        /* Entry 'APU_ON': '<S125>:24' */
+                        ATV_B.apu_req_out = true;
+                        ATV_B.warn_low_soc = false;
+                    }
+                    break;
+                  case ATV_IN_VAL:
+                    /* During 'VAL': '<S125>:70' */
+                    if (ATV_B.Compare) {
+                        /* Transition: '<S125>:69' */
+                        ATV_B.warn_high_soc = true;
+                        ATV_DW.is_HYBRID = ATV_IN_DEB_b;
+                        ATV_DW.temporalCounter_i1_b = 0U;
+                    } else {
+                        /* Transition: '<S125>:68' */
+                        /* Transition: '<S125>:77' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_ON;
+                        /* Entry 'APU_ON': '<S125>:24' */
+                        ATV_B.apu_req_out = true;
+                        ATV_B.warn_low_soc = false;
+                    }
+                    break;
+                  default:
+                    /* During 'VAL1': '<S125>:83' */
+                    if (ATV_B.Switch_k) {
+                        /* Transition: '<S125>:79' */
+                        ATV_B.warn_low_soc = true;
+                        ATV_DW.is_HYBRID = ATV_IN_DEB1;
+                        ATV_DW.temporalCounter_i1_b = 0U;
+                    } else {
+                        /* Transition: '<S125>:82' */
+                        /* Transition: '<S125>:88' */
+                        ATV_DW.is_HYBRID = ATV_IN_APU_OFF;
+                        /* Entry 'APU_OFF': '<S125>:23' */
+                        ATV_B.apu_req_out = false;
+                        ATV_B.warn_high_soc = false;
+                    }
+                    break;
+                }
+            }
+            break;
+          default:
+            /* During 'init': '<S125>:53' */
+            /* Transition: '<S125>:54' */
+            if (ATV_B.Compare_l) {
+                /* Transition: '<S125>:33' */
+                ATV_DW.is_RUN_MODE = ATV_IN_HYBRID;
+                %<(SLibCGCallSubFcn("ATV_enter_internal_HYBRID", [], 5, 3, 0))>;
+            } else {
+                /* Transition: '<S125>:50' */
+                ATV_DW.is_RUN_MODE = ATV_IN_APU_OFF;
+                /* Entry 'APU_OFF': '<S125>:34' */
+                ATV_B.apu_req_out = false;
+            }
+            break;
+        }
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_ICE_START_STOP(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 3, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_HV_REQ_RUN_Fcn4(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* During 'HV_REQ_RUN': '<S149>:169' */
+if (ATV_DW.temporalCounter_i3 >= 150U) {
+    /* Transition: '<S149>:185' */
+    ATV_DW.HV_Req = false;
+    ATV_DW.is_SM = ATV_IN_IDLE;
+    /* Entry 'IDLE': '<S149>:20' */
+    atv_state_out = 4U;
+    atv_sub_state_out = 0U;
+    ATV_B.en_inv_rear_out = false;
+    ATV_B.en_inv_front_out = false;
+    ATV_B.en_inv_gen_out = false;
+    ATV_B.apu_start_out = false;
+    ATV_B.runLed_out = false;
+    ATV_B.chg_shutdown_out = false;
+} else {
+    if (ATV_DW.is_HV_CTRL == ATV_IN_HV_ON) {
+        /* Transition: '<S149>:184' */
+        ATV_DW.is_SM = ATV_IN_RUN;
+        /* Entry 'RUN': '<S149>:166' */
+        atv_state_out = 6U;
+        /* Entry Internal 'RUN': '<S149>:166' */
+        /* Transition: '<S149>:176' */
+        ATV_DW.is_RUN = ATV_IN_PRE_START_l;
+        ATV_DW.temporalCounter_i3 = 0U;
+        /* Entry 'PRE_START': '<S149>:174' */
+        atv_sub_state_out = 0U;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_HV_REQ_RUN(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 4, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_IDLE_Fcn5(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+atv_state_out = 4U;
+ATV_B.chg_shutdown_out = false;
+/* During 'IDLE': '<S149>:20' */
+if (ATV_DW.is_FAULT_DETECT == ATV_IN_FAULT_a4) {
+    /* Transition: '<S149>:358' */
+    ATV_DW.is_SM = ATV_IN_FAULT_a;
+    /* Entry 'FAULT': '<S149>:168' */
+    atv_state_out = MAX_uint8_T;
+} else if (ATV_B.LogicalOperator && (!ATV_B.Compare_bl)) {
+    /* Transition: '<S149>:313' */
+    ATV_DW.chg_req = true;
+    ATV_DW.is_SM = ATV_IN_HV_REQ_CHARGE;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'HV_REQ_CHARGE': '<S149>:312' */
+    atv_sub_state_out = 12U;
+} else if (((ATV_DW.StartBtn_In_prev != ATV_DW.StartBtn_In_start) && ATV_DW.StartBtn_In_start && atv_startBtnArmed && (!ATV_B.LogicalOperator1) && atv_startConditions) || atvc_force_inv_preop) {
+    /* Transition: '<S149>:182' */
+    ATV_DW.HV_Req = true;
+    ATV_DW.is_SM = ATV_IN_HV_REQ_RUN;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'HV_REQ_RUN': '<S149>:169' */
+    atv_sub_state_out = 11U;
+} else if ((ATV_DW.apu_req_in_prev != ATV_DW.apu_req_in_start) && ATV_DW.apu_req_in_start) {
+    /* Transition: '<S149>:192' */
+    ATV_DW.HV_Req = true;
+    ATV_DW.is_SM = ATV_IN_HV_REQ_APU;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'HV_REQ_APU': '<S149>:193' */
+    atv_sub_state_out = 10U;
+} else {
+    if ((!key_signal) && (ATV_DW.is_HV_CTRL != ATV_IN_HVM_ON_m) && (ATV_DW.is_HV_CTRL != ATV_IN_HV_ON) && (ATV_DW.is_HV_CTRL != ATV_IN_HV_WAIT_INV_OFF) && (!ATV_B.LogicalOperator)) {
+        /* Transition: '<S149>:23' */
+        /* Transition: '<S149>:25' */
+        /* Transition: '<S149>:164' */
+        ATV_DW.is_SM = ATV_IN_PRE_SLEEP;
+        ATV_DW.temporalCounter_i3 = 0U;
+        /* Entry 'PRE_SLEEP': '<S149>:3' */
+        atv_state_out = 2U;
+        atv_sub_state_out = 0U;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_IDLE(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 5, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_INIT_Fcn6(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+atv_state_out = 3U;
+atv_wakelock_out = true;
+atv_en_dcdc_out = true;
+/* During 'INIT': '<S149>:5' */
+if ((!key_signal) && (!ATV_B.LogicalOperator) && (!ATV_B.RateTransition38)) {
+    /* Transition: '<S149>:17' */
+    ATV_DW.is_SM = ATV_IN_PRE_SLEEP;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'PRE_SLEEP': '<S149>:3' */
+    atv_state_out = 2U;
+    atv_sub_state_out = 0U;
+} else {
+    if (ATV_DW.temporalCounter_i3 >= 100U) {
+        /* Transition: '<S149>:22' */
+        ATV_DW.is_SM = ATV_IN_IDLE;
+        /* Entry 'IDLE': '<S149>:20' */
+        atv_state_out = 4U;
+        atv_sub_state_out = 0U;
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        ATV_B.apu_start_out = false;
+        ATV_B.runLed_out = false;
+        ATV_B.chg_shutdown_out = false;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_INIT(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 6, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_INV_OFF_Fcn7(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* During 'INV_OFF': '<S149>:246' */
+if (ATV_DW.temporalCounter_i3 >= 50U) {
+    /* Transition: '<S149>:247' */
+    ATV_DW.HV_Req = false;
+    ATV_DW.is_SM = ATV_IN_IDLE;
+    /* Entry 'IDLE': '<S149>:20' */
+    atv_state_out = 4U;
+    atv_sub_state_out = 0U;
+    ATV_B.en_inv_rear_out = false;
+    ATV_B.en_inv_front_out = false;
+    ATV_B.en_inv_gen_out = false;
+    ATV_B.apu_start_out = false;
+    ATV_B.runLed_out = false;
+    ATV_B.chg_shutdown_out = false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_INV_OFF(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 7, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_PRE_SLEEP_Fcn8(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+atv_state_out = 2U;
+/* During 'PRE_SLEEP': '<S149>:3' */
+if (key_signal || ATV_B.LogicalOperator || ATV_B.RateTransition38) {
+    /* Transition: '<S149>:19' */
+    ATV_DW.is_SM = ATV_IN_INIT;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'INIT': '<S149>:5' */
+    atv_state_out = 3U;
+    atv_sub_state_out = 0U;
+    atv_wakelock_out = true;
+    atv_en_dcdc_out = true;
+    atv_startBtnArmed = false;
+} else {
+    if (ATV_DW.temporalCounter_i3 >= 25U) {
+        /* Transition: '<S149>:16' */
+        ATV_DW.is_SM = ATV_IN_SLEEP;
+        /* Entry 'SLEEP': '<S149>:9' */
+        atv_state_out = 1U;
+        atv_sub_state_out = 0U;
+        atv_wakelock_out = false;
+        atv_en_dcdc_out = false;
+        ATV_DW.HV_Req = false;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_PRE_SLEEP(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 8, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_PRE_START_Fcn9(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* During 'PRE_START': '<S149>:174' */
+if (!ATV_B.apu_req_out) {
+    /* Transition: '<S149>:250' */
+    /* Transition: '<S149>:265' */
+    ATV_DW.is_RUN = ATV_IN_SHUTDOWN_ICE;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'SHUTDOWN_ICE': '<S149>:248' */
+    ATV_B.apu_start_out = false;
+    atv_sub_state_out = 6U;
+} else if ((!ATV_B.apu_req_out) && (ATV_DW.temporalCounter_i3 >= 50U)) {
+    /* Transition: '<S149>:181' */
+    ATV_DW.is_RUN = ATV_IN_DRIVE_ENABLED;
+    /* Entry 'DRIVE_ENABLED': '<S149>:175' */
+    atv_sub_state_out = 1U;
+    ATV_B.en_inv_rear_out = true;
+    ATV_B.en_inv_front_out = true;
+    ATV_B.en_inv_gen_out = false;
+    ATV_B.apu_start_out = false;
+    ATV_B.runLed_out = true;
+} else {
+    if (ATV_B.apu_req_out) {
+        /* Transition: '<S149>:256' */
+        /* Transition: '<S149>:261' */
+        ATV_DW.is_RUN = ATV_IN_GEN_ON;
+        /* Entry 'GEN_ON': '<S149>:230' */
+        atv_sub_state_out = 2U;
+        ATV_B.en_inv_gen_out = true;
+        /* {S!d30722}Constant: '<S34>/Constant' */
+        ATV_B.apu_start_out = !atvc_force_inv_preop;
+        ATV_B.en_inv_rear_out = true;
+        ATV_B.en_inv_front_out = true;
+        ATV_B.runLed_out = true;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_PRE_START(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 9, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_RUN_Fcn10(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T tmp;
+atv_state_out = 6U;
+/* {S!d30716}Constant: '<S34>/Constant' */
+/* {S!d30720}Constant: '<S34>/Constant' */
+/* During 'RUN': '<S149>:166' */
+tmp = !atvc_force_inv_preop;
+if (((ATV_DW.is_FAULT_DETECT == ATV_IN_FAULT_a4) || (ATV_DW.is_RUN == ATV_IN_IDLE_e) || (ATV_DW.is_RUN == ATV_IN_FAULT_a40) || (!key_signal) || ATV_B.LogicalOperator) && tmp) {
+    /* Transition: '<S149>:218' */
+    ATV_B.apu_start_out = false;
+    /* Transition: '<S149>:243' */
+    /* Exit Internal 'RUN': '<S149>:166' */
+    ATV_DW.is_RUN = ATV_IN_NO_ACTIVE_CHILD_c;
+    ATV_DW.is_SM = ATV_IN_APU_OFF_p;
+    ATV_DW.temporalCounter_i3 = 0U;
+} else if (ATV_DW.is_RUN == ATV_IN_APU) {
+    /* Transition: '<S149>:197' */
+    /* Exit Internal 'RUN': '<S149>:166' */
+    ATV_DW.is_RUN = ATV_IN_NO_ACTIVE_CHILD_c;
+    ATV_DW.is_SM = ATV_IN_APU;
+    /* Entry 'APU': '<S149>:165' */
+    atv_state_out = 5U;
+    /* Entry Internal 'APU': '<S149>:165' */
+    /* Transition: '<S149>:222' */
+    ATV_DW.is_APU = ATV_IN_PRE_START;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'PRE_START': '<S149>:220' */
+    atv_sub_state_out = 0U;
+} else {
+    switch (ATV_DW.is_RUN) {
+      case ATV_IN_APU:
+        /* During 'APU': '<S149>:216' */
+        break;
+      case ATV_IN_DEB_j:
+        /* During 'DEB': '<S149>:396' */
+        if (ATV_DW.temporalCounter_i3 >= 500U) {
+            /* Transition: '<S149>:397' */
+            /* Transition: '<S149>:294' */
+            if (!ATV_B.apu_req_out) {
+                /* Transition: '<S149>:295' */
+                ATV_DW.is_RUN = ATV_IN_FAULT_a40;
+                /* Entry 'FAULT': '<S149>:290' */
+                atv_sub_state_out = 5U;
+                ATV_B.en_inv_rear_out = false;
+                ATV_B.en_inv_front_out = false;
+                ATV_B.en_inv_gen_out = false;
+                ATV_B.runLed_out = false;
+            } else {
+                /* Transition: '<S149>:297' */
+                /* Transition: '<S149>:298' */
+                ATV_DW.is_RUN = ATV_IN_APU;
+                /* Entry 'APU': '<S149>:216' */
+                atv_sub_state_out = 4U;
+                ATV_B.en_inv_rear_out = false;
+                ATV_B.en_inv_front_out = false;
+                ATV_B.runLed_out = false;
+            }
+        } else {
+            if ((!ATV_B.Memory2) && (!ATV_B.Memory1)) {
+                /* Transition: '<S149>:398' */
+                ATV_DW.is_RUN = ATV_IN_DRIVE_ENABLED;
+                /* Entry 'DRIVE_ENABLED': '<S149>:175' */
+                atv_sub_state_out = 1U;
+                ATV_B.en_inv_rear_out = true;
+                ATV_B.en_inv_front_out = true;
+                ATV_B.en_inv_gen_out = false;
+                ATV_B.apu_start_out = false;
+                ATV_B.runLed_out = true;
+            }
+        }
+        break;
+      case ATV_IN_DRIVE_ENABLED:
+        /* During 'DRIVE_ENABLED': '<S149>:175' */
+        if ((((ATV_DW.StartBtn_In_prev != ATV_DW.StartBtn_In_start) && ATV_DW.StartBtn_In_start && (!ATV_B.apu_req_out)) || ATV_B.LogicalOperator1) && tmp) {
+            /* Transition: '<S149>:213' */
+            /* Transition: '<S149>:439' */
+            ATV_DW.is_RUN = ATV_IN_IDLE_e;
+            /* Entry 'IDLE': '<S149>:173' */
+            atv_sub_state_out = 3U;
+            ATV_B.en_inv_rear_out = false;
+            ATV_B.en_inv_front_out = false;
+            ATV_B.en_inv_gen_out = false;
+            ATV_B.runLed_out = false;
+        } else if (((ATV_DW.apu_req_in_prev != ATV_DW.apu_req_in_start) && ATV_DW.apu_req_in_start) || atvc_force_inv_preop) {
+            /* Transition: '<S149>:231' */
+            ATV_DW.is_RUN = ATV_IN_GEN_ON;
+            /* Entry 'GEN_ON': '<S149>:230' */
+            atv_sub_state_out = 2U;
+            ATV_B.en_inv_gen_out = true;
+            ATV_B.apu_start_out = tmp;
+            ATV_B.en_inv_rear_out = true;
+            ATV_B.en_inv_front_out = true;
+            ATV_B.runLed_out = true;
+        } else {
+            if (ATV_B.Memory2 || ATV_B.Memory1) {
+                /* Transition: '<S149>:291' */
+                ATV_DW.is_RUN = ATV_IN_DEB_j;
+                ATV_DW.temporalCounter_i3 = 0U;
+            }
+        }
+        break;
+      case ATV_IN_FAULT_a40:
+        /* During 'FAULT': '<S149>:290' */
+        break;
+      case ATV_IN_GEN_ON:
+        /* During 'GEN_ON': '<S149>:230' */
+        if ((ATV_DW.StartBtn_In_prev != ATV_DW.StartBtn_In_start) && ATV_DW.StartBtn_In_start && (!ATV_B.LogicalOperator1) && tmp) {
+            /* Transition: '<S149>:431' */
+            /* Transition: '<S149>:434' */
+            ATV_DW.is_RUN = ATV_IN_SHUTDOWN_ALL;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'SHUTDOWN_ALL': '<S149>:432' */
+            ATV_B.apu_start_out = false;
+            atv_sub_state_out = 8U;
+        } else if ((ATV_DW.StartBtn_In_prev != ATV_DW.StartBtn_In_start) && ATV_DW.StartBtn_In_start && ATV_B.LogicalOperator1 && tmp) {
+            /* Transition: '<S149>:217' */
+            /* Transition: '<S149>:298' */
+            ATV_DW.is_RUN = ATV_IN_APU;
+            /* Entry 'APU': '<S149>:216' */
+            atv_sub_state_out = 4U;
+            ATV_B.en_inv_rear_out = false;
+            ATV_B.en_inv_front_out = false;
+            ATV_B.runLed_out = false;
+        } else if ((!ATV_B.apu_req_out) && tmp) {
+            /* Transition: '<S149>:233' */
+            ATV_DW.is_RUN = ATV_IN_SHUTDOWN_ICE;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'SHUTDOWN_ICE': '<S149>:248' */
+            ATV_B.apu_start_out = false;
+            atv_sub_state_out = 6U;
+        } else {
+            if (atvc_force_inv_preop) {
+                /* Transition: '<S149>:407' */
+                ATV_DW.is_RUN = ATV_IN_INV_PREOP;
+                /* Entry 'INV_PREOP': '<S149>:406' */
+                atv_sub_state_out = 7U;
+            }
+        }
+        break;
+      case ATV_IN_IDLE_e:
+        /* During 'IDLE': '<S149>:173' */
+        break;
+      case ATV_IN_INV_PREOP:
+        /* {S!d30718}Constant: '<S34>/Constant' */
+        /* During 'INV_PREOP': '<S149>:406' */
+        if (!atvc_force_inv_preop) {
+            /* Transition: '<S149>:402' */
+            /* Transition: '<S149>:404' */
+            /* Transition: '<S149>:405' */
+            ATV_DW.is_RUN = ATV_IN_IDLE_e;
+            /* Entry 'IDLE': '<S149>:173' */
+            atv_sub_state_out = 3U;
+            ATV_B.en_inv_rear_out = false;
+            ATV_B.en_inv_front_out = false;
+            ATV_B.en_inv_gen_out = false;
+            ATV_B.runLed_out = false;
+        }
+        break;
+      case ATV_IN_PRE_START_l:
+        %<(SLibCGCallSubFcn("ATV_PRE_START", [], 5, 10, 0))>;
+        break;
+      case ATV_IN_SHUTDOWN_ALL:
+        /* During 'SHUTDOWN_ALL': '<S149>:432' */
+        if (ATV_DW.temporalCounter_i3 >= 100U) {
+            /* Transition: '<S149>:437' */
+            /* Transition: '<S149>:439' */
+            ATV_DW.is_RUN = ATV_IN_IDLE_e;
+            /* Entry 'IDLE': '<S149>:173' */
+            atv_sub_state_out = 3U;
+            ATV_B.en_inv_rear_out = false;
+            ATV_B.en_inv_front_out = false;
+            ATV_B.en_inv_gen_out = false;
+            ATV_B.runLed_out = false;
+        }
+        break;
+      default:
+        /* During 'SHUTDOWN_ICE': '<S149>:248' */
+        if (ATV_DW.temporalCounter_i3 >= 100U) {
+            /* Transition: '<S149>:251' */
+            ATV_DW.is_RUN = ATV_IN_DRIVE_ENABLED;
+            /* Entry 'DRIVE_ENABLED': '<S149>:175' */
+            atv_sub_state_out = 1U;
+            ATV_B.en_inv_rear_out = true;
+            ATV_B.en_inv_front_out = true;
+            ATV_B.en_inv_gen_out = false;
+            ATV_B.apu_start_out = false;
+            ATV_B.runLed_out = true;
+        }
+        break;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_RUN(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 10, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SLEEP_Fcn11(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+atv_state_out = 1U;
+atv_wakelock_out = false;
+atv_en_dcdc_out = false;
+/* During 'SLEEP': '<S149>:9' */
+if (key_signal || ATV_B.LogicalOperator || ATV_B.RateTransition38) {
+    /* Transition: '<S149>:12' */
+    ATV_DW.is_SM = ATV_IN_INIT;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'INIT': '<S149>:5' */
+    atv_state_out = 3U;
+    atv_sub_state_out = 0U;
+    atv_wakelock_out = true;
+    atv_en_dcdc_out = true;
+    atv_startBtnArmed = false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SLEEP(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 11, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SM_Fcn12(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T guard1 = false;
+/* During 'SM': '<S149>:123' */
+guard1 = false;
+switch (ATV_DW.is_SM) {
+  case ATV_IN_APU:
+    atv_state_out = 5U;
+    /* During 'APU': '<S149>:165' */
+    if ((ATV_DW.is_APU == ATV_IN_IDLE_e) || (ATV_DW.is_APU == ATV_IN_FAULT_a4) || (!key_signal) || ATV_B.LogicalOperator || (ATV_DW.is_FAULT_DETECT == ATV_IN_FAULT_a4)) {
+        /* Transition: '<S149>:227' */
+        ATV_B.apu_start_out = false;
+        /* Transition: '<S149>:245' */
+        /* Exit Internal 'APU': '<S149>:165' */
+        ATV_DW.is_APU = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_SM = ATV_IN_APU_OFF_p;
+        ATV_DW.temporalCounter_i3 = 0U;
+    } else if (ATV_DW.is_APU == ATV_IN_RUN_e) {
+        /* Transition: '<S149>:232' */
+        /* Exit Internal 'APU': '<S149>:165' */
+        ATV_DW.is_APU = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_SM = ATV_IN_RUN;
+        /* Entry 'RUN': '<S149>:166' */
+        atv_state_out = 6U;
+        /* Entry Internal 'RUN': '<S149>:166' */
+        /* Transition: '<S149>:176' */
+        ATV_DW.is_RUN = ATV_IN_PRE_START_l;
+        ATV_DW.temporalCounter_i3 = 0U;
+        /* Entry 'PRE_START': '<S149>:174' */
+        atv_sub_state_out = 0U;
+    } else {
+        switch (ATV_DW.is_APU) {
+          case ATV_IN_APU_PRE_FAULT:
+            /* During 'APU_PRE_FAULT': '<S149>:288' */
+            if (ATV_DW.temporalCounter_i3 >= 100U) {
+                /* Transition: '<S149>:289' */
+                ATV_DW.is_APU = ATV_IN_FAULT_a4;
+                /* Entry 'FAULT': '<S149>:286' */
+                atv_sub_state_out = 6U;
+                ATV_B.en_inv_gen_out = false;
+                ATV_B.apu_start_out = false;
+            }
+            break;
+          case ATV_IN_DEB_j:
+            /* During 'DEB': '<S149>:391' */
+            if (!ATV_B.Memory3) {
+                /* Transition: '<S149>:392' */
+                /* Transition: '<S149>:394' */
+                ATV_DW.is_APU = ATV_IN_GEN_ENABLED;
+                /* Entry 'GEN_ENABLED': '<S149>:221' */
+                atv_sub_state_out = 1U;
+                ATV_B.en_inv_gen_out = true;
+                /* {S!d30712}Constant: '<S34>/Constant' */
+                ATV_B.apu_start_out = !atvc_force_inv_preop;
+            } else {
+                if (ATV_DW.temporalCounter_i3 >= 500U) {
+                    /* Transition: '<S149>:395' */
+                    /* Transition: '<S149>:287' */
+                    ATV_DW.is_APU = ATV_IN_APU_PRE_FAULT;
+                    ATV_DW.temporalCounter_i3 = 0U;
+                    /* Entry 'APU_PRE_FAULT': '<S149>:288' */
+                    atv_sub_state_out = 5U;
+                    ATV_B.apu_start_out = false;
+                }
+            }
+            break;
+          case ATV_IN_FAULT_a4:
+            /* During 'FAULT': '<S149>:286' */
+            break;
+          case ATV_IN_GEN_ENABLED:
+            /* During 'GEN_ENABLED': '<S149>:221' */
+            if (ATV_B.Memory3) {
+                /* Transition: '<S149>:282' */
+                /* Transition: '<S149>:285' */
+                ATV_DW.is_APU = ATV_IN_DEB_j;
+                ATV_DW.temporalCounter_i3 = 0U;
+                /* Entry 'DEB': '<S149>:391' */
+                atv_sub_state_out = 7U;
+            } else if ((ATV_DW.apu_req_in_prev != ATV_DW.apu_req_in_start) && (!ATV_DW.apu_req_in_start)) {
+                /* Transition: '<S149>:228' */
+                ATV_DW.is_APU = ATV_IN_ICE_OFF;
+                ATV_DW.temporalCounter_i3 = 0U;
+                /* Entry 'ICE_OFF': '<S149>:234' */
+                atv_sub_state_out = 2U;
+                ATV_B.apu_start_out = false;
+            } else {
+                if ((ATV_DW.StartBtn_In_prev != ATV_DW.StartBtn_In_start) && ATV_DW.StartBtn_In_start && (!ATV_B.LogicalOperator1)) {
+                    /* Transition: '<S149>:225' */
+                    ATV_DW.is_APU = ATV_IN_RUN_e;
+                    /* Entry 'RUN': '<S149>:226' */
+                    atv_sub_state_out = 4U;
+                }
+            }
+            break;
+          case ATV_IN_ICE_OFF:
+            /* During 'ICE_OFF': '<S149>:234' */
+            if (ATV_DW.temporalCounter_i3 >= 100U) {
+                /* Transition: '<S149>:235' */
+                ATV_DW.is_APU = ATV_IN_IDLE_e;
+                /* Entry 'IDLE': '<S149>:224' */
+                atv_sub_state_out = 3U;
+                ATV_B.en_inv_gen_out = false;
+                ATV_B.apu_start_out = false;
+            }
+            break;
+          case ATV_IN_IDLE_e:
+            /* During 'IDLE': '<S149>:224' */
+            break;
+          case ATV_IN_PRE_START:
+            /* During 'PRE_START': '<S149>:220' */
+            if (ATV_DW.temporalCounter_i3 >= 50U) {
+                /* Transition: '<S149>:223' */
+                ATV_DW.is_APU = ATV_IN_GEN_ENABLED;
+                /* Entry 'GEN_ENABLED': '<S149>:221' */
+                atv_sub_state_out = 1U;
+                ATV_B.en_inv_gen_out = true;
+                /* {S!d30714}Constant: '<S34>/Constant' */
+                ATV_B.apu_start_out = !atvc_force_inv_preop;
+            }
+            break;
+          default:
+            /* During 'RUN': '<S149>:226' */
+            break;
+        }
+    }
+    break;
+  case ATV_IN_APU_OFF_p:
+    /* During 'APU_OFF': '<S149>:240' */
+    if (ATV_DW.temporalCounter_i3 >= 100U) {
+        /* Transition: '<S149>:244' */
+        ATV_DW.is_SM = ATV_IN_INV_OFF;
+        ATV_DW.temporalCounter_i3 = 0U;
+        /* Entry 'INV_OFF': '<S149>:246' */
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        ATV_B.runLed_out = false;
+    }
+    break;
+  case ATV_IN_CHARGE:
+    atv_state_out = 7U;
+    /* During 'CHARGE': '<S149>:167' */
+    if ((!ATV_B.LogicalOperator) || (ATV_DW.is_FAULT_DETECT == ATV_IN_FAULT_a4)) {
+        /* Transition: '<S149>:323' */
+        guard1 = true;
+    } else {
+        if (ATV_B.Compare_bl) {
+            /* Transition: '<S149>:417' */
+            ATV_B.chg_complete_out = true;
+            /* Transition: '<S149>:419' */
+            /* Transition: '<S149>:420' */
+            guard1 = true;
+        }
+    }
+    break;
+  case ATV_IN_CURR_MON:
+    ATV_B.chg_shutdown_out = true;
+    /* During 'CURR_MON': '<S149>:411' */
+    if (ATV_B.Compare_n || (ATV_DW.temporalCounter_i3 >= 500U)) {
+        /* Transition: '<S149>:412' */
+        ATV_DW.chg_req = false;
+        ATV_DW.is_SM = ATV_IN_WAIT_DISCONNECT;
+        /* Entry 'WAIT_DISCONNECT': '<S149>:422' */
+        atv_sub_state_out = 14U;
+    }
+    break;
+  case ATV_IN_FAULT_a:
+    atv_state_out = MAX_uint8_T;
+    /* During 'FAULT': '<S149>:168' */
+    if (!key_signal) {
+        /* Transition: '<S149>:335' */
+        /* Transition: '<S149>:337' */
+        /* Transition: '<S149>:339' */
+        /* Transition: '<S149>:164' */
+        ATV_DW.is_SM = ATV_IN_PRE_SLEEP;
+        ATV_DW.temporalCounter_i3 = 0U;
+        /* Entry 'PRE_SLEEP': '<S149>:3' */
+        atv_state_out = 2U;
+        atv_sub_state_out = 0U;
+    }
+    break;
+  case ATV_IN_HV_REQ_APU:
+    /* During 'HV_REQ_APU': '<S149>:193' */
+    if (ATV_DW.temporalCounter_i3 >= 150U) {
+        /* Transition: '<S149>:191' */
+        ATV_DW.HV_Req = false;
+        ATV_DW.is_SM = ATV_IN_IDLE;
+        /* Entry 'IDLE': '<S149>:20' */
+        atv_state_out = 4U;
+        atv_sub_state_out = 0U;
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        ATV_B.apu_start_out = false;
+        ATV_B.runLed_out = false;
+        ATV_B.chg_shutdown_out = false;
+    } else {
+        if (ATV_DW.is_HV_CTRL == ATV_IN_HV_ON) {
+            /* Transition: '<S149>:194' */
+            ATV_DW.is_SM = ATV_IN_APU;
+            /* Entry 'APU': '<S149>:165' */
+            atv_state_out = 5U;
+            /* Entry Internal 'APU': '<S149>:165' */
+            /* Transition: '<S149>:222' */
+            ATV_DW.is_APU = ATV_IN_PRE_START;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'PRE_START': '<S149>:220' */
+            atv_sub_state_out = 0U;
+        }
+    }
+    break;
+  case ATV_IN_HV_REQ_CHARGE:
+    /* During 'HV_REQ_CHARGE': '<S149>:312' */
+    if (ATV_DW.temporalCounter_i3 >= 150U) {
+        /* Transition: '<S149>:314' */
+        ATV_DW.chg_req = false;
+        ATV_DW.is_SM = ATV_IN_IDLE;
+        /* Entry 'IDLE': '<S149>:20' */
+        atv_state_out = 4U;
+        atv_sub_state_out = 0U;
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        ATV_B.apu_start_out = false;
+        ATV_B.runLed_out = false;
+        ATV_B.chg_shutdown_out = false;
+    } else {
+        if (ATV_DW.is_CHG_CTRL == ATV_IN_HV_ON) {
+            /* Transition: '<S149>:317' */
+            /* Transition: '<S149>:319' */
+            /* Transition: '<S149>:320' */
+            ATV_DW.is_SM = ATV_IN_CHARGE;
+            /* Entry 'CHARGE': '<S149>:167' */
+            atv_state_out = 7U;
+            atv_sub_state_out = 1U;
+        }
+    }
+    break;
+  case ATV_IN_HV_REQ_RUN:
+    %<(SLibCGCallSubFcn("ATV_HV_REQ_RUN", [], 5, 12, 0))>;
+    break;
+  case ATV_IN_IDLE:
+    %<(SLibCGCallSubFcn("ATV_IDLE", [], 5, 12, 1))>;
+    break;
+  case ATV_IN_INIT:
+    %<(SLibCGCallSubFcn("ATV_INIT", [], 5, 12, 2))>;
+    break;
+  case ATV_IN_INV_OFF:
+    %<(SLibCGCallSubFcn("ATV_INV_OFF", [], 5, 12, 3))>;
+    break;
+  case ATV_IN_PRE_SLEEP:
+    %<(SLibCGCallSubFcn("ATV_PRE_SLEEP", [], 5, 12, 4))>;
+    break;
+  case ATV_IN_RUN:
+    %<(SLibCGCallSubFcn("ATV_RUN", [], 5, 12, 5))>;
+    break;
+  case ATV_IN_SLEEP:
+    %<(SLibCGCallSubFcn("ATV_SLEEP", [], 5, 12, 6))>;
+    break;
+  default:
+    /* During 'WAIT_DISCONNECT': '<S149>:422' */
+    if (!ATV_B.LogicalOperator) {
+        /* Transition: '<S149>:423' */
+        ATV_B.chg_complete_out = false;
+        /* Transition: '<S149>:326' */
+        /* Transition: '<S149>:327' */
+        ATV_DW.is_SM = ATV_IN_IDLE;
+        /* Entry 'IDLE': '<S149>:20' */
+        atv_state_out = 4U;
+        atv_sub_state_out = 0U;
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        ATV_B.apu_start_out = false;
+        ATV_B.runLed_out = false;
+        ATV_B.chg_shutdown_out = false;
+    }
+    break;
+}
+if (guard1) {
+    ATV_DW.is_SM = ATV_IN_CURR_MON;
+    ATV_DW.temporalCounter_i3 = 0U;
+    /* Entry 'CURR_MON': '<S149>:411' */
+    atv_sub_state_out = 13U;
+    ATV_B.chg_shutdown_out = true;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SM(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 12, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_MON_Fcn13(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+int32_T tmp;
+/* During 'MON': '<S149>:124' */
+/* During 'HV_CTRL': '<S149>:161' */
+switch (ATV_DW.is_HV_CTRL) {
+  case ATV_IN_HVM_ON_m:
+    /* During 'HVM_ON': '<S149>:129' */
+    if (ATV_DW.temporalCounter_i2_j >= 10U) {
+        /* Transition: '<S149>:142' */
+        ATV_DW.is_HV_CTRL = ATV_IN_HV_ON;
+        /* Entry 'HV_ON': '<S149>:130' */
+        atv_sub_state_out = 3U;
+        ATV_B.hvp_ctrl_out = true;
+        ATV_B.hvm_ctrl_out = true;
+    } else {
+        if (!ATV_DW.HV_Req) {
+            /* Transition: '<S149>:186' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HV_OFF;
+            /* Entry 'HV_OFF': '<S149>:126' */
+        }
+    }
+    break;
+  case ATV_IN_HV_OFF:
+    /* During 'HV_OFF': '<S149>:126' */
+    if (ATV_DW.HV_Req) {
+        /* Transition: '<S149>:133' */
+        ATV_DW.is_HV_CTRL = ATV_IN_HVM_ON_m;
+        ATV_DW.temporalCounter_i2_j = 0U;
+        /* Entry 'HVM_ON': '<S149>:129' */
+        ATV_B.hvp_ctrl_out = false;
+        ATV_B.hvm_ctrl_out = true;
+    } else {
+        ATV_B.hvp_ctrl_out = false;
+        ATV_B.hvm_ctrl_out = false;
+    }
+    break;
+  case ATV_IN_HV_ON:
+    /* During 'HV_ON': '<S149>:130' */
+    if (!ATV_DW.HV_Req) {
+        /* Transition: '<S149>:187' */
+        ATV_DW.is_HV_CTRL = ATV_IN_HV_WAIT_INV_OFF;
+        ATV_DW.temporalCounter_i2_j = 0U;
+        /* Entry 'HV_WAIT_INV_OFF': '<S149>:131' */
+        atv_sub_state_out = 4U;
+        ATV_B.hvp_ctrl_out = true;
+        ATV_B.hvm_ctrl_out = true;
+    }
+    break;
+  default:
+    /* During 'HV_WAIT_INV_OFF': '<S149>:131' */
+    if (ATV_DW.temporalCounter_i2_j >= 50U) {
+        /* Transition: '<S149>:150' */
+        /* Transition: '<S149>:134' */
+        ATV_DW.is_HV_CTRL = ATV_IN_HV_OFF;
+        /* Entry 'HV_OFF': '<S149>:126' */
+    }
+    break;
+}
+/* During 'HEATER_CTRL': '<S149>:125' */
+if (ATV_DW.is_HEATER_CTRL == ATV_IN_HEATER_OFF) {
+    ATV_B.heater_disabled = false;
+    /* During 'HEATER_OFF': '<S149>:151' */
+    if (key_signal && (ATV_B.RateTransition5_l || (ATV_B.Switch3 < atvc_HeatingMat_thr))) {
+        /* Transition: '<S149>:153' */
+        ATV_DW.is_HEATER_CTRL = ATV_IN_HEATER_ON;
+        /* Entry Internal 'HEATER_ON': '<S149>:149' */
+        /* Transition: '<S149>:453' */
+        ATV_DW.is_HEATER_ON = ATV_IN_OFF_a;
+        /* Entry 'OFF': '<S149>:452' */
+        ATV_B.heater_ctrl_out = false;
+        ATV_B.heater_disabled = true;
+        ATV_B.heater_warn = true;
+    }
+} else {
+    /* During 'HEATER_ON': '<S149>:149' */
+    tmp = atvc_HeatingMat_thr + 1;
+    if (tmp > 127) {
+        tmp = 127;
+    }
+    if ((!key_signal) || ((!ATV_B.RateTransition5_l) && (ATV_B.Switch3 >= tmp))) {
+        /* Transition: '<S149>:146' */
+        /* Exit Internal 'HEATER_ON': '<S149>:149' */
+        ATV_DW.is_HEATER_ON = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_HEATER_CTRL = ATV_IN_HEATER_OFF;
+        /* Entry 'HEATER_OFF': '<S149>:151' */
+        ATV_B.heater_disabled = false;
+    } else {
+        switch (ATV_DW.is_HEATER_ON) {
+          case ATV_IN_OFF_a:
+            ATV_B.heater_ctrl_out = false;
+            ATV_B.heater_disabled = true;
+            ATV_B.heater_warn = true;
+            /* During 'OFF': '<S149>:452' */
+            if (ATV_B.RateTransition4 >= 20) {
+                /* Transition: '<S149>:450' */
+                /* Transition: '<S149>:457' */
+                ATV_DW.is_HEATER_ON = ATV_IN_ON_a;
+                /* Entry 'ON': '<S149>:455' */
+                ATV_B.heater_ctrl_out = true;
+                ATV_B.heater_disabled = false;
+                ATV_B.heater_warn = false;
+            } else {
+                if (ATV_B.RateTransition4 >= 10) {
+                    /* Transition: '<S149>:460' */
+                    ATV_DW.is_HEATER_ON = ATV_IN_ON_LOW;
+                    /* Entry 'ON_LOW': '<S149>:451' */
+                    ATV_B.heater_ctrl_out = true;
+                    ATV_B.heater_disabled = false;
+                    ATV_B.heater_warn = true;
+                }
+            }
+            break;
+          case ATV_IN_ON_a:
+            ATV_B.heater_ctrl_out = true;
+            ATV_B.heater_disabled = false;
+            ATV_B.heater_warn = false;
+            /* During 'ON': '<S149>:455' */
+            if (ATV_B.RateTransition4 < 20) {
+                /* Transition: '<S149>:458' */
+                ATV_DW.is_HEATER_ON = ATV_IN_ON_LOW;
+                /* Entry 'ON_LOW': '<S149>:451' */
+                ATV_B.heater_ctrl_out = true;
+                ATV_B.heater_disabled = false;
+                ATV_B.heater_warn = true;
+            }
+            break;
+          default:
+            ATV_B.heater_ctrl_out = true;
+            ATV_B.heater_disabled = false;
+            ATV_B.heater_warn = true;
+            /* During 'ON_LOW': '<S149>:451' */
+            if (ATV_B.RateTransition4 < 10) {
+                /* Transition: '<S149>:449' */
+                ATV_DW.is_HEATER_ON = ATV_IN_OFF_a;
+                /* Entry 'OFF': '<S149>:452' */
+                ATV_B.heater_ctrl_out = false;
+                ATV_B.heater_disabled = true;
+                ATV_B.heater_warn = true;
+            } else {
+                if (ATV_B.RateTransition4 >= 20) {
+                    /* Transition: '<S149>:461' */
+                    ATV_DW.is_HEATER_ON = ATV_IN_ON_a;
+                    /* Entry 'ON': '<S149>:455' */
+                    ATV_B.heater_ctrl_out = true;
+                    ATV_B.heater_disabled = false;
+                    ATV_B.heater_warn = false;
+                }
+            }
+            break;
+        }
+    }
+}
+/* During 'STARTTRIGGER': '<S149>:144' */
+if (ATV_DW.is_STARTTRIGGER == ATV_IN_STARTTRIGGER_OFF) {
+    /* During 'STARTTRIGGER_OFF': '<S149>:154' */
+    if ((ATV_DW.is_SM == ATV_IN_IDLE) && (!ATV_B.atv_StartBtn_din)) {
+        /* Transition: '<S149>:238' */
+        ATV_DW.is_STARTTRIGGER = ATV_IN_STARTTRIGGER_ON;
+        /* Entry 'STARTTRIGGER_ON': '<S149>:147' */
+        atv_startBtnArmed = true;
+    }
+} else {
+    /* During 'STARTTRIGGER_ON': '<S149>:147' */
+    if ((ATV_DW.is_SM != ATV_IN_IDLE) || ATV_B.atv_StartBtn_din) {
+        /* Transition: '<S149>:409' */
+        ATV_DW.is_STARTTRIGGER = ATV_IN_STARTTRIGGER_OFF;
+    }
+}
+/* During 'CHG_CTRL': '<S149>:128' */
+switch (ATV_DW.is_CHG_CTRL) {
+  case ATV_IN_CHG_OFF:
+    /* During 'CHG_OFF': '<S149>:137' */
+    if (ATV_B.LogicalOperator && (ATV_DW.temporalCounter_i1_j >= 100U)) {
+        /* Transition: '<S149>:155' */
+        ATV_DW.is_CHG_CTRL = ATV_IN_HVM_ON;
+        ATV_DW.temporalCounter_i1_j = 0U;
+        /* Entry 'HVM_ON': '<S149>:160' */
+    }
+    break;
+  case ATV_IN_HVM_ON:
+    /* During 'HVM_ON': '<S149>:160' */
+    if (!ATV_DW.chg_req) {
+        /* Transition: '<S149>:145' */
+        ATV_DW.is_CHG_CTRL = ATV_IN_CHG_OFF;
+        ATV_DW.temporalCounter_i1_j = 0U;
+        /* Entry 'CHG_OFF': '<S149>:137' */
+        ATV_B.chg_ctrl_out = false;
+        ATV_B.hvm_ctrl_out = false;
+    } else if (ATV_DW.temporalCounter_i1_j >= 50U) {
+        /* Transition: '<S149>:159' */
+        ATV_DW.is_CHG_CTRL = ATV_IN_HV_ON;
+        /* Entry 'HV_ON': '<S149>:138' */
+    } else {
+        ATV_B.chg_ctrl_out = false;
+        ATV_B.hvm_ctrl_out = true;
+    }
+    break;
+  default:
+    /* During 'HV_ON': '<S149>:138' */
+    if (!ATV_DW.chg_req) {
+        /* Transition: '<S149>:152' */
+        /* Transition: '<S149>:141' */
+        ATV_DW.is_CHG_CTRL = ATV_IN_CHG_OFF;
+        ATV_DW.temporalCounter_i1_j = 0U;
+        /* Entry 'CHG_OFF': '<S149>:137' */
+        ATV_B.chg_ctrl_out = false;
+        ATV_B.hvm_ctrl_out = false;
+    } else {
+        ATV_B.chg_ctrl_out = true;
+        ATV_B.hvm_ctrl_out = true;
+    }
+    break;
+}
+/* During 'FAULT_DETECT': '<S149>:346' */
+switch (ATV_DW.is_FAULT_DETECT) {
+  case ATV_IN_DEB_d:
+    /* During 'DEB': '<S149>:354' */
+    if (ATV_DW.temporalCounter_i4 >= 250U) {
+        /* Transition: '<S149>:348' */
+        ATV_DW.is_FAULT_DETECT = ATV_IN_FAULT_a4;
+        /* Entry 'FAULT': '<S149>:357' */
+    } else {
+        if (ATV_DW.is_DETECT != ATV_IN_FAULT) {
+            /* Transition: '<S149>:356' */
+            ATV_DW.is_FAULT_DETECT = ATV_IN_DETECT;
+            /* Entry Internal 'DETECT': '<S149>:340' */
+            /* Transition: '<S149>:372' */
+            ATV_DW.is_DETECT = ATV_IN_NO_FLT;
+        }
+    }
+    break;
+  case ATV_IN_DETECT:
+    /* During 'DETECT': '<S149>:340' */
+    if (ATV_DW.is_DETECT == ATV_IN_FAULT) {
+        /* Transition: '<S149>:344' */
+        /* Exit Internal 'DETECT': '<S149>:340' */
+        ATV_DW.is_DETECT = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_FAULT_DETECT = ATV_IN_DEB_d;
+        ATV_DW.temporalCounter_i4 = 0U;
+    } else if (ATV_DW.is_DETECT == ATV_IN_FAULT) {
+        /* During 'FAULT': '<S149>:373' */
+        if ((!ATV_B.Compare_bk) || (!ATV_B.Compare_f) || (!ATV_B.Compare_e) || (!ATV_B.Compare_ln)) {
+            /* Transition: '<S149>:376' */
+            /* Transition: '<S149>:380' */
+            /* Transition: '<S149>:378' */
+            /* Transition: '<S149>:375' */
+            ATV_DW.is_DETECT = ATV_IN_NO_FLT;
+        }
+    } else {
+        /* During 'NO_FLT': '<S149>:371' */
+        if (ATV_B.Compare_ln || ATV_B.Compare_e || ATV_B.Compare_f || ATV_B.Compare_bk) {
+            /* Transition: '<S149>:374' */
+            /* Transition: '<S149>:379' */
+            /* Transition: '<S149>:381' */
+            /* Transition: '<S149>:377' */
+            ATV_DW.is_DETECT = ATV_IN_FAULT;
+        }
+    }
+    break;
+  default:
+    /* During 'FAULT': '<S149>:357' */
+    if ((ATV_DW.key_signal_prev != ATV_DW.key_signal_start) && (!ATV_DW.key_signal_start)) {
+        /* Transition: '<S149>:365' */
+        /* Transition: '<S149>:368' */
+        /* Transition: '<S149>:369' */
+        ATV_DW.is_FAULT_DETECT = ATV_IN_DETECT;
+        /* Entry Internal 'DETECT': '<S149>:340' */
+        /* Transition: '<S149>:372' */
+        ATV_DW.is_DETECT = ATV_IN_NO_FLT;
+    }
+    break;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_MON(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 13, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_IceSM_Fcn14(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+uint32_T elapseT_H;
+real32_T rtb_Sum_j5;
+real32_T rtb_Saturation;
+uint32_T IceSMspeed_pid_ice_ELAPS_T_tmp;
+uint32_T elapseT_H_tmp;
+real32_T rtb_Sum_p_tmp;
+boolean_T guard1 = false;
+/* {S!d30695}Outputs for Function Call SubSystem: '<S169>/IceSM.speed_pid_ice' */
+/* During 'IceSM': '<S169>:191' */
+/* Simulink Function 'speed_pid_ice': '<S169>:352' */
+IceSMspeed_pid_ice_ELAPS_T_tmp = %<(SLibCG_SE(LibGetClockTick(0)))>;
+ATV_DW.IceSMspeed_pid_ice_ELAPS_T[0] = IceSMspeed_pid_ice_ELAPS_T_tmp - ATV_DW.IceSMspeed_pid_ice_PREV_T[0];
+elapseT_H_tmp = %<(SLibCG_SE(LibGetClockTickHigh(0)))>;
+elapseT_H = elapseT_H_tmp - ATV_DW.IceSMspeed_pid_ice_PREV_T[1];
+if (ATV_DW.IceSMspeed_pid_ice_PREV_T[0] > IceSMspeed_pid_ice_ELAPS_T_tmp) {
+    elapseT_H--;
+}
+ATV_DW.IceSMspeed_pid_ice_ELAPS_T[1] = elapseT_H;
+ATV_DW.IceSMspeed_pid_ice_PREV_T[0] = IceSMspeed_pid_ice_ELAPS_T_tmp;
+ATV_DW.IceSMspeed_pid_ice_PREV_T[1] = elapseT_H_tmp;
+/* {S!d30700}DiscreteIntegrator: '<S325>/Integrator' */
+if (ATV_DW.reset_PID || (ATV_DW.Integrator_PrevResetState != 0)) {
+    ATV_DW.Integrator_DSTATE = 0.0F;
+}
+/* {S!d30702}Gain: '<S342>/Proportional Gain' incorporates:
+ *  Constant: '<S267>/atvc_gen_start_rpm'
+ *  DataTypeConversion: '<S267>/Data Type Conversion1'
+ *  Gain: '<S315>/Integral Gain'
+ *  Sum: '<S268>/Sum1'
+ */
+rtb_Sum_p_tmp = (real32_T)(atvc_gen_start_rpm - atv_RPM_Gen);
+/* {S!d30704}Sum: '<S352>/Sum' incorporates:
+ *  DiscreteIntegrator: '<S325>/Integrator'
+ *  Gain: '<S342>/Proportional Gain'
+ */
+rtb_Sum_j5 = rtb_Sum_p_tmp * atvc_gen_start_PID_KP + ATV_DW.Integrator_DSTATE;
+/* {S!d30706}Saturate: '<S346>/Saturation' */
+if (rtb_Sum_j5 > 1000.0F) {
+    rtb_Saturation = 1000.0F;
+} else if (rtb_Sum_j5 < 0.0F) {
+    rtb_Saturation = 0.0F;
+} else {
+    rtb_Saturation = rtb_Sum_j5;
+}
+/* {E!d30706}End of Saturate: '<S346>/Saturation' */
+
+/* {S!d30708}Update for DiscreteIntegrator: '<S325>/Integrator' incorporates:
+ *  Gain: '<S315>/Integral Gain'
+ *  Sum: '<S293>/SumI2'
+ *  Sum: '<S293>/SumI4'
+ */
+if (!ATV_DW.reset_PID) {
+    ATV_DW.Integrator_DSTATE += (rtb_Sum_p_tmp * atvc_gen_start_PID_KI + (rtb_Saturation - rtb_Sum_j5)) * (0.01F * (real32_T)ATV_DW.IceSMspeed_pid_ice_ELAPS_T[0]);
+}
+ATV_DW.Integrator_PrevResetState = (int8_T)ATV_DW.reset_PID;
+/* {E!d30708}End of Update for DiscreteIntegrator: '<S325>/Integrator' */
+/* {E!d30695}End of Outputs for SubSystem: '<S169>/IceSM.speed_pid_ice' */
+guard1 = false;
+switch (ATV_DW.is_IceSM) {
+  case ATV_IN_AvviamentoIce:
+    /* During 'AvviamentoIce': '<S169>:275' */
+    if (ATV_DW.temporalCounter_i1 >= (uint32_T)ceil(atvc_ICE_dragging_time * 100.0)) {
+        /* Transition: '<S169>:278' */
+        if (ATV_B.tHROTTLEGen_X1000_out > 0) {
+            /* Transition: '<S169>:285' */
+            ATV_DW.IceStartAttempCnt++;
+            atv_IceShutdown_out = true;
+            /* Transition: '<S169>:272' */
+            /* Exit 'AvviamentoIce': '<S169>:275' */
+            ATV_DW.reset_PID = true;
+            ATV_DW.is_IceSM = ATV_IN_Wait0RPM;
+            /* Entry 'Wait0RPM': '<S169>:292' */
+            atv_IceSM = 8U;
+            ATV_B.tHROTTLEGen_X1000_out = 0U;
+            ATV_B.FS1_out = false;
+        } else {
+            /* Transition: '<S169>:358' */
+            /* Exit 'AvviamentoIce': '<S169>:275' */
+            ATV_DW.reset_PID = true;
+            ATV_DW.is_IceSM = ATV_IN_MonitoraggioIce;
+            ATV_DW.temporalCounter_i1 = 0U;
+            /* Entry 'MonitoraggioIce': '<S169>:284' */
+            atv_IceSM = 4U;
+            ATV_B.tHROTTLEGen_X1000_out = 0U;
+            ATV_B.FS1_out = false;
+        }
+    } else if ((!ATV_B.apu_start_out) || ATV_B.RelationalOperator1) {
+        /* Transition: '<S169>:332' */
+        atv_IceShutdown_out = true;
+        ATV_B.FS1_out = false;
+        ATV_B.tHROTTLEGen_X1000_out = 0U;
+        /* Transition: '<S169>:337' */
+        /* Transition: '<S169>:338' */
+        /* Exit 'AvviamentoIce': '<S169>:275' */
+        ATV_DW.reset_PID = true;
+        ATV_DW.is_IceSM = ATV_IN_WAIT_ICE_OFF;
+        ATV_DW.temporalCounter_i1 = 0U;
+    } else {
+        /* {S!d30697}Outputs for Function Call SubSystem: '<S169>/IceSM.speed_pid_ice' */
+        /* {S!d30710}DataTypeConversion: '<S267>/Data Type Conversion2' */
+        rtb_Sum_p_tmp = (real32_T)floor(rtb_Saturation);
+        if (rtIsNaNF(rtb_Sum_p_tmp)) {
+            ATV_B.tHROTTLEGen_X1000_out = 0U;
+        } else {
+            ATV_B.tHROTTLEGen_X1000_out = (uint16_T)(real32_T)fmod(rtb_Sum_p_tmp, 65536.0);
+        }
+        /* {E!d30710}End of DataTypeConversion: '<S267>/Data Type Conversion2' */
+        /* {E!d30697}End of Outputs for SubSystem: '<S169>/IceSM.speed_pid_ice' */
+        atv_IceSM = 2U;
+        ATV_B.FS1_out = true;
+    }
+    break;
+  case ATV_IN_FuelPumpOff:
+    atv_IceKey_out = false;
+    /* During 'FuelPumpOff': '<S169>:323' */
+    if (ATV_DW.temporalCounter_i1 >= 500U) {
+        /* Transition: '<S169>:324' */
+        /* Transition: '<S169>:282' */
+        ATV_DW.is_IceSM = ATV_IN_Inizializzazione;
+        /* Entry 'Inizializzazione': '<S169>:279' */
+        ATV_DW.IceStartAttempCnt = 0.0;
+        atv_IceOn = false;
+        atv_IceKey_out = false;
+        atv_IceShutdown_out = false;
+        atv_IceFault = false;
+        ATV_B.GenFwd_out = false;
+        atv_IceSM = 0U;
+        ATV_DW.reset_PID = true;
+    }
+    break;
+  case ATV_IN_FuelPumpOn:
+    atv_IceKey_out = true;
+    ATV_B.GenFwd_out = true;
+    /* During 'FuelPumpOn': '<S169>:320' */
+    if (ATV_DW.temporalCounter_i1 >= 300U) {
+        /* Transition: '<S169>:321' */
+        ATV_DW.is_IceSM = ATV_IN_AvviamentoIce;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'AvviamentoIce': '<S169>:275' */
+        ATV_DW.reset_PID = false;
+    }
+    break;
+  case ATV_IN_ICE_NOT_SETTLE:
+    /* During 'ICE_NOT_SETTLE': '<S169>:360' */
+    if (atv_RPM_Gen > atvc_IceOnTh) {
+        /* Transition: '<S169>:283' */
+        ATV_DW.is_IceSM = ATV_IN_MonitoraggioIce;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'MonitoraggioIce': '<S169>:284' */
+        atv_IceSM = 4U;
+        ATV_B.tHROTTLEGen_X1000_out = 0U;
+        ATV_B.FS1_out = false;
+    } else if (!ATV_B.apu_start_out) {
+        /* Transition: '<S169>:328' */
+        atv_IceShutdown_out = true;
+        /* Transition: '<S169>:330' */
+        /* Transition: '<S169>:337' */
+        /* Transition: '<S169>:338' */
+        ATV_DW.is_IceSM = ATV_IN_WAIT_ICE_OFF;
+        ATV_DW.temporalCounter_i1 = 0U;
+    } else {
+        if (ATV_DW.temporalCounter_i1 >= 200U) {
+            /* Transition: '<S169>:361' */
+            atv_IceOn = false;
+            ATV_DW.IceStartAttempCnt++;
+            atv_IceShutdown_out = true;
+            /* Transition: '<S169>:272' */
+            ATV_DW.is_IceSM = ATV_IN_Wait0RPM;
+            /* Entry 'Wait0RPM': '<S169>:292' */
+            atv_IceSM = 8U;
+            ATV_B.tHROTTLEGen_X1000_out = 0U;
+            ATV_B.FS1_out = false;
+        }
+    }
+    break;
+  case ATV_IN_IceRestartDelay:
+    /* During 'IceRestartDelay': '<S169>:303' */
+    if (ATV_DW.temporalCounter_i1 >= 200U) {
+        /* Transition: '<S169>:277' */
+        ATV_DW.is_IceSM = ATV_IN_AvviamentoIce;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'AvviamentoIce': '<S169>:275' */
+        ATV_DW.reset_PID = false;
+    }
+    break;
+  case ATV_IN_Inizializzazione:
+    atv_IceKey_out = false;
+    ATV_B.GenFwd_out = false;
+    /* During 'Inizializzazione': '<S169>:279' */
+    if ((ATV_DW.ReqGen_prev != ATV_DW.ReqGen_start) && ATV_DW.ReqGen_start && (!ATV_B.RelationalOperator1)) {
+        /* Transition: '<S169>:273' */
+        ATV_DW.is_IceSM = ATV_IN_FuelPumpOn;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'FuelPumpOn': '<S169>:320' */
+        atv_IceKey_out = true;
+        ATV_B.GenFwd_out = true;
+        atv_IceSM = 1U;
+    }
+    break;
+  case ATV_IN_MonitoraggioIce:
+    /* During 'MonitoraggioIce': '<S169>:284' */
+    if ((!ATV_B.apu_start_out) || ATV_B.RelationalOperator1) {
+        /* Transition: '<S169>:333' */
+        atv_IceShutdown_out = true;
+        /* Transition: '<S169>:335' */
+        /* Transition: '<S169>:330' */
+        /* Transition: '<S169>:337' */
+        /* Transition: '<S169>:338' */
+        ATV_DW.is_IceSM = ATV_IN_WAIT_ICE_OFF;
+        ATV_DW.temporalCounter_i1 = 0U;
+    } else if (atv_RPM_Gen <= atvc_IceOffTh) {
+        /* Transition: '<S169>:288' */
+        ATV_DW.is_IceSM = ATV_IN_ICE_NOT_SETTLE;
+        ATV_DW.temporalCounter_i1 = 0U;
+    } else {
+        if (ATV_DW.temporalCounter_i1 >= 200U) {
+            /* Transition: '<S169>:286' */
+            atv_IceOn = !ATV_B.RelationalOperator1;
+            ATV_DW.is_IceSM = ATV_IN_MonitoraggioStatoICE;
+            /* Entry Internal 'MonitoraggioStatoICE': '<S169>:299' */
+            /* Transition: '<S169>:300' */
+            ATV_DW.is_MonitoraggioStatoICE = ATV_IN_iCEOn;
+            /* Entry 'iCEOn': '<S169>:298' */
+            atv_IceFault = false;
+            atv_IceSM = 5U;
+        }
+    }
+    break;
+  case ATV_IN_MonitoraggioStatoICE:
+    /* During 'MonitoraggioStatoICE': '<S169>:299' */
+    if ((!ATV_B.apu_start_out) || (!atv_IceOn) || ATV_B.RelationalOperator1) {
+        /* Transition: '<S169>:295' */
+        /* Exit Internal 'MonitoraggioStatoICE': '<S169>:299' */
+        ATV_DW.is_MonitoraggioStatoICE = ATV_IN_NO_ACTIVE_CHILD_c;
+        ATV_DW.is_IceSM = ATV_IN_WAIT_NO_LOAD;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'WAIT_NO_LOAD': '<S169>:378' */
+        ATV_B.IceReduceLoad = true;
+    } else {
+        switch (ATV_DW.is_MonitoraggioStatoICE) {
+          case ATV_IN_DEB_d:
+            /* During 'DEB': '<S169>:290' */
+            if (atv_RPM_Gen > atvc_IceOnTh) {
+                /* Transition: '<S169>:297' */
+                ATV_DW.is_MonitoraggioStatoICE = ATV_IN_iCEOn;
+                /* Entry 'iCEOn': '<S169>:298' */
+                atv_IceFault = false;
+                atv_IceSM = 5U;
+            } else {
+                if (ATV_DW.temporalCounter_i1 >= 100U) {
+                    /* Transition: '<S169>:304' */
+                    ATV_DW.is_MonitoraggioStatoICE = ATV_IN_iCEOff;
+                    /* Entry 'iCEOff': '<S169>:302' */
+                    atv_IceOn = false;
+                    atv_IceFault = true;
+                    atv_IceShutdown_out = true;
+                    atv_IceSM = 7U;
+                }
+            }
+            break;
+          case ATV_IN_iCEOff:
+            /* During 'iCEOff': '<S169>:302' */
+            break;
+          default:
+            /* During 'iCEOn': '<S169>:298' */
+            if (atv_RPM_Gen <= atvc_IceOffTh) {
+                /* Transition: '<S169>:301' */
+                ATV_DW.is_MonitoraggioStatoICE = ATV_IN_DEB_d;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'DEB': '<S169>:290' */
+                atv_IceSM = 6U;
+            }
+            break;
+        }
+    }
+    break;
+  case ATV_IN_WAIT_ICE_OFF:
+    /* During 'WAIT_ICE_OFF': '<S169>:365' */
+    if (ATV_DW.temporalCounter_i1 >= 500U) {
+        /* Transition: '<S169>:366' */
+        ATV_DW.is_IceSM = ATV_IN_Inizializzazione;
+        /* Entry 'Inizializzazione': '<S169>:279' */
+        ATV_DW.IceStartAttempCnt = 0.0;
+        atv_IceOn = false;
+        atv_IceKey_out = false;
+        atv_IceShutdown_out = false;
+        atv_IceFault = false;
+        ATV_B.GenFwd_out = false;
+        atv_IceSM = 0U;
+        ATV_DW.reset_PID = true;
+    }
+    break;
+  case ATV_IN_WAIT_NO_LOAD:
+    /* During 'WAIT_NO_LOAD': '<S169>:378' */
+    if (ATV_DW.temporalCounter_i1 >= 20U) {
+        /* Transition: '<S169>:381' */
+        atv_IceShutdown_out = true;
+        /* Exit 'WAIT_NO_LOAD': '<S169>:378' */
+        ATV_B.IceReduceLoad = false;
+        ATV_DW.is_IceSM = ATV_IN_FuelPumpOff;
+        ATV_DW.temporalCounter_i1 = 0U;
+        /* Entry 'FuelPumpOff': '<S169>:323' */
+        atv_IceKey_out = false;
+        atv_IceSM = 10U;
+    }
+    break;
+  default:
+    /* During 'Wait0RPM': '<S169>:292' */
+    if (atv_RPM_Gen < 10) {
+        /* Transition: '<S169>:281' */
+        if ((!ATV_B.apu_start_out) || ATV_B.RelationalOperator1) {
+            /* Transition: '<S169>:309' */
+            atv_IceShutdown_out = true;
+            /* Transition: '<S169>:311' */
+            guard1 = true;
+        } else if ((ATV_DW.IceStartAttempCnt > atvc_IceStartRetry) || ATV_B.RelationalOperator1) {
+            /* Transition: '<S169>:289' */
+            atv_IceFault = true;
+            guard1 = true;
+        } else {
+            /* Transition: '<S169>:296' */
+            ATV_DW.is_IceSM = ATV_IN_IceRestartDelay;
+            ATV_DW.temporalCounter_i1 = 0U;
+            /* Entry 'IceRestartDelay': '<S169>:303' */
+            atv_IceSM = 9U;
+            atv_IceShutdown_out = false;
+        }
+    }
+    break;
+}
+if (guard1) {
+    ATV_DW.is_IceSM = ATV_IN_FuelPumpOff;
+    ATV_DW.temporalCounter_i1 = 0U;
+    /* Entry 'FuelPumpOff': '<S169>:323' */
+    atv_IceKey_out = false;
+    atv_IceSM = 10U;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_IceSM(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 14, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function rt_remd_snf_Fcn15(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T y;
+real_T u1_0;
+if (rtIsNaN(u0) || rtIsInf(u0) || (rtIsNaN(u1) || rtIsInf(u1))) {
+    y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("double"))>;
+} else {
+    if (u1 < 0.0) {
+        u1_0 = ceil(u1);
+    } else {
+        u1_0 = floor(u1);
+    }
+    if ((u1 != 0.0) && (u1 != u1_0)) {
+        u1_0 = fabs(u0 / u1);
+        if (fabs(u1_0 - floor(u1_0 + 0.5)) <= DBL_EPSILON * u1_0) {
+            y = 0.0 * u0;
+        } else {
+            y = fmod(u0, u1);
+        }
+    } else {
+        y = fmod(u0, u1);
+    }
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_remd_snf(\
+%assign comma = ""
+%<comma>real_T u0\
+%assign comma = ", "
+%<comma>real_T u1\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 15, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SystemCore_release_p_Fcn16(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+dsp_private_SlidingWindowAv_p_T *obj_0;
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj_0 = obj->pStatistic;
+    if (obj_0->isInitialized == 1) {
+        obj_0->isInitialized = 2;
+    }
+    obj->NumChannels = -1;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SystemCore_release_p(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_p_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 16, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SystemCore_delete_p_Fcn17(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,17,0,0)
+%<SLibCG_AccessArg(5 ,17, 0)>
+%endif
+
+%<(SLibCGCallSubFcn("ATV_SystemCore_release_p", ["obj"], 5, 17, 0))>;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SystemCore_delete_p(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_p_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 17, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function matlabCodegenHandle_matlabCod_p_Fcn18(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,18,0,0)
+%<SLibCG_AccessArg(5 ,18, 0)>
+%endif
+
+if (!obj->matlabCodegenIsDeleted) {
+    obj->matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ATV_SystemCore_delete_p", ["obj"], 5, 18, 0))>;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void matlabCodegenHandle_matlabCod_p(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_p_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 18, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SystemCore_release_Fcn19(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+dsp_private_SlidingWindowAver_T *obj_0;
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj_0 = obj->pStatistic;
+    if (obj_0->isInitialized == 1) {
+        obj_0->isInitialized = 2;
+    }
+    obj->NumChannels = -1;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SystemCore_release(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_AT_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 19, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_SystemCore_delete_Fcn20(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,20,0,0)
+%<SLibCG_AccessArg(5 ,20, 0)>
+%endif
+
+%<(SLibCGCallSubFcn("ATV_SystemCore_release", ["obj"], 5, 20, 0))>;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_SystemCore_delete(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_AT_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 20, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function matlabCodegenHandle_matlabCodeg_Fcn21(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,21,0,0)
+%<SLibCG_AccessArg(5 ,21, 0)>
+%endif
+
+if (!obj->matlabCodegenIsDeleted) {
+    obj->matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ATV_SystemCore_delete", ["obj"], 5, 21, 0))>;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void matlabCodegenHandle_matlabCodeg(\
+%assign comma = ""
+%<comma>dsp_simulink_MovingAverage_AT_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 21, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

@@ -27,8 +27,8 @@ target-ecu
 application
 {
   major-version    = 1;
-  minor-version    = 1;
-  subminor-version = 0;
+  minor-version    = 8;
+  subminor-version = 2;
 
   name             = "New_model_v%ver-major%.%ver-minor%.%ver-subminor%_%target%";
   description      = "(none)";
@@ -50,16 +50,32 @@ application
 
     task
     {
-      name     = task_100ms;
+      name     = task_20ms;
       priority = 39;
+      period   = 20;
+      function = pkn_20ms_model_task;
+    }
+
+    task
+    {
+      name     = task_100ms;
+      priority = 38;
       period   = 100;
       function = pkn_100ms_model_task;
     }
 
     task
     {
+      name     = task_500ms;
+      priority = 37;
+      period   = 500;
+      function = pkn_500ms_model_task;
+    }
+
+    task
+    {
       name     = task_1000ms;
-      priority = 38;
+      priority = 36;
       period   = 1000;
       function = pkn_1000ms_model_task;
     }
@@ -81,8 +97,8 @@ ddes
 
 can-messaging
 {
-  number-of-receive-messages  = 4;
-  number-of-transmit-messages = 9;
+  number-of-receive-messages  = 16;
+  number-of-transmit-messages = 35;
 }
 
 ccp-messaging
@@ -112,4 +128,9 @@ ccp-messaging
 
 
 
+adaptives
+{
+  storage       = flash;
+  adaptive-list = atvv_map, atvc_fmot_run_timer, atvc_ice_run_timer, atvc_odometer, atvc_rmot_run_timer;
+}
 

@@ -1,0 +1,759 @@
+%implements s91_b0_790xc_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS78B9 = OpaqueTLCBlockFcn("Start", 78, 9, 5, 22)
+%assign tlcStartFcnOfS78B10 = OpaqueTLCBlockFcn("Start", 78, 10, 5, 22)
+%assign tlcStartFcnOfS78B11 = OpaqueTLCBlockFcn("Start", 78, 11, 5, 22)
+%assign tlcStartFcnOfS78B54 = OpaqueTLCBlockFcn("Start", 78, 54, 5, 22)
+%assign tlcStartFcnOfS78B57 = OpaqueTLCBlockFcn("Start", 78, 57, 5, 22)
+%assign tlcStartFcnOfS78B59 = OpaqueTLCBlockFcn("Start", 78, 59, 5, 22)
+%assign tlcStartFcnOfS78B62 = OpaqueTLCBlockFcn("Start", 78, 62, 5, 22)
+%assign tlcStartFcnOfS78B63 = OpaqueTLCBlockFcn("Start", 78, 63, 5, 22)
+%assign tlcStartFcnOfS78B64 = OpaqueTLCBlockFcn("Start", 78, 64, 5, 22)
+%assign tlcStartFcnOfS78B65 = OpaqueTLCBlockFcn("Start", 78, 65, 5, 22)
+%assign tlcStartFcnOfS78B67 = OpaqueTLCBlockFcn("Start", 78, 67, 5, 22)
+%assign tlcStartFcnOfS78B73 = OpaqueTLCBlockFcn("Start", 78, 73, 5, 22)
+%assign tlcStartFcnOfS78B74 = OpaqueTLCBlockFcn("Start", 78, 74, 5, 22)
+%assign tlcStartFcnOfS78B75 = OpaqueTLCBlockFcn("Start", 78, 75, 5, 22)
+%assign tlcStartFcnOfS78B76 = OpaqueTLCBlockFcn("Start", 78, 76, 5, 22)
+%assign tlcStartFcnOfS78B77 = OpaqueTLCBlockFcn("Start", 78, 77, 5, 22)
+%assign tlcStartFcnOfS78B78 = OpaqueTLCBlockFcn("Start", 78, 78, 5, 22)
+%assign tlcStartFcnOfS78B79 = OpaqueTLCBlockFcn("Start", 78, 79, 5, 22)
+%assign tlcStartFcnOfS78B80 = OpaqueTLCBlockFcn("Start", 78, 80, 5, 22)
+%assign tlcStartFcnOfS78B88 = OpaqueTLCBlockFcn("Start", 78, 88, 5, 22)
+%assign tlcStartFcnOfS78B92 = OpaqueTLCBlockFcn("Start", 78, 92, 5, 22)
+%assign tlcStartFcnOfS78B93 = OpaqueTLCBlockFcn("Start", 78, 93, 5, 22)
+%assign tlcStartFcnOfS78B108 = OpaqueTLCBlockFcn("Start", 78, 108, 5, 22)
+%assign tlcStartFcnOfS78B110 = OpaqueTLCBlockFcn("Start", 78, 110, 5, 22)
+%assign tlcStartFcnOfS78B111 = OpaqueTLCBlockFcn("Start", 78, 111, 5, 22)
+%assign tlcStartFcnOfS78B112 = OpaqueTLCBlockFcn("Start", 78, 112, 5, 22)
+%assign tlcStartFcnOfS78B119 = OpaqueTLCBlockFcn("Start", 78, 119, 5, 22)
+%assign tlcStartFcnOfS78B120 = OpaqueTLCBlockFcn("Start", 78, 120, 5, 22)
+%assign tlcStartFcnOfS78B122 = OpaqueTLCBlockFcn("Start", 78, 122, 5, 22)
+%assign tlcStartFcnOfS78B123 = OpaqueTLCBlockFcn("Start", 78, 123, 5, 22)
+%assign tlcStartFcnOfS78B124 = OpaqueTLCBlockFcn("Start", 78, 124, 5, 22)
+%assign tlcStartFcnOfS78B133 = OpaqueTLCBlockFcn("Start", 78, 133, 5, 22)
+%assign tlcStartFcnOfS78B137 = OpaqueTLCBlockFcn("Start", 78, 137, 5, 22)
+%assign tlcStartFcnOfS78B140 = OpaqueTLCBlockFcn("Start", 78, 140, 5, 22)
+%assign tlcStartFcnOfS78B144 = OpaqueTLCBlockFcn("Start", 78, 144, 5, 22)
+%assign tlcStartFcnOfS78B148 = OpaqueTLCBlockFcn("Start", 78, 148, 5, 22)
+%assign tlcStartFcnOfS78B151 = OpaqueTLCBlockFcn("Start", 78, 151, 5, 22)
+%assign tlcStartFcnOfS78B154 = OpaqueTLCBlockFcn("Start", 78, 154, 5, 22)
+%assign tlcStartFcnOfS78B157 = OpaqueTLCBlockFcn("Start", 78, 157, 5, 22)
+%assign tlcStartFcnOfS78B254 = OpaqueTLCBlockFcn("Start", 78, 254, 5, 22)
+%assign tlcStartFcnOfS78B256 = OpaqueTLCBlockFcn("Start", 78, 256, 5, 22)
+%assign tlcStartFcnOfS78B258 = OpaqueTLCBlockFcn("Start", 78, 258, 5, 22)
+%assign tlcStartFcnOfS78B262 = OpaqueTLCBlockFcn("Start", 78, 262, 5, 22)
+%assign tlcStartFcnOfS78B263 = OpaqueTLCBlockFcn("Start", 78, 263, 5, 22)
+%assign tlcStartFcnOfS78B264 = OpaqueTLCBlockFcn("Start", 78, 264, 5, 22)
+%assign tlcStartFcnOfS78B265 = OpaqueTLCBlockFcn("Start", 78, 265, 5, 22)
+%assign tlcStartFcnOfS78B267 = OpaqueTLCBlockFcn("Start", 78, 267, 5, 22)
+%assign tlcStartFcnOfS78B268 = OpaqueTLCBlockFcn("Start", 78, 268, 5, 22)
+%assign tlcStartFcnOfS78B270 = OpaqueTLCBlockFcn("Start", 78, 270, 5, 22)
+%assign tlcStartFcnOfS78B272 = OpaqueTLCBlockFcn("Start", 78, 272, 5, 22)
+%assign tlcStartFcnOfS78B274 = OpaqueTLCBlockFcn("Start", 78, 274, 5, 22)
+%assign tlcStartFcnOfS78B276 = OpaqueTLCBlockFcn("Start", 78, 276, 5, 22)
+%assign tlcStartFcnOfS23B10 = OpaqueTLCBlockFcn("Start", 23, 10, 5, 22)
+%assign tlcStartFcnOfS24B2 = OpaqueTLCBlockFcn("Start", 24, 2, 5, 22)
+%assign tlcStartFcnOfS26B7 = OpaqueTLCBlockFcn("Start", 26, 7, 5, 22)
+%assign tlcStartFcnOfS28B1 = OpaqueTLCBlockFcn("Start", 28, 1, 5, 22)
+%assign tlcStartFcnOfS78B278 = OpaqueTLCBlockFcn("Start", 78, 278, 5, 22)
+%assign tlcStartFcnOfS78B280 = OpaqueTLCBlockFcn("Start", 78, 280, 5, 22)
+%assign tlcStartFcnOfS78B286 = OpaqueTLCBlockFcn("Start", 78, 286, 5, 22)
+%assign tlcStartFcnOfS78B287 = OpaqueTLCBlockFcn("Start", 78, 287, 5, 22)
+%assign tlcStartFcnOfS78B288 = OpaqueTLCBlockFcn("Start", 78, 288, 5, 22)
+%assign tlcStartFcnOfS78B289 = OpaqueTLCBlockFcn("Start", 78, 289, 5, 22)
+%assign tlcStartFcnOfS78B290 = OpaqueTLCBlockFcn("Start", 78, 290, 5, 22)
+%assign tlcStartFcnOfS78B291 = OpaqueTLCBlockFcn("Start", 78, 291, 5, 22)
+%assign tlcStartFcnOfS78B292 = OpaqueTLCBlockFcn("Start", 78, 292, 5, 22)
+%assign tlcStartFcnOfS78B293 = OpaqueTLCBlockFcn("Start", 78, 293, 5, 22)
+%assign tlcStartFcnOfS12B2 = OpaqueTLCBlockFcn("Start", 12, 2, 5, 22)
+%assign tlcStartFcnOfS12B3 = OpaqueTLCBlockFcn("Start", 12, 3, 5, 22)
+%assign tlcStartFcnOfS12B7 = OpaqueTLCBlockFcn("Start", 12, 7, 5, 22)
+%assign tlcStartFcnOfS12B10 = OpaqueTLCBlockFcn("Start", 12, 10, 5, 22)
+%assign tlcStartFcnOfS12B12 = OpaqueTLCBlockFcn("Start", 12, 12, 5, 22)
+%assign tlcStartFcnOfS12B14 = OpaqueTLCBlockFcn("Start", 12, 14, 5, 22)
+%assign tlcStartFcnOfS12B15 = OpaqueTLCBlockFcn("Start", 12, 15, 5, 22)
+%assign tlcStartFcnOfS12B16 = OpaqueTLCBlockFcn("Start", 12, 16, 5, 22)
+%assign tlcStartFcnOfS12B17 = OpaqueTLCBlockFcn("Start", 12, 17, 5, 22)
+%assign tlcStartFcnOfS12B18 = OpaqueTLCBlockFcn("Start", 12, 18, 5, 22)
+%assign tlcStartFcnOfS12B19 = OpaqueTLCBlockFcn("Start", 12, 19, 5, 22)
+%assign tlcStartFcnOfS12B22 = OpaqueTLCBlockFcn("Start", 12, 22, 5, 22)
+%assign tlcStartFcnOfS12B23 = OpaqueTLCBlockFcn("Start", 12, 23, 5, 22)
+%assign tlcStartFcnOfS12B24 = OpaqueTLCBlockFcn("Start", 12, 24, 5, 22)
+%assign tlcStartFcnOfS12B25 = OpaqueTLCBlockFcn("Start", 12, 25, 5, 22)
+%assign tlcStartFcnOfS12B26 = OpaqueTLCBlockFcn("Start", 12, 26, 5, 22)
+%assign tlcStartFcnOfS12B27 = OpaqueTLCBlockFcn("Start", 12, 27, 5, 22)
+%assign tlcStartFcnOfS12B28 = OpaqueTLCBlockFcn("Start", 12, 28, 5, 22)
+%assign tlcStartFcnOfS12B30 = OpaqueTLCBlockFcn("Start", 12, 30, 5, 22)
+%assign tlcStartFcnOfS12B33 = OpaqueTLCBlockFcn("Start", 12, 33, 5, 22)
+%assign tlcStartFcnOfS12B35 = OpaqueTLCBlockFcn("Start", 12, 35, 5, 22)
+%assign tlcStartFcnOfS12B36 = OpaqueTLCBlockFcn("Start", 12, 36, 5, 22)
+%assign tlcStartFcnOfS12B39 = OpaqueTLCBlockFcn("Start", 12, 39, 5, 22)
+%assign tlcStartFcnOfS12B41 = OpaqueTLCBlockFcn("Start", 12, 41, 5, 22)
+%assign tlcStartFcnOfS12B43 = OpaqueTLCBlockFcn("Start", 12, 43, 5, 22)
+%assign tlcStartFcnOfS12B45 = OpaqueTLCBlockFcn("Start", 12, 45, 5, 22)
+%assign tlcStartFcnOfS12B48 = OpaqueTLCBlockFcn("Start", 12, 48, 5, 22)
+%assign tlcStartFcnOfS10B0 = OpaqueTLCBlockFcn("Start", 10, 0, 5, 22)
+%assign tlcStartFcnOfS10B1 = OpaqueTLCBlockFcn("Start", 10, 1, 5, 22)
+%assign tlcStartFcnOfS31B0 = OpaqueTLCBlockFcn("Start", 31, 0, 5, 22)
+%assign tlcStartFcnOfS31B4 = OpaqueTLCBlockFcn("Start", 31, 4, 5, 22)
+%assign tlcStartFcnOfS47B0 = OpaqueTLCBlockFcn("Start", 47, 0, 5, 22)
+%assign tlcOutputsFcnOfS78B278 = OpaqueTLCBlockFcn("Outputs", 78, 278, 5, 22)
+%assign tlcOutputsFcnOfS78B279 = OpaqueTLCBlockFcn("Outputs", 78, 279, 5, 22)
+%assign tlcOutputsFcnOfS78B280 = OpaqueTLCBlockFcn("Outputs", 78, 280, 5, 22)
+%assign tlcOutputsFcnOfS78B294 = OpaqueTLCBlockFcn("Outputs", 78, 294, 5, 22)
+%assign tlcOutputsFcnOfS78B295 = OpaqueTLCBlockFcn("Outputs", 78, 295, 5, 22)
+%assign tlcOutputsFcnOfS78B296 = OpaqueTLCBlockFcn("Outputs", 78, 296, 5, 22)
+%assign tlcOutputsFcnOfS78B297 = OpaqueTLCBlockFcn("Outputs", 78, 297, 5, 22)
+/* {S!d28838}Start for RateTransition: '<Root>/Rate Transition6' */
+ATV_B.RateTransition6_a = 0;
+/* {S!d28840}Start for RateTransition: '<Root>/Rate Transition7' */
+ATV_B.RateTransition7 = 0;
+/* {S!d28842}Start for RateTransition: '<Root>/Rate Transition10' */
+ATV_B.RateTransition10 = 0;
+/* {S!d28844}Start for RateTransition: '<Root>/Rate Transition11' */
+ATV_B.RateTransition11_n = 0;
+/* {S!d28846}Start for RateTransition: '<Root>/Rate Transition26' */
+ATV_B.RateTransition26 = 0;
+/* {S!d28848}Start for RateTransition: '<Root>/Rate Transition27' */
+ATV_B.rear_motor_speed = 0;
+%if !WHITE_SPACE(tlcStartFcnOfS78B9)
+/* {S!d28850}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput' */
+%<tlcStartFcnOfS78B9>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B10)
+/* {S!d28852}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput8' */
+%<tlcStartFcnOfS78B10>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B11)
+/* {S!d28854}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput9' */
+%<tlcStartFcnOfS78B11>\
+%endif
+/* {S!d28856}Start for RateTransition: '<Root>/Rate Transition4' */
+ATV_B.RateTransition4_f = false;
+/* {S!d28858}Start for RateTransition: '<Root>/Rate Transition37' */
+ATV_B.RateTransition37 = false;
+/* {S!d28860}Start for RateTransition: '<Root>/Rate Transition5' */
+ATV_B.RateTransition5_l = false;
+/* {S!d28862}Start for RateTransition: '<S4>/Rate Transition4' */
+ATV_B.RateTransition4 = 0U;
+/* {S!d28864}Start for RateTransition: '<S6>/Rate Transition6' */
+ATV_B.RateTransition6 = 0.0;
+/* {S!d28866}Start for RateTransition: '<S6>/Rate Transition27' */
+ATV_B.RateTransition27 = false;
+/* {S!d28868}Start for RateTransition: '<S6>/Rate Transition5' */
+ATV_B.RateTransition5 = 0.0;
+/* {S!d28870}Start for RateTransition: '<S6>/Rate Transition1' */
+ATV_B.RateTransition1 = 0.0;
+/* {S!d28872}Start for RateTransition: '<S6>/Rate Transition2' */
+ATV_B.RateTransition2 = 0.0;
+/* {S!d28874}Start for RateTransition: '<S4>/Rate Transition3' */
+ATV_B.RateTransition3 = 0.0;
+/* {S!d28876}Start for RateTransition: '<S4>/Rate Transition27' */
+ATV_B.RateTransition27_k = false;
+/* {S!d28878}Start for RateTransition: '<Root>/Rate Transition38' */
+ATV_B.RateTransition38 = false;
+%if !WHITE_SPACE(tlcStartFcnOfS78B54)
+/* {S!d28880}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput6' */
+%<tlcStartFcnOfS78B54>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B57)
+/* {S!d28882}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B57>\
+%endif
+/* {S!d28884}Start for RateTransition: '<Root>/Rate Transition8' */
+ATV_B.RateTransition8 = 0;
+/* {S!d28886}Start for RateTransition: '<Root>/Rate Transition9' */
+ATV_B.RateTransition9 = 0;
+%if !WHITE_SPACE(tlcStartFcnOfS78B59)
+/* {S!d28888}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput7' */
+%<tlcStartFcnOfS78B59>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B62)
+/* {S!d28890}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B62>\
+%endif
+/* {S!d28892}Start for RateTransition: '<Root>/Rate Transition48' */
+ATV_B.RateTransition48 = false;
+%if !WHITE_SPACE(tlcStartFcnOfS78B63)
+/* {S!d28894}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput10' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B63>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B64)
+/* {S!d28896}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput11' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B64>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B65)
+/* {S!d28898}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput12' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B65>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B67)
+/* {S!d28900}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput13' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B67>\
+%endif
+/* {S!d28902}Start for MATLABSystem: '<S168>/Moving Average' */
+ATV_DW.obj_n.matlabCodegenIsDeleted = true;
+ATV_DW.obj_n.isInitialized = 0;
+ATV_DW.obj_n.NumChannels = -1;
+ATV_DW.obj_n.matlabCodegenIsDeleted = false;
+ATV_DW.objisempty = true;
+ATV_DW.obj_n.isSetupComplete = false;
+ATV_DW.obj_n.isInitialized = 1;
+ATV_DW.obj_n.NumChannels = 1;
+ATV_DW.gobj_0_l.isInitialized = 0;
+ATV_DW.obj_n.pStatistic = &ATV_DW.gobj_0_l;
+ATV_DW.obj_n.isSetupComplete = true;
+ATV_DW.obj_n.TunablePropsChanged = false;
+%if !WHITE_SPACE(tlcStartFcnOfS78B73)
+/* {S!d28904}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput2' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B73>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B74)
+/* {S!d28906}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B74>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B75)
+/* {S!d28908}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput4' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B75>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B76)
+/* {S!d28910}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput5' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B76>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B77)
+/* {S!d28912}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput6' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B77>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B78)
+/* {S!d28914}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput7' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B78>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B79)
+/* {S!d28916}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput8' */
+%<tlcStartFcnOfS78B79>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B80)
+/* {S!d28918}Start for S-Function (pdx_digital_output): '<S25>/pdx_DigitalOutput9' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B80>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B88)
+/* {S!d28920}Start for S-Function (pdx_pwm_output): '<S25>/pdx_PWMOutput' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B88>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B92)
+/* {S!d28922}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput4' */
+%<tlcStartFcnOfS78B92>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B93)
+/* {S!d28924}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput5' */
+%<tlcStartFcnOfS78B93>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B108)
+/* {S!d28926}Start for S-Function (pdx_pwm_output): '<S25>/pdx_PWMOutput1' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B108>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B110)
+/* {S!d28928}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput1' */
+%<tlcStartFcnOfS78B110>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B111)
+/* {S!d28930}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput2' */
+%<tlcStartFcnOfS78B111>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B112)
+/* {S!d28932}Start for S-Function (pdx_digital_input): '<S28>/pdx_DigitalInput3' */
+%<tlcStartFcnOfS78B112>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B119)
+/* {S!d28934}Start for S-Function (pdx_pwm_output): '<S25>/pdx_PWMOutput2' incorporates:
+ *  Constant: '<S25>/Constant1'
+ */
+%<tlcStartFcnOfS78B119>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B120)
+/* {S!d28936}Start for S-Function (pcx_candb_receive_message): '<S4>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B120>\
+%endif
+/* {S!d28938}Start for RateTransition: '<S4>/Rate Transition6' */
+ATV_B.RateTransition6_o = 0.0;
+%if !WHITE_SPACE(tlcStartFcnOfS78B122)
+/* {S!d28940}Start for S-Function (pcx_candb_receive_message): '<S6>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B122>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B123)
+/* {S!d28942}Start for S-Function (pcx_candb_receive_message): '<S7>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B123>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B124)
+/* {S!d28944}Start for S-Function (pcx_candb_receive_message): '<S7>/pcx_CANdb_ReceiveMessage1' */
+%<tlcStartFcnOfS78B124>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B133)
+/* {S!d28946}Start for S-Function (pcx_candb_receive_message): '<S10>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B133>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B137)
+/* {S!d28948}Start for S-Function (pcx_candb_receive_message): '<S11>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B137>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B140)
+/* {S!d28950}Start for S-Function (pcx_candb_receive_message): '<S12>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B140>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B144)
+/* {S!d28952}Start for S-Function (pcx_candb_receive_message): '<S13>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B144>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B148)
+/* {S!d28954}Start for S-Function (pcx_candb_receive_message): '<S15>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B148>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B151)
+/* {S!d28956}Start for S-Function (pcx_candb_receive_message): '<S16>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B151>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B154)
+/* {S!d28958}Start for S-Function (pcx_candb_receive_message): '<S17>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B154>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B157)
+/* {S!d28960}Start for S-Function (pcx_candb_receive_message): '<S18>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B157>\
+%endif
+/* {S!d28962}Start for RateTransition: '<S28>/Rate Transition' */
+ATV_B.atv_yg3_raw_ain_c = 0.0;
+/* {S!d28964}Start for MATLABSystem: '<S28>/Moving Average' */
+ATV_DW.obj.matlabCodegenIsDeleted = true;
+ATV_DW.obj.isInitialized = 0;
+ATV_DW.obj.NumChannels = -1;
+ATV_DW.obj.matlabCodegenIsDeleted = false;
+ATV_DW.objisempty_p = true;
+ATV_DW.obj.isSetupComplete = false;
+ATV_DW.obj.isInitialized = 1;
+ATV_DW.obj.NumChannels = 1;
+ATV_DW.gobj_0.isInitialized = 0;
+ATV_DW.obj.pStatistic = &ATV_DW.gobj_0;
+ATV_DW.obj.isSetupComplete = true;
+ATV_DW.obj.TunablePropsChanged = false;
+/* {S!d28966}Start for Constant: '<S138>/Constant' */
+atv_fs1_out = true;
+/* {S!d28968}Start for RateTransition: '<S5>/Rate Transition3' */
+ATV_B.RateTransition3_a = 0.0;
+/* {S!d28970}Start for RateTransition: '<S5>/Rate Transition27' */
+ATV_B.RateTransition27_a = false;
+%if !WHITE_SPACE(tlcStartFcnOfS78B254)
+/* {S!d28972}Start for S-Function (pcx_candb_receive_message): '<S5>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B254>\
+%endif
+/* {S!d28974}Start for RateTransition: '<S5>/Rate Transition6' */
+ATV_B.RateTransition6_e = 0.0;
+%if !WHITE_SPACE(tlcStartFcnOfS78B256)
+/* {S!d28976}Start for S-Function (pcx_candb_receive_message): '<S8>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B256>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B258)
+/* {S!d28978}Start for S-Function (pcx_candb_receive_message): '<S9>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B258>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B262)
+/* {S!d28980}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS78B262>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B263)
+/* {S!d28982}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS78B263>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B264)
+/* {S!d28984}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput13' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS78B264>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B265)
+/* {S!d28986}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput2' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS78B265>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B267)
+/* {S!d28988}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<Root>/Constant'
+ */
+%<tlcStartFcnOfS78B267>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B268)
+/* {S!d28990}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput5' incorporates:
+ *  Constant: '<Root>/Constant'
+ */
+%<tlcStartFcnOfS78B268>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B270)
+/* {S!d28992}Start for S-Function (pdd_data_output): '<Root>/pdd_DataOutput2' incorporates:
+ *  Constant: '<Root>/Constant4'
+ */
+%<tlcStartFcnOfS78B270>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B272)
+/* {S!d28994}Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput4' incorporates:
+ *  Constant: '<Root>/Constant5'
+ */
+%<tlcStartFcnOfS78B272>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B274)
+/* {S!d28996}Start for S-Function (pdd_data_output): '<Root>/pdd_DataOutput1' incorporates:
+ *  Constant: '<Root>/Constant6'
+ */
+%<tlcStartFcnOfS78B274>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B276)
+/* {S!d28998}Start for S-Function (pcx_candb_receive_message): '<S14>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS78B276>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS23B10)
+/* {S!d28813}Start for Triggered SubSystem: '<S14>/Triggered Subsystem' */
+/* {S!d28814}Start for IfAction SubSystem: '<S57>/Switch Case Action Subsystem' */
+/* {S!d28815}Start for IfAction SubSystem: '<S58>/If Action Subsystem' */
+/* {S!d28816}Start for IfAction SubSystem: '<S60>/If Action Subsystem' */
+/* {S!d29000}Start for S-Function (pcx_candb_transmit_message): '<S62>/pcx_CANdb_TransmitMessage' incorporates:
+ *  Constant: '<S62>/Constant'
+ *  Constant: '<S62>/Constant1'
+ */
+%<tlcStartFcnOfS23B10>\
+/* {E!d28816}End of Start for SubSystem: '<S60>/If Action Subsystem' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS24B2)
+
+/* {S!d28818}Start for IfAction SubSystem: '<S60>/If Action Subsystem1' */
+/* {S!d29002}Start for S-Function (pcx_candb_transmit_message): '<S63>/pcx_CANdb_TransmitMessage' incorporates:
+ *  Constant: '<S63>/Constant'
+ *  Constant: '<S63>/Constant1'
+ */
+%<tlcStartFcnOfS24B2>\
+/* {E!d28818}End of Start for SubSystem: '<S60>/If Action Subsystem1' */
+/* {E!d28815}End of Start for SubSystem: '<S58>/If Action Subsystem' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS26B7)
+
+/* {S!d28821}Start for IfAction SubSystem: '<S58>/If Action Subsystem1' */
+/* {S!d29004}Start for S-Function (pcx_candb_transmit_message): '<S61>/pcx_CANdb_TransmitMessage' incorporates:
+ *  Constant: '<S61>/Constant'
+ *  Constant: '<S61>/Constant1'
+ */
+%<tlcStartFcnOfS26B7>\
+/* {E!d28821}End of Start for SubSystem: '<S58>/If Action Subsystem1' */
+/* {E!d28814}End of Start for SubSystem: '<S57>/Switch Case Action Subsystem' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B1)
+
+/* {S!d28824}Start for IfAction SubSystem: '<S57>/Switch Case Action Subsystem1' */
+/* {S!d29006}Start for S-Function (pcx_candb_transmit_message): '<S59>/pcx_CANdb_TransmitMessage' incorporates:
+ *  Constant: '<S59>/Constant'
+ */
+%<tlcStartFcnOfS28B1>\
+/* {E!d28824}End of Start for SubSystem: '<S57>/Switch Case Action Subsystem1' */
+/* {E!d28813}End of Start for SubSystem: '<S14>/Triggered Subsystem' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B278)
+
+/* {S!d29008}Start for S-Function (pcx_can_config): '<S115>/pcx_CANConfiguration' */
+%<tlcStartFcnOfS78B278>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B280)
+/* {S!d29010}Start for S-Function (pcfg_config_m5xx): '<S117>/pcfg_Config_M5xx' */
+%<tlcStartFcnOfS78B280>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B286)
+/* {S!d29012}Start for S-Function (psc_app_build_date): '<S120>/psc_AppBuildDate' */
+%<tlcStartFcnOfS78B286>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B287)
+/* {S!d29014}Start for S-Function (psc_app_version): '<S120>/psc_AppVersion' */
+%<tlcStartFcnOfS78B287>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B288)
+/* {S!d29016}Start for S-Function (psc_boot_build_date): '<S121>/psc_BootBuildDate' */
+%<tlcStartFcnOfS78B288>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B289)
+/* {S!d29018}Start for S-Function (psc_boot_version): '<S121>/psc_BootVersion' */
+%<tlcStartFcnOfS78B289>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B290)
+/* {S!d29020}Start for S-Function (psc_prg_build_date): '<S122>/psc_PrgBuildDate' */
+%<tlcStartFcnOfS78B290>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B291)
+/* {S!d29022}Start for S-Function (psc_prg_version): '<S122>/psc_PrgVersion' */
+%<tlcStartFcnOfS78B291>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B292)
+/* {S!d29024}Start for S-Function (psc_platform_build_date): '<S123>/psc_PlatformBuildDate' */
+%<tlcStartFcnOfS78B292>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS78B293)
+/* {S!d29026}Start for S-Function (psc_platform_version): '<S123>/psc_PlatformVersion' */
+%<tlcStartFcnOfS78B293>\
+%endif
+/* {S!d29028}Start for RateTransition: '<Root>/Rate Transition33' */
+ATV_B.RateTransition33 = false;
+/* {S!d29030}Start for RateTransition: '<Root>/Rate Transition35' */
+ATV_B.RateTransition35 = false;
+/* {S!d29032}Start for RateTransition: '<Root>/Rate Transition34' */
+ATV_B.RateTransition34 = false;
+/* {S!d28827}Start for Enabled SubSystem: '<Root>/CANBUS_Output_Processing' */
+ATV_DW.CANBUS_Output_Processing_MODE = false;
+%if !WHITE_SPACE(tlcStartFcnOfS12B2)
+/* {S!d29034}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage' */
+%<tlcStartFcnOfS12B2>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B3)
+/* {S!d29036}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage1' */
+%<tlcStartFcnOfS12B3>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B7)
+/* {S!d29038}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage10' incorporates:
+ *  Constant: '<S3>/Constant1'
+ *  Constant: '<S3>/Constant12'
+ *  Constant: '<S3>/Constant5'
+ */
+%<tlcStartFcnOfS12B7>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B10)
+/* {S!d29040}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage11' incorporates:
+ *  Constant: '<S3>/Constant12'
+ */
+%<tlcStartFcnOfS12B10>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B12)
+/* {S!d29042}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage12' incorporates:
+ *  Constant: '<S3>/Constant12'
+ *  Constant: '<S3>/Constant6'
+ */
+%<tlcStartFcnOfS12B12>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B14)
+/* {S!d29044}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage13' incorporates:
+ *  Constant: '<S3>/Constant1'
+ *  Constant: '<S3>/Constant12'
+ *  Constant: '<S3>/Constant9'
+ */
+%<tlcStartFcnOfS12B14>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B15)
+/* {S!d29046}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage14' incorporates:
+ *  Constant: '<S3>/Constant12'
+ */
+%<tlcStartFcnOfS12B15>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B16)
+/* {S!d29048}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage15' incorporates:
+ *  Constant: '<S3>/Constant12'
+ *  Constant: '<S3>/Constant6'
+ */
+%<tlcStartFcnOfS12B16>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B17)
+/* {S!d29050}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage2' */
+%<tlcStartFcnOfS12B17>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B18)
+/* {S!d29052}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage20' */
+%<tlcStartFcnOfS12B18>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B19)
+/* {S!d29054}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage23' */
+%<tlcStartFcnOfS12B19>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B22)
+/* {S!d29056}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage3' */
+%<tlcStartFcnOfS12B22>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B23)
+/* {S!d29058}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage4' */
+%<tlcStartFcnOfS12B23>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B24)
+/* {S!d29060}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage5' */
+%<tlcStartFcnOfS12B24>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B25)
+/* {S!d29062}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage19' */
+%<tlcStartFcnOfS12B25>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B26)
+/* {S!d29064}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage22' */
+%<tlcStartFcnOfS12B26>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B27)
+/* {S!d29066}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage24' */
+%<tlcStartFcnOfS12B27>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B28)
+/* {S!d29068}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage26' */
+%<tlcStartFcnOfS12B28>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B30)
+/* {S!d29070}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage6' */
+%<tlcStartFcnOfS12B30>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B33)
+/* {S!d29072}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage7' incorporates:
+ *  Constant: '<S3>/Constant2'
+ *  Constant: '<S3>/Constant3'
+ */
+%<tlcStartFcnOfS12B33>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B35)
+/* {S!d29074}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage8' incorporates:
+ *  Constant: '<S3>/Constant'
+ */
+%<tlcStartFcnOfS12B35>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B36)
+/* {S!d29076}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage9' */
+%<tlcStartFcnOfS12B36>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B39)
+/* {S!d29078}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage21' */
+%<tlcStartFcnOfS12B39>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B41)
+/* {S!d29080}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage25' */
+%<tlcStartFcnOfS12B41>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B43)
+/* {S!d29082}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage16' incorporates:
+ *  Constant: '<S3>/atvc_max_gen_trq'
+ */
+%<tlcStartFcnOfS12B43>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B45)
+/* {S!d29084}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage17' incorporates:
+ *  Constant: '<S3>/atvc_max_gen_neutral_trq'
+ */
+%<tlcStartFcnOfS12B45>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS12B48)
+/* {S!d29086}Start for S-Function (pcx_candb_transmit_message): '<S3>/pcx_CANdb_TransmitMessage18' incorporates:
+ *  Constant: '<S3>/atvc_gen_ramp_up'
+ *  Constant: '<S3>/atvc_max_gen_reg_trq'
+ */
+%<tlcStartFcnOfS12B48>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS10B0)
+/* {S!d28828}Start for IfAction SubSystem: '<S3>/If Action Subsystem2' */
+/* {S!d29088}Start for S-Function (pcx_candb_transmit_message): '<S42>/pcx_CANdb_TransmitMessage23' */
+%<tlcStartFcnOfS10B0>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS10B1)
+/* {S!d29090}Start for S-Function (pcx_candb_transmit_message): '<S42>/pcx_CANdb_TransmitMessage24' */
+%<tlcStartFcnOfS10B1>\
+/* {E!d28828}End of Start for SubSystem: '<S3>/If Action Subsystem2' */
+/* {E!d28827}End of Start for SubSystem: '<Root>/CANBUS_Output_Processing' */
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS31B0)
+
+/* {S!d28831}Start for Atomic SubSystem: '<Root>/CHARGER_CONTROL' */
+/* {S!d28832}Start for Enabled SubSystem: '<S19>/Enabled Subsystem' */
+/* {S!d29092}Start for S-Function (pcx_candb_transmit_message): '<S68>/pcx_CANdb_TransmitMessage' */
+%<tlcStartFcnOfS31B0>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS31B4)
+/* {S!d29094}Start for S-Function (pcx_candb_transmit_message): '<S68>/pcx_CANdb_TransmitMessage1' incorporates:
+ *  Constant: '<S68>/Constant'
+ *  Constant: '<S68>/Constant1'
+ *  Constant: '<S68>/Constant2'
+ */
+%<tlcStartFcnOfS31B4>\
+/* {E!d28832}End of Start for SubSystem: '<S19>/Enabled Subsystem' */
+/* {E!d28831}End of Start for SubSystem: '<Root>/CHARGER_CONTROL' */
+
+%endif
+/* {S!d29096}Start for If: '<S32>/If' */
+ATV_DW.If_ActiveSubsystem = -1;
+%if !WHITE_SPACE(tlcStartFcnOfS47B0)
+/* {S!d28835}Start for IfAction SubSystem: '<S32>/If Action Subsystem' */
+/* {S!d29098}Start for S-Function (ptm_real_time): '<S109>/ptm_RealTime' */
+%<tlcStartFcnOfS47B0>\
+/* {E!d28835}End of Start for SubSystem: '<S32>/If Action Subsystem' */
+
+%endif
+/* {S!d29100}ConstCode for Constant: '<S138>/Constant' */
+atv_fs1_out = true;
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B278)
+/* {S!d29102}ConstCode for S-Function (pcx_can_config): '<S115>/pcx_CANConfiguration' */
+%<tlcOutputsFcnOfS78B278>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B279)
+/* {S!d29104}ConstCode for S-Function (pcp_ccp_config): '<S118>/S-Function' */
+%<tlcOutputsFcnOfS78B279>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B280)
+/* {S!d29106}ConstCode for S-Function (pcfg_config_m5xx): '<S117>/pcfg_Config_M5xx' */
+%<tlcOutputsFcnOfS78B280>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B294)
+/* {S!d29108}ConstCode for S-Function (prtw_config_using_ert): '<S114>/prtw_ConfigUsingRtwEc' */
+%<tlcOutputsFcnOfS78B294>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B295)
+/* {S!d29110}ConstCode for S-Function (prtw_config_using_grt_rtmodel): '<S114>/prtw_ConfigUsingRtwRtmodel' */
+%<tlcOutputsFcnOfS78B295>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B296)
+/* {S!d29112}ConstCode for S-Function (prtw_build): '<Root>/prtw_Build' */
+%<tlcOutputsFcnOfS78B296>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS78B297)
+/* {S!d29114}ConstCode for S-Function (put_identification): '<Root>/put_Identification' */
+%<tlcOutputsFcnOfS78B297>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 22, fcnProtoType)>
+%endfunction

@@ -1,0 +1,18 @@
+%implements s91_b0_790xc_ModelPrevZCStateInit "C"
+
+%function ModelPrevZCStateInit(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+ATV_PrevZCX.TriggeredSubsystem_Trig_ZCE = POS_ZCSIG;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelPrevZCStateInitFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelPrevZCStateInit(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 34, fcnProtoType)>
+%endfunction

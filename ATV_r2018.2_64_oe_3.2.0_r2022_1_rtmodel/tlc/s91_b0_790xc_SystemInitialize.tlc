@@ -1,0 +1,472 @@
+%implements s91_b0_790xc_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%assign tlcInitializeConditionsFcnOfS78B120 = OpaqueTLCBlockFcn("InitializeConditions", 78, 120, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B122 = OpaqueTLCBlockFcn("InitializeConditions", 78, 122, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B123 = OpaqueTLCBlockFcn("InitializeConditions", 78, 123, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B124 = OpaqueTLCBlockFcn("InitializeConditions", 78, 124, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B133 = OpaqueTLCBlockFcn("InitializeConditions", 78, 133, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B137 = OpaqueTLCBlockFcn("InitializeConditions", 78, 137, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B140 = OpaqueTLCBlockFcn("InitializeConditions", 78, 140, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B144 = OpaqueTLCBlockFcn("InitializeConditions", 78, 144, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B148 = OpaqueTLCBlockFcn("InitializeConditions", 78, 148, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B151 = OpaqueTLCBlockFcn("InitializeConditions", 78, 151, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B154 = OpaqueTLCBlockFcn("InitializeConditions", 78, 154, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B157 = OpaqueTLCBlockFcn("InitializeConditions", 78, 157, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B254 = OpaqueTLCBlockFcn("InitializeConditions", 78, 254, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B256 = OpaqueTLCBlockFcn("InitializeConditions", 78, 256, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B258 = OpaqueTLCBlockFcn("InitializeConditions", 78, 258, 5, 23)
+%assign tlcInitializeConditionsFcnOfS78B276 = OpaqueTLCBlockFcn("InitializeConditions", 78, 276, 5, 23)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+/* {S!d29122}InitializeConditions for RateTransition: '<Root>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_i = 0;
+/* {S!d29124}InitializeConditions for RateTransition: '<Root>/Rate Transition7' */
+ATV_DW.RateTransition7_Buffer0 = 0;
+/* {S!d29126}InitializeConditions for RateTransition: '<Root>/Rate Transition10' */
+ATV_DW.RateTransition10_Buffer0 = 0;
+/* {S!d29128}InitializeConditions for RateTransition: '<Root>/Rate Transition11' */
+ATV_DW.RateTransition11_Buffer0 = 0;
+/* {S!d29130}InitializeConditions for RateTransition: '<Root>/Rate Transition26' */
+ATV_DW.RateTransition26_Buffer0 = 0;
+/* {S!d29132}InitializeConditions for RateTransition: '<Root>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0 = 0;
+/* {S!d29134}InitializeConditions for RateTransition: '<Root>/Rate Transition4' */
+ATV_DW.RateTransition4_Buffer0_f = false;
+/* {S!d29136}InitializeConditions for RateTransition: '<Root>/Rate Transition37' */
+ATV_DW.RateTransition37_Buffer0 = false;
+/* {S!d29138}InitializeConditions for Memory: '<S34>/Memory1' */
+ATV_DW.Memory1_PreviousInput_m = false;
+/* {S!d29140}InitializeConditions for Memory: '<S34>/Memory2' */
+ATV_DW.Memory2_PreviousInput = false;
+/* {S!d29142}InitializeConditions for Memory: '<S34>/Memory3' */
+ATV_DW.Memory3_PreviousInput = false;
+/* {S!d29144}InitializeConditions for RateTransition: '<Root>/Rate Transition5' */
+ATV_DW.RateTransition5_Buffer0_c = false;
+/* {S!d29146}InitializeConditions for Memory: '<S34>/Memory' */
+ATV_DW.Memory_PreviousInput_l = false;
+/* {S!d29148}InitializeConditions for Memory: '<S34>/Memory4' */
+ATV_DW.Memory4_PreviousInput = false;
+/* {S!d29150}InitializeConditions for RateTransition: '<S4>/Rate Transition4' */
+ATV_DW.RateTransition4_Buffer0 = 0U;
+/* {S!d29152}InitializeConditions for Memory: '<S34>/Memory5' */
+ATV_DW.Memory5_PreviousInput = false;
+/* {S!d29154}InitializeConditions for RateTransition: '<S6>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0 = 0.0;
+/* {S!d29156}InitializeConditions for RateTransition: '<S6>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_b = false;
+/* {S!d29158}InitializeConditions for RateTransition: '<S6>/Rate Transition5' */
+ATV_DW.RateTransition5_Buffer0 = 0.0;
+/* {S!d29160}InitializeConditions for RateTransition: '<S6>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0 = 0.0;
+/* {S!d29162}InitializeConditions for RateTransition: '<S6>/Rate Transition2' */
+ATV_DW.RateTransition2_Buffer0 = 0.0;
+/* {S!d29164}InitializeConditions for RateTransition: '<S4>/Rate Transition3' */
+ATV_DW.RateTransition3_Buffer0 = 0.0;
+/* {S!d29166}InitializeConditions for RateTransition: '<S4>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_f = false;
+/* {S!d29168}InitializeConditions for RateTransition: '<Root>/Rate Transition38' */
+ATV_DW.RateTransition38_Buffer0 = false;
+/* {S!d29170}InitializeConditions for RateTransition: '<Root>/Rate Transition8' */
+ATV_DW.RateTransition8_Buffer0 = 0;
+/* {S!d29172}InitializeConditions for RateTransition: '<Root>/Rate Transition9' */
+ATV_DW.RateTransition9_Buffer0 = 0;
+/* {S!d29174}InitializeConditions for RateTransition: '<Root>/Rate Transition48' */
+ATV_DW.RateTransition48_Buffer0 = false;
+/* {S!d29176}InitializeConditions for RateTransition: '<Root>/Rate Transition24' */
+ATV_DW.RateTransition24_Buffer0 = 0;
+/* {S!d29178}InitializeConditions for RateLimiter: '<S141>/Rate Limiter4' */
+ATV_DW.PrevY = 0.0;
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B120)
+/* {S!d29180}InitializeConditions for S-Function (pcx_candb_receive_message): '<S4>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B120>\
+%endif
+/* {S!d29182}InitializeConditions for RateTransition: '<S4>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_j = 0.0;
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B122)
+/* {S!d29184}InitializeConditions for S-Function (pcx_candb_receive_message): '<S6>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B122>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B123)
+/* {S!d29186}InitializeConditions for S-Function (pcx_candb_receive_message): '<S7>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B123>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B124)
+/* {S!d29188}InitializeConditions for S-Function (pcx_candb_receive_message): '<S7>/pcx_CANdb_ReceiveMessage1' */
+%<tlcInitializeConditionsFcnOfS78B124>\
+%endif
+/* {S!d29190}InitializeConditions for UnitDelay: '<S47>/Unit Delay3' */
+ATV_DW.UnitDelay3_DSTATE = 0.0;
+/* {S!d29192}InitializeConditions for UnitDelay: '<S48>/Unit Delay3' */
+ATV_DW.UnitDelay3_DSTATE_p = 0.0;
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B133)
+/* {S!d29194}InitializeConditions for S-Function (pcx_candb_receive_message): '<S10>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B133>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B137)
+/* {S!d29196}InitializeConditions for S-Function (pcx_candb_receive_message): '<S11>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B137>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B140)
+/* {S!d29198}InitializeConditions for S-Function (pcx_candb_receive_message): '<S12>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B140>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B144)
+/* {S!d29200}InitializeConditions for S-Function (pcx_candb_receive_message): '<S13>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B144>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B148)
+/* {S!d29202}InitializeConditions for S-Function (pcx_candb_receive_message): '<S15>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B148>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B151)
+/* {S!d29204}InitializeConditions for S-Function (pcx_candb_receive_message): '<S16>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B151>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B154)
+/* {S!d29206}InitializeConditions for S-Function (pcx_candb_receive_message): '<S17>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B154>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B157)
+/* {S!d29208}InitializeConditions for S-Function (pcx_candb_receive_message): '<S18>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B157>\
+%endif
+/* {S!d29210}InitializeConditions for RateTransition: '<S28>/Rate Transition' */
+ATV_DW.RateTransition_Buffer0 = 0.0;
+/* {S!d29212}InitializeConditions for Memory: '<S157>/Memory' */
+ATV_DW.Memory_PreviousInput_l4 = false;
+/* {S!d29214}InitializeConditions for Memory: '<S158>/Memory' */
+ATV_DW.Memory_PreviousInput_lr = false;
+/* {S!d29216}InitializeConditions for Memory: '<S165>/Memory1' */
+ATV_DW.Memory1_PreviousInput = 0;
+/* {S!d29218}InitializeConditions for RateTransition: '<S139>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_b = 0U;
+/* {S!d29220}InitializeConditions for RateLimiter: '<S141>/Rate Limiter2' */
+ATV_DW.PrevY_d = 0.0F;
+/* {S!d29222}InitializeConditions for RateTransition: '<S5>/Rate Transition3' */
+ATV_DW.RateTransition3_Buffer0_j = 0.0;
+/* {S!d29224}InitializeConditions for RateTransition: '<S5>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_fl = false;
+/* {S!d29226}InitializeConditions for RateLimiter: '<S141>/Rate Limiter3' */
+ATV_DW.PrevY_a = 0.0F;
+/* {S!d29228}InitializeConditions for DiscreteIntegrator: '<S224>/Integrator' */
+ATV_DW.Integrator_DSTATE_b = 0;
+/* {S!d29230}InitializeConditions for DiscreteIntegrator: '<S206>/Filter' */
+ATV_DW.Filter_DSTATE = 0.0;
+/* {S!d29232}InitializeConditions for RateLimiter: '<S141>/Rate Limiter' */
+ATV_DW.PrevY_l = 0U;
+/* {S!d29234}InitializeConditions for RateLimiter: '<S141>/Rate Limiter1' */
+ATV_DW.PrevY_k = 0U;
+/* {S!d29236}InitializeConditions for Memory: '<S370>/Memory1' */
+ATV_DW.Memory1_PreviousInput_d = 0;
+/* {S!d29238}InitializeConditions for RateTransition: '<S142>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_k = 0U;
+/* {S!d29240}InitializeConditions for Memory: '<S145>/Memory4' */
+ATV_DW.Memory4_PreviousInput_o = false;
+/* {S!d29242}InitializeConditions for Memory: '<S371>/Memory1' */
+ATV_DW.Memory1_PreviousInput_om = false;
+/* {S!d29244}InitializeConditions for Memory: '<S372>/Memory1' */
+ATV_DW.Memory1_PreviousInput_o = 0;
+/* {S!d29246}InitializeConditions for DiscreteIntegrator: '<S145>/Discrete-Time Integrator' */
+ATV_DW.DiscreteTimeIntegrator_DSTATE = 0.0;
+ATV_DW.DiscreteTimeIntegrator_PrevRese = 2;
+/* {S!d29248}InitializeConditions for Memory: '<S374>/Memory1' */
+ATV_DW.Memory1_PreviousInput_c = 0;
+/* {S!d29250}InitializeConditions for RateTransition: '<S146>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_i = 0U;
+/* {S!d29252}InitializeConditions for Memory: '<S140>/Memory1' */
+ATV_DW.Memory1_PreviousInput_e = false;
+/* {S!d29254}InitializeConditions for DiscretePulseGenerator: '<S34>/Pulse Generator' */
+ATV_DW.clockTickCounter = -6000;
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B254)
+/* {S!d29256}InitializeConditions for S-Function (pcx_candb_receive_message): '<S5>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B254>\
+%endif
+/* {S!d29258}InitializeConditions for RateTransition: '<S5>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_p = 0.0;
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B256)
+/* {S!d29260}InitializeConditions for S-Function (pcx_candb_receive_message): '<S8>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B256>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B258)
+/* {S!d29262}InitializeConditions for S-Function (pcx_candb_receive_message): '<S9>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B258>\
+%endif
+%if !WHITE_SPACE(tlcInitializeConditionsFcnOfS78B276)
+/* {S!d29264}InitializeConditions for S-Function (pcx_candb_receive_message): '<S14>/pcx_CANdb_ReceiveMessage' */
+%<tlcInitializeConditionsFcnOfS78B276>\
+%endif
+/* {S!d29266}InitializeConditions for RateTransition: '<Root>/Rate Transition33' */
+ATV_DW.RateTransition33_Buffer0 = false;
+/* {S!d29268}InitializeConditions for RateTransition: '<Root>/Rate Transition35' */
+ATV_DW.RateTransition35_Buffer0 = false;
+/* {S!d29270}InitializeConditions for RateTransition: '<Root>/Rate Transition34' */
+ATV_DW.RateTransition34_Buffer0 = false;
+/* {S!d29272}InitializeConditions for Memory: '<S32>/Memory' */
+ATV_DW.Memory_PreviousInput_f = 0;
+/* {S!d29274}SystemInitialize for Chart: '<S34>/Chart1' */
+ATV_DW.is_FAULT_DETECTION = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_ICE_START_STOP = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_KEY_ON = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_RUN_MODE = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_HYBRID = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i1_b = 0U;
+ATV_DW.is_active_c25_ATV = 0U;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[13], "SystemInitialize",0)
+/* {S!d29276}SystemInitialize for Chart: '<S6>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_Init",13,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_j"], 13, 1, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[13], "SystemInitialize",0)
+
+/* {S!d29278}SystemInitialize for Chart: '<S4>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_Init",13,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart"], 13, 0, 4, 0, 4, 78)>\
+
+
+%endif
+/* {S!d29280}SystemInitialize for Chart: '<S34>/VSM' */
+ATV_DW.is_CHG_CTRL = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i1_j = 0U;
+ATV_DW.is_FAULT_DETECT = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i4 = 0U;
+ATV_DW.is_DETECT = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_HEATER_CTRL = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_HEATER_ON = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_HV_CTRL = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i2_j = 0U;
+ATV_DW.is_STARTTRIGGER = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_SM = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_APU = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_RUN = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i3 = 0U;
+ATV_DW.is_active_c3_ATV = 0U;
+/* {S!d29282}SystemInitialize for Chart: '<S150>/Chart1' */
+ATV_DW.temporalCounter_i1_o = 0U;
+ATV_DW.is_active_c21_ATV = 0U;
+ATV_DW.is_c21_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+/* {S!d29284}SystemInitialize for Chart: '<S150>/Chart2' */
+ATV_DW.temporalCounter_i1_l = 0U;
+ATV_DW.is_active_c22_ATV = 0U;
+ATV_DW.is_c22_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+/* {S!d29286}SystemInitialize for Chart: '<S150>/Chart' */
+ATV_DW.temporalCounter_i1_h = 0U;
+ATV_DW.is_active_c18_ATV = 0U;
+ATV_DW.is_c18_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+/* {S!d29288}SystemInitialize for Chart: '<Root>/Chart' */
+ATV_DW.temporalCounter_i1_c = 0U;
+ATV_DW.is_active_c15_ATV = 0U;
+ATV_DW.is_c15_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+/* {S!d29290}InitializeConditions for MATLABSystem: '<S168>/Moving Average' */
+if (ATV_DW.obj_n.pStatistic->isInitialized == 1) {
+    ATV_DW.obj_n.pStatistic->pCumSum = 0.0F;
+    memset(&ATV_DW.obj_n.pStatistic->pCumSumRev[0], 0, 19U * sizeof(real32_T));
+    ATV_DW.obj_n.pStatistic->pCumRevIndex = 1.0F;
+}
+/* {E!d29290}End of InitializeConditions for MATLABSystem: '<S168>/Moving Average' */
+ATV_DW.is_active_IceSM = 0U;
+ATV_DW.is_IceSM = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.is_MonitoraggioStatoICE = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i1 = 0U;
+ATV_DW.is_WarmUpIce = ATV_IN_NO_ACTIVE_CHILD_c;
+ATV_DW.temporalCounter_i2 = 0U;
+ATV_DW.is_active_c2_ATV = 0U;
+/* {S!d29115}SystemInitialize for Chart: '<S141>/VSMGestioneIbrido' incorporates:
+ *  SubSystem: '<S169>/IceSM.speed_pid_ice'
+ */
+ATV_DW.IceSMspeed_pid_ice_PREV_T[0] = %<(SLibCG_SE(LibGetClockTick(0)))>;
+ATV_DW.IceSMspeed_pid_ice_PREV_T[1] = %<(SLibCG_SE(LibGetClockTickHigh(0)))>;
+/* {S!d29292}InitializeConditions for DiscreteIntegrator: '<S325>/Integrator' */
+ATV_DW.Integrator_DSTATE = 0.0F;
+ATV_DW.Integrator_PrevResetState = 0;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+/* {S!d29294}SystemInitialize for Chart: '<S10>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_jt"], 21, 2, 4, 0, 4, 78)>\
+
+
+%endif
+/* {S!d29296}SystemInitialize for Chart: '<S11>/Chart' */
+ATV_DW.temporalCounter_i1_o5 = 0U;
+ATV_DW.is_active_c14_ATV = 0U;
+ATV_DW.is_c14_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+/* {S!d29298}SystemInitialize for Chart: '<S12>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_l"], 21, 3, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29300}SystemInitialize for Chart: '<S13>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_a"], 21, 4, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29302}SystemInitialize for Chart: '<S15>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_m"], 21, 5, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29304}SystemInitialize for Chart: '<S16>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_d0"], 21, 6, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29306}SystemInitialize for Chart: '<S17>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_e"], 21, 7, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29308}SystemInitialize for Chart: '<S18>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_ju"], 21, 8, 4, 0, 4, 78)>\
+
+
+%endif
+/* {S!d29310}InitializeConditions for MATLABSystem: '<S28>/Moving Average' */
+if (ATV_DW.obj.pStatistic->isInitialized == 1) {
+    ATV_DW.obj.pStatistic->pCumSum = 0.0;
+    memset(&ATV_DW.obj.pStatistic->pCumSumRev[0], 0, 99U * sizeof(real_T));
+    ATV_DW.obj.pStatistic->pCumRevIndex = 1.0;
+}
+/* {E!d29310}End of InitializeConditions for MATLABSystem: '<S28>/Moving Average' */
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[67], "SystemInitialize",0)
+
+/* {S!d29312}SystemInitialize for Chart: '<S157>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_a_Init",67,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_a_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_n"], 67, 0, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[67], "SystemInitialize",0)
+
+/* {S!d29314}SystemInitialize for Chart: '<S158>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_a_Init",67,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_a_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_p"], 67, 1, 4, 0, 4, 78)>\
+
+
+%endif
+/* {S!d29316}SystemInitialize for Chart: '<S5>/Chart' */
+ATV_DW.temporalCounter_i1_a = 0U;
+ATV_DW.is_active_c9_ATV = 0U;
+ATV_DW.is_c9_ATV = ATV_IN_NO_ACTIVE_CHILD_c;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+/* {S!d29318}SystemInitialize for Chart: '<S8>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_o"], 21, 0, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d29320}SystemInitialize for Chart: '<S9>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_d_Init",21,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_d_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_c"], 21, 1, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "SystemInitialize",0)
+
+/* {S!d29322}SystemInitialize for Chart: '<S29>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_o_Init",45,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_o_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart_cv"], 45, 0, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "SystemInitialize",0)
+
+/* {S!d29324}SystemInitialize for Chart: '<S29>/Chart1' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_o_Init",45,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_o_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart1"], 45, 1, 4, 0, 4, 78)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "SystemInitialize",0)
+
+/* {S!d29326}SystemInitialize for Chart: '<S29>/Chart2' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart_o_Init",45,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart_o_Init", ["%<_modelSS>", "&ATV_DW.sf_Chart2"], 45, 2, 4, 0, 4, 78)>\
+
+
+%endif
+/* {S!d29117}SystemInitialize for Enabled SubSystem: '<Root>/CANBUS_Output_Processing' */
+/* {S!d29328}InitializeConditions for RandomNumber: '<S3>/Random Number' */
+ATV_DW.RandSeed = 1144108930U;
+ATV_DW.NextOutput = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&ATV_DW.RandSeed"], 5, 23, 0))> * 22.360679774997898;
+/* {E!d29117}End of SystemInitialize for SubSystem: '<Root>/CANBUS_Output_Processing' */
+
+/* {S!d29119}SystemInitialize for IfAction SubSystem: '<S32>/If Action Subsystem' */
+/* {S!d29330}InitializeConditions for Memory: '<S109>/Memory' */
+ATV_DW.Memory_PreviousInput = 0U;
+/* {E!d29119}End of SystemInitialize for SubSystem: '<S32>/If Action Subsystem' */
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 23, fcnProtoType)>
+%endfunction

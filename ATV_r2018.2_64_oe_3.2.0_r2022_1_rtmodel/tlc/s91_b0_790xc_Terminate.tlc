@@ -1,0 +1,26 @@
+%implements s91_b0_790xc_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS78B297 = OpaqueTLCBlockFcn("Terminate", 78, 297, 5, 33)
+/* Terminate for MATLABSystem: '<S168>/Moving Average' */
+%<(SLibCGCallSubFcn("matlabCodegenHandle_matlabCod_p", ["&ATV_DW.obj_n"], 5, 33, 0))>;
+/* Terminate for MATLABSystem: '<S28>/Moving Average' */
+%<(SLibCGCallSubFcn("matlabCodegenHandle_matlabCodeg", ["&ATV_DW.obj"], 5, 33, 1))>;
+%if !WHITE_SPACE(tlcTerminateFcnOfS78B297)
+/* Terminate for S-Function (put_identification): '<Root>/put_Identification' */
+%<tlcTerminateFcnOfS78B297>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 33, fcnProtoType)>
+%endfunction

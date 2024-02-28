@@ -1,0 +1,74 @@
+%implements s91_b0_790xc_3_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d28810}Chart: '<S29>/Chart' */
+if (localDW->temporalCounter_i1 < 255U) {
+    localDW->temporalCounter_i1++;
+}
+/* Gateway: Subsystem/Chart */
+/* During: Subsystem/Chart */
+if (localDW->is_active_c5_ATV == 0U) {
+    /* Entry: Subsystem/Chart */
+    localDW->is_active_c5_ATV = 1U;
+    /* Entry Internal: Subsystem/Chart */
+    /* Transition: '<S105>:4' */
+    localDW->is_c5_ATV = ATV_IN_NO_RX_j;
+    /* Entry 'NO_RX': '<S105>:5' */
+    localB->out = true;
+} else if (localDW->is_c5_ATV == ATV_IN_NO_RX_j) {
+    localB->out = true;
+    /* During 'NO_RX': '<S105>:5' */
+    if (rtu_in) {
+        /* Transition: '<S105>:6' */
+        localDW->is_c5_ATV = ATV_IN_RX_ih;
+        localDW->temporalCounter_i1 = 0U;
+        /* Entry 'RX': '<S105>:3' */
+        localB->out = false;
+    }
+} else {
+    localB->out = false;
+    /* During 'RX': '<S105>:3' */
+    if ((!rtu_in) && (localDW->temporalCounter_i1 >= 150U)) {
+        /* Transition: '<S105>:7' */
+        localDW->is_c5_ATV = ATV_IN_NO_RX_j;
+        /* Entry 'NO_RX': '<S105>:5' */
+        localB->out = true;
+    }
+}
+/* {E!d28810}End of Chart: '<S29>/Chart' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[3].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(3, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(3, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(3, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_Chart_c(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(3, 1, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_in\
+%assign comma = ", "
+%<comma>B_Chart_ATV_k_T *localB\
+%assign comma = ", "
+%<comma>DW_Chart_ATV_k_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 1, fcnProtoType)>
+%endfunction

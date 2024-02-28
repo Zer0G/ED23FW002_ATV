@@ -61,14 +61,14 @@ COMPILER_TOOL_CHAIN =           default
 #  ADD_INCLUDES    - series of include directories for s-functions etc.
 
 MODEL                         = ATV
-MODULES                       = rtGetInf.c rtGetNaN.c rt_nonfinite.c
+MODULES                       = ATV_data.c rtGetInf.c rtGetNaN.c rt_nonfinite.c
 MAKEFILE                      = ATV.mk
 MATLAB_ROOT                   = C:\Program Files\MATLAB\R2018b
 MATLAB_BIN                    = C:\Program Files\MATLAB\R2018b\bin
 S_FUNCTIONS                   = 
 S_FUNCTIONS_LIB               = 
 SOLVER                        = 
-NUMST                         = 3
+NUMST                         = 5
 TID01EQ                       = 0
 NCSTATES                      = 0
 BUILDARGS                     =  MODELLIB=ATVlib.a EXT_MODE=0 EXTMODE_STATIC_ALLOC=0 TMW_EXTMODE_TESTING=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 MAT_FILE=0 MAX_DD_LENGTH=31 CONT_IF_VISION_STRATEGY_FAILS=0 COMBINE_OUTPUT_UPDATE_FCNS=0 INCLUDE_MDL_TERMINATE_FCN=1 MULTI_INSTANCE_CODE=0 MODELREF_TARGET_TYPE=NONE RELATIVE_PATH_TO_ANCHOR=.. ISPROTECTINGMODEL=NOTPROTECTING

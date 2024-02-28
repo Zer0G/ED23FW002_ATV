@@ -1,0 +1,217 @@
+%implements s91_b0_790xc_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d30574}Update for Memory: '<S34>/Memory1' */
+ATV_DW.Memory1_PreviousInput_m = ATV_B.sf_Chart_cv.out;
+/* {S!d30576}Update for Memory: '<S34>/Memory2' */
+ATV_DW.Memory2_PreviousInput = ATV_B.sf_Chart1.out;
+/* {S!d30578}Update for Memory: '<S34>/Memory3' */
+ATV_DW.Memory3_PreviousInput = ATV_B.sf_Chart2.out;
+/* {S!d30580}Update for Memory: '<S34>/Memory' */
+ATV_DW.Memory_PreviousInput_l = atv_IceOn;
+/* {S!d30582}Update for Memory: '<S34>/Memory4' */
+ATV_DW.Memory4_PreviousInput = ATV_B.atv_run_mode;
+/* {S!d30584}Update for Memory: '<S34>/Memory5' */
+ATV_DW.Memory5_PreviousInput = atv_IceFault;
+/* {S!d30586}Update for Memory: '<S157>/Memory' */
+ATV_DW.Memory_PreviousInput_l4 = ATV_B.Compare_bt;
+/* {S!d30588}Update for Memory: '<S158>/Memory' */
+ATV_DW.Memory_PreviousInput_lr = ATV_B.Compare_p;
+/* {S!d30590}Update for DiscreteIntegrator: '<S224>/Integrator' */
+ATV_DW.Integrator_DSTATE_b += ATV_B.IntegralGain;
+/* {S!d30592}Update for DiscreteIntegrator: '<S206>/Filter' */
+ATV_DW.Filter_DSTATE += 0.01 * ATV_B.FilterCoefficient;
+/* {S!d30594}Update for Memory: '<S145>/Memory4' */
+ATV_DW.Memory4_PreviousInput_o = ATV_B.FixPtLogicalOperator;
+/* {S!d30596}Update for Memory: '<S371>/Memory1' */
+ATV_DW.Memory1_PreviousInput_om = ATV_B.Memory4_o;
+/* {S!d30598}Update for Memory: '<S372>/Memory1' */
+ATV_DW.Memory1_PreviousInput_o = ATV_B.atvc_odometer_reset_o;
+/* {S!d30600}Update for DiscreteIntegrator: '<S145>/Discrete-Time Integrator' */
+ATV_DW.DiscreteTimeIntegrator_DSTATE += 0.01 * ATV_B.Product;
+ATV_DW.DiscreteTimeIntegrator_PrevRese = (int8_T)ATV_B.LogicalOperator_mo;
+/* {S!d30602}Update for Memory: '<S140>/Memory1' */
+ATV_DW.Memory1_PreviousInput_e = ATV_B.LogicalOperator7;
+/* {S!d30604}Update for Memory: '<S32>/Memory' */
+ATV_DW.Memory_PreviousInput_f = ATV_B.DataTypeConversion1_i;
+/* {S!d30608}Update for If: '<S32>/If' */
+if (ATV_DW.If_ActiveSubsystem == 0) {
+    /* {S!d30571}Update for IfAction SubSystem: '<S32>/If Action Subsystem' incorporates:
+ *  ActionPort: '<S109>/Action Port'
+ */
+    /* {S!d30606}Update for Memory: '<S109>/Memory' */
+    ATV_DW.Memory_PreviousInput = ATV_B.ptm_RealTime;
+    /* {E!d30571}End of Update for SubSystem: '<S32>/If Action Subsystem' */
+}
+/* {E!d30608}End of Update for If: '<S32>/If' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d30609}Update for Enabled SubSystem: '<Root>/CANBUS_Output_Processing' incorporates:
+ *  EnablePort: '<S3>/Enable'
+ */
+if (ATV_DW.CANBUS_Output_Processing_MODE) {
+    /* {S!d30612}Update for RandomNumber: '<S3>/Random Number' */
+    ATV_DW.NextOutput = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&ATV_DW.RandSeed"], 5, 30, 0))> * 22.360679774997898;
+}
+/* {E!d30609}End of Update for SubSystem: '<Root>/CANBUS_Output_Processing' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Update for RateTransition: '<Root>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_i = ATV_B.Switch1_e;
+/* Update for RateTransition: '<Root>/Rate Transition7' */
+ATV_DW.RateTransition7_Buffer0 = ATV_B.Switch1;
+/* Update for RateTransition: '<Root>/Rate Transition10' */
+ATV_DW.RateTransition10_Buffer0 = ATV_B.Switch1_h;
+/* Update for RateTransition: '<Root>/Rate Transition11' */
+ATV_DW.RateTransition11_Buffer0 = ATV_B.Switch1_j;
+/* Update for RateTransition: '<Root>/Rate Transition26' */
+ATV_DW.RateTransition26_Buffer0 = ATV_B.Saturation_e;
+/* Update for RateTransition: '<Root>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0 = ATV_B.Saturation_k;
+/* Update for RateTransition: '<Root>/Rate Transition4' */
+ATV_DW.RateTransition4_Buffer0_f = atv_v_dbg_chg_req;
+/* Update for RateTransition: '<Root>/Rate Transition37' */
+ATV_DW.RateTransition37_Buffer0 = atv_chg_present;
+/* Update for RateTransition: '<Root>/Rate Transition5' */
+ATV_DW.RateTransition5_Buffer0_c = atv_v_dbg_heater_req;
+/* Update for RateTransition: '<S4>/Rate Transition4' */
+ATV_DW.RateTransition4_Buffer0 = bms_pack_soc;
+/* Update for RateTransition: '<S6>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0 = B_Max_Cell;
+/* Update for RateTransition: '<S6>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_b = ATV_B.pcx_CANdb_ReceiveMessage_o2_k;
+/* Update for RateTransition: '<S6>/Rate Transition5' */
+ATV_DW.RateTransition5_Buffer0 = ATV_B.B_Min_Cell;
+/* Update for RateTransition: '<S6>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0 = ATV_B.B_Max_Temp;
+/* Update for RateTransition: '<S6>/Rate Transition2' */
+ATV_DW.RateTransition2_Buffer0 = ATV_B.B_Min_Temp;
+/* Update for RateTransition: '<S4>/Rate Transition3' */
+ATV_DW.RateTransition3_Buffer0 = ATV_B.atv_bms_pack_current;
+/* Update for RateTransition: '<S4>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_f = ATV_B.pcx_CANdb_ReceiveMessage_o2;
+/* Update for RateTransition: '<Root>/Rate Transition38' */
+ATV_DW.RateTransition38_Buffer0 = atv_can_wakeup;
+/* Update for RateTransition: '<Root>/Rate Transition8' */
+ATV_DW.RateTransition8_Buffer0 = ATV_B.Switch1_f;
+/* Update for RateTransition: '<Root>/Rate Transition9' */
+ATV_DW.RateTransition9_Buffer0 = ATV_B.Switch1_l;
+/* Update for RateTransition: '<Root>/Rate Transition48' */
+ATV_DW.RateTransition48_Buffer0 = ATV_B.LogicalOperator_g;
+/* Update for RateTransition: '<Root>/Rate Transition24' */
+ATV_DW.RateTransition24_Buffer0 = ATV_B.Saturation_a;
+/* Update for RateTransition: '<S4>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_j = bms_pack_voltage;
+/* Update for UnitDelay: '<S47>/Unit Delay3' */
+ATV_DW.UnitDelay3_DSTATE = ATV_B.Saturateatthreshold;
+/* Update for UnitDelay: '<S48>/Unit Delay3' */
+ATV_DW.UnitDelay3_DSTATE_p = ATV_B.Saturateatthreshold_n;
+/* Update for RateTransition: '<S28>/Rate Transition' */
+ATV_DW.RateTransition_Buffer0 = atv_yg3_raw_ain;
+/* Update for RateTransition: '<S5>/Rate Transition3' */
+ATV_DW.RateTransition3_Buffer0_j = ATV_B.pcx_CANdb_ReceiveMessage_o5_mt;
+/* Update for RateTransition: '<S5>/Rate Transition27' */
+ATV_DW.RateTransition27_Buffer0_fl = ATV_B.pcx_CANdb_ReceiveMessage_o2_gq;
+/* Update for RateTransition: '<S5>/Rate Transition6' */
+ATV_DW.RateTransition6_Buffer0_p = ATV_B.pcx_CANdb_ReceiveMessage_o4_p;
+/* Update for RateTransition: '<Root>/Rate Transition33' */
+ATV_DW.RateTransition33_Buffer0 = ATV_B.pcx_CANdb_ReceiveMessage_o2_b;
+/* Update for RateTransition: '<Root>/Rate Transition35' */
+ATV_DW.RateTransition35_Buffer0 = ATV_B.pcx_CANdb_ReceiveMessage_o2_e;
+/* Update for RateTransition: '<Root>/Rate Transition34' */
+ATV_DW.RateTransition34_Buffer0 = ATV_B.pcx_CANdb_ReceiveMessage_o2_n;
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 3
+%assign ::GlobalCurrentTID = 3
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 4
+%assign ::GlobalCurrentTID = 4
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Update for Memory: '<S165>/Memory1' */
+ATV_DW.Memory1_PreviousInput = ATV_B.RateTransition2_j;
+/* Update for RateTransition: '<S139>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_b = ATV_B.DataTypeConversion;
+/* Update for Memory: '<S370>/Memory1' */
+ATV_DW.Memory1_PreviousInput_d = ATV_B.RateTransition2_m;
+/* Update for RateTransition: '<S142>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_k = ATV_B.DataTypeConversion_e;
+/* Update for Memory: '<S374>/Memory1' */
+ATV_DW.Memory1_PreviousInput_c = ATV_B.RateTransition2_k;
+/* Update for RateTransition: '<S146>/Rate Transition1' */
+ATV_DW.RateTransition1_Buffer0_i = ATV_B.DataTypeConversion_eb;
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function UpdateFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 29, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 30, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update2(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 31, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 3
+%assign ::GlobalCurrentTID = 3
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 4
+%assign ::GlobalCurrentTID = 4
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update4(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 32, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

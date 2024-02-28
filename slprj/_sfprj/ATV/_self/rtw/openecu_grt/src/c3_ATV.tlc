@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   11 \
+    NumChartData   23 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,52 +21,87 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_c3_ATV"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_DRIVE_ENABLE"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "KEY_ON.DRIVE_ENABLE"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_HV_CTRL"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "KEY_ON.HV_CTRL"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "is_CHG_CTRL"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "KEY_ON.CHG_CTRL"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_HEATER_CTRL"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "KEY_ON.HEATER_CTRL"\
+      Path         "MON.CHG_CTRL"\
       SrcLocation  ""\
     }\
     ChartData {\
       Name         "is_STARTTRIGGER"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "KEY_ON.STARTTRIGGER"\
+      Path         "MON.STARTTRIGGER"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "startBtnArmed"\
+      Name         "is_HV_CTRL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MON.HV_CTRL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HEATER_ON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MON.HEATER_CTRL.HEATER_ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HEATER_CTRL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MON.HEATER_CTRL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SM"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SM"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_APU"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SM.APU"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RUN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SM.RUN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DETECT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MON.FAULT_DETECT.DETECT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAULT_DETECT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "MON.FAULT_DETECT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "HV_Req"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "startBtnArmed"\
+      Path         "HV_Req"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "chg_req"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "chg_req"\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -88,6 +123,55 @@
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i4"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_in_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "apu_req_in_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "apu_req_in"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "StartBtn_In_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "StartBtn_In"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "StartBtn_In_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "StartBtn_In"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "key_signal_prev"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "key_signal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "key_signal_start"\
+      Description  "ChangeDetectionDoubleBuffer"\
+      SFName       ""\
+      Path         "key_signal"\
       SrcLocation  ""\
     }\
   }

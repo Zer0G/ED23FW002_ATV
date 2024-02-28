@@ -1,10 +1,82 @@
 FormatVersion=5.0 // Do not edit!
-Title="atv"
+Title="atv_17_05_2023"
 
 {ENUMS}
-enum VtSig_FS1_Switch_Node_3(1="ACTIVE", 0="INACTIVE")
+enum VtSig_FS1_Switch_Node_Rear(1="ACTIVE", 0="INACTIVE")
 
 {SENDRECEIVE}
+
+[D_CTRL5_GEN]
+ID=325h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_F_B_Gen unsigned 32,16 /u:%/s	// Ramp down rate during footbraking (Torque %/s)
+Var=Ramp_Up_Rate_Du_F_B_Gen unsigned 16,16 /u:%/s	// Ramp up rate during footbraking (Torque %/s)
+Var=Max_Trq_App_When_F_B_Gen unsigned 0,16 /u:%	// Maximum torque applied when footbraking (%)
+
+[D_CTRL4_GEN]
+ID=324h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_N_B_Gen unsigned 32,16 /u:%/s	// Ramp down rate during neutral braking (Torque %/s)
+Var=Ramp_Up_Rate_Du_N_B_Gen unsigned 16,16 /u:%/s	// Ramp up rate during neutral braking (Torque %/s)
+Var=Max_Trq_App_When_N_B_Gen unsigned 0,16 /u:%	// Maximum torque applied when neutral braking (%)
+
+[D_CTRL3_GEN]
+ID=323h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_Drive_Gen unsigned 32,16 /u:%/s	// Ramp down rate during drive (Torque %/s)
+Var=Ramp_Up_Rate_Du_Drive_Gen unsigned 16,16 /u:%/s	// Ramp up rate during drive (Torque %/s)
+Var=Max_Trq_App_Du_Drive_Gen unsigned 0,16 /u:%	// Maximum torque applied during drive (%)
+
+[D_CTRL5_REAR]
+ID=335h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_F_B_Rear unsigned 32,16 /u:%/s	// Ramp down rate during footbraking (Torque %/s)
+Var=Ramp_Up_Rate_Du_F_B_Rear unsigned 16,16 /u:%/s	// Ramp up rate during footbraking (Torque %/s)
+Var=Max_Trq_App_When_F_B_Rear unsigned 0,16 /u:%	// Maximum torque applied when footbraking (%)
+
+[D_CTRL4_REAR]
+ID=334h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_N_B_Rear unsigned 32,16 /u:%/s	// Ramp down rate during neutral braking (Torque %/s)
+Var=Ramp_Up_Rate_Du_N_B_Rear unsigned 16,16 /u:%/s	// Ramp up rate during neutral braking (Torque %/s)
+Var=Max_Trq_App_When_N_B_Rear unsigned 0,16 /u:%	// Maximum torque applied when neutral braking (%)
+
+[D_CTRL3_REAR]
+ID=333h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_Drive_Rear unsigned 32,16 /u:%/s	// Ramp down rate during drive (Torque %/s)
+Var=Ramp_Up_Rate_Du_Drive_Rear unsigned 16,16 /u:%/s	// Ramp up rate during drive (Torque %/s)
+Var=Max_Trq_App_Du_Drive_Rear unsigned 0,16 /u:%	// Maximum torque applied during drive (%)
+
+[D_CTRL5_FRONT]
+ID=315h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_F_B_Front unsigned 32,16 /u:%/s	// Ramp down rate during footbraking (Torque %/s)
+Var=Ramp_Up_Rate_Du_F_B_Front unsigned 16,16 /u:%/s	// Ramp up rate during footbraking (Torque %/s)
+Var=Max_Trq_App_When_F_B_Front unsigned 0,16 /u:%	// Maximum torque applied when footbraking (%)
+
+[D_CTRL4_FRONT]
+ID=314h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_N_B_Front unsigned 32,16 /u:%/s	// Ramp down rate during neutral braking (Torque %/s)
+Var=Ramp_Up_Rate_Du_N_B_Front unsigned 16,16 /u:%/s	// Ramp up rate during neutral braking (Torque %/s)
+Var=Max_Trq_App_When_N_B_Front unsigned 0,16 /u:%	// Maximum torque applied when neutral braking (%)
+
+[D_CTRL3_FRONT]
+ID=313h
+DLC=8
+CycleTime=20
+Var=Ramp_Down_Rate_Du_Drive_Front unsigned 32,16 /u:%/s	// Ramp down rate during drive (Torque %/s)
+Var=Ramp_Up_Rate_Du_Drive_Front unsigned 16,16 /u:%/s	// Ramp up rate during drive (Torque %/s)
+Var=Max_Trq_App_Du_Drive_Front unsigned 0,16 /u:%	// Maximum torque applied during drive (%)
 
 [V_BMS_RELAY_CTRL]
 ID=14Fh
@@ -16,17 +88,34 @@ Var=b_ChgCtrl bit 0,1
 Var=b_HeaterCtrl bit 24,1
 Var=b_HeaterSsrCtrl bit 32,1
 Var=b_EnableDCDC bit 40,1
+Var=v_front_inv_key bit 56,1
+Var=v_rear_inv_key bit 57,1
+Var=v_gen_inv_key bit 58,1
 
-[VC_STATUS]
+[V_STATUS]
 ID=100h
 DLC=8
 CycleTime=100
 Var=v_vsmStatus unsigned 0,8
 Var=v_vsmSubStatus unsigned 8,8
 Var=v_CPUload unsigned 16,8
-Var=WakeLock bit 24,1
-Var=v_EnDCDC unsigned 25,1
-Var=v_RunActive unsigned 26,1
+Var=WakeLock bit 25,1
+Var=v_EnDCDC bit 26,1
+Var=v_RunActive bit 27,1
+Var=Key bit 24,1
+Var=v_fwd_mode bit 28,1
+Var=v_rwd_mode bit 29,1
+Var=v_2wd bit 30,1
+Var=w_4wd bit 31,1
+Var=HandBrake_Sts bit 32,1
+Var=v_StartBtn bit 33,1
+Var=v_chg_complete unsigned 35,1
+Var=v_charge unsigned 34,1
+Var=vRegMap unsigned 36,3
+Var=v_apu_req bit 39,1
+Var=v_heater_low_soc bit 40,1
+Var=v_heater_disabled bit 41,1
+Var=v_StealthMode bit 42,1
 
 [BMS_PACK_STS]
 ID=140h	// This ID Transmits at 200 ms.
@@ -34,7 +123,7 @@ DLC=8
 Var=b_counter unsigned 0,8 -m /u:Num
 Var=b_SOC unsigned 8,8 -m /u:Percent /f:0.5 /d:0
 Var=b_Pack_V unsigned 16,16 /u:Volts /f:0.1 /d:0
-Var=b_Pack_I signed 32,16 /u:Amps /f:0.1 /d:0
+Var=b_Pack_I signed 32,16 /u:Amps /f:0.1 /max:3276.7 /d:0
 Var=b_SOH unsigned 48,8 -m /u:Percent
 Var=b_CRC_Checksum unsigned 56,8 -m /o:1720
 
@@ -45,24 +134,24 @@ Var=b_Low_Cell_Voltage unsigned 0,16 /u:Volts /f:0.001 /p:3 /d:0
 Var=b_Low_Cell_Voltage_ID unsigned 16,8 -m /u:ID /f:10 /d:0
 Var=b_High_Cell_Voltage unsigned 24,16 /u:Volts /f:0.0001 /p:3 /d:0
 Var=b_High_Cell_Voltage_ID unsigned 40,8 -m /u:ID
-Var=b_Low_Temperature unsigned 48,8 -m /u:Celsius
-Var=b_High_Temperature unsigned 56,8 -m /u:Celsius /o:1721
+Var=b_Low_Temperature signed 48,8 /u:Celsius
+Var=b_High_Temperature signed 56,8 /u:Celsius
 
 [BMS_PACK_C_LIMITS]
-ID=144h	// This ID Transmits at 200 ms.
+ID=145h	// This ID Transmits at 200 ms.
 DLC=8
-Var=b_Pack_DCL unsigned 0,16 /u:Amps /f:10 /d:0
-Var=b_Pack_CCL unsigned 16,16 /u:Amps /f:10 /d:0
-Var=b_Maximum_Pack_DCL unsigned 32,16 /u:Amps /f:10 /d:0
-Var=b_Maximum_Pack_CCL unsigned 48,16 /u:Amps /f:10 /d:0
+Var=b_Pack_DCL unsigned 0,16 /u:Amps
+Var=b_Pack_CCL unsigned 16,16 /u:Amps
+Var=b_Maximum_Pack_DCL unsigned 32,16 /u:Amps
+Var=b_Maximum_Pack_CCL unsigned 48,16 /u:Amps
 
 [BMS_C_BCAST]
 ID=150h	// This ID Transmits at 100 ms.
 DLC=8
 Var=b_CellId unsigned 0,8 -m /u:#
-Var=b_CellVoltage unsigned 8,16 -m /u:Volts /f:0.0001 /d:0
+Var=b_CellVoltage unsigned 8,16 -m /u:Volts /f:0.0001 /max:6.5535 /d:0
 Var=b_CellResistance unsigned 25,15 -m /u:mOhms /f:0.01 /d:0
-Var=b_CellOpenVoltage unsigned 40,16 -m /u:Volts /f:0.0001 /d:0
+Var=b_CellOpenVoltage unsigned 40,16 -m /u:Volts /f:0.0001 /max:6.5535 /d:0
 Var=b_Checksum unsigned 56,8 -m	// Value = (0x156 + 8 + byte0 + byte1 + ... + byte6) & 0xFF
 Var=b_CellBalancing bit 31,1
 
@@ -70,8 +159,8 @@ Var=b_CellBalancing bit 31,1
 ID=1F0h
 DLC=8
 Var=hv_en_req bit 0,1
-Var=chg_en_req unsigned 8,1
-Var=heater_en_req unsigned 16,1
+Var=chg_en_req bit 8,1
+Var=heater_en_req bit 16,1
 
 [D_SYNC]
 ID=080h
@@ -96,9 +185,9 @@ CycleTime=500
 ID=332h
 DLC=8
 CycleTime=20
-Var=FS1_Switch_Node_Rear bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
-Var=Reverse_Switch_Node_Rear bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
-Var=Forward_Switch_Node_Rear bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=FS1_Switch_Node_Rear bit 34,1 /e:VtSig_FS1_Switch_Node_Rear	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_Rear bit 33,1 /e:VtSig_FS1_Switch_Node_Rear	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_Rear bit 32,1 /e:VtSig_FS1_Switch_Node_Rear	// Forward switch for enable traction in forward direction
 Var=Max_Batt_Recharge_Node_Rear signed 16,16 /u:Amp	// Maximum battery recharge current
 Var=Max_Batt_Discharge_Node_Rear signed 0,16 /u:Amp	// Maximum battery discharge current
 
@@ -115,9 +204,9 @@ Var=Maximum_Speed_Forward_Node_Rear unsigned 0,16 /u:RPM	// Speed limit in forwa
 ID=322h
 DLC=8
 CycleTime=20
-Var=FS1_Switch_Node_Gen bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
-Var=Reverse_Switch_Node_Gen bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
-Var=Forward_Switch_Node_Gen bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=FS1_Switch_Node_Gen bit 34,1 /e:VtSig_FS1_Switch_Node_Rear	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_Gen bit 33,1 /e:VtSig_FS1_Switch_Node_Rear	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_Gen bit 32,1 /e:VtSig_FS1_Switch_Node_Rear	// Forward switch for enable traction in forward direction
 Var=Max_Batt_Recharge_Node_Gen signed 16,16 /u:Amp	// Maximum battery recharge current
 Var=Max_Batt_Discharge_Node_Gen signed 0,16 /u:Amp	// Maximum battery discharge current
 
@@ -134,9 +223,9 @@ Var=Maximum_Speed_Forward_Node_Gen unsigned 0,16 /u:RPM	// Speed limit in forwar
 ID=312h
 DLC=8
 CycleTime=20
-Var=FS1_Switch_Node_Front bit 34,1 /e:VtSig_FS1_Switch_Node_3	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
-Var=Reverse_Switch_Node_Front bit 33,1 /e:VtSig_FS1_Switch_Node_3	// Reverse switch for enable traction in reverse direction
-Var=Forward_Switch_Node_Front bit 32,1 /e:VtSig_FS1_Switch_Node_3	// Forward switch for enable traction in forward direction
+Var=FS1_Switch_Node_Front bit 34,1 /e:VtSig_FS1_Switch_Node_Rear	// Footswitch used for confirm throttle value if set to 1 and apply neutral braking when set to 0
+Var=Reverse_Switch_Node_Front bit 33,1 /e:VtSig_FS1_Switch_Node_Rear	// Reverse switch for enable traction in reverse direction
+Var=Forward_Switch_Node_Front bit 32,1 /e:VtSig_FS1_Switch_Node_Rear	// Forward switch for enable traction in forward direction
 Var=Max_Batt_Recharge_Node_Front signed 16,16 /u:Amp	// Maximum battery recharge current
 Var=Max_Batt_Discharge_Node_Front signed 0,16 /u:Amp	// Maximum battery discharge current
 
@@ -155,7 +244,7 @@ DLC=8
 Var=Uq_Rear signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
 Var=Ud_Rear signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
 Var=Motor_Temp_Torque_Cutback_Rear unsigned 16,16 /f:0.00390625 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
-Var=Drive_Trq_Voltage_Cutback_Rear unsigned 0,16 /f:3.0517578125E-005 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Rear unsigned 0,16 /f:3.0517578125E-005 /max:1.99996948242187 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
 
 [D_STATUS4_REAR]
 ID=237h
@@ -185,7 +274,6 @@ Var=Velocity_Rear signed 0,32 /u:RPM	// Actual velocity in RPM.
 ID=234h
 DLC=8
 CycleTime=50
-Timeout=100
 Var=Active_Fault_Rear unsigned 48,16	// Fault ID of currently active highest priority fault
 Var=Analog_Output_1_Rear signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
 Var=Battery_Current_Rear signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
@@ -197,7 +285,7 @@ DLC=8
 Var=Uq_Gen signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
 Var=Ud_Gen signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
 Var=Motor_Temp_Torque_Cutback_Gen unsigned 16,16 /f:0.00390625 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
-Var=Drive_Trq_Voltage_Cutback_Gen unsigned 0,16 /f:3.0517578125E-005 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Gen unsigned 0,16 /f:3.0517578125E-005 /max:1.99996948242187 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
 
 [D_STATUS4_GEN]
 ID=227h
@@ -227,7 +315,6 @@ Var=Velocity_Gen signed 0,32 /u:RPM	// Actual velocity in RPM.
 ID=224h
 DLC=8
 CycleTime=50
-Timeout=100
 Var=Active_Fault_Gen unsigned 48,16	// Fault ID of currently active highest priority fault
 Var=Analog_Output_1_Gen signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
 Var=Battery_Current_Gen signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
@@ -239,7 +326,7 @@ DLC=8
 Var=Uq_Front signed 48,16 /f:0.0625 /d:0	// Motor Uq Actual
 Var=Ud_Front signed 32,16 /f:0.0625 /d:0	// Motor Ud Actual
 Var=Motor_Temp_Torque_Cutback_Front unsigned 16,16 /f:0.00390625 /d:0	// Temperature cutback factor for drive torque calculated from overall temperature ( controller and motort )  and applied based on temperature cutback table This value is between 0 (100% cutback) to 1 (no cutback)
-Var=Drive_Trq_Voltage_Cutback_Front unsigned 0,16 /f:3.0517578125E-005 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
+Var=Drive_Trq_Voltage_Cutback_Front unsigned 0,16 /f:3.0517578125E-005 /max:1.99996948242187 /d:0	// Voltage cutback factor for drive torque calculated from capacitor voltage and applied based on Voltage cutback table This value is between 0 (100% cutback) to 1 (no cutback)
 
 [D_STATUS3_FRONT]
 ID=216h
@@ -261,7 +348,6 @@ Var=Torque_demand_Front signed 0,16 /u:Nm /f:0.0625 /d:0	// Torque demand value 
 ID=215h
 DLC=8
 CycleTime=50
-Timeout=100
 Var=Traction_drive_state_Front signed 56,8
 Var=Heatsink_temperature_Front signed 48,8 /u:DegC	// Temperature of heatsink readed
 Var=Torque_actual_value_Front signed 32,16 /u:Nm /f:0.0625 /d:0	// Torque actual in Nm
@@ -271,7 +357,6 @@ Var=Velocity_Front signed 0,32 /u:RPM	// Actual velocity in RPM.
 ID=214h
 DLC=8
 CycleTime=50
-Timeout=100
 Var=Active_Fault_Front unsigned 48,16	// Fault ID of currently active highest priority fault
 Var=Analog_Output_1_Front signed 32,16 /u:Volt /f:0.00390625 /d:0	// Status of Analog Output 1, normally used for line contactor Value = 0 --> Line Contactor OpenValue > 0 --> Line Contactor Closed
 Var=Battery_Current_Front signed 16,16 /u:Amp /f:0.0625 /d:0	// Battery current measured from controllerPositive value --> Current flow from battery to controller i.e. tractionNegative value --> Current flow from controller to battery i.e. braking with regen
@@ -281,7 +366,6 @@ Var=Capacitor_Voltage_Front unsigned 0,16 /u:Volt /f:0.0625 /d:0	// Voltage read
 ID=1F1h
 DLC=8
 CycleTime=100
-Timeout=300
 Var=T_FMot unsigned 0,8
 Var=T_FInv unsigned 8,8
 Var=T_RInv unsigned 24,8
@@ -294,9 +378,209 @@ Var=T_Rad unsigned 48,8
 ID=1F2h
 DLC=8
 CycleTime=100
-Timeout=300
-Var=PumpACtrl unsigned 0,1
-Var=PumpBCtrl unsigned 8,1
-Var=RadFanCtrl unsigned 16,1
+Var=PumpACtrl bit 0,1
+Var=PumpBCtrl bit 8,1
+Var=RadFanCtrl bit 16,1
 Var=FanPWMDuty unsigned 24,8
+
+[V_SPDODO]
+ID=101h
+DLC=8
+CycleTime=20
+Var=VehicleSpeed signed 0,16 /u:km/h /f:0.01 /d:0
+Var=IndicadedSpeed unsigned 16,16 /u:km/h
+Var=Odometer unsigned 32,24 /u:km /f:0.1 /d:0
+Var=Tacho bit 56,1
+
+[V_DBW_1]
+ID=110h
+DLC=8
+Var=V_THROTTLE unsigned 0,16 /u:% /f:0.1
+Var=V_EBRAKE unsigned 32,16 /u:% /f:0.1
+Var=V_BRAKE_PRESSURE unsigned 48,16 /u:% /f:0.1
+Var=V_MOTORING unsigned 16,16 /u:% /f:0.1
+
+[V_ERROR_FLAGS]
+ID=10Fh
+DLC=8
+Var=ERR_THR_COHRENCY bit 0,1
+Var=ERR_BMS_COMM bit 8,1
+Var=ERR_THR_ZSWITCH bit 1,1
+Var=ERR_FRONT_INV_COMM unsigned 16,1
+Var=ERR_REAR_INV_COMM bit 17,1
+Var=ERR_GEN_INV_COMM bit 18,1
+Var=ERR_T_F_MOT bit 24,1
+Var=ERR_T_R_MOT bit 25,1
+Var=ERR_T_G_MOT bit 26,1
+Var=ERR_T_F_INV bit 27,1
+Var=ERR_T_R_INV bit 28,1
+Var=ERR_T_G_INV bit 29,1
+Var=WARN_T_MOT bit 30,1
+Var=WARN_T_INV bit 31,1
+Var=ERR_ICE_TEMP bit 9,1
+Var=ERR_ICE_FAULT bit 10,1
+Var=ERR_PUMP_B_FAULT bit 3,1
+Var=ERR_PUMP_A_FAULT bit 2,1
+Var=WARN_APU_HIGH_SOC unsigned 33,1
+Var=WARN_APU_LOW_SOC unsigned 32,1
+
+[S_STATUS]
+ID=0C4h
+DLC=8
+CycleTime=20
+Timeout=65
+Var=S_ANGLE signed 48,16 -m
+
+[V_STEERING]
+ID=102h
+DLC=8
+CycleTime=10
+Var=V_S_COUNTER unsigned 48,16 -m
+Var=V_S_RPM unsigned 0,16 -m
+
+[S_CLOCK]
+ID=330h
+DLC=8
+CycleTime=20
+Var=S_V_COUNTER unsigned 48,16 -m
+
+[V_ICE]
+ID=103h
+DLC=8
+CycleTime=100
+Var=V_CURRENT_REQ signed 16,8
+Var=V_T_ICE unsigned 0,8 /u:°C /o:-40
+Var=V_ACTUAL_POWER unsigned 32,10 /u:kW /f:0.1
+Var=V_POWER_REQ unsigned 24,8 /f:0.1 /p:1
+Var=V_TARGET_RPM unsigned 42,14 /u:RPM
+Var=V_FUEL_LEVEL unsigned 8,7 /u:%
+Var=KD signed 56,8 /u:A
+Var=v_fuel_reserve bit 15,1
+
+[S_TICK_1]
+ID=308h
+DLC=8
+CycleTime=20
+Var=S_DUMMY1 unsigned 0,1
+
+[S_TICK_2]
+ID=516h
+DLC=8
+CycleTime=20
+Var=S_DUMMY2 unsigned 0,1
+
+[V_SYSTEM_VOLTAGES]
+ID=104h
+DLC=8
+CycleTime=100
+Var=V_24V unsigned 0,12 /u:V /f:0.01 /p:2
+Var=V_12V unsigned 12,12 /u:V /f:0.01 /p:2
+
+[B_PACK_INFO]
+ID=144h	// This ID Transmits at 200 ms.
+DLC=8
+Var=Average_Current signed 0,16 /u:Amps /f:0.1 /d:0
+Var=Pack_Open_Voltage unsigned 16,16 /u:Volts /f:0.1 /d:0
+Var=Pack_Resistance unsigned 32,16 /u:Ohms /f:0.001 /p:3 /d:0
+Var=Total_Pack_Cycles unsigned 48,16 /u:Num
+
+[V_HMI_COMMAND_RX]
+ID=1FFh
+DLC=8
+Var=V_HMI_RX_CMD_ID unsigned 0,7
+Var=V_HMI_RW bit 7,1
+Var=V_HMI_RX_PAYLOAD0 unsigned 8,8
+Var=V_HMI_RX_PAYLOAD1 unsigned 16,8
+Var=V_HMI_RX_PAYLOAD2 unsigned 24,8
+Var=V_HMI_RX_PAYLOAD3 unsigned 32,8
+Var=V_HMI_RX_PAYLOAD4 unsigned 40,8
+Var=V_HMI_RX_PAYLOAD5 unsigned 48,8
+Var=V_HMI_RX_PAYLOAD6 unsigned 56,8
+
+[V_HMI_COMMAND_TX]
+ID=1FEh
+DLC=8
+Var=V_HMI_TX_CMD_ID unsigned 0,7
+Var=V_HMI_ACK bit 7,1
+Var=V_HMI_TX_PAYLOAD0 unsigned 8,8
+Var=V_HMI_TX_PAYLOAD1 unsigned 16,8
+Var=V_HMI_TX_PAYLOAD2 unsigned 24,8
+Var=V_HMI_TX_PAYLOAD3 unsigned 32,8
+Var=V_HMI_TX_PAYLOAD4 unsigned 40,8
+Var=V_HMI_TX_PAYLOAD5 unsigned 48,8
+Var=V_HMI_TX_PAYLOAD6 unsigned 56,8
+
+[V_TEMP]
+ID=105h
+DLC=8
+Var=V_TEMP_WATER_OUT signed 0,16 /u:C /f:0.1
+Var=V_TEMP_WATER_IN signed 32,16 /u:°C /f:0.1
+Var=V_TEMP_AIR signed 16,16 /u:°C /f:0.1
+
+[C_MONITOR]
+ID=3A4h
+DLC=8
+CycleTime=1000
+Timeout=2000
+Var=C_DC_CURRENT unsigned 16,16 -m /u:A /f:0.1 /p:1
+Var=C_DC_VOLT unsigned 32,16 -m /u:V /f:0.1 /p:1
+Var=C_AH unsigned 48,16 -m /u:Ah /f:0.1 /p:1
+
+[C_STATUS]
+ID=2A4h
+DLC=8
+CycleTime=4000
+Timeout=8000
+Var=C_ALARM_CODE unsigned 24,8
+Var=C_HV_START_STOP_STS unsigned 32,8
+Var=C_ALARM unsigned 40,8
+
+[C_BROADCAST_SETPOINT]
+ID=776h
+DLC=8
+Var=C_MAX_CURR_SETPOINT unsigned 0,16 -m /u:A /f:0.1 /p:1
+Var=C_MAX_VOLT_SETPOINT unsigned 16,16 -m /u:V /f:0.1 /p:1
+Var=C_BATT_DETECT_VOLT unsigned 48,16 -m /u:V /f:0.1 /p:1
+
+[C_INFO]
+ID=1A4h
+DLC=8
+Var=C_MAX_CURR_PROG unsigned 0,16 -m /u:A /f:0.1 /p:1
+Var=C_MAX_VOLT_PROG unsigned 16,16 -m /u:V /f:0.1 /p:1
+Var=C_PRECHG_END bit 32,1
+
+[C_BROADCAST_CURRENT_PERCENT]
+ID=6C1h
+DLC=8
+CycleTime=1000
+Timeout=4000
+Var=C_CURR_PERCENT unsigned 48,16 -m /u:% /f:0.1 /p:1
+
+[V_WAKEUP]
+ID=3A5h
+DLC=8
+Var=V_WAKEUP_MODE unsigned 0,8
+
+[V_RUN_TIMER]
+ID=106h
+DLC=8
+Var=V_ICE_RUN_TIME unsigned 0,16 /u:H
+Var=V_FMOTOR_RUN_TIME unsigned 16,16 /u:H
+Var=V_RMOTOR_RUN_TIME unsigned 32,16 /u:H
+Var=V_ICE_RESTART_TIME unsigned 48,15 /u:m
+Var=V_TIMER_VALID bit 63,1
+
+[V_NRG]
+ID=107h
+DLC=8
+Var=V_USR_SOC unsigned 0,8 /u:%
+Var=v_fuel_qty unsigned 24,16 /u:l /f:0.01
+Var=v_battery_energy unsigned 8,16 /u:Wh
+
+[B_ISO_MON]
+ID=146h
+DLC=8
+Var=B_ISO_ADC unsigned 0,16
+Var=B_ISO_CLIP unsigned 16,16
+Var=B_ISO_THR unsigned 32,16
 

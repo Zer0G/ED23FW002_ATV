@@ -1,0 +1,86 @@
+%implements s91_b0_790xc_4_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d28812}Chart: '<S157>/Chart' */
+if (localDW->temporalCounter_i1 < 31U) {
+    localDW->temporalCounter_i1++;
+}
+/* Gateway: loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/Chart */
+/* During: loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/Chart */
+if (localDW->is_active_c20_ATV == 0U) {
+    /* Entry: loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/Chart */
+    localDW->is_active_c20_ATV = 1U;
+    /* Entry Internal: loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/Chart */
+    /* Transition: '<S159>:2' */
+    localDW->is_c20_ATV = ATV_IN_OFF;
+    /* Entry 'OFF': '<S159>:1' */
+    localB->out = false;
+} else {
+    switch (localDW->is_c20_ATV) {
+      case ATV_IN_DEB:
+        /* During 'DEB': '<S159>:8' */
+        if (localDW->temporalCounter_i1 >= 20U) {
+            /* Transition: '<S159>:9' */
+            localDW->is_c20_ATV = ATV_IN_OFF;
+            /* Entry 'OFF': '<S159>:1' */
+            localB->out = false;
+        }
+        break;
+      case ATV_IN_OFF:
+        localB->out = false;
+        /* During 'OFF': '<S159>:1' */
+        if (rtu_in) {
+            /* Transition: '<S159>:4' */
+            localDW->is_c20_ATV = ATV_IN_ON;
+            /* Entry 'ON': '<S159>:3' */
+            localB->out = true;
+        }
+        break;
+      default:
+        localB->out = true;
+        /* During 'ON': '<S159>:3' */
+        if (!rtu_in) {
+            /* Transition: '<S159>:5' */
+            localDW->is_c20_ATV = ATV_IN_DEB;
+            localDW->temporalCounter_i1 = 0U;
+        }
+        break;
+    }
+}
+/* {E!d28812}End of Chart: '<S157>/Chart' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[4].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(4, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(4, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(4, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_Chart_n(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(4, 1, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_in\
+%assign comma = ", "
+%<comma>B_Chart_ATV_e_T *localB\
+%assign comma = ", "
+%<comma>DW_Chart_ATV_g_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 1, fcnProtoType)>
+%endfunction

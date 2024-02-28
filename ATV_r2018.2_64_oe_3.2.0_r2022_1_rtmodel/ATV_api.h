@@ -9,7 +9,7 @@
  *
  *  Notes:          Automatically generated as part of the build process.
  *                  Do not modify.
- *                  Created on: Wed Apr 26 22:22:13 2023 
+ *                  Created on: Wed Feb 21 16:56:20 2024 
  *
  *****************************************************************************
  */
@@ -27,6 +27,20 @@
 #define PCP_CCP_RESET_ENABLED 0
 #define PCP_CCP_BUS_ID        0
 #define PCP_CCP_STATION_ID    0
+
+
+/* Declare any flash adaptive data (default) references. */
+#if !defined(__GCC__)
+
+#pragma section CONST ".cal_adap"
+#pragma use_section CONST atvv_map;
+#pragma use_section CONST atvc_fmot_run_timer;
+#pragma use_section CONST atvc_ice_run_timer;
+#pragma use_section CONST atvc_odometer;
+#pragma use_section CONST atvc_rmot_run_timer;
+#pragma section CONST
+
+#endif
 
 
 /* No ISO diagnostic PIDs */
@@ -70,16 +84,24 @@ extern const U16 pj1939_num_st_ds_spns;
 /* Function prototypes for each task. */
 extern void task_10ms(void);
 extern void pkn_10ms_model_task(void);
+extern void task_20ms(void);
+extern void pkn_20ms_model_task(void);
 extern void task_100ms(void);
 extern void pkn_100ms_model_task(void);
+extern void task_500ms(void);
+extern void pkn_500ms_model_task(void);
 extern void task_1000ms(void);
 extern void pkn_1000ms_model_task(void);
 
 /* Handles for tasks and resources. */
 extern const PKN_TASK_HANDLE_T pkn_task_10ms_task_hdl;
 extern const PKN_PERIODIC_TASK_HANDLE_T pkn_task_10ms_periodic_hdl;
+extern const PKN_TASK_HANDLE_T pkn_task_20ms_task_hdl;
+extern const PKN_PERIODIC_TASK_HANDLE_T pkn_task_20ms_periodic_hdl;
 extern const PKN_TASK_HANDLE_T pkn_task_100ms_task_hdl;
 extern const PKN_PERIODIC_TASK_HANDLE_T pkn_task_100ms_periodic_hdl;
+extern const PKN_TASK_HANDLE_T pkn_task_500ms_task_hdl;
+extern const PKN_PERIODIC_TASK_HANDLE_T pkn_task_500ms_periodic_hdl;
 extern const PKN_TASK_HANDLE_T pkn_task_1000ms_task_hdl;
 extern const PKN_PERIODIC_TASK_HANDLE_T pkn_task_1000ms_periodic_hdl;
 
