@@ -1,5 +1,5 @@
 /* ASAP2 file for OpenECU and a generic calibration tool.
- * Auto-generated from 'capi.py' (version 3.2.0-FS r2022-1) at Tue Apr 18 19:35:12 2023 (local time).
+ * Auto-generated from 'capi.py' (version 3.2.0-FS r2022-1) at Wed Apr 26 22:22:25 2023 (local time).
  *
  * Information taken from:
  *     ATV.dde_group.tmp
@@ -9,12 +9,12 @@
 ASAP2_VERSION 1 31
 
 /begin PROJECT
-  New_model_v1.0.0_M560_000
+  New_model_v1.1.0_M560_000
   "(none)"
 
   /begin HEADER
     "(none)"
-    VERSION "1_0_0"
+    VERSION "1_1_0"
   /end HEADER
 
   /begin MODULE
@@ -31,7 +31,7 @@ ASAP2_VERSION 1 31
         FLASH
         INTERN
         0x1040000
-        0x2d158
+        0x2d828
         -1 -1 -1 -1 -1
       /end MEMORY_SEGMENT
 
@@ -42,7 +42,7 @@ ASAP2_VERSION 1 31
         FLASH
         INTERN
         0x1000000
-        0x1078
+        0x11b0
         -1 -1 -1 -1 -1
       /end MEMORY_SEGMENT
 
@@ -57,12 +57,159 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x4002287e
+      ECU_ADDRESS 0x40022890
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
     /begin COMPU_METHOD CU_ATV_4WD_DIN
       "Conversion method for atv_4wd_din"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_GenCurrentSetPoint'. */
+    /begin MEASUREMENT atv_GenCurrentSetPoint
+      "Generator Current Set Point"
+      SWORD
+      CU_ATV_GENCURRENTSETPOINT
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022880
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_GENCURRENTSETPOINT
+      "Conversion method for atv_GenCurrentSetPoint"
+      RAT_FUNC
+      "%10.0"
+      "A"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceFault'. */
+    /begin MEASUREMENT atv_IceFault
+      "Ice Fault  (Boolean)"
+      UBYTE
+      CU_ATV_ICEFAULT
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x4002289a
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICEFAULT
+      "Conversion method for atv_IceFault"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceKey_out'. */
+    /begin MEASUREMENT atv_IceKey_out
+      "Ice Ignition  (Boolean)"
+      UBYTE
+      CU_ATV_ICEKEY_OUT
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x40022897
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICEKEY_OUT
+      "Conversion method for atv_IceKey_out"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceOn'. */
+    /begin MEASUREMENT atv_IceOn
+      "Ice Status  (Boolean)"
+      UBYTE
+      CU_ATV_ICEON
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x40022899
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICEON
+      "Conversion method for atv_IceOn"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceRG'. */
+    /begin MEASUREMENT atv_IceRG
+      "Debug Reg Ice"
+      UBYTE
+      CU_ATV_ICERG
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022887
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICERG
+      "Conversion method for atv_IceRG"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceSM'. */
+    /begin MEASUREMENT atv_IceSM
+      "Debug Start Ice"
+      UBYTE
+      CU_ATV_ICESM
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022886
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICESM
+      "Conversion method for atv_IceSM"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_IceShutdown_out'. */
+    /begin MEASUREMENT atv_IceShutdown_out
+      "Ice Status  (Boolean)"
+      UBYTE
+      CU_ATV_ICESHUTDOWN_OUT
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x40022898
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_ICESHUTDOWN_OUT
+      "Conversion method for atv_IceShutdown_out"
       RAT_FUNC
       "%10.0"
       "one"
@@ -78,7 +225,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022848
+      ECU_ADDRESS 0x40022854
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -99,7 +246,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002284a
+      ECU_ADDRESS 0x40022856
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -120,7 +267,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002284c
+      ECU_ADDRESS 0x40022858
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -141,7 +288,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022846
+      ECU_ADDRESS 0x40022852
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -162,7 +309,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002284e
+      ECU_ADDRESS 0x4002285a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -183,7 +330,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022844
+      ECU_ADDRESS 0x40022850
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -204,7 +351,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022881
+      ECU_ADDRESS 0x40022891
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -225,7 +372,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022854
+      ECU_ADDRESS 0x40022860
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -246,7 +393,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022856
+      ECU_ADDRESS 0x40022862
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -267,7 +414,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022858
+      ECU_ADDRESS 0x40022864
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -288,7 +435,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022852
+      ECU_ADDRESS 0x4002285e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -309,7 +456,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002285a
+      ECU_ADDRESS 0x40022866
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -330,7 +477,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022850
+      ECU_ADDRESS 0x4002285c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -351,7 +498,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022840
+      ECU_ADDRESS 0x4002283c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -372,7 +519,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x4002287c
+      ECU_ADDRESS 0x4002288c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -393,7 +540,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022874
+      ECU_ADDRESS 0x40022882
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -414,7 +561,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022875
+      ECU_ADDRESS 0x40022883
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -435,7 +582,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022885
+      ECU_ADDRESS 0x4002289b
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -456,7 +603,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022884
+      ECU_ADDRESS 0x40022896
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -468,21 +615,63 @@ ASAP2_VERSION 1 31
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
+    /* Scalar measurable for DDE 'atv_footBrake_X1000_out'. */
+    /begin MEASUREMENT atv_footBrake_X1000_out
+      "footbrake Gen Out [0.1%]"
+      UWORD
+      CU_ATV_FOOTBRAKE_X1000_OUT
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x4002284c
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_FOOTBRAKE_X1000_OUT
+      "Conversion method for atv_footBrake_X1000_out"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
     /* Scalar measurable for DDE 'atv_fs1_in'. */
     /begin MEASUREMENT atv_fs1_in
-      "Foot Pedal FS1 Switch Status"
+      "Foot Pedal FS1 Switch Status input"
       UBYTE
       CU_ATV_FS1_IN
       1
       100
       0.0
       1.0
-      ECU_ADDRESS 0x4002287d
+      ECU_ADDRESS 0x4002288e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
     /begin COMPU_METHOD CU_ATV_FS1_IN
       "Conversion method for atv_fs1_in"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_fs1_out'. */
+    /begin MEASUREMENT atv_fs1_out
+      "Foot Pedal FS1 Switch Status output"
+      UBYTE
+      CU_ATV_FS1_OUT
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x4002288f
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_FS1_OUT
+      "Conversion method for atv_fs1_out"
       RAT_FUNC
       "%10.0"
       "one"
@@ -498,7 +687,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022878
+      ECU_ADDRESS 0x40022888
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -507,6 +696,90 @@ ASAP2_VERSION 1 31
       RAT_FUNC
       "%10.0"
       "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_motoring_x1000_front'. */
+    /begin MEASUREMENT atv_motoring_x1000_front
+      "Throttle output front positive torque 0-1000"
+      UWORD
+      CU_ATV_MOTORING_X1000_FRONT
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022848
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_MOTORING_X1000_FRONT
+      "Conversion method for atv_motoring_x1000_front"
+      RAT_FUNC
+      "%10.0"
+      "V"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_motoring_x1000_front_limited'. */
+    /begin MEASUREMENT atv_motoring_x1000_front_limit0
+      "Throttle output front positive torque limited 0-1000"
+      UWORD
+      CU_ATV_MOTORING_X1000_FRONT_LI0
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x4002284a
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_MOTORING_X1000_FRONT_LI0
+      "Conversion method for atv_motoring_x1000_front_limited"
+      RAT_FUNC
+      "%10.0"
+      "V"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_motoring_x1000_rear'. */
+    /begin MEASUREMENT atv_motoring_x1000_rear
+      "Throttle output rear positive torque 0-1000"
+      UWORD
+      CU_ATV_MOTORING_X1000_REAR
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022842
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_MOTORING_X1000_REAR
+      "Conversion method for atv_motoring_x1000_rear"
+      RAT_FUNC
+      "%10.0"
+      "V"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_motoring_x1000_rear_limited'. */
+    /begin MEASUREMENT atv_motoring_x1000_rear_limited
+      "Throttle output rear positive torque limited 0-1000"
+      UWORD
+      CU_ATV_MOTORING_X1000_REAR_LIM0
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022844
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_MOTORING_X1000_REAR_LIM0
+      "Conversion method for atv_motoring_x1000_rear_limited"
+      RAT_FUNC
+      "%10.0"
+      "V"
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
@@ -519,7 +792,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002286c
+      ECU_ADDRESS 0x40022878
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -540,7 +813,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002286e
+      ECU_ADDRESS 0x4002287a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -561,7 +834,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022870
+      ECU_ADDRESS 0x4002287c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -582,7 +855,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002286a
+      ECU_ADDRESS 0x40022876
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -603,7 +876,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022872
+      ECU_ADDRESS 0x4002287e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -624,7 +897,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022868
+      ECU_ADDRESS 0x40022874
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -645,7 +918,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022860
+      ECU_ADDRESS 0x4002286c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -666,7 +939,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022862
+      ECU_ADDRESS 0x4002286e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -687,7 +960,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022864
+      ECU_ADDRESS 0x40022870
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -708,7 +981,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002285e
+      ECU_ADDRESS 0x4002286a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -729,7 +1002,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022866
+      ECU_ADDRESS 0x40022872
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -750,7 +1023,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002285c
+      ECU_ADDRESS 0x40022868
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -759,6 +1032,48 @@ ASAP2_VERSION 1 31
       RAT_FUNC
       "%10.0"
       "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_regen_x1000_front'. */
+    /begin MEASUREMENT atv_regen_x1000_front
+      "Throttle output front neutral braking 0-1000"
+      UWORD
+      CU_ATV_REGEN_X1000_FRONT
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022846
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_REGEN_X1000_FRONT
+      "Conversion method for atv_regen_x1000_front"
+      RAT_FUNC
+      "%10.0"
+      "V"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_regen_x1000_rear'. */
+    /begin MEASUREMENT atv_regen_x1000_rear
+      "Throttle output rear neutral braking 0-1000"
+      UWORD
+      CU_ATV_REGEN_X1000_REAR
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022840
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_REGEN_X1000_REAR
+      "Conversion method for atv_regen_x1000_rear"
+      RAT_FUNC
+      "%10.0"
+      "V"
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
@@ -771,7 +1086,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022883
+      ECU_ADDRESS 0x40022895
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -792,7 +1107,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002282c
+      ECU_ADDRESS 0x40022828
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -813,7 +1128,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022876
+      ECU_ADDRESS 0x40022884
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -834,12 +1149,33 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022877
+      ECU_ADDRESS 0x40022885
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
     /begin COMPU_METHOD CU_ATV_SUB_STATE_OUT
       "Conversion method for atv_sub_state_out"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_tHROTTLEGen_X1000_out'. */
+    /begin MEASUREMENT atv_tHROTTLEGen_X1000_out
+      "Ice StartTorque [0.1%]"
+      UWORD
+      CU_ATV_THROTTLEGEN_X1000_OUT
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x4002284e
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_THROTTLEGEN_X1000_OUT
+      "Conversion method for atv_tHROTTLEGen_X1000_out"
       RAT_FUNC
       "%10.0"
       "one"
@@ -855,7 +1191,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022830
+      ECU_ADDRESS 0x4002282c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -876,7 +1212,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022834
+      ECU_ADDRESS 0x40022830
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -885,6 +1221,27 @@ ASAP2_VERSION 1 31
       RAT_FUNC
       "%10.0"
       "microsecond"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_throttleRegOff'. */
+    /begin MEASUREMENT atv_throttleRegOff
+      "Disable Neutral Braking"
+      UBYTE
+      CU_ATV_THROTTLEREGOFF
+      1
+      100
+      0.0
+      1.0
+      ECU_ADDRESS 0x4002288d
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_THROTTLEREGOFF
+      "Conversion method for atv_throttleRegOff"
+      RAT_FUNC
+      "%10.0"
+      "one"
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
@@ -897,7 +1254,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022842
+      ECU_ADDRESS 0x4002283e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -905,7 +1262,7 @@ ASAP2_VERSION 1 31
       "Conversion method for atv_throttleX1000"
       RAT_FUNC
       "%10.0"
-      "V"
+      "one"
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
@@ -918,7 +1275,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x4002287f
+      ECU_ADDRESS 0x40022892
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -939,7 +1296,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022880
+      ECU_ADDRESS 0x40022893
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -960,7 +1317,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022882
+      ECU_ADDRESS 0x40022894
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -981,7 +1338,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022818
+      ECU_ADDRESS 0x4002280c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1002,7 +1359,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022810
+      ECU_ADDRESS 0x40022808
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1023,7 +1380,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022808
+      ECU_ADDRESS 0x40022800
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1044,7 +1401,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002280c
+      ECU_ADDRESS 0x40022804
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1065,7 +1422,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022838
+      ECU_ADDRESS 0x40022834
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1086,7 +1443,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022824
+      ECU_ADDRESS 0x40022810
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1107,7 +1464,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022820
+      ECU_ADDRESS 0x40022818
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1128,7 +1485,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002283c
+      ECU_ADDRESS 0x40022838
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1149,12 +1506,33 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x4002281c
+      ECU_ADDRESS 0x40022814
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
     /begin COMPU_METHOD CU_ATV_XE4_RAW_AIN
       "Conversion method for atv_xe4_raw_ain"
+      RAT_FUNC
+      "%10.3"
+      "V"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar measurable for DDE 'atv_yg3_raw_ain'. */
+    /begin MEASUREMENT atv_yg3_raw_ain
+      "Throttle Input V (Raw Voltage)"
+      FLOAT32_IEEE
+      CU_ATV_YG3_RAW_AIN
+      1
+      100
+      0.0
+      0.0
+      ECU_ADDRESS 0x40022820
+      BYTE_ORDER MSB_FIRST
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CU_ATV_YG3_RAW_AIN
+      "Conversion method for atv_yg3_raw_ain"
       RAT_FUNC
       "%10.3"
       "V"
@@ -1170,7 +1548,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       1.0
-      ECU_ADDRESS 0x40022879
+      ECU_ADDRESS 0x40022889
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1182,11 +1560,211 @@ ASAP2_VERSION 1 31
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
+    /* Scalar calibration for DDE 'atvc_FanTest'. */
+    /begin CHARACTERISTIC atvc_FanTest
+      "Fan Speed test [%]"
+      VALUE
+      0x1001133
+      RL_ATVC_FANTEST
+      100.000000
+      CU_ATVC_FANTEST
+      0.000000
+      100.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_FANTEST
+      FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_FANTEST
+      "Conversion method for atvc_FanTest"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_GenTestCurrent'. */
+    /begin CHARACTERISTIC atvc_GenTestCurrent
+      "Generator warm up current [A]"
+      VALUE
+      0x1001112
+      RL_ATVC_GENTESTCURRENT
+      250.000000
+      CU_ATVC_GENTESTCURRENT
+      0.000000
+      250.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_GENTESTCURRENT
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_GENTESTCURRENT
+      "Conversion method for atvc_GenTestCurrent"
+      RAT_FUNC
+      "%10.0"
+      "A"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_GenWarmUpCurrent'. */
+    /begin CHARACTERISTIC atvc_GenWarmUpCurrent
+      "Generator warm up current [A]"
+      VALUE
+      0x100110c
+      RL_ATVC_GENWARMUPCURRENT
+      100.000000
+      CU_ATVC_GENWARMUPCURRENT
+      0.000000
+      100.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_GENWARMUPCURRENT
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_GENWARMUPCURRENT
+      "Conversion method for atvc_GenWarmUpCurrent"
+      RAT_FUNC
+      "%10.0"
+      "A"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_IceOffTh'. */
+    /begin CHARACTERISTIC atvc_IceOffTh
+      "ICE Off Detection Tresasold [RPM]"
+      VALUE
+      0x1000b68
+      RL_ATVC_ICEOFFTH
+      1800.000000
+      CU_ATVC_ICEOFFTH
+      200.000000
+      2000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_ICEOFFTH
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_ICEOFFTH
+      "Conversion method for atvc_IceOffTh"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_IceOnTh'. */
+    /begin CHARACTERISTIC atvc_IceOnTh
+      "ICE On Detection Tresasold [RPM]"
+      VALUE
+      0x1000b6a
+      RL_ATVC_ICEONTH
+      1900.000000
+      CU_ATVC_ICEONTH
+      2100.000000
+      4000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_ICEONTH
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_ICEONTH
+      "Conversion method for atvc_IceOnTh"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_IceStartRetry'. */
+    /begin CHARACTERISTIC atvc_IceStartRetry
+      "ICE StartUp Max Retry [RPM]"
+      VALUE
+      0x1000b71
+      RL_ATVC_ICESTARTRETRY
+      10.000000
+      CU_ATVC_ICESTARTRETRY
+      0.000000
+      10.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_ICESTARTRETRY
+      FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_ICESTARTRETRY
+      "Conversion method for atvc_IceStartRetry"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_RpmEndWarmUp'. */
+    /begin CHARACTERISTIC atvc_RpmEndWarmUp
+      "ICE Warm Up Detection Tresasold [RPM]"
+      VALUE
+      0x1001114
+      RL_ATVC_RPMENDWARMUP
+      3000.000000
+      CU_ATVC_RPMENDWARMUP
+      3000.000000
+      6000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_RPMENDWARMUP
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_RPMENDWARMUP
+      "Conversion method for atvc_RpmEndWarmUp"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_StartThrottleIce'. */
+    /begin CHARACTERISTIC atvc_StartThrottleIce
+      "ICE StartUp GENERATOR Throttle Val [0.1%]"
+      VALUE
+      0x1000b6c
+      RL_ATVC_STARTTHROTTLEICE
+      900.000000
+      CU_ATVC_STARTTHROTTLEICE
+      100.000000
+      1000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_STARTTHROTTLEICE
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_STARTTHROTTLEICE
+      "Conversion method for atvc_StartThrottleIce"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
     /* Scalar calibration for DDE 'atvc_an_in_sel_his'. */
     /begin CHARACTERISTIC atvc_an_in_sel_his
       "Analog Selectors Histeresis  [V]"
       VALUE
-      0x1000b68
+      0x1001100
       RL_ATVC_AN_IN_SEL_HIS
       1.000000
       CU_ATVC_AN_IN_SEL_HIS
@@ -1211,7 +1789,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_an_in_sel_th
       "Analog Selectors Threashold Pedal On Trheashold [V]"
       VALUE
-      0x1000b6c
+      0x1001104
       RL_ATVC_AN_IN_SEL_TH
       3.000000
       CU_ATVC_AN_IN_SEL_TH
@@ -1236,7 +1814,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_brakePedalHis
       "Brake Pedal Histeresis [0.1%]"
       VALUE
-      0x1000b70
+      0x1001108
       RL_ATVC_BRAKEPEDALHIS
       25.000000
       CU_ATVC_BRAKEPEDALHIS
@@ -1261,7 +1839,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_brakePedalOn
       "Brake Pedal On Trheashold [0.1%]"
       VALUE
-      0x1000b72
+      0x100110a
       RL_ATVC_BRAKEPEDALON
       950.000000
       CU_ATVC_BRAKEPEDALON
@@ -1286,7 +1864,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_dcMinFan
       "Minimum Fan Speed [%]"
       VALUE
-      0x1000b7a
+      0x1000b72
       RL_ATVC_DCMINFAN
       100.000000
       CU_ATVC_DCMINFAN
@@ -1307,11 +1885,61 @@ ASAP2_VERSION 1 31
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
+    /* Scalar calibration for DDE 'atvc_footBrakeIce'. */
+    /begin CHARACTERISTIC atvc_footBrakeIce
+      "ICE RegTorque Val [0.1%]"
+      VALUE
+      0x1001116
+      RL_ATVC_FOOTBRAKEICE
+      990.000000
+      CU_ATVC_FOOTBRAKEICE
+      10.000000
+      1000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_FOOTBRAKEICE
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_FOOTBRAKEICE
+      "Conversion method for atvc_footBrakeIce"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
+    /* Scalar calibration for DDE 'atvc_footBrakeWarmUp'. */
+    /begin CHARACTERISTIC atvc_footBrakeWarmUp
+      "ICE RegTorque Val [0.1%]"
+      VALUE
+      0x1000b6e
+      RL_ATVC_FOOTBRAKEWARMUP
+      1000.000000
+      CU_ATVC_FOOTBRAKEWARMUP
+      0.000000
+      1000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_FOOTBRAKEWARMUP
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_FOOTBRAKEWARMUP
+      "Conversion method for atvc_footBrakeWarmUp"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
     /* Scalar calibration for DDE 'atvc_maxDischCurr'. */
     /begin CHARACTERISTIC atvc_maxDischCurr
       "Max Outbound current [A]"
       VALUE
-      0x1000b74
+      0x100110e
       RL_ATVC_MAXDISCHCURR
       870.000000
       CU_ATVC_MAXDISCHCURR
@@ -1336,7 +1964,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_maxRegenCurr
       "Max Inbound current [A]"
       VALUE
-      0x1000b76
+      0x1001110
       RL_ATVC_MAXREGENCURR
       270.000000
       CU_ATVC_MAXREGENCURR
@@ -1361,7 +1989,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_maxTempInv
       "Max Inverter Temp"
       VALUE
-      0x1000b7b
+      0x100112b
       RL_ATVC_MAXTEMPINV
       190.000000
       CU_ATVC_MAXTEMPINV
@@ -1386,7 +2014,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_maxTempMotor
       "Max Inverter Temp"
       VALUE
-      0x1000b7c
+      0x100112f
       RL_ATVC_MAXTEMPMOTOR
       190.000000
       CU_ATVC_MAXTEMPMOTOR
@@ -1411,7 +2039,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_minTempInv
       "Min Inverter Temp"
       VALUE
-      0x1000b7d
+      0x1000b73
       RL_ATVC_MINTEMPINV
       190.000000
       CU_ATVC_MINTEMPINV
@@ -1436,7 +2064,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_minTempMotor
       "Min Inverter Temp"
       VALUE
-      0x1000b7e
+      0x1000b74
       RL_ATVC_MINTEMPMOTOR
       190.000000
       CU_ATVC_MINTEMPMOTOR
@@ -1461,7 +2089,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_socLimitSave
       "Min soc for pump control"
       VALUE
-      0x1000b7f
+      0x1000b75
       RL_ATVC_SOCLIMITSAVE
       88.000000
       CU_ATVC_SOCLIMITSAVE
@@ -1486,7 +2114,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_tempSwitchOffFan
       "Fan Off Temp"
       VALUE
-      0x1000b80
+      0x1000b76
       RL_ATVC_TEMPSWITCHOFFFAN
       90.000000
       CU_ATVC_TEMPSWITCHOFFFAN
@@ -1511,7 +2139,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC atvc_tempSwitchOnFan
       "Fan On Temp"
       VALUE
-      0x1000b81
+      0x1000b77
       RL_ATVC_TEMPSWITCHONFAN
       90.000000
       CU_ATVC_TEMPSWITCHONFAN
@@ -1532,11 +2160,36 @@ ASAP2_VERSION 1 31
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
+    /* Scalar calibration for DDE 'atvc_throttleMaxLimit'. */
+    /begin CHARACTERISTIC atvc_throttleMaxLimit
+      "High Pedal limit [0.1%]"
+      VALUE
+      0x10010fe
+      RL_ATVC_THROTTLEMAXLIMIT
+      900.000000
+      CU_ATVC_THROTTLEMAXLIMIT
+      100.000000
+      1000.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_THROTTLEMAXLIMIT
+      FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_THROTTLEMAXLIMIT
+      "Conversion method for atvc_throttleMaxLimit"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
     /* Scalar calibration for DDE 'atvc_throttleNeutralPoint'. */
     /begin CHARACTERISTIC atvc_throttleNeutralPoint
       "Throttle neutral position [0.1%]"
       VALUE
-      0x1000b78
+      0x10010fc
       RL_ATVC_THROTTLENEUTRALPOINT
       450.000000
       CU_ATVC_THROTTLENEUTRALPOINT
@@ -1557,11 +2210,36 @@ ASAP2_VERSION 1 31
       COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
     /end COMPU_METHOD
 
+    /* Scalar calibration for DDE 'atvc_throttleRegOff'. */
+    /begin CHARACTERISTIC atvc_throttleRegOff
+      "disable neutral braking (Boolean)"
+      VALUE
+      0x1000b70
+      RL_ATVC_THROTTLEREGOFF
+      1.000000
+      CU_ATVC_THROTTLEREGOFF
+      0.000000
+      1.000000
+      BYTE_ORDER MSB_FIRST
+    /end CHARACTERISTIC
+
+    /begin RECORD_LAYOUT RL_ATVC_THROTTLEREGOFF
+      FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin COMPU_METHOD CU_ATVC_THROTTLEREGOFF
+      "Conversion method for atvc_throttleRegOff"
+      RAT_FUNC
+      "%10.0"
+      "one"
+      COEFFS 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000
+    /end COMPU_METHOD
+
     /* Scalar calibration for DDE 'atvc_velocityLimitFwd'. */
     /begin CHARACTERISTIC atvc_velocityLimitFwd
-      "Speed Limit Forward"
+      "Speed Limit Forward [Km/h]"
       VALUE
-      0x1000b82
+      0x1000b78
       RL_ATVC_VELOCITYLIMITFWD
       117.000000
       CU_ATVC_VELOCITYLIMITFWD
@@ -1584,9 +2262,9 @@ ASAP2_VERSION 1 31
 
     /* Scalar calibration for DDE 'atvc_velocityLimitRwd'. */
     /begin CHARACTERISTIC atvc_velocityLimitRwd
-      "Speed Limit Reverse"
+      "Speed Limit Reverse [Km/h]"
       VALUE
-      0x1000b83
+      0x1000b79
       RL_ATVC_VELOCITYLIMITRWD
       97.000000
       CU_ATVC_VELOCITYLIMITRWD
@@ -1616,7 +2294,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       0.0
-      ECU_ADDRESS 0x40022828
+      ECU_ADDRESS 0x40022824
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1951,7 +2629,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022912
+      ECU_ADDRESS 0x4002292e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1972,7 +2650,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022914
+      ECU_ADDRESS 0x40022930
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -1993,7 +2671,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022916
+      ECU_ADDRESS 0x40022932
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2014,7 +2692,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022918
+      ECU_ADDRESS 0x40022934
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2035,7 +2713,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002291c
+      ECU_ADDRESS 0x40022938
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2056,7 +2734,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022920
+      ECU_ADDRESS 0x4002293c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2077,7 +2755,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022919
+      ECU_ADDRESS 0x40022935
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2098,7 +2776,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002290c
+      ECU_ADDRESS 0x40022928
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2119,7 +2797,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002290e
+      ECU_ADDRESS 0x4002292a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2140,7 +2818,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022910
+      ECU_ADDRESS 0x4002292c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2161,7 +2839,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022904
+      ECU_ADDRESS 0x40022920
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2182,7 +2860,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022905
+      ECU_ADDRESS 0x40022921
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2203,7 +2881,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022904
+      ECU_ADDRESS 0x40022920
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2224,7 +2902,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022aa0
+      ECU_ADDRESS 0x40022abc
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2245,7 +2923,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022a9c
+      ECU_ADDRESS 0x40022ab8
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2266,7 +2944,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022baa
+      ECU_ADDRESS 0x40022bc2
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2287,7 +2965,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022bab
+      ECU_ADDRESS 0x40022bc3
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2308,7 +2986,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022bac
+      ECU_ADDRESS 0x40022bc4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2329,7 +3007,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022ba8
+      ECU_ADDRESS 0x40022bc0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2350,7 +3028,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022ba9
+      ECU_ADDRESS 0x40022bc1
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2371,7 +3049,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022908
+      ECU_ADDRESS 0x40022924
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2392,7 +3070,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022909
+      ECU_ADDRESS 0x40022925
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2413,7 +3091,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022908
+      ECU_ADDRESS 0x40022924
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2434,7 +3112,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022970
+      ECU_ADDRESS 0x4002298c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2455,7 +3133,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024344
+      ECU_ADDRESS 0x400243d4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2476,7 +3154,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024308
+      ECU_ADDRESS 0x40024398
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2497,7 +3175,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024338
+      ECU_ADDRESS 0x400243c8
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2518,7 +3196,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002433c
+      ECU_ADDRESS 0x400243cc
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2539,7 +3217,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002431c
+      ECU_ADDRESS 0x400243ac
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2560,7 +3238,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024334
+      ECU_ADDRESS 0x400243c4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2581,7 +3259,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024310
+      ECU_ADDRESS 0x400243a0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2602,7 +3280,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024314
+      ECU_ADDRESS 0x400243a4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2623,7 +3301,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242f4
+      ECU_ADDRESS 0x40024384
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2644,7 +3322,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024318
+      ECU_ADDRESS 0x400243a8
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2665,7 +3343,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002430c
+      ECU_ADDRESS 0x4002439c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2686,7 +3364,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024320
+      ECU_ADDRESS 0x400243b0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2707,7 +3385,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242f8
+      ECU_ADDRESS 0x40024388
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2728,7 +3406,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024304
+      ECU_ADDRESS 0x40024394
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2749,7 +3427,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024340
+      ECU_ADDRESS 0x400243d0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2770,7 +3448,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242fc
+      ECU_ADDRESS 0x4002438c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2791,7 +3469,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024324
+      ECU_ADDRESS 0x400243b4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2812,7 +3490,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024300
+      ECU_ADDRESS 0x40024390
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2833,7 +3511,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024330
+      ECU_ADDRESS 0x400243c0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2854,7 +3532,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002432c
+      ECU_ADDRESS 0x400243bc
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2875,7 +3553,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40024328
+      ECU_ADDRESS 0x400243b8
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2896,7 +3574,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025680
+      ECU_ADDRESS 0x40025710
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2917,7 +3595,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025671
+      ECU_ADDRESS 0x40025701
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2938,7 +3616,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567d
+      ECU_ADDRESS 0x4002570d
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2959,7 +3637,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567e
+      ECU_ADDRESS 0x4002570e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -2980,7 +3658,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025676
+      ECU_ADDRESS 0x40025706
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3001,7 +3679,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567c
+      ECU_ADDRESS 0x4002570c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3022,7 +3700,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025673
+      ECU_ADDRESS 0x40025703
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3043,7 +3721,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025674
+      ECU_ADDRESS 0x40025704
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3064,7 +3742,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002566c
+      ECU_ADDRESS 0x400256fc
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3085,7 +3763,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025675
+      ECU_ADDRESS 0x40025705
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3106,7 +3784,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025672
+      ECU_ADDRESS 0x40025702
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3127,7 +3805,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025677
+      ECU_ADDRESS 0x40025707
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3148,7 +3826,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002566d
+      ECU_ADDRESS 0x400256fd
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3169,7 +3847,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025670
+      ECU_ADDRESS 0x40025700
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3190,7 +3868,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567f
+      ECU_ADDRESS 0x4002570f
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3211,7 +3889,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002566e
+      ECU_ADDRESS 0x400256fe
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3232,7 +3910,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025678
+      ECU_ADDRESS 0x40025708
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3253,7 +3931,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002566f
+      ECU_ADDRESS 0x400256ff
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3274,7 +3952,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567b
+      ECU_ADDRESS 0x4002570b
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3295,7 +3973,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002567a
+      ECU_ADDRESS 0x4002570a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3316,7 +3994,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025679
+      ECU_ADDRESS 0x40025709
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3337,7 +4015,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002293c
+      ECU_ADDRESS 0x40022958
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3358,7 +4036,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002293e
+      ECU_ADDRESS 0x4002295a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3379,7 +4057,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022940
+      ECU_ADDRESS 0x4002295c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3400,7 +4078,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022942
+      ECU_ADDRESS 0x4002295e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3421,7 +4099,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022944
+      ECU_ADDRESS 0x40022960
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3442,7 +4120,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022948
+      ECU_ADDRESS 0x40022964
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3463,7 +4141,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022943
+      ECU_ADDRESS 0x4002295f
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3484,7 +4162,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022936
+      ECU_ADDRESS 0x40022952
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3505,7 +4183,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022938
+      ECU_ADDRESS 0x40022954
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3526,7 +4204,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002293a
+      ECU_ADDRESS 0x40022956
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3547,7 +4225,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022928
+      ECU_ADDRESS 0x40022944
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3568,7 +4246,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002292a
+      ECU_ADDRESS 0x40022946
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3589,7 +4267,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x4002292c
+      ECU_ADDRESS 0x40022948
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3610,7 +4288,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002292e
+      ECU_ADDRESS 0x4002294a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3631,7 +4309,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022930
+      ECU_ADDRESS 0x4002294c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3652,7 +4330,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022934
+      ECU_ADDRESS 0x40022950
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3673,7 +4351,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002292f
+      ECU_ADDRESS 0x4002294b
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3694,7 +4372,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022922
+      ECU_ADDRESS 0x4002293e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3715,7 +4393,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022924
+      ECU_ADDRESS 0x40022940
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3736,7 +4414,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       65535.0
-      ECU_ADDRESS 0x40022926
+      ECU_ADDRESS 0x40022942
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3757,7 +4435,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002295c
+      ECU_ADDRESS 0x40022978
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3778,7 +4456,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002296c
+      ECU_ADDRESS 0x40022988
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3799,7 +4477,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025618
+      ECU_ADDRESS 0x400256a8
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3820,7 +4498,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025609
+      ECU_ADDRESS 0x40025699
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3841,7 +4519,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025615
+      ECU_ADDRESS 0x400256a5
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3862,7 +4540,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025616
+      ECU_ADDRESS 0x400256a6
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3883,7 +4561,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560e
+      ECU_ADDRESS 0x4002569e
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3904,7 +4582,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025614
+      ECU_ADDRESS 0x400256a4
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3925,7 +4603,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560b
+      ECU_ADDRESS 0x4002569b
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3946,7 +4624,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560c
+      ECU_ADDRESS 0x4002569c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3967,7 +4645,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025604
+      ECU_ADDRESS 0x40025694
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -3988,7 +4666,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560d
+      ECU_ADDRESS 0x4002569d
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4009,7 +4687,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560a
+      ECU_ADDRESS 0x4002569a
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4030,7 +4708,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x4002560f
+      ECU_ADDRESS 0x4002569f
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4051,7 +4729,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025605
+      ECU_ADDRESS 0x40025695
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4072,7 +4750,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025608
+      ECU_ADDRESS 0x40025698
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4093,7 +4771,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025617
+      ECU_ADDRESS 0x400256a7
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4114,7 +4792,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025606
+      ECU_ADDRESS 0x40025696
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4135,7 +4813,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025610
+      ECU_ADDRESS 0x400256a0
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4156,7 +4834,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025607
+      ECU_ADDRESS 0x40025697
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4177,7 +4855,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025613
+      ECU_ADDRESS 0x400256a3
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4198,7 +4876,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025612
+      ECU_ADDRESS 0x400256a2
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4219,7 +4897,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40025611
+      ECU_ADDRESS 0x400256a1
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4240,7 +4918,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022968
+      ECU_ADDRESS 0x40022984
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4261,7 +4939,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       255.0
-      ECU_ADDRESS 0x40022961
+      ECU_ADDRESS 0x4002297d
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4282,7 +4960,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022964
+      ECU_ADDRESS 0x40022980
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4303,7 +4981,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242ec
+      ECU_ADDRESS 0x4002437c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4324,7 +5002,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242b0
+      ECU_ADDRESS 0x40024340
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4345,7 +5023,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242e0
+      ECU_ADDRESS 0x40024370
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4366,7 +5044,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242e4
+      ECU_ADDRESS 0x40024374
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4387,7 +5065,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242c4
+      ECU_ADDRESS 0x40024354
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4408,7 +5086,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242dc
+      ECU_ADDRESS 0x4002436c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4429,7 +5107,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242b8
+      ECU_ADDRESS 0x40024348
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4450,7 +5128,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242bc
+      ECU_ADDRESS 0x4002434c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4471,7 +5149,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x4002429c
+      ECU_ADDRESS 0x4002432c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4492,7 +5170,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242c0
+      ECU_ADDRESS 0x40024350
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4513,7 +5191,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242b4
+      ECU_ADDRESS 0x40024344
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4534,7 +5212,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242c8
+      ECU_ADDRESS 0x40024358
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4555,7 +5233,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242a0
+      ECU_ADDRESS 0x40024330
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4576,7 +5254,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242ac
+      ECU_ADDRESS 0x4002433c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4597,7 +5275,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242e8
+      ECU_ADDRESS 0x40024378
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4618,7 +5296,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242a4
+      ECU_ADDRESS 0x40024334
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4639,7 +5317,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242cc
+      ECU_ADDRESS 0x4002435c
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4660,7 +5338,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242a8
+      ECU_ADDRESS 0x40024338
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4681,7 +5359,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242d8
+      ECU_ADDRESS 0x40024368
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4702,7 +5380,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242d4
+      ECU_ADDRESS 0x40024364
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4723,7 +5401,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x400242d0
+      ECU_ADDRESS 0x40024360
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4744,7 +5422,7 @@ ASAP2_VERSION 1 31
       100
       0.0
       4294967295.0
-      ECU_ADDRESS 0x40022958
+      ECU_ADDRESS 0x40022974
       BYTE_ORDER MSB_FIRST
     /end MEASUREMENT
 
@@ -4885,7 +5563,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC mpls_plat_build_time
       "Date and time of platform build."
       ASCII
-      0x1001000
+      0x1001138
       RL_MPLS_PLAT_BUILD_TIME
       0
       CU_MPLS_PLAT_BUILD_TIME
@@ -4910,7 +5588,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC mpls_plat_copyright
       "Date and time of platform build."
       ASCII
-      0x1001038
+      0x1001170
       RL_MPLS_PLAT_COPYRIGHT
       0
       CU_MPLS_PLAT_COPYRIGHT
@@ -4935,7 +5613,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC mpls_plat_target
       "Target platform."
       ASCII
-      0x1001020
+      0x1001158
       RL_MPLS_PLAT_TARGET
       0
       CU_MPLS_PLAT_TARGET
@@ -4960,7 +5638,7 @@ ASAP2_VERSION 1 31
     /begin CHARACTERISTIC mpls_plat_version
       "Version of platform."
       ASCII
-      0x1001028
+      0x1001160
       RL_MPLS_PLAT_VERSION
       0
       CU_MPLS_PLAT_VERSION
@@ -5010,6 +5688,13 @@ ASAP2_VERSION 1 31
       "Group /ByDataDictionaryPrefix/atv"
       /begin LOC_MEASUREMENT
         atv_4wd_din
+        atv_GenCurrentSetPoint
+        atv_IceFault
+        atv_IceKey_out
+        atv_IceOn
+        atv_IceRG
+        atv_IceSM
+        atv_IceShutdown_out
         atv_app_code_day
         atv_app_code_major_ver
         atv_app_code_minor_ver
@@ -5029,8 +5714,14 @@ ASAP2_VERSION 1 31
         atv_cpu_loading_max
         atv_dbg_pumpB_out
         atv_en_dcdc_out
+        atv_footBrake_X1000_out
         atv_fs1_in
+        atv_fs1_out
         atv_key_signal
+        atv_motoring_x1000_front
+        atv_motoring_x1000_front_limit0
+        atv_motoring_x1000_rear
+        atv_motoring_x1000_rear_limited
         atv_platform_code_day
         atv_platform_code_major_ver
         atv_platform_code_minor_ver
@@ -5043,12 +5734,16 @@ ASAP2_VERSION 1 31
         atv_prg_code_month
         atv_prg_code_subminor_ver
         atv_prg_code_year
+        atv_regen_x1000_front
+        atv_regen_x1000_rear
         atv_runLed_out
         atv_stack_used
         atv_state_out
         atv_sub_state_out
+        atv_tHROTTLEGen_X1000_out
         atv_task_duration_1s
         atv_task_duration_1s_max
+        atv_throttleRegOff
         atv_throttleX1000
         atv_v_dbg_chg_req
         atv_v_dbg_heater_req
@@ -5062,14 +5757,25 @@ ASAP2_VERSION 1 31
         atv_xe2_raw_ain
         atv_xe3_ain
         atv_xe4_raw_ain
+        atv_yg3_raw_ain
         atv_za3_StartBtn_din
       /end LOC_MEASUREMENT
       /begin REF_CHARACTERISTIC
+        atvc_FanTest
+        atvc_GenTestCurrent
+        atvc_GenWarmUpCurrent
+        atvc_IceOffTh
+        atvc_IceOnTh
+        atvc_IceStartRetry
+        atvc_RpmEndWarmUp
+        atvc_StartThrottleIce
         atvc_an_in_sel_his
         atvc_an_in_sel_th
         atvc_brakePedalHis
         atvc_brakePedalOn
         atvc_dcMinFan
+        atvc_footBrakeIce
+        atvc_footBrakeWarmUp
         atvc_maxDischCurr
         atvc_maxRegenCurr
         atvc_maxTempInv
@@ -5079,7 +5785,9 @@ ASAP2_VERSION 1 31
         atvc_socLimitSave
         atvc_tempSwitchOffFan
         atvc_tempSwitchOnFan
+        atvc_throttleMaxLimit
         atvc_throttleNeutralPoint
+        atvc_throttleRegOff
         atvc_velocityLimitFwd
         atvc_velocityLimitRwd
       /end REF_CHARACTERISTIC
@@ -5128,6 +5836,9 @@ ASAP2_VERSION 1 31
       /begin LOC_MEASUREMENT
         atv_dbg_pumpB_out
       /end LOC_MEASUREMENT
+      /begin REF_CHARACTERISTIC
+        atvc_FanTest
+      /end REF_CHARACTERISTIC
     /end FUNCTION
 
     /begin FUNCTION Input_Processing
@@ -5148,11 +5859,9 @@ ASAP2_VERSION 1 31
         atv_xe2_raw_ain
         atv_xe3_ain
         atv_xe4_raw_ain
+        atv_yg3_raw_ain
         atv_za3_StartBtn_din
       /end LOC_MEASUREMENT
-      /begin REF_CHARACTERISTIC
-        atvc_throttleNeutralPoint
-      /end REF_CHARACTERISTIC
     /end FUNCTION
 
     /begin FUNCTION CPU_Status
@@ -5233,7 +5942,7 @@ ASAP2_VERSION 1 31
     /end FUNCTION
 
     /begin FUNCTION FAN_LOGIC
-      "Group /ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC"
+      "Group /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC"
       /begin REF_CHARACTERISTIC
         atvc_dcMinFan
         atvc_tempSwitchOffFan
@@ -5242,7 +5951,7 @@ ASAP2_VERSION 1 31
     /end FUNCTION
 
     /begin FUNCTION GestioneImpiantoRaffreddamento
-      "Group /ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento"
+      "Group /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento"
       /begin SUB_FUNCTION
         FAN_LOGIC
       /end SUB_FUNCTION
@@ -5251,8 +5960,8 @@ ASAP2_VERSION 1 31
       /end REF_CHARACTERISTIC
     /end FUNCTION
 
-    /begin FUNCTION COOLING_SYSTEM
-      "Group /ByModelHeirarchy/ATV/loop_10ms/COOLING SYSTEM"
+    /begin FUNCTION _COOLING_SYSTEM
+      "Group /ByModelHeirarchy/ATV/loop_10ms/ COOLING SYSTEM"
       /begin SUB_FUNCTION
         GestioneImpiantoRaffreddamento
       /end SUB_FUNCTION
@@ -5267,8 +5976,28 @@ ASAP2_VERSION 1 31
 
     /begin FUNCTION DRIVE_BY_WIRE
       "Group /ByModelHeirarchy/ATV/loop_10ms/DRIVE BY WIRE"
+      /begin LOC_MEASUREMENT
+        atv_fs1_out
+        atv_motoring_x1000_front
+        atv_motoring_x1000_front_limit0
+        atv_motoring_x1000_rear
+        atv_motoring_x1000_rear_limited
+        atv_regen_x1000_front
+        atv_regen_x1000_rear
+        atv_throttleRegOff
+      /end LOC_MEASUREMENT
       /begin REF_CHARACTERISTIC
+        atvc_throttleMaxLimit
         atvc_throttleNeutralPoint
+        atvc_throttleRegOff
+      /end REF_CHARACTERISTIC
+    /end FUNCTION
+
+    /begin FUNCTION HYBRID_MANAGEMENT_Rev1_1
+      "Group /ByModelHeirarchy/ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1"
+      /begin REF_CHARACTERISTIC
+        atvc_GenWarmUpCurrent
+        atvc_RpmEndWarmUp
       /end REF_CHARACTERISTIC
     /end FUNCTION
 
@@ -5282,19 +6011,39 @@ ASAP2_VERSION 1 31
     /begin FUNCTION loop_10ms
       "Group /ByModelHeirarchy/ATV/loop_10ms"
       /begin SUB_FUNCTION
-        COOLING_SYSTEM
+        _COOLING_SYSTEM
         DRIVE_BY_WIRE
+        HYBRID_MANAGEMENT_Rev1_1
         VSM
       /end SUB_FUNCTION
       /begin LOC_MEASUREMENT
+        atv_GenCurrentSetPoint
+        atv_IceFault
+        atv_IceKey_out
+        atv_IceOn
+        atv_IceRG
+        atv_IceSM
+        atv_IceShutdown_out
         atv_en_dcdc_out
+        atv_footBrake_X1000_out
+        atv_fs1_in
+        atv_fs1_out
         atv_key_signal
+        atv_motoring_x1000_front
+        atv_motoring_x1000_front_limit0
+        atv_motoring_x1000_rear
+        atv_motoring_x1000_rear_limited
+        atv_regen_x1000_front
+        atv_regen_x1000_rear
         atv_runLed_out
         atv_state_out
         atv_sub_state_out
+        atv_tHROTTLEGen_X1000_out
+        atv_throttleX1000
         atv_wakelock_out
       /end LOC_MEASUREMENT
       /begin REF_CHARACTERISTIC
+        atvc_GenTestCurrent
         atvc_velocityLimitFwd
         atvc_velocityLimitRwd
       /end REF_CHARACTERISTIC
@@ -5489,6 +6238,10 @@ ASAP2_VERSION 1 31
     /begin FUNCTION Scalars
       "Group /ByType/Scalars"
       /begin REF_CHARACTERISTIC
+        atvc_FanTest
+        atvc_GenTestCurrent
+        atvc_GenWarmUpCurrent
+        atvc_RpmEndWarmUp
         atvc_dcMinFan
         atvc_maxDischCurr
         atvc_maxRegenCurr
@@ -5499,7 +6252,9 @@ ASAP2_VERSION 1 31
         atvc_socLimitSave
         atvc_tempSwitchOffFan
         atvc_tempSwitchOnFan
+        atvc_throttleMaxLimit
         atvc_throttleNeutralPoint
+        atvc_throttleRegOff
         atvc_velocityLimitFwd
         atvc_velocityLimitRwd
       /end REF_CHARACTERISTIC
@@ -5509,6 +6264,13 @@ ASAP2_VERSION 1 31
       "Group /ByType/Signals"
       /begin LOC_MEASUREMENT
         atv_4wd_din
+        atv_GenCurrentSetPoint
+        atv_IceFault
+        atv_IceKey_out
+        atv_IceOn
+        atv_IceRG
+        atv_IceSM
+        atv_IceShutdown_out
         atv_app_code_day
         atv_app_code_major_ver
         atv_app_code_minor_ver
@@ -5528,8 +6290,14 @@ ASAP2_VERSION 1 31
         atv_cpu_loading_max
         atv_dbg_pumpB_out
         atv_en_dcdc_out
+        atv_footBrake_X1000_out
         atv_fs1_in
+        atv_fs1_out
         atv_key_signal
+        atv_motoring_x1000_front
+        atv_motoring_x1000_front_limit0
+        atv_motoring_x1000_rear
+        atv_motoring_x1000_rear_limited
         atv_platform_code_day
         atv_platform_code_major_ver
         atv_platform_code_minor_ver
@@ -5542,12 +6310,16 @@ ASAP2_VERSION 1 31
         atv_prg_code_month
         atv_prg_code_subminor_ver
         atv_prg_code_year
+        atv_regen_x1000_front
+        atv_regen_x1000_rear
         atv_runLed_out
         atv_stack_used
         atv_state_out
         atv_sub_state_out
+        atv_tHROTTLEGen_X1000_out
         atv_task_duration_1s
         atv_task_duration_1s_max
+        atv_throttleRegOff
         atv_throttleX1000
         atv_v_dbg_chg_req
         atv_v_dbg_heater_req
@@ -5561,6 +6333,7 @@ ASAP2_VERSION 1 31
         atv_xe2_raw_ain
         atv_xe3_ain
         atv_xe4_raw_ain
+        atv_yg3_raw_ain
         atv_za3_StartBtn_din
         bms_pack_voltage
       /end LOC_MEASUREMENT
@@ -5578,10 +6351,16 @@ ASAP2_VERSION 1 31
     /begin FUNCTION Others
       "Group /Others"
       /begin REF_CHARACTERISTIC
+        atvc_IceOffTh
+        atvc_IceOnTh
+        atvc_IceStartRetry
+        atvc_StartThrottleIce
         atvc_an_in_sel_his
         atvc_an_in_sel_th
         atvc_brakePedalHis
         atvc_brakePedalOn
+        atvc_footBrakeIce
+        atvc_footBrakeWarmUp
       /end REF_CHARACTERISTIC
     /end FUNCTION
 

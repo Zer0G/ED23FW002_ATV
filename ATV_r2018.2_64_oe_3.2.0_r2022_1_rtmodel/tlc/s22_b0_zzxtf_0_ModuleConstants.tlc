@@ -1,0 +1,10 @@
+%implements s22_b0_zzxtf_0_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S3>/Chart' */
+#define ATV_IN_NO_ACTIVE_CHILD ((uint8_T)0U)
+#define ATV_IN_NO_RX ((uint8_T)1U)
+#define ATV_IN_RX ((uint8_T)2U)
+%endfunction

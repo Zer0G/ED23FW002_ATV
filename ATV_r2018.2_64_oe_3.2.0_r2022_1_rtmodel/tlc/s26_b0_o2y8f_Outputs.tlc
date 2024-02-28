@@ -1,0 +1,1673 @@
+%implements s26_b0_o2y8f_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rateLimiterRate;
+boolean_T rtb_Compare;
+uint8_T rtb_Switch_l;
+uint8_T rtb_Gain_d;
+int16_T rtb_MultiportSwitch;
+boolean_T rtb_PumpACtrl;
+real_T rtb_Product;
+real_T rtb_Gain;
+int64m_T tmp;
+int64m_T tmp_0;
+int64m_T tmp_1;
+int64m_T tmp_2;
+uint32_T tmp_3;
+uint32_T tmp_4;
+int96m_T tmp_5;
+int64m_T tmp_6;
+int64m_T tmp_7;
+int64m_T tmp_8;
+int64m_T tmp_9;
+int96m_T tmp_a;
+int64m_T tmp_b;
+int96m_T tmp_c;
+int64m_T tmp_d;
+int96m_T tmp_e;
+int64m_T tmp_f;
+int32_T u0_tmp;
+int32_T u0_tmp_0;
+static int64m_T tmp_g = { { 0U, 0U }/* chunks */ };
+%closefile localVarDecl
+%assign tlcOutputsFcnOfS24B0 = OpaqueTLCBlockFcn("Outputs", 24, 0, 1, 5)
+%assign tlcOutputsFcnOfS24B2 = OpaqueTLCBlockFcn("Outputs", 24, 2, 1, 5)
+%assign tlcOutputsFcnOfS24B3 = OpaqueTLCBlockFcn("Outputs", 24, 3, 1, 5)
+%assign tlcOutputsFcnOfS24B4 = OpaqueTLCBlockFcn("Outputs", 24, 4, 1, 5)
+%assign tlcOutputsFcnOfS24B5 = OpaqueTLCBlockFcn("Outputs", 24, 5, 1, 5)
+%assign tlcOutputsFcnOfS24B12 = OpaqueTLCBlockFcn("Outputs", 24, 12, 1, 5)
+%assign tlcOutputsFcnOfS24B13 = OpaqueTLCBlockFcn("Outputs", 24, 13, 1, 5)
+%assign tlcOutputsFcnOfS24B29 = OpaqueTLCBlockFcn("Outputs", 24, 29, 1, 5)
+%assign tlcOutputsFcnOfS24B52 = OpaqueTLCBlockFcn("Outputs", 24, 52, 1, 5)
+%assign tlcOutputsFcnOfS24B53 = OpaqueTLCBlockFcn("Outputs", 24, 53, 1, 5)
+%assign tlcOutputsFcnOfS24B57 = OpaqueTLCBlockFcn("Outputs", 24, 57, 1, 5)
+%assign tlcOutputsFcnOfS24B61 = OpaqueTLCBlockFcn("Outputs", 24, 61, 1, 5)
+%assign tlcOutputsFcnOfS24B70 = OpaqueTLCBlockFcn("Outputs", 24, 70, 1, 5)
+%assign tlcOutputsFcnOfS24B71 = OpaqueTLCBlockFcn("Outputs", 24, 71, 1, 5)
+%assign tlcOutputsFcnOfS24B72 = OpaqueTLCBlockFcn("Outputs", 24, 72, 1, 5)
+%assign tlcOutputsFcnOfS24B77 = OpaqueTLCBlockFcn("Outputs", 24, 77, 1, 5)
+%assign tlcOutputsFcnOfS24B82 = OpaqueTLCBlockFcn("Outputs", 24, 82, 1, 5)
+%assign tlcOutputsFcnOfS24B84 = OpaqueTLCBlockFcn("Outputs", 24, 84, 1, 5)
+%assign tlcOutputsFcnOfS24B85 = OpaqueTLCBlockFcn("Outputs", 24, 85, 1, 5)
+%assign tlcOutputsFcnOfS24B86 = OpaqueTLCBlockFcn("Outputs", 24, 86, 1, 5)
+%assign tlcOutputsFcnOfS24B87 = OpaqueTLCBlockFcn("Outputs", 24, 87, 1, 5)
+%assign tlcOutputsFcnOfS24B88 = OpaqueTLCBlockFcn("Outputs", 24, 88, 1, 5)
+%assign tlcOutputsFcnOfS24B89 = OpaqueTLCBlockFcn("Outputs", 24, 89, 1, 5)
+%assign tlcOutputsFcnOfS24B90 = OpaqueTLCBlockFcn("Outputs", 24, 90, 1, 5)
+%assign tlcOutputsFcnOfS24B91 = OpaqueTLCBlockFcn("Outputs", 24, 91, 1, 5)
+%assign tlcOutputsFcnOfS24B92 = OpaqueTLCBlockFcn("Outputs", 24, 92, 1, 5)
+%assign tlcOutputsFcnOfS24B93 = OpaqueTLCBlockFcn("Outputs", 24, 93, 1, 5)
+%assign tlcOutputsFcnOfS24B95 = OpaqueTLCBlockFcn("Outputs", 24, 95, 1, 5)
+%assign tlcOutputsFcnOfS24B112 = OpaqueTLCBlockFcn("Outputs", 24, 112, 1, 5)
+%assign tlcOutputsFcnOfS24B113 = OpaqueTLCBlockFcn("Outputs", 24, 113, 1, 5)
+%assign tlcOutputsFcnOfS24B116 = OpaqueTLCBlockFcn("Outputs", 24, 116, 1, 5)
+%assign tlcOutputsFcnOfS24B117 = OpaqueTLCBlockFcn("Outputs", 24, 117, 1, 5)
+%assign tlcOutputsFcnOfS24B118 = OpaqueTLCBlockFcn("Outputs", 24, 118, 1, 5)
+%assign tlcOutputsFcnOfS24B120 = OpaqueTLCBlockFcn("Outputs", 24, 120, 1, 5)
+%assign tlcOutputsFcnOfS24B129 = OpaqueTLCBlockFcn("Outputs", 24, 129, 1, 5)
+%assign tlcOutputsFcnOfS24B130 = OpaqueTLCBlockFcn("Outputs", 24, 130, 1, 5)
+%assign tlcOutputsFcnOfS24B131 = OpaqueTLCBlockFcn("Outputs", 24, 131, 1, 5)
+%assign tlcOutputsFcnOfS24B132 = OpaqueTLCBlockFcn("Outputs", 24, 132, 1, 5)
+%assign tlcOutputsFcnOfS24B133 = OpaqueTLCBlockFcn("Outputs", 24, 133, 1, 5)
+%assign tlcOutputsFcnOfS24B134 = OpaqueTLCBlockFcn("Outputs", 24, 134, 1, 5)
+%assign tlcOutputsFcnOfS24B135 = OpaqueTLCBlockFcn("Outputs", 24, 135, 1, 5)
+%assign tlcOutputsFcnOfS24B136 = OpaqueTLCBlockFcn("Outputs", 24, 136, 1, 5)
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B0)
+/* {S!d2366}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput' */
+%<tlcOutputsFcnOfS24B0>\
+%endif
+/* {S!d2368}Gain: '<S7>/Gain' */
+rtb_Product = floor(1000.0 * ATV_B.pai_BasicAnalogInput);
+if (rtIsNaN(rtb_Product) || rtIsInf(rtb_Product)) {
+    rtb_Product = 0.0;
+} else {
+    rtb_Product = fmod(rtb_Product, 4.294967296E+9);
+}
+atv_xd1_key_ain = rtb_Product < 0.0 ? -(int32_T)(uint32_T)-rtb_Product : (int32_T)(uint32_T)rtb_Product;
+/* {E!d2368}End of Gain: '<S7>/Gain' */
+
+/* {S!d2370}RelationalOperator: '<S31>/Compare' incorporates:
+ *  Constant: '<S31>/Constant'
+ */
+atv_key_signal = (atv_xd1_key_ain > 500);
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B2)
+/* {S!d2372}S-Function (pdx_digital_input): '<S7>/pdx_DigitalInput' */
+%<tlcOutputsFcnOfS24B2>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B3)
+/* {S!d2374}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput5' */
+%<tlcOutputsFcnOfS24B3>\
+%endif
+/* {S!d2376}Relay: '<S7>/Relay2' incorporates:
+ *  Relay: '<S7>/Relay3'
+ */
+rtb_Product = atvc_an_in_sel_th + atvc_an_in_sel_his;
+if (atv_xc1_raw_ain >= rtb_Product) {
+    ATV_DW.Relay2_Mode = true;
+} else {
+    if (atv_xc1_raw_ain <= atvc_an_in_sel_th - atvc_an_in_sel_his) {
+        ATV_DW.Relay2_Mode = false;
+    }
+}
+atv_fwd_mode_in = !ATV_DW.Relay2_Mode;
+/* {E!d2376}End of Relay: '<S7>/Relay2' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B4)
+
+/* {S!d2378}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput6' */
+%<tlcOutputsFcnOfS24B4>\
+%endif
+/* {S!d2380}Relay: '<S7>/Relay3' */
+if (atv_xc4_raw_ain >= rtb_Product) {
+    ATV_DW.Relay3_Mode = true;
+} else {
+    if (atv_xc4_raw_ain <= atvc_an_in_sel_th - atvc_an_in_sel_his) {
+        ATV_DW.Relay3_Mode = false;
+    }
+}
+atv_rwd_mode_in = !ATV_DW.Relay3_Mode;
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B5)
+/* {S!d2382}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput4' */
+%<tlcOutputsFcnOfS24B5>\
+%endif
+/* {S!d2394}Switch: '<S15>/Switch' incorporates:
+ *  Constant: '<S17>/Lower Limit'
+ *  Constant: '<S17>/Upper Limit'
+ *  Logic: '<S17>/AND'
+ *  RelationalOperator: '<S17>/Lower Test'
+ *  RelationalOperator: '<S17>/Upper Test'
+ */
+if ((0.45 <= atv_xa3_brake_pedal_raw_ain) && (atv_xa3_brake_pedal_raw_ain <= 4.55)) {
+    /* {S!d2384}Saturate: '<S15>/Saturation' */
+    if (atv_xa3_brake_pedal_raw_ain > 4.5) {
+        rtb_Product = 4.5;
+    } else if (atv_xa3_brake_pedal_raw_ain < 0.5) {
+        rtb_Product = 0.5;
+    } else {
+        rtb_Product = atv_xa3_brake_pedal_raw_ain;
+    }
+    /* {E!d2384}End of Saturate: '<S15>/Saturation' */
+
+    /* {S!d2386}Gain: '<S15>/Gain' incorporates:
+ *  Constant: '<S15>/Constant1'
+ *  Sum: '<S15>/Add'
+ */
+    rtb_Product = floor((rtb_Product - 0.5) * 750.0);
+    if (rtIsNaN(rtb_Product)) {
+        atv_brake_pedalX1000 = 0U;
+    } else {
+        atv_brake_pedalX1000 = (uint16_T)fmod(rtb_Product, 65536.0);
+    }
+    /* {S!d2390}Saturate: '<S15>/Saturation1' */
+    if (atv_brake_pedalX1000 >= 1000) {
+        /* {S!d2388}Gain: '<S15>/Gain' */
+        atv_brake_pedalX1000 = 1000U;
+    }
+    /* {E!d2390}End of Saturate: '<S15>/Saturation1' */
+} else {
+    /* {S!d2392}Gain: '<S15>/Gain' incorporates:
+ *  Constant: '<S15>/Constant'
+ */
+    atv_brake_pedalX1000 = 0U;
+}
+/* {E!d2394}End of Switch: '<S15>/Switch' */
+
+/* {S!d2396}Relay: '<S7>/Relay1' */
+if (atv_brake_pedalX1000 >= (uint16_T)((uint32_T)atvc_brakePedalOn + atvc_brakePedalHis)) {
+    ATV_DW.Relay1_Mode = true;
+} else {
+    if (atv_brake_pedalX1000 <= (uint16_T)((uint32_T)atvc_brakePedalOn - atvc_brakePedalHis)) {
+        ATV_DW.Relay1_Mode = false;
+    }
+}
+atv_brake_pedal_digital_in = ATV_DW.Relay1_Mode;
+/* {E!d2396}End of Relay: '<S7>/Relay1' */
+
+/* {S!d2398}Logic: '<S9>/Logical Operator3' incorporates:
+ *  Logic: '<S7>/Logical Operator'
+ *  Logic: '<S9>/Logical Operator1'
+ *  Logic: '<S9>/Logical Operator2'
+ *  Logic: '<S9>/Logical Operator4'
+ */
+ATV_B.LogicalOperator3 = ((!atv_za3_StartBtn_din) && ((!atv_fwd_mode_in) && (!atv_rwd_mode_in)) && atv_brake_pedal_digital_in);
+/* {S!d2402}RateTransition: '<Root>/Rate Transition4' */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition4 = ATV_DW.RateTransition4_Buffer0;
+    /* {S!d2400}RateTransition: '<Root>/Rate Transition5' */
+    ATV_B.RateTransition5 = ATV_DW.RateTransition5_Buffer0;
+}
+/* {E!d2402}End of RateTransition: '<Root>/Rate Transition4' */
+
+/* {S!d2404}Chart: '<S9>/VSM' */
+if (ATV_DW.temporalCounter_i1_j < 127U) {
+    ATV_DW.temporalCounter_i1_j++;
+}
+if (ATV_DW.temporalCounter_i2 < 63U) {
+    ATV_DW.temporalCounter_i2++;
+}
+if (ATV_DW.temporalCounter_i3 < 255U) {
+    ATV_DW.temporalCounter_i3++;
+}
+/* Gateway: loop_10ms/VSM */
+/* During: loop_10ms/VSM */
+if (ATV_DW.is_active_c3_ATV == 0U) {
+    /* Entry: loop_10ms/VSM */
+    ATV_DW.is_active_c3_ATV = 1U;
+    /* Entry Internal: loop_10ms/VSM */
+    /* Transition: '<S41>:4' */
+    ATV_DW.is_c3_ATV = ATV_IN_SLEEP;
+    /* Entry 'SLEEP': '<S41>:9' */
+    atv_state_out = 1U;
+    atv_sub_state_out = 0U;
+    atv_wakelock_out = false;
+    atv_en_dcdc_out = false;
+} else {
+    switch (ATV_DW.is_c3_ATV) {
+      case ATV_IN_INIT:
+        atv_state_out = 3U;
+        atv_wakelock_out = true;
+        atv_en_dcdc_out = true;
+        /* During 'INIT': '<S41>:5' */
+        if (!atv_key_signal) {
+            /* Transition: '<S41>:17' */
+            ATV_DW.is_c3_ATV = ATV_IN_PRE_SLEEP;
+            ATV_DW.temporalCounter_i1_j = 0U;
+            /* Entry 'PRE_SLEEP': '<S41>:3' */
+            atv_state_out = 2U;
+            atv_sub_state_out = 0U;
+        } else {
+            if (ATV_DW.temporalCounter_i1_j >= 100U) {
+                /* Transition: '<S41>:22' */
+                ATV_DW.is_c3_ATV = ATV_IN_KEY_ON;
+                /* Entry 'KEY_ON': '<S41>:20' */
+                /* Entry Internal 'KEY_ON': '<S41>:20' */
+                /* Entry Internal 'HV_CTRL': '<S41>:34' */
+                /* Transition: '<S41>:82' */
+                ATV_DW.is_HV_CTRL = ATV_IN_HV_OFF;
+                /* Entry 'HV_OFF': '<S41>:52' */
+                /* Entry Internal 'CHG_CTRL': '<S41>:68' */
+                /* Transition: '<S41>:67' */
+                ATV_DW.is_CHG_CTRL = ATV_IN_CHG_OFF;
+                ATV_DW.temporalCounter_i3 = 0U;
+                /* Entry 'CHG_OFF': '<S41>:62' */
+                ATV_B.chg_ctrl_out = false;
+                ATV_B.hvm_ctrl_out = false;
+                /* Entry Internal 'HEATER_CTRL': '<S41>:72' */
+                /* Transition: '<S41>:74' */
+                ATV_DW.is_HEATER_CTRL = ATV_IN_HEATER_OFF;
+                /* Entry 'HEATER_OFF': '<S41>:69' */
+                ATV_B.heater_ctrl_out = false;
+                /* Entry Internal 'DRIVE_ENABLE': '<S41>:85' */
+                /* Transition: '<S41>:91' */
+                ATV_DW.is_DRIVE_ENABLE = ATV_IN_IDLE;
+                /* Entry 'IDLE': '<S41>:87' */
+                atv_state_out = 4U;
+                ATV_B.en_inv_rear_out = false;
+                ATV_B.en_inv_front_out = false;
+                ATV_B.en_inv_gen_out = false;
+                /* Entry Internal 'STARTTRIGGER': '<S41>:119' */
+                /* Transition: '<S41>:115' */
+                ATV_DW.is_STARTTRIGGER = ATV_IN_STARTTRIGGER_OFF;
+            }
+        }
+        break;
+      case ATV_IN_KEY_ON:
+        %<(SLibCGCallSubFcn("ATV_KEY_ON", [], 1, 5, 0))>;
+        break;
+      case ATV_IN_PRE_SLEEP:
+        atv_state_out = 2U;
+        /* During 'PRE_SLEEP': '<S41>:3' */
+        if (atv_key_signal) {
+            /* Transition: '<S41>:19' */
+            ATV_DW.is_c3_ATV = ATV_IN_INIT;
+            ATV_DW.temporalCounter_i1_j = 0U;
+            /* Entry 'INIT': '<S41>:5' */
+            atv_state_out = 3U;
+            atv_sub_state_out = 0U;
+            atv_wakelock_out = true;
+            atv_en_dcdc_out = true;
+        } else {
+            if (ATV_DW.temporalCounter_i1_j >= 25U) {
+                /* Transition: '<S41>:16' */
+                ATV_DW.is_c3_ATV = ATV_IN_SLEEP;
+                /* Entry 'SLEEP': '<S41>:9' */
+                atv_state_out = 1U;
+                atv_sub_state_out = 0U;
+                atv_wakelock_out = false;
+                atv_en_dcdc_out = false;
+            }
+        }
+        break;
+      default:
+        atv_state_out = 1U;
+        atv_wakelock_out = false;
+        atv_en_dcdc_out = false;
+        /* During 'SLEEP': '<S41>:9' */
+        if (atv_key_signal) {
+            /* Transition: '<S41>:12' */
+            ATV_DW.is_c3_ATV = ATV_IN_INIT;
+            ATV_DW.temporalCounter_i1_j = 0U;
+            /* Entry 'INIT': '<S41>:5' */
+            atv_state_out = 3U;
+            atv_sub_state_out = 0U;
+            atv_wakelock_out = true;
+            atv_en_dcdc_out = true;
+        }
+        break;
+    }
+}
+/* {E!d2404}End of Chart: '<S9>/VSM' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B12)
+
+/* {S!d2406}S-Function (psc_cpu_loading): '<S1>/psc_CpuLoading' */
+%<tlcOutputsFcnOfS24B12>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B13)
+/* {S!d2408}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage' */
+%<tlcOutputsFcnOfS24B13>\
+%endif
+/* {S!d2416}RateTransition: '<S1>/Rate Transition4' incorporates:
+ *  RateTransition: '<Root>/Rate Transition6'
+ */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition4_b = ATV_B.hvm_ctrl_out;
+    /* {S!d2410}RateTransition: '<S1>/Rate Transition' */
+    ATV_B.RateTransition = ATV_B.hvp_ctrl_out;
+    /* {S!d2412}RateTransition: '<S1>/Rate Transition1' */
+    ATV_B.RateTransition1 = ATV_B.chg_ctrl_out;
+    /* {S!d2414}RateTransition: '<S1>/Rate Transition2' */
+    ATV_B.RateTransition2 = ATV_B.heater_ctrl_out;
+    ATV_B.RateTransition6 = ATV_DW.RateTransition6_Buffer0;
+}
+/* {E!d2416}End of RateTransition: '<S1>/Rate Transition4' */
+
+/* {S!d2418}Logic: '<S30>/Logical Operator' incorporates:
+ *  Constant: '<S30>/atvc_socLimitSave'
+ *  Constant: '<S9>/state_Const1'
+ *  RelationalOperator: '<S30>/Relational Operator12'
+ */
+rtb_Compare = (80 <= atvc_socLimitSave);
+/* {S!d2420}Relay: '<S30>/Relay' */
+if (ATV_B.RateTransition6 >= atvc_maxTempMotor) {
+    ATV_DW.Relay_Mode = true;
+} else {
+    if (ATV_B.RateTransition6 <= atvc_minTempMotor) {
+        ATV_DW.Relay_Mode = false;
+    }
+}
+/* {S!d2422}RateTransition: '<Root>/Rate Transition7' incorporates:
+ *  RateTransition: '<Root>/Rate Transition10'
+ */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition7 = ATV_DW.RateTransition7_Buffer0;
+    ATV_B.RateTransition10 = ATV_DW.RateTransition10_Buffer0;
+}
+/* {E!d2422}End of RateTransition: '<Root>/Rate Transition7' */
+
+/* {S!d2424}Relay: '<S30>/Relay1' */
+if (ATV_B.RateTransition7 >= atvc_maxTempInv) {
+    ATV_DW.Relay1_Mode_h = true;
+} else {
+    if (ATV_B.RateTransition7 <= atvc_minTempInv) {
+        ATV_DW.Relay1_Mode_h = false;
+    }
+}
+/* {S!d2426}Relay: '<S30>/Relay2' */
+if (ATV_B.RateTransition10 >= atvc_maxTempMotor) {
+    ATV_DW.Relay2_Mode_m = true;
+} else {
+    if (ATV_B.RateTransition10 <= atvc_minTempMotor) {
+        ATV_DW.Relay2_Mode_m = false;
+    }
+}
+/* {S!d2428}RateTransition: '<Root>/Rate Transition8' incorporates:
+ *  RateTransition: '<Root>/Rate Transition9'
+ */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition8 = ATV_DW.RateTransition8_Buffer0;
+    ATV_B.RateTransition9 = ATV_DW.RateTransition9_Buffer0;
+}
+/* {E!d2428}End of RateTransition: '<Root>/Rate Transition8' */
+
+/* {S!d2430}Relay: '<S30>/Relay3' */
+if (ATV_B.RateTransition8 >= atvc_maxTempMotor) {
+    ATV_DW.Relay3_Mode_d = true;
+} else {
+    if (ATV_B.RateTransition8 <= atvc_minTempMotor) {
+        ATV_DW.Relay3_Mode_d = false;
+    }
+}
+/* {S!d2432}Relay: '<S30>/Relay4' */
+if (ATV_B.RateTransition9 >= atvc_maxTempInv) {
+    ATV_DW.Relay4_Mode = true;
+} else {
+    if (ATV_B.RateTransition9 <= atvc_minTempInv) {
+        ATV_DW.Relay4_Mode = false;
+    }
+}
+/* {S!d2434}RateTransition: '<Root>/Rate Transition11' */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition11 = ATV_DW.RateTransition11_Buffer0;
+}
+/* {E!d2434}End of RateTransition: '<Root>/Rate Transition11' */
+
+/* {S!d2436}Relay: '<S30>/Relay5' */
+if (ATV_B.RateTransition11 >= atvc_maxTempInv) {
+    ATV_DW.Relay5_Mode = true;
+} else {
+    if (ATV_B.RateTransition11 <= atvc_minTempInv) {
+        ATV_DW.Relay5_Mode = false;
+    }
+}
+/* {S!d2438}Chart: '<S42>/PUMP LOGIC' incorporates:
+ *  Relay: '<S30>/Relay'
+ *  Relay: '<S30>/Relay1'
+ *  Relay: '<S30>/Relay2'
+ *  Relay: '<S30>/Relay3'
+ *  Relay: '<S30>/Relay4'
+ *  Relay: '<S30>/Relay5'
+ */
+if (ATV_DW.temporalCounter_i1_f < 65535U) {
+    ATV_DW.temporalCounter_i1_f++;
+}
+/* Gateway: loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC */
+/* During: loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC */
+if (ATV_DW.is_active_c5_ATV == 0U) {
+    /* Entry: loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC */
+    ATV_DW.is_active_c5_ATV = 1U;
+    /* Entry Internal: loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC */
+    /* Entry 'PumpALogic': '<S44>:47' */
+    ATV_DW.PumpStA = 0.0;
+    /* Entry Internal 'PumpALogic': '<S44>:47' */
+    /* Transition: '<S44>:56' */
+    ATV_DW.is_PumpALogic = ATV_IN_Off;
+    /* Entry 'Off': '<S44>:63' */
+    rtb_PumpACtrl = false;
+    /* Entry 'PumpBLogic': '<S44>:14' */
+    ATV_DW.PumpStB = 0.0;
+    /* Entry Internal 'PumpBLogic': '<S44>:14' */
+    /* Transition: '<S44>:27' */
+    ATV_DW.is_PumpBLogic = ATV_IN_Off;
+    ATV_DW.temporalCounter_i1_f = 0U;
+    /* Entry 'Off': '<S44>:24' */
+    atv_dbg_pumpB_out = false;
+} else {
+    /* During 'PumpALogic': '<S44>:47' */
+    if (ATV_DW.is_PumpALogic == ATV_IN_Off) {
+        rtb_PumpACtrl = false;
+        /* During 'Off': '<S44>:63' */
+        if (ATV_DW.PumpStA == 1.0) {
+            /* Transition: '<S44>:116' */
+            ATV_DW.is_PumpALogic = ATV_IN_Run;
+            /* Entry 'Run': '<S44>:54' */
+            rtb_PumpACtrl = true;
+        } else {
+            ATV_DW.PumpStA = %<(SLibCGCallSubFcn("ATV_Management", ["(int16_T)ATV_DW.Relay1_Mode_h", "(int16_T)ATV_DW.Relay_Mode", "(int16_T)ATV_DW.Relay2_Mode_m"], 1, 5, 1))>;
+        }
+    } else {
+        rtb_PumpACtrl = true;
+        /* During 'Run': '<S44>:54' */
+        if (ATV_DW.PumpStA == 0.0) {
+            /* Transition: '<S44>:62' */
+            ATV_DW.is_PumpALogic = ATV_IN_Off;
+            /* Entry 'Off': '<S44>:63' */
+            rtb_PumpACtrl = false;
+        } else {
+            ATV_DW.PumpStA = %<(SLibCGCallSubFcn("ATV_Management", ["(int16_T)ATV_DW.Relay1_Mode_h", "(int16_T)ATV_DW.Relay_Mode", "(int16_T)ATV_DW.Relay2_Mode_m"], 1, 5, 2))>;
+        }
+    }
+    /* During 'PumpBLogic': '<S44>:14' */
+    switch (ATV_DW.is_PumpBLogic) {
+      case ATV_IN_Off:
+        atv_dbg_pumpB_out = false;
+        /* During 'Off': '<S44>:24' */
+        if (ATV_DW.PumpStB == 1.0) {
+            /* Transition: '<S44>:29' */
+            ATV_DW.is_PumpBLogic = ATV_IN_Run;
+            /* Entry 'Run': '<S44>:28' */
+            atv_dbg_pumpB_out = true;
+        } else if (ATV_DW.temporalCounter_i1_f >= 50000U) {
+            /* Transition: '<S44>:32' */
+            ATV_DW.is_PumpBLogic = ATV_IN_Run60sec;
+            ATV_DW.temporalCounter_i1_f = 0U;
+            /* Entry 'Run60sec': '<S44>:22' */
+            atv_dbg_pumpB_out = true;
+        } else {
+            ATV_DW.PumpStB = %<(SLibCGCallSubFcn("ATV_Management", ["(int16_T)ATV_DW.Relay4_Mode", "(int16_T)ATV_DW.Relay3_Mode_d", "(int16_T)ATV_DW.Relay5_Mode"], 1, 5, 4))>;
+        }
+        break;
+      case ATV_IN_Run:
+        atv_dbg_pumpB_out = true;
+        /* During 'Run': '<S44>:28' */
+        if (ATV_DW.PumpStB == 0.0) {
+            /* Transition: '<S44>:25' */
+            ATV_DW.is_PumpBLogic = ATV_IN_Off;
+            ATV_DW.temporalCounter_i1_f = 0U;
+            /* Entry 'Off': '<S44>:24' */
+            atv_dbg_pumpB_out = false;
+        } else {
+            ATV_DW.PumpStB = %<(SLibCGCallSubFcn("ATV_Management", ["(int16_T)ATV_DW.Relay4_Mode", "(int16_T)ATV_DW.Relay3_Mode_d", "(int16_T)ATV_DW.Relay5_Mode"], 1, 5, 3))>;
+        }
+        break;
+      default:
+        atv_dbg_pumpB_out = true;
+        /* During 'Run60sec': '<S44>:22' */
+        if (ATV_DW.PumpStB == 1.0) {
+            /* Transition: '<S44>:31' */
+            /* Transition: '<S44>:34' */
+            ATV_DW.is_PumpBLogic = ATV_IN_Run;
+            /* Entry 'Run': '<S44>:28' */
+            atv_dbg_pumpB_out = true;
+        } else if (ATV_DW.temporalCounter_i1_f >= 6000U) {
+            /* Transition: '<S44>:26' */
+            ATV_DW.is_PumpBLogic = ATV_IN_Off;
+            ATV_DW.temporalCounter_i1_f = 0U;
+            /* Entry 'Off': '<S44>:24' */
+            atv_dbg_pumpB_out = false;
+        } else {
+            ATV_DW.PumpStB = %<(SLibCGCallSubFcn("ATV_Management", ["(int16_T)ATV_DW.Relay4_Mode", "(int16_T)ATV_DW.Relay3_Mode_d", "(int16_T)ATV_DW.Relay5_Mode"], 1, 5, 5))>;
+        }
+        break;
+    }
+}
+/* {E!d2438}End of Chart: '<S42>/PUMP LOGIC' */
+
+/* {S!d2440}Switch: '<S42>/Switch' */
+ATV_B.Switch = ((!rtb_Compare) && rtb_PumpACtrl);
+/* {S!d2446}RateTransition: '<S1>/Rate Transition3' */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition3 = ATV_B.Switch;
+    /* {S!d2442}RateTransition: '<S1>/Rate Transition5' */
+    ATV_B.RateTransition5_g = atv_dbg_pumpB_out;
+    /* {S!d2444}RateTransition: '<Root>/Rate Transition12' */
+    ATV_B.RateTransition12 = ATV_DW.RateTransition12_Buffer0;
+}
+/* {E!d2446}End of RateTransition: '<S1>/Rate Transition3' */
+
+/* {S!d2448}Relay: '<S43>/Relay1' */
+if (ATV_B.RateTransition12 >= atvc_tempSwitchOnFan) {
+    ATV_DW.Relay1_Mode_b = true;
+} else {
+    if (ATV_B.RateTransition12 <= atvc_tempSwitchOffFan) {
+        ATV_DW.Relay1_Mode_b = false;
+    }
+}
+/* {S!d2462}Switch: '<S42>/Switch1' incorporates:
+ *  Constant: '<S42>/FanOff'
+ *  Logic: '<S43>/Logical Operator'
+ *  Relay: '<S43>/Relay1'
+ *  Switch: '<S43>/Switch1'
+ */
+if (rtb_Compare) {
+    rtb_Switch_l = 0U;
+} else {
+    if (atv_dbg_pumpB_out && ATV_DW.Relay1_Mode_b) {
+        /* {S!d2450}Sum: '<S43>/Add1' incorporates:
+ *  Constant: '<S42>/atvc_tempSwitchOnFan'
+ *  Switch: '<S43>/Switch1'
+ */
+        rtb_MultiportSwitch = (int16_T)(ATV_B.RateTransition12 - atvc_tempSwitchOnFan);
+        /* {S!d2452}Saturate: '<S43>/Saturation' incorporates:
+ *  Switch: '<S43>/Switch1'
+ */
+        if (rtb_MultiportSwitch > 20) {
+            rtb_MultiportSwitch = 20;
+        } else {
+            if (rtb_MultiportSwitch < 0) {
+                rtb_MultiportSwitch = 0;
+            }
+        }
+        /* {E!d2452}End of Saturate: '<S43>/Saturation' */
+
+        /* {S!d2454}Product: '<S43>/Product' incorporates:
+ *  Constant: '<S43>/Constant'
+ *  Switch: '<S43>/Switch1'
+ */
+        rtb_Product = (real_T)rtb_MultiportSwitch / 20.0;
+        /* {S!d2456}Gain: '<S43>/Gain' incorporates:
+ *  Constant: '<S43>/Constant2'
+ *  DataTypeConversion: '<S43>/Data Type Conversion'
+ *  Switch: '<S43>/Switch1'
+ *  Switch: '<S45>/Switch2'
+ */
+        rtb_Gain = 0.01 * (real_T)atvc_dcMinFan;
+        /* {S!d2458}Switch: '<S45>/Switch' incorporates:
+ *  RelationalOperator: '<S45>/UpperRelop'
+ *  Switch: '<S43>/Switch1'
+ *  Switch: '<S45>/Switch2'
+ */
+        if (rtb_Product < rtb_Gain) {
+            rtb_Product = rtb_Gain;
+        }
+        /* {E!d2458}End of Switch: '<S45>/Switch' */
+    } else {
+        /* {S!d2460}Switch: '<S43>/Switch1' incorporates:
+ *  Constant: '<S43>/Ventola spenta'
+ */
+        rtb_Product = 0.0;
+    }
+    rtb_Switch_l = (uint8_T)(int32_T)fmod((int32_T)floor(rtb_Product), 256.0);
+}
+/* {E!d2462}End of Switch: '<S42>/Switch1' */
+
+/* {S!d2464}Gain: '<S1>/Gain' */
+rtb_Gain_d = (uint8_T)(100U * rtb_Switch_l);
+/* {S!d2466}RelationalOperator: '<S10>/Compare' incorporates:
+ *  Constant: '<S10>/Constant'
+ */
+rtb_Compare = (rtb_Gain_d > 0);
+/* {S!d2470}RateTransition: '<S1>/Rate Transition6' */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition6_p = rtb_Compare;
+    /* {S!d2468}RateTransition: '<S1>/Rate Transition7' */
+    ATV_B.RateTransition7_p = rtb_Gain_d;
+}
+/* {E!d2470}End of RateTransition: '<S1>/Rate Transition6' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B29)
+
+/* {S!d2472}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput1' */
+%<tlcOutputsFcnOfS24B29>\
+%endif
+/* {S!d2478}Switch: '<S14>/Switch' incorporates:
+ *  Constant: '<S14>/Constant'
+ *  Constant: '<S16>/Lower Limit'
+ *  Constant: '<S16>/Upper Limit'
+ *  Logic: '<S16>/AND'
+ *  RelationalOperator: '<S16>/Lower Test'
+ *  RelationalOperator: '<S16>/Upper Test'
+ */
+if ((0.45 <= atv_xa1_ain_throttle_raw) && (atv_xa1_ain_throttle_raw <= 4.55)) {
+    /* {S!d2474}Saturate: '<S14>/Saturation' */
+    if (atv_xa1_ain_throttle_raw > 4.5) {
+        rtb_Product = 4.5;
+    } else if (atv_xa1_ain_throttle_raw < 0.5) {
+        rtb_Product = 0.5;
+    } else {
+        rtb_Product = atv_xa1_ain_throttle_raw;
+    }
+    /* {E!d2474}End of Saturate: '<S14>/Saturation' */
+
+    /* {S!d2476}Gain: '<S14>/Gain' incorporates:
+ *  Constant: '<S14>/Constant1'
+ *  Sum: '<S14>/Add'
+ */
+    rtb_Product = floor((rtb_Product - 0.5) * 250.0);
+    if (rtIsNaN(rtb_Product)) {
+        atv_throttleX1000 = 0U;
+    } else {
+        atv_throttleX1000 = (uint16_T)fmod(rtb_Product, 65536.0);
+    }
+    /* {E!d2476}End of Gain: '<S14>/Gain' */
+} else {
+    atv_throttleX1000 = 0U;
+}
+/* {E!d2478}End of Switch: '<S14>/Switch' */
+
+/* {S!d2480}RelationalOperator: '<S47>/Relational Operator1' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ */
+rtb_Compare = (atv_throttleX1000 >= atvc_throttleNeutralPoint);
+/* {S!d2482}Constant: '<S32>/atvc_throttleRegOff' */
+atv_throttleRegOff = atvc_throttleRegOff;
+/* {S!d2530}Switch: '<S47>/Switch5' incorporates:
+ *  Constant: '<S47>/Constant2'
+ *  Constant: '<S47>/Constant3'
+ *  Switch: '<S47>/Switch1'
+ */
+if (ATV_B.en_inv_rear_out) {
+    /* {S!d2504}Switch: '<S47>/Switch2' incorporates:
+ *  Constant: '<S47>/Constant1'
+ */
+    if (atv_throttleRegOff) {
+        /* {S!d2502}Switch: '<S47>/Switch4' incorporates:
+ *  Constant: '<S53>/Constant'
+ */
+        if (rtb_Compare) {
+            atv_regen_x1000_rear = 0U;
+        } else {
+            /* {S!d2484}Gain: '<S52>/Gain2' */
+            tmp_3 = 1000U;
+            /* {S!d2486}Sum: '<S52>/Add' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S52>/Cast'
+ *  DataTypeConversion: '<S52>/Cast1'
+ */
+            u0_tmp = atvc_throttleNeutralPoint - atv_throttleX1000;
+            /* {S!d2494}Saturate: '<S52>/Saturation' incorporates:
+ *  Sum: '<S52>/Add'
+ */
+            if (u0_tmp > 1000) {
+                /* {S!d2488}Gain: '<S52>/Gain2' */
+                tmp_4 = 1000U;
+            } else if (u0_tmp < 0) {
+                /* {S!d2490}Gain: '<S52>/Gain2' */
+                tmp_4 = 0U;
+            } else {
+                /* {S!d2492}Gain: '<S52>/Gain2' */
+                tmp_4 = (uint32_T)u0_tmp;
+            }
+            /* {E!d2494}End of Saturate: '<S52>/Saturation' */
+
+            /* {S!d2496}Gain: '<S52>/Gain2' */
+            sMultiWordMul(&tmp_3, 1, &tmp_4, 1, &tmp_2.chunks[0U], 2);
+            /* {S!d2498}Product: '<S52>/Divide3' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S52>/Cast1'
+ */
+            if (atvc_throttleNeutralPoint == 0) {
+                tmp_6 = tmp_g;
+                if (sMultiWordGe(&tmp_2.chunks[0U], &tmp_6.chunks[0U], 2)) {
+                    u0_tmp = MAX_int32_T;
+                } else {
+                    u0_tmp = MIN_int32_T;
+                }
+            } else {
+                sLong2MultiWord(atvc_throttleNeutralPoint, &tmp_6.chunks[0U], 2);
+                sMultiWordDivFloor(&tmp_2.chunks[0U], 2, &tmp_6.chunks[0U], 2, &tmp_5.chunks[0U], 3, &tmp_7.chunks[0U], 2, &tmp_8.chunks[0U], 2, &tmp_9.chunks[0U], 2);
+                u0_tmp = MultiWord2sLong(&tmp_5.chunks[0U]);
+            }
+            /* {S!d2500}Saturate: '<S52>/Saturation1' incorporates:
+ *  Product: '<S52>/Divide3'
+ */
+            if (u0_tmp > 1000) {
+                atv_regen_x1000_rear = 1000U;
+            } else if (u0_tmp < 0) {
+                atv_regen_x1000_rear = 0U;
+            } else {
+                atv_regen_x1000_rear = (uint16_T)u0_tmp;
+            }
+            /* {E!d2500}End of Saturate: '<S52>/Saturation1' */
+        }
+        /* {E!d2502}End of Switch: '<S47>/Switch4' */
+    } else {
+        atv_regen_x1000_rear = 0U;
+    }
+    /* {E!d2504}End of Switch: '<S47>/Switch2' */
+
+    /* {S!d2528}Switch: '<S47>/Switch3' incorporates:
+ *  Constant: '<S52>/Constant'
+ */
+    if (rtb_Compare) {
+        /* {S!d2506}Sum: '<S53>/Add1' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  Constant: '<S53>/Constant1'
+ *  DataTypeConversion: '<S53>/Cast'
+ */
+        u0_tmp = 1000 - atvc_throttleNeutralPoint;
+        /* {S!d2508}Gain: '<S53>/Gain2' */
+        tmp_3 = 1000U;
+        /* {S!d2510}Sum: '<S53>/Add' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S53>/Cast'
+ *  DataTypeConversion: '<S53>/Cast1'
+ */
+        u0_tmp_0 = atv_throttleX1000 - atvc_throttleNeutralPoint;
+        /* {S!d2518}Saturate: '<S53>/Saturation' incorporates:
+ *  Sum: '<S53>/Add'
+ */
+        if (u0_tmp_0 > 1000) {
+            /* {S!d2512}Gain: '<S53>/Gain2' */
+            tmp_4 = 1000U;
+        } else if (u0_tmp_0 < 0) {
+            /* {S!d2514}Gain: '<S53>/Gain2' */
+            tmp_4 = 0U;
+        } else {
+            /* {S!d2516}Gain: '<S53>/Gain2' */
+            tmp_4 = (uint32_T)u0_tmp_0;
+        }
+        /* {E!d2518}End of Saturate: '<S53>/Saturation' */
+
+        /* {S!d2520}Gain: '<S53>/Gain2' */
+        sMultiWordMul(&tmp_3, 1, &tmp_4, 1, &tmp_1.chunks[0U], 2);
+        /* {S!d2522}Saturate: '<S53>/Saturation2' incorporates:
+ *  Sum: '<S53>/Add1'
+ */
+        if (u0_tmp < 1) {
+            u0_tmp = 1;
+        }
+        /* {E!d2522}End of Saturate: '<S53>/Saturation2' */
+
+        /* {S!d2524}Product: '<S53>/Divide3' */
+        sLong2MultiWord(u0_tmp, &tmp_7.chunks[0U], 2);
+        sMultiWordDivFloor(&tmp_1.chunks[0U], 2, &tmp_7.chunks[0U], 2, &tmp_a.chunks[0U], 3, &tmp_8.chunks[0U], 2, &tmp_9.chunks[0U], 2, &tmp_b.chunks[0U], 2);
+        u0_tmp = MultiWord2sLong(&tmp_a.chunks[0U]);
+        /* {S!d2526}Saturate: '<S53>/Saturation1' incorporates:
+ *  Product: '<S53>/Divide3'
+ */
+        if (u0_tmp > 1000) {
+            atv_motoring_x1000_rear = 1000U;
+        } else if (u0_tmp < 0) {
+            atv_motoring_x1000_rear = 0U;
+        } else {
+            atv_motoring_x1000_rear = (uint16_T)u0_tmp;
+        }
+        /* {E!d2526}End of Saturate: '<S53>/Saturation1' */
+    } else {
+        atv_motoring_x1000_rear = 0U;
+    }
+    /* {E!d2528}End of Switch: '<S47>/Switch3' */
+} else {
+    atv_regen_x1000_rear = 0U;
+    atv_motoring_x1000_rear = 0U;
+}
+/* {E!d2530}End of Switch: '<S47>/Switch5' */
+
+/* {S!d2532}Switch: '<S48>/Switch2' incorporates:
+ *  Constant: '<S32>/atvc_throttleMaxLimit'
+ *  RelationalOperator: '<S48>/LowerRelop1'
+ *  Switch: '<S48>/Switch'
+ */
+if (atv_motoring_x1000_rear > atvc_throttleMaxLimit) {
+    atv_motoring_x1000_rear_limited = atvc_throttleMaxLimit;
+} else {
+    atv_motoring_x1000_rear_limited = atv_motoring_x1000_rear;
+}
+/* {E!d2532}End of Switch: '<S48>/Switch2' */
+
+/* {S!d2534}DataTypeConversion: '<S39>/Cast2' incorporates:
+ *  Constant: '<S9>/atvc_velocityLimitRwd'
+ *  DataTypeConversion: '<S39>/Data Type Conversion1'
+ *  Gain: '<S39>/Gain2'
+ *  Product: '<S39>/Product2'
+ */
+ATV_B.Cast2 = (uint16_T)(int32_T)fmod((int32_T)floor(0.277777791F * (real32_T)atvc_velocityLimitRwd * 303.25370753692243), 65536.0);
+/* {S!d2536}DataTypeConversion: '<S39>/Cast1' incorporates:
+ *  Constant: '<S9>/atvc_velocityLimitFwd'
+ *  DataTypeConversion: '<S39>/Data Type Conversion'
+ *  Gain: '<S39>/Gain1'
+ *  Product: '<S39>/Product'
+ */
+ATV_B.Cast1 = (uint16_T)(int32_T)fmod((int32_T)floor(0.277777791F * (real32_T)atvc_velocityLimitFwd * 303.25370753692243), 65536.0);
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B52)
+/* {S!d2538}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage2' */
+%<tlcOutputsFcnOfS24B52>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B53)
+/* {S!d2540}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput3' */
+%<tlcOutputsFcnOfS24B53>\
+%endif
+/* {S!d2542}Relay: '<S7>/Relay' */
+if (atv_xd3_raw_ain >= 3.0) {
+    ATV_DW.Relay_Mode_b = true;
+} else {
+    if (atv_xd3_raw_ain <= 2.0) {
+        ATV_DW.Relay_Mode_b = false;
+    }
+}
+atv_fs1_in = !ATV_DW.Relay_Mode_b;
+/* {E!d2542}End of Relay: '<S7>/Relay' */
+
+/* {S!d2544}Switch: '<S32>/Switch' incorporates:
+ *  Logic: '<S32>/Logical Operator1'
+ */
+if (atv_motoring_x1000_rear > (uint16_T)(atvc_throttleNeutralPoint + 10U)) {
+    atv_fs1_out = atv_fs1_in;
+} else {
+    atv_fs1_out = !atv_fs1_in;
+}
+/* {E!d2544}End of Switch: '<S32>/Switch' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B57)
+
+/* {S!d2546}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage3' incorporates:
+ *  Constant: '<S1>/atvc_maxDischCurr'
+ *  Constant: '<S1>/atvc_maxRegenCurr'
+ */
+%<tlcOutputsFcnOfS24B57>\
+%endif
+/* {S!d2548}RelationalOperator: '<S46>/Relational Operator1' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ */
+rtb_Compare = (atv_throttleX1000 >= atvc_throttleNeutralPoint);
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B61)
+/* {S!d2550}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput8' */
+%<tlcOutputsFcnOfS24B61>\
+%endif
+/* {S!d2552}Relay: '<S7>/Relay5' */
+if (atv_xe4_raw_ain >= atvc_an_in_sel_th + atvc_an_in_sel_his) {
+    ATV_DW.Relay5_Mode_e = true;
+} else {
+    if (atv_xe4_raw_ain <= atvc_an_in_sel_th - atvc_an_in_sel_his) {
+        ATV_DW.Relay5_Mode_e = false;
+    }
+}
+atv_4wd_din = !ATV_DW.Relay5_Mode_e;
+/* {E!d2552}End of Relay: '<S7>/Relay5' */
+
+/* {S!d2578}Switch: '<S32>/Switch4' incorporates:
+ *  Constant: '<S32>/Constant4'
+ */
+if (atv_4wd_din) {
+    /* {S!d2576}Switch: '<S46>/Switch5' incorporates:
+ *  Constant: '<S46>/Constant2'
+ */
+    if (ATV_B.en_inv_front_out) {
+        /* {S!d2574}Switch: '<S46>/Switch2' incorporates:
+ *  Constant: '<S46>/Constant1'
+ */
+        if (atv_throttleRegOff) {
+            /* {S!d2572}Switch: '<S46>/Switch4' incorporates:
+ *  Constant: '<S51>/Constant'
+ */
+            if (rtb_Compare) {
+                atv_regen_x1000_front = 0U;
+            } else {
+                /* {S!d2554}Gain: '<S50>/Gain2' */
+                tmp_3 = 1000U;
+                /* {S!d2556}Sum: '<S50>/Add' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S50>/Cast'
+ *  DataTypeConversion: '<S50>/Cast1'
+ */
+                u0_tmp = atvc_throttleNeutralPoint - atv_throttleX1000;
+                /* {S!d2564}Saturate: '<S50>/Saturation' incorporates:
+ *  Sum: '<S50>/Add'
+ */
+                if (u0_tmp > 1000) {
+                    /* {S!d2558}Gain: '<S50>/Gain2' */
+                    tmp_4 = 1000U;
+                } else if (u0_tmp < 0) {
+                    /* {S!d2560}Gain: '<S50>/Gain2' */
+                    tmp_4 = 0U;
+                } else {
+                    /* {S!d2562}Gain: '<S50>/Gain2' */
+                    tmp_4 = (uint32_T)u0_tmp;
+                }
+                /* {E!d2564}End of Saturate: '<S50>/Saturation' */
+
+                /* {S!d2566}Gain: '<S50>/Gain2' */
+                sMultiWordMul(&tmp_3, 1, &tmp_4, 1, &tmp_0.chunks[0U], 2);
+                /* {S!d2568}Product: '<S50>/Divide3' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S50>/Cast1'
+ */
+                if (atvc_throttleNeutralPoint == 0) {
+                    tmp_8 = tmp_g;
+                    if (sMultiWordGe(&tmp_0.chunks[0U], &tmp_8.chunks[0U], 2)) {
+                        u0_tmp = MAX_int32_T;
+                    } else {
+                        u0_tmp = MIN_int32_T;
+                    }
+                } else {
+                    sLong2MultiWord(atvc_throttleNeutralPoint, &tmp_8.chunks[0U], 2);
+                    sMultiWordDivFloor(&tmp_0.chunks[0U], 2, &tmp_8.chunks[0U], 2, &tmp_c.chunks[0U], 3, &tmp_9.chunks[0U], 2, &tmp_b.chunks[0U], 2, &tmp_d.chunks[0U], 2);
+                    u0_tmp = MultiWord2sLong(&tmp_c.chunks[0U]);
+                }
+                /* {S!d2570}Saturate: '<S50>/Saturation1' incorporates:
+ *  Product: '<S50>/Divide3'
+ */
+                if (u0_tmp > 1000) {
+                    atv_regen_x1000_front = 1000U;
+                } else if (u0_tmp < 0) {
+                    atv_regen_x1000_front = 0U;
+                } else {
+                    atv_regen_x1000_front = (uint16_T)u0_tmp;
+                }
+                /* {E!d2570}End of Saturate: '<S50>/Saturation1' */
+            }
+            /* {E!d2572}End of Switch: '<S46>/Switch4' */
+        } else {
+            atv_regen_x1000_front = 0U;
+        }
+        /* {E!d2574}End of Switch: '<S46>/Switch2' */
+    } else {
+        atv_regen_x1000_front = 0U;
+    }
+    /* {E!d2576}End of Switch: '<S46>/Switch5' */
+} else {
+    atv_regen_x1000_front = 0U;
+}
+/* {E!d2578}End of Switch: '<S32>/Switch4' */
+
+/* {S!d2604}Switch: '<S46>/Switch1' incorporates:
+ *  Constant: '<S46>/Constant3'
+ */
+if (ATV_B.en_inv_front_out) {
+    /* {S!d2602}Switch: '<S46>/Switch3' incorporates:
+ *  Constant: '<S50>/Constant'
+ */
+    if (rtb_Compare) {
+        /* {S!d2580}Sum: '<S51>/Add1' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  Constant: '<S51>/Constant1'
+ *  DataTypeConversion: '<S51>/Cast'
+ */
+        u0_tmp = 1000 - atvc_throttleNeutralPoint;
+        /* {S!d2582}Gain: '<S51>/Gain2' */
+        tmp_3 = 1000U;
+        /* {S!d2584}Sum: '<S51>/Add' incorporates:
+ *  Constant: '<S32>/atvc_throttleNeutralPoint'
+ *  DataTypeConversion: '<S51>/Cast'
+ *  DataTypeConversion: '<S51>/Cast1'
+ */
+        u0_tmp_0 = atv_throttleX1000 - atvc_throttleNeutralPoint;
+        /* {S!d2592}Saturate: '<S51>/Saturation' incorporates:
+ *  Sum: '<S51>/Add'
+ */
+        if (u0_tmp_0 > 1000) {
+            /* {S!d2586}Gain: '<S51>/Gain2' */
+            tmp_4 = 1000U;
+        } else if (u0_tmp_0 < 0) {
+            /* {S!d2588}Gain: '<S51>/Gain2' */
+            tmp_4 = 0U;
+        } else {
+            /* {S!d2590}Gain: '<S51>/Gain2' */
+            tmp_4 = (uint32_T)u0_tmp_0;
+        }
+        /* {E!d2592}End of Saturate: '<S51>/Saturation' */
+
+        /* {S!d2594}Gain: '<S51>/Gain2' */
+        sMultiWordMul(&tmp_3, 1, &tmp_4, 1, &tmp.chunks[0U], 2);
+        /* {S!d2596}Saturate: '<S51>/Saturation2' incorporates:
+ *  Sum: '<S51>/Add1'
+ */
+        if (u0_tmp < 1) {
+            u0_tmp = 1;
+        }
+        /* {E!d2596}End of Saturate: '<S51>/Saturation2' */
+
+        /* {S!d2598}Product: '<S51>/Divide3' */
+        sLong2MultiWord(u0_tmp, &tmp_9.chunks[0U], 2);
+        sMultiWordDivFloor(&tmp.chunks[0U], 2, &tmp_9.chunks[0U], 2, &tmp_e.chunks[0U], 3, &tmp_b.chunks[0U], 2, &tmp_d.chunks[0U], 2, &tmp_f.chunks[0U], 2);
+        u0_tmp = MultiWord2sLong(&tmp_e.chunks[0U]);
+        /* {S!d2600}Saturate: '<S51>/Saturation1' incorporates:
+ *  Product: '<S51>/Divide3'
+ */
+        if (u0_tmp > 1000) {
+            atv_motoring_x1000_front = 1000U;
+        } else if (u0_tmp < 0) {
+            atv_motoring_x1000_front = 0U;
+        } else {
+            atv_motoring_x1000_front = (uint16_T)u0_tmp;
+        }
+        /* {E!d2600}End of Saturate: '<S51>/Saturation1' */
+    } else {
+        atv_motoring_x1000_front = 0U;
+    }
+    /* {E!d2602}End of Switch: '<S46>/Switch3' */
+} else {
+    atv_motoring_x1000_front = 0U;
+}
+/* {E!d2604}End of Switch: '<S46>/Switch1' */
+
+/* {S!d2606}Switch: '<S32>/Switch3' incorporates:
+ *  Constant: '<S32>/Constant2'
+ */
+if (atv_4wd_din) {
+    atv_motoring_x1000_front_limited = atv_motoring_x1000_front;
+} else {
+    atv_motoring_x1000_front_limited = 0U;
+}
+/* {E!d2606}End of Switch: '<S32>/Switch3' */
+
+/* {S!d2608}Switch: '<S49>/Switch2' incorporates:
+ *  Constant: '<S32>/atvc_throttleMaxLimit'
+ *  RelationalOperator: '<S49>/LowerRelop1'
+ */
+if (atv_motoring_x1000_front_limited > atvc_throttleMaxLimit) {
+    atv_motoring_x1000_front_limited = atvc_throttleMaxLimit;
+}
+/* {E!d2608}End of Switch: '<S49>/Switch2' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B70)
+
+/* {S!d2610}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage4' */
+%<tlcOutputsFcnOfS24B70>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B71)
+/* {S!d2612}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage5' incorporates:
+ *  Constant: '<S1>/atvc_maxDischCurr'
+ *  Constant: '<S1>/atvc_maxRegenCurr'
+ */
+%<tlcOutputsFcnOfS24B71>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B72)
+/* {S!d2614}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput7' */
+%<tlcOutputsFcnOfS24B72>\
+%endif
+/* {S!d2616}Relay: '<S7>/Relay4' */
+if (atv_xe2_raw_ain >= atvc_an_in_sel_th + atvc_an_in_sel_his) {
+    ATV_DW.Relay4_Mode_b = true;
+} else {
+    if (atv_xe2_raw_ain <= atvc_an_in_sel_th - atvc_an_in_sel_his) {
+        ATV_DW.Relay4_Mode_b = false;
+    }
+}
+atv_apu_req_in = !ATV_DW.Relay4_Mode_b;
+/* {E!d2616}End of Relay: '<S7>/Relay4' */
+
+/* {S!d2618}RateTransition: '<Root>/Rate Transition24' */
+if (%<(LibIsSpecialSampleHit(1, 0))>) {
+    ATV_B.RateTransition24 = ATV_DW.RateTransition24_Buffer0;
+}
+/* {E!d2618}End of RateTransition: '<Root>/Rate Transition24' */
+
+/* {S!d2620}Chart: '<S37>/VSMGestioneIbrido' incorporates:
+ *  Constant: '<S37>/atvc_RpmEndwarmUp'
+ *  RelationalOperator: '<S37>/Relational Operator'
+ */
+if (ATV_DW.temporalCounter_i1 < 511U) {
+    ATV_DW.temporalCounter_i1++;
+}
+if (ATV_DW.temporalCounter_i2_m < 255U) {
+    ATV_DW.temporalCounter_i2_m++;
+}
+/* Gateway: loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido */
+ATV_DW.ReqGen_prev = ATV_DW.ReqGen_start;
+ATV_DW.ReqGen_start = atv_apu_req_in;
+/* During: loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido */
+if (ATV_DW.is_active_c2_ATV == 0U) {
+    ATV_DW.ReqGen_prev = atv_apu_req_in;
+    /* Entry: loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido */
+    ATV_DW.is_active_c2_ATV = 1U;
+    /* Entry Internal: loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido */
+    /* Entry Internal 'GestioneIbrido': '<S72>:166' */
+    /* Transition: '<S72>:192' */
+    /* Entry Internal 'IceSM': '<S72>:191' */
+    /* Transition: '<S72>:280' */
+    ATV_DW.is_IceSM = ATV_IN_Inizializzazione;
+    /* Entry 'Inizializzazione': '<S72>:279' */
+    ATV_DW.IceStartAttempCnt = 0.0;
+    atv_IceOn = false;
+    atv_IceKey_out = false;
+    atv_IceShutdown_out = false;
+    atv_IceFault = false;
+    ATV_B.GenFwd_out = false;
+    atv_IceSM = 0U;
+    /* Entry Internal 'WarmUpIce': '<S72>:168' */
+    /* Transition: '<S72>:305' */
+    ATV_DW.is_WarmUpIce = ATV_IN_CoolUpTermico;
+    /* Entry 'CoolUpTermico': '<S72>:306' */
+} else {
+    %<(SLibCGCallSubFcn("ATV_GestioneIbrido", [], 1, 5, 6))>;
+    /* During 'WarmUpIce': '<S72>:168' */
+    switch (ATV_DW.is_WarmUpIce) {
+      case ATV_IN_CoolUpTermico:
+        /* During 'CoolUpTermico': '<S72>:306' */
+        if (atv_IceOn) {
+            /* Transition: '<S72>:307' */
+            ATV_DW.is_WarmUpIce = ATV_IN_WarmUpTermico;
+            /* Entry 'WarmUpTermico': '<S72>:102' */
+            atv_IceRG = 1U;
+            ATV_B.footBrake_X1000_out = atvc_footBrakeWarmUp;
+        } else {
+            atv_IceRG = 0U;
+            ATV_B.footBrake_X1000_out = 0U;
+        }
+        break;
+      case ATV_IN_RegenerativeMode:
+        /* During 'RegenerativeMode': '<S72>:167' */
+        if (!atv_IceOn) {
+            /* Transition: '<S72>:315' */
+            /* Exit Internal 'RegenerativeMode': '<S72>:167' */
+            ATV_DW.is_WarmUpIce = ATV_IN_CoolUpTermico;
+            /* Entry 'CoolUpTermico': '<S72>:306' */
+        } else {
+            /* During 'Regenerative': '<S72>:225' */
+        }
+        break;
+      case ATV_IN_WaitReg:
+        /* During 'WaitReg': '<S72>:346' */
+        if (!atv_IceOn) {
+            /* Transition: '<S72>:348' */
+            /* Transition: '<S72>:350' */
+            ATV_DW.is_WarmUpIce = ATV_IN_CoolUpTermico;
+            /* Entry 'CoolUpTermico': '<S72>:306' */
+        } else {
+            if (ATV_DW.temporalCounter_i2_m >= 200U) {
+                /* Transition: '<S72>:347' */
+                ATV_DW.is_WarmUpIce = ATV_IN_RegenerativeMode;
+                /* Entry 'RegenerativeMode': '<S72>:167' */
+                /* Entry Internal 'RegenerativeMode': '<S72>:167' */
+                /* Transition: '<S72>:344' */
+                /* Entry 'Regenerative': '<S72>:225' */
+                ATV_B.footBrake_X1000_out = atvc_footBrakeIce;
+                atv_IceRG = 3U;
+            }
+        }
+        break;
+      default:
+        /* During 'WarmUpTermico': '<S72>:102' */
+        if (ATV_B.RateTransition24 > atvc_RpmEndWarmUp) {
+            /* Transition: '<S72>:106' */
+            ATV_DW.is_WarmUpIce = ATV_IN_WaitReg;
+            ATV_DW.temporalCounter_i2_m = 0U;
+            /* Entry 'WaitReg': '<S72>:346' */
+            atv_IceRG = 2U;
+        } else {
+            if (!atv_IceOn) {
+                /* Transition: '<S72>:316' */
+                ATV_DW.is_WarmUpIce = ATV_IN_CoolUpTermico;
+                /* Entry 'CoolUpTermico': '<S72>:306' */
+            }
+        }
+        break;
+    }
+}
+/* {E!d2620}End of Chart: '<S37>/VSMGestioneIbrido' */
+
+/* {S!d2622}RateLimiter: '<S37>/Rate Limiter1' */
+u0_tmp = ATV_B.footBrake_X1000_out - ATV_DW.PrevY_k;
+if (u0_tmp > 1) {
+    atv_footBrake_X1000_out = (uint16_T)(ATV_DW.PrevY_k + 1);
+} else if (u0_tmp < -20) {
+    atv_footBrake_X1000_out = (uint16_T)(ATV_DW.PrevY_k - 20);
+} else {
+    atv_footBrake_X1000_out = ATV_B.footBrake_X1000_out;
+}
+ATV_DW.PrevY_k = atv_footBrake_X1000_out;
+/* {E!d2622}End of RateLimiter: '<S37>/Rate Limiter1' */
+
+/* {S!d2624}RateLimiter: '<S37>/Rate Limiter' */
+u0_tmp = ATV_B.tHROTTLEGen_X1000_out - ATV_DW.PrevY_l;
+if (u0_tmp > 50) {
+    atv_tHROTTLEGen_X1000_out = (uint16_T)(ATV_DW.PrevY_l + 50);
+} else if (u0_tmp < -50) {
+    atv_tHROTTLEGen_X1000_out = (uint16_T)(ATV_DW.PrevY_l - 50);
+} else {
+    atv_tHROTTLEGen_X1000_out = ATV_B.tHROTTLEGen_X1000_out;
+}
+ATV_DW.PrevY_l = atv_tHROTTLEGen_X1000_out;
+/* {E!d2624}End of RateLimiter: '<S37>/Rate Limiter' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B77)
+
+/* {S!d2626}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage7' incorporates:
+ *  Constant: '<S1>/Constant2'
+ *  Constant: '<S1>/Constant3'
+ */
+%<tlcOutputsFcnOfS24B77>\
+%endif
+/* {S!d2628}MultiPortSwitch: '<S37>/Multiport Switch' incorporates:
+ *  Constant: '<S37>/atvc_GenWarmUpCurrent'
+ *  Constant: '<S37>/const'
+ *  Constant: '<S9>/atvc_GenTestCurrent'
+ */
+switch (atv_IceRG) {
+  case 0:
+    rtb_MultiportSwitch = 0;
+    break;
+  case 1:
+    rtb_MultiportSwitch = atvc_GenWarmUpCurrent;
+    break;
+  case 2:
+    rtb_MultiportSwitch = atvc_GenWarmUpCurrent;
+    break;
+  case 3:
+    rtb_MultiportSwitch = atvc_GenTestCurrent;
+    break;
+  default:
+    rtb_MultiportSwitch = 0;
+    break;
+}
+/* {E!d2628}End of MultiPortSwitch: '<S37>/Multiport Switch' */
+
+/* {S!d2630}RateLimiter: '<S37>/Rate Limiter2' incorporates:
+ *  DataTypeConversion: '<S37>/Data Type Conversion'
+ */
+rateLimiterRate = (real32_T)rtb_MultiportSwitch - ATV_DW.PrevY;
+if (rateLimiterRate > 1.5F) {
+    ATV_DW.PrevY += 1.5F;
+} else if (rateLimiterRate < -3.0F) {
+    ATV_DW.PrevY += -3.0F;
+} else {
+    ATV_DW.PrevY = rtb_MultiportSwitch;
+}
+/* {E!d2630}End of RateLimiter: '<S37>/Rate Limiter2' */
+
+/* {S!d2632}DataTypeConversion: '<S37>/Data Type Conversion1' */
+rateLimiterRate = (real32_T)floor(ATV_DW.PrevY);
+if (rtIsNaNF(rateLimiterRate) || rtIsInfF(rateLimiterRate)) {
+    rateLimiterRate = 0.0F;
+} else {
+    rateLimiterRate = (real32_T)fmod(rateLimiterRate, 65536.0);
+}
+atv_GenCurrentSetPoint = (int16_T)(rateLimiterRate < 0.0F ? (int32_T)(int16_T)-(int16_T)(uint16_T)-rateLimiterRate : (int32_T)(int16_T)(uint16_T)rateLimiterRate);
+/* {E!d2632}End of DataTypeConversion: '<S37>/Data Type Conversion1' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B82)
+
+/* {S!d2634}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage8' incorporates:
+ *  Constant: '<S1>/Constant'
+ */
+%<tlcOutputsFcnOfS24B82>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B84)
+/* {S!d2636}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B84>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B85)
+/* {S!d2638}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B85>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B86)
+/* {S!d2640}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput2' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B86>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B87)
+/* {S!d2642}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B87>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B88)
+/* {S!d2644}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput4' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B88>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B89)
+/* {S!d2646}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput5' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B89>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B90)
+/* {S!d2648}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput6' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B90>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B91)
+/* {S!d2650}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput7' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B91>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B92)
+/* {S!d2652}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput8' */
+%<tlcOutputsFcnOfS24B92>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B93)
+/* {S!d2654}S-Function (pdx_digital_output): '<S6>/pdx_DigitalOutput9' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B93>\
+%endif
+/* {S!d2656}Switch: '<S6>/Switch' incorporates:
+ *  Constant: '<S6>/atvc_FanTest'
+ */
+if (atvc_FanTest > 0) {
+    rtb_Switch_l = atvc_FanTest;
+}
+/* {E!d2656}End of Switch: '<S6>/Switch' */
+
+/* {S!d2658}DataTypeConversion: '<S6>/Data Type Conversion' */
+atv_dbg_FAN_out = rtb_Switch_l;
+/* {S!d2660}Gain: '<S6>/Gain' */
+ATV_B.Saturation = 0.01 * atv_dbg_FAN_out;
+/* {S!d2666}Saturate: '<S6>/Saturation' */
+if (ATV_B.Saturation > 1.0) {
+    /* {S!d2662}Gain: '<S6>/Gain' */
+    ATV_B.Saturation = 1.0;
+} else {
+    if (ATV_B.Saturation < 0.0) {
+        /* {S!d2664}Gain: '<S6>/Gain' */
+        ATV_B.Saturation = 0.0;
+    }
+}
+/* {E!d2666}End of Saturate: '<S6>/Saturation' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B95)
+
+/* {S!d2668}S-Function (pdx_pwm_output): '<S6>/pdx_PWMOutput' incorporates:
+ *  Constant: '<S6>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B95>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B112)
+/* {S!d2670}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput2' */
+%<tlcOutputsFcnOfS24B112>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B113)
+/* {S!d2672}S-Function (pax_adc_input): '<S7>/pai_BasicAnalogInput9' */
+%<tlcOutputsFcnOfS24B113>\
+%endif
+/* {S!d2674}Gain: '<S7>/Gain2' */
+rtb_Product = floor(1000.0 * ATV_B.pai_BasicAnalogInput2);
+if (rtIsNaN(rtb_Product) || rtIsInf(rtb_Product)) {
+    rtb_Product = 0.0;
+} else {
+    rtb_Product = fmod(rtb_Product, 4.294967296E+9);
+}
+atv_xe3_ain = rtb_Product < 0.0 ? -(int32_T)(uint32_T)-rtb_Product : (int32_T)(uint32_T)rtb_Product;
+/* {E!d2674}End of Gain: '<S7>/Gain2' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B116)
+
+/* {S!d2676}S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B116>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B117)
+/* {S!d2678}S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B117>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B118)
+/* {S!d2680}S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput2' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcOutputsFcnOfS24B118>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B120)
+/* {S!d2682}S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<Root>/Constant'
+ */
+%<tlcOutputsFcnOfS24B120>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B129)
+/* {S!d2684}S-Function (psc_app_build_date): '<S26>/psc_AppBuildDate' */
+%<tlcOutputsFcnOfS24B129>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B130)
+/* {S!d2686}S-Function (psc_app_version): '<S26>/psc_AppVersion' */
+%<tlcOutputsFcnOfS24B130>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B131)
+/* {S!d2688}S-Function (psc_boot_build_date): '<S27>/psc_BootBuildDate' */
+%<tlcOutputsFcnOfS24B131>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B132)
+/* {S!d2690}S-Function (psc_boot_version): '<S27>/psc_BootVersion' */
+%<tlcOutputsFcnOfS24B132>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B133)
+/* {S!d2692}S-Function (psc_prg_build_date): '<S28>/psc_PrgBuildDate' */
+%<tlcOutputsFcnOfS24B133>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B134)
+/* {S!d2694}S-Function (psc_prg_version): '<S28>/psc_PrgVersion' */
+%<tlcOutputsFcnOfS24B134>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B135)
+/* {S!d2696}S-Function (psc_platform_build_date): '<S29>/psc_PlatformBuildDate' */
+%<tlcOutputsFcnOfS24B135>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B136)
+/* {S!d2698}S-Function (psc_platform_version): '<S29>/psc_PlatformVersion' */
+%<tlcOutputsFcnOfS24B136>\
+%endif
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput0LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T u0;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%assign tlcOutputsFcnOfS24B14 = OpaqueTLCBlockFcn("Outputs", 24, 14, 1, 6)
+%assign tlcOutputsFcnOfS24B27 = OpaqueTLCBlockFcn("Outputs", 24, 27, 1, 6)
+%assign tlcOutputsFcnOfS24B96 = OpaqueTLCBlockFcn("Outputs", 24, 96, 1, 6)
+%assign tlcOutputsFcnOfS24B100 = OpaqueTLCBlockFcn("Outputs", 24, 100, 1, 6)
+%assign tlcOutputsFcnOfS24B109 = OpaqueTLCBlockFcn("Outputs", 24, 109, 1, 6)
+%assign tlcOutputsFcnOfS24B114 = OpaqueTLCBlockFcn("Outputs", 24, 114, 1, 6)
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B14)
+/* {S!d2700}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage1' */
+%<tlcOutputsFcnOfS24B14>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B27)
+/* {S!d2702}S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage6' */
+%<tlcOutputsFcnOfS24B27>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B96)
+/* {S!d2704}S-Function (pcx_candb_receive_message): '<S3>/pcx_CANdb_ReceiveMessage' */
+%<tlcOutputsFcnOfS24B96>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Output",1)
+/* {S!d2706}Chart: '<S3>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart",0,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart", ["%<_modelSS>", "ATV_B.pcx_CANdb_ReceiveMessage_o2", "&ATV_B.sf_Chart", "&ATV_DW.sf_Chart"], 0, 0, 7, 1, 7, 24)>\
+
+
+%endif
+/* {S!d2708}Switch: '<S3>/Switch1' */
+atv_v_dbg_chg_req = (ATV_B.sf_Chart.out && (ATV_B.pcx_CANdb_ReceiveMessage_o5 != 0.0));
+/* {S!d2710}Switch: '<S3>/Switch2' */
+atv_v_dbg_heater_req = (ATV_B.sf_Chart.out && (ATV_B.pcx_CANdb_ReceiveMessage_o6 != 0.0));
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B100)
+/* {S!d2712}S-Function (pcx_candb_receive_message): '<S4>/pcx_CANdb_ReceiveMessage' */
+%<tlcOutputsFcnOfS24B100>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Output",1)
+/* {S!d2714}Chart: '<S4>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart",0,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart", ["%<_modelSS>", "ATV_B.pcx_CANdb_ReceiveMessage_o2_d", "&ATV_B.sf_Chart_b", "&ATV_DW.sf_Chart_b"], 0, 1, 7, 1, 7, 24)>\
+
+
+%endif
+/* {S!d2716}Switch: '<S4>/Switch' incorporates:
+ *  Constant: '<S4>/Constant'
+ *  Constant: '<S4>/Constant1'
+ *  Constant: '<S4>/Constant2'
+ *  Constant: '<S4>/Constant3'
+ *  Constant: '<S4>/Constant4'
+ *  Constant: '<S4>/Constant5'
+ *  Constant: '<S4>/Constant6'
+ *  Switch: '<S4>/Switch1'
+ *  Switch: '<S4>/Switch2'
+ *  Switch: '<S4>/Switch3'
+ *  Switch: '<S4>/Switch4'
+ *  Switch: '<S4>/Switch5'
+ *  Switch: '<S4>/Switch6'
+ */
+if (ATV_B.sf_Chart_b.out) {
+    ATV_B.atv_v_dbg_T_FMot = ATV_B.pcx_CANdb_ReceiveMessage_o4_k;
+    ATV_B.atv_v_dbg_T_FInv = ATV_B.pcx_CANdb_ReceiveMessage_o5_c;
+    ATV_B.atv_v_dbg_T_RMot = ATV_B.pcx_CANdb_ReceiveMessage_o7_p;
+    ATV_B.atv_v_dbg_T_RInv = ATV_B.pcx_CANdb_ReceiveMessage_o6_o;
+    ATV_B.atv_v_dbg_T_GMot = ATV_B.pcx_CANdb_ReceiveMessage_o8;
+    ATV_B.atv_v_dbg_T_GInv = ATV_B.pcx_CANdb_ReceiveMessage_o9_b;
+    ATV_B.atv_v_dbg_T_Rad = ATV_B.pcx_CANdb_ReceiveMessage_o10;
+} else {
+    ATV_B.atv_v_dbg_T_FMot = 0;
+    ATV_B.atv_v_dbg_T_FInv = 0;
+    ATV_B.atv_v_dbg_T_RMot = 0;
+    ATV_B.atv_v_dbg_T_RInv = 0;
+    ATV_B.atv_v_dbg_T_GMot = 0;
+    ATV_B.atv_v_dbg_T_GInv = 0;
+    ATV_B.atv_v_dbg_T_Rad = 0;
+}
+/* {E!d2716}End of Switch: '<S4>/Switch' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B109)
+
+/* {S!d2718}S-Function (pcx_candb_receive_message): '<S5>/pcx_CANdb_ReceiveMessage' */
+%<tlcOutputsFcnOfS24B109>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Output",1)
+/* {S!d2720}Chart: '<S5>/Chart' */
+%if SLibCG_SystemFcnArgAccessed("ATV_Chart",0,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ATV_Chart", ["%<_modelSS>", "ATV_B.pcx_CANdb_ReceiveMessage_o2_n", "&ATV_B.sf_Chart_l", "&ATV_DW.sf_Chart_l"], 0, 2, 7, 1, 7, 24)>\
+
+
+%endif
+/* {S!d2722}Switch: '<S5>/Switch3' incorporates:
+ *  Constant: '<S5>/Constant3'
+ */
+if (ATV_B.sf_Chart_l.out) {
+    u0 = ATV_B.pcx_CANdb_ReceiveMessage_o7;
+} else {
+    u0 = 0.0;
+}
+/* {E!d2722}End of Switch: '<S5>/Switch3' */
+
+/* {S!d2724}Saturate: '<S5>/Saturation' */
+if (u0 > 32767.0) {
+    u0 = 32767.0;
+} else {
+    if (u0 < -32767.0) {
+        u0 = -32767.0;
+    }
+}
+u0 = floor(u0);
+if (rtIsNaN(u0)) {
+    u0 = 0.0;
+} else {
+    u0 = fmod(u0, 65536.0);
+}
+ATV_B.Saturation_a = (int16_T)(u0 < 0.0 ? (int32_T)(int16_T)-(int16_T)(uint16_T)-u0 : (int32_T)(int16_T)(uint16_T)u0);
+/* {E!d2724}End of Saturate: '<S5>/Saturation' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B114)
+
+/* {S!d2726}S-Function (pcx_candb_receive_message): '<S2>/pcx_CANdb_ReceiveMessage' */
+%<tlcOutputsFcnOfS24B114>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput1LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS24B124 = OpaqueTLCBlockFcn("Outputs", 24, 124, 1, 7)
+%assign tlcOutputsFcnOfS24B125 = OpaqueTLCBlockFcn("Outputs", 24, 125, 1, 7)
+%assign tlcOutputsFcnOfS24B126 = OpaqueTLCBlockFcn("Outputs", 24, 126, 1, 7)
+%assign tlcOutputsFcnOfS24B127 = OpaqueTLCBlockFcn("Outputs", 24, 127, 1, 7)
+%assign tlcOutputsFcnOfS24B128 = OpaqueTLCBlockFcn("Outputs", 24, 128, 1, 7)
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B124)
+/* S-Function (psc_cpu_loading): '<S25>/psc_CpuLoading1' */
+%<tlcOutputsFcnOfS24B124>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B125)
+/* S-Function (psc_stack_used): '<S25>/psc_StackUsed' */
+%<tlcOutputsFcnOfS24B125>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B126)
+/* S-Function (pkn_task_duration): '<S25>/pkn_TaskDuration1' */
+%<tlcOutputsFcnOfS24B126>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B127)
+/* S-Function (psc_cpu_loading): '<S25>/psc_CpuLoading2' */
+%<tlcOutputsFcnOfS24B127>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS24B128)
+/* S-Function (pkn_task_duration): '<S25>/pkn_TaskDuration2' */
+%<tlcOutputsFcnOfS24B128>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput2LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 5, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 6, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs2(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 7, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

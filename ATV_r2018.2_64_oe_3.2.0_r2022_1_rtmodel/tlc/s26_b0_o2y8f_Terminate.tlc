@@ -1,0 +1,22 @@
+%implements s26_b0_o2y8f_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS24B140 = OpaqueTLCBlockFcn("Terminate", 24, 140, 1, 9)
+%if !WHITE_SPACE(tlcTerminateFcnOfS24B140)
+/* Terminate for S-Function (put_identification): '<Root>/put_Identification' */
+%<tlcTerminateFcnOfS24B140>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 9, fcnProtoType)>
+%endfunction

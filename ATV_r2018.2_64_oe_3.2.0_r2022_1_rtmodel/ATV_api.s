@@ -697,44 +697,42 @@ pcp_ccpenabled:
 	.align		1
 	.globl		pcx_tot_allow_msg_tx
 pcx_tot_allow_msg_tx:
-	.short		8
+	.short		10
 	.section	.cal_sec,,r
 	.type		pcx_tot_allow_msg_rx,@object
 	.size		pcx_tot_allow_msg_rx,2
 	.align		1
 	.globl		pcx_tot_allow_msg_rx
 pcx_tot_allow_msg_rx:
-	.short		4
+	.short		5
 	.bss
 	.type		pcx_tx_msg,@object
-	.size		pcx_tx_msg,256
+	.size		pcx_tx_msg,320
 	.align		2
 	.globl		pcx_tx_msg
 pcx_tx_msg:
-	.space		256
+	.space		320
 	.bss
 	.type		pcx_rx_msg,@object
-	.size		pcx_rx_msg,112
+	.size		pcx_rx_msg,140
 	.align		2
 	.globl		pcx_rx_msg
 pcx_rx_msg:
-	.space		112
-	.sbss
-	.0byte		.L1652
-	.sbss
+	.space		140
+	.bss
 	.type		pcx_sorted_rx_msg,@object
-	.size		pcx_sorted_rx_msg,8
+	.size		pcx_sorted_rx_msg,10
 	.align		1
 	.globl		pcx_sorted_rx_msg
 pcx_sorted_rx_msg:
-	.space		8
+	.space		10
 	.bss
 	.type		pcx_queued_tx_list,@object
-	.size		pcx_queued_tx_list,72
+	.size		pcx_queued_tx_list,88
 	.align		1
 	.globl		pcx_queued_tx_list
 pcx_queued_tx_list:
-	.space		72
+	.space		88
 	.bss
 	.type		pkn_task_start_time,@object
 	.size		pkn_task_start_time,88
@@ -892,6 +890,8 @@ ppid_j1939_spn_map:
 	.globl		ppid_num_j1939_spns
 ppid_num_j1939_spns:
 	.short		0
+	.sbss
+	.0byte		.L1734
 	.sbss
 	.type		ppid_nv_buffer,@object
 	.size		ppid_nv_buffer,1
@@ -1753,7 +1753,7 @@ psc_app_major_ver_num:
 	.align		1
 	.globl		psc_app_minor_ver_num
 psc_app_minor_ver_num:
-	.short		0
+	.short		1
 	.section	.cal_sec,,r
 	.type		psc_app_sub_minor_ver_num,@object
 	.size		psc_app_sub_minor_ver_num,2
@@ -1769,7 +1769,7 @@ psc_app_sub_minor_ver_num:
 	.align		1
 	.globl		psc_app_build_day
 psc_app_build_day:
-	.short		18
+	.short		26
 	.section	.text_vle
 	.type		psc_app_build_month,@object
 	.size		psc_app_build_month,2
@@ -1790,7 +1790,7 @@ psc_app_build_year:
 	.align		2
 	.globl		psc_app_name
 psc_app_name:
-	.byte		78,101,119,95,109,111,100,101,108,95,118,49,46,48,46,48
+	.byte		78,101,119,95,109,111,100,101,108,95,118,49,46,49,46,48
 	.byte		95,77,53,54,48,95,48,48,48
 	.byte		0
 	.section	.cal_sec,,r
@@ -1955,7 +1955,7 @@ pkn_task_1000ms_periodic_hdl:
 	.align		2
 	.globl		psc_app_ver
 psc_app_ver:
-	.byte		49,46,48,46,48
+	.byte		49,46,49,46,48
 	.byte		0
 	.section	.text_vle
 	.type		psc_app_build_sec,@object
@@ -1963,29 +1963,29 @@ psc_app_ver:
 	.align		1
 	.globl		psc_app_build_sec
 psc_app_build_sec:
-	.short		1
+	.short		13
 	.section	.text_vle
 	.type		psc_app_build_min,@object
 	.size		psc_app_build_min,2
 	.align		1
 	.globl		psc_app_build_min
 psc_app_build_min:
-	.short		35
+	.short		22
 	.section	.text_vle
 	.type		psc_app_build_hour,@object
 	.size		psc_app_build_hour,2
 	.align		1
 	.globl		psc_app_build_hour
 psc_app_build_hour:
-	.short		19
+	.short		22
 	.section	.cal_sec,,r
 	.type		psc_app_build_str,@object
 	.size		psc_app_build_str,27
 	.align		2
 	.globl		psc_app_build_str
 psc_app_build_str:
-	.byte		84,117,101,44,32,49,56,32,65,112,114,32,50,48,50,51
-	.byte		44,32,49,57,58,51,53,58,48,49
+	.byte		87,101,100,44,32,50,54,32,65,112,114,32,50,48,50,51
+	.byte		44,32,50,50,58,50,50,58,49,51
 	.byte		0
 	.section	.bss_stack,,d
 	.0byte		.L2150
@@ -4138,7 +4138,6 @@ pkn_ceiling_records:
 	.byte		0x3
 	.4byte		pcx_sorted_rx_msg
 	.section	.debug_info,,n
-	.section	.debug_info,,n
 .L1656:
 	.sleb128	3
 	.byte		0x1
@@ -4403,6 +4402,7 @@ pkn_ceiling_records:
 	.sleb128	5
 	.byte		0x3
 	.4byte		ppid_nv_buffer
+	.section	.debug_info,,n
 	.section	.debug_info,,n
 .L1737:
 	.sleb128	3
@@ -11496,7 +11496,7 @@ pkn_ceiling_records:
 	.4byte		.L1644-.L2
 	.4byte		.L1645
 	.sleb128	15
-	.uleb128	7
+	.uleb128	9
 	.sleb128	0
 .L1644:
 .L1650:
@@ -11509,7 +11509,7 @@ pkn_ceiling_records:
 	.4byte		.L1649-.L2
 	.4byte		.L1650
 	.sleb128	15
-	.uleb128	3
+	.uleb128	4
 	.sleb128	0
 .L1649:
 .L1655:
@@ -11522,7 +11522,7 @@ pkn_ceiling_records:
 	.4byte		.L1654-.L2
 	.4byte		.L1655
 	.sleb128	15
-	.uleb128	3
+	.uleb128	4
 	.sleb128	0
 .L1654:
 .L1657:
@@ -11530,7 +11530,7 @@ pkn_ceiling_records:
 	.4byte		.L1658-.L2
 	.4byte		.L1655
 	.sleb128	15
-	.uleb128	8
+	.uleb128	10
 	.sleb128	15
 	.uleb128	3
 	.sleb128	0

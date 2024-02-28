@@ -1,0 +1,514 @@
+%implements s22_b0_zzxtf_Functions "C"
+
+%function ATV_KEY_ON_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T tmp;
+/* During 'KEY_ON': '<S37>:20' */
+tmp = !atv_key_signal;
+if (tmp && (ATV_DW.is_HV_CTRL != ATV_IN_HVM_ON) && (ATV_DW.is_HV_CTRL != ATV_IN_HV_ON) && (ATV_DW.is_HV_CTRL != ATV_IN_HV_WAIT_INV_OFF)) {
+    /* Transition: '<S37>:23' */
+    /* Transition: '<S37>:25' */
+    /* Exit Internal 'KEY_ON': '<S37>:20' */
+    /* Exit Internal 'STARTTRIGGER': '<S37>:119' */
+    ATV_DW.is_STARTTRIGGER = ATV_IN_NO_ACTIVE_CHILD_b;
+    /* Exit Internal 'DRIVE_ENABLE': '<S37>:85' */
+    if (ATV_DW.is_DRIVE_ENABLE == ATV_IN_DRIVE_ENABLED) {
+        /* Exit 'DRIVE_ENABLED': '<S37>:88' */
+        atv_runLed_out = false;
+        ATV_DW.is_DRIVE_ENABLE = ATV_IN_NO_ACTIVE_CHILD_b;
+    } else {
+        ATV_DW.is_DRIVE_ENABLE = ATV_IN_NO_ACTIVE_CHILD_b;
+    }
+    /* Exit Internal 'HEATER_CTRL': '<S37>:72' */
+    ATV_DW.is_HEATER_CTRL = ATV_IN_NO_ACTIVE_CHILD_b;
+    /* Exit Internal 'CHG_CTRL': '<S37>:68' */
+    ATV_DW.is_CHG_CTRL = ATV_IN_NO_ACTIVE_CHILD_b;
+    /* Exit Internal 'HV_CTRL': '<S37>:34' */
+    ATV_DW.is_HV_CTRL = ATV_IN_NO_ACTIVE_CHILD_b;
+    ATV_DW.is_c3_ATV = ATV_IN_PRE_SLEEP;
+    ATV_DW.temporalCounter_i1_ji = 0U;
+    /* Entry 'PRE_SLEEP': '<S37>:3' */
+    atv_state_out = 2U;
+    atv_sub_state_out = 0U;
+} else {
+    /* During 'HV_CTRL': '<S37>:34' */
+    switch (ATV_DW.is_HV_CTRL) {
+      case ATV_IN_HVM_ON:
+        /* During 'HVM_ON': '<S37>:54' */
+        if (ATV_DW.temporalCounter_i2_j >= 50U) {
+            /* Transition: '<S37>:56' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HV_ON;
+            /* Entry 'HV_ON': '<S37>:53' */
+            atv_sub_state_out = 3U;
+            ATV_B.hvp_ctrl_out = true;
+            ATV_B.hvm_ctrl_out = true;
+        }
+        break;
+      case ATV_IN_HV_ARMED:
+        /* During 'HV_ARMED': '<S37>:83' */
+        if (ATV_B.LogicalOperator3 && (!ATV_B.RateTransition4)) {
+            /* Transition: '<S37>:51' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HVM_ON;
+            ATV_DW.temporalCounter_i2_j = 0U;
+            /* Entry 'HVM_ON': '<S37>:54' */
+            ATV_DW.startBtnArmed = false;
+            atv_sub_state_out = 2U;
+            ATV_B.hvp_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = true;
+        }
+        break;
+      case ATV_IN_HV_OFF:
+        /* During 'HV_OFF': '<S37>:52' */
+        if ((!ATV_B.LogicalOperator3) && (!ATV_B.RateTransition4)) {
+            /* Transition: '<S37>:84' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HV_ARMED;
+            /* Entry 'HV_ARMED': '<S37>:83' */
+            atv_sub_state_out = 1U;
+            ATV_B.hvp_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = false;
+        } else {
+            atv_sub_state_out = 0U;
+            ATV_B.hvp_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = false;
+        }
+        break;
+      case ATV_IN_HV_ON:
+        /* During 'HV_ON': '<S37>:53' */
+        if ((ATV_DW.startBtnArmed && ATV_B.LogicalOperator3) || ATV_B.RateTransition4 || tmp) {
+            /* Transition: '<S37>:48' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HV_WAIT_INV_OFF;
+            ATV_DW.temporalCounter_i2_j = 0U;
+            /* Entry 'HV_WAIT_INV_OFF': '<S37>:98' */
+            atv_sub_state_out = 4U;
+            ATV_B.hvp_ctrl_out = true;
+            ATV_B.hvm_ctrl_out = true;
+        }
+        break;
+      default:
+        /* During 'HV_WAIT_INV_OFF': '<S37>:98' */
+        if (ATV_DW.temporalCounter_i2_j >= 50U) {
+            /* Transition: '<S37>:99' */
+            /* Transition: '<S37>:47' */
+            ATV_DW.is_HV_CTRL = ATV_IN_HV_OFF;
+            /* Entry 'HV_OFF': '<S37>:52' */
+        }
+        break;
+    }
+    /* During 'CHG_CTRL': '<S37>:68' */
+    switch (ATV_DW.is_CHG_CTRL) {
+      case ATV_IN_CHG_OFF:
+        /* During 'CHG_OFF': '<S37>:62' */
+        if (ATV_B.RateTransition4 && ((!ATV_B.hvp_ctrl_out) || (ATV_DW.temporalCounter_i3 < 100U))) {
+            /* Transition: '<S37>:64' */
+            ATV_DW.is_CHG_CTRL = ATV_IN_HVM_ON_m;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'HVM_ON': '<S37>:66' */
+        }
+        break;
+      case ATV_IN_HVM_ON_m:
+        /* During 'HVM_ON': '<S37>:66' */
+        if ((!ATV_B.RateTransition4) || ATV_B.hvp_ctrl_out) {
+            /* Transition: '<S37>:61' */
+            ATV_DW.is_CHG_CTRL = ATV_IN_CHG_OFF;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'CHG_OFF': '<S37>:62' */
+            ATV_B.chg_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = false;
+        } else if (ATV_DW.temporalCounter_i3 >= 150U) {
+            /* Transition: '<S37>:63' */
+            ATV_DW.is_CHG_CTRL = ATV_IN_HV_ON_o;
+            /* Entry 'HV_ON': '<S37>:65' */
+        } else {
+            ATV_B.chg_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = true;
+        }
+        break;
+      default:
+        /* During 'HV_ON': '<S37>:65' */
+        if ((!ATV_B.RateTransition4) || ATV_B.hvp_ctrl_out) {
+            /* Transition: '<S37>:59' */
+            /* Transition: '<S37>:60' */
+            ATV_DW.is_CHG_CTRL = ATV_IN_CHG_OFF;
+            ATV_DW.temporalCounter_i3 = 0U;
+            /* Entry 'CHG_OFF': '<S37>:62' */
+            ATV_B.chg_ctrl_out = false;
+            ATV_B.hvm_ctrl_out = false;
+        } else {
+            ATV_B.chg_ctrl_out = true;
+            ATV_B.hvm_ctrl_out = true;
+        }
+        break;
+    }
+    /* During 'HEATER_CTRL': '<S37>:72' */
+    if (ATV_DW.is_HEATER_CTRL == ATV_IN_HEATER_OFF) {
+        ATV_B.heater_ctrl_out = false;
+        /* During 'HEATER_OFF': '<S37>:69' */
+        if (ATV_B.RateTransition5) {
+            /* Transition: '<S37>:78' */
+            ATV_DW.is_HEATER_CTRL = ATV_IN_HVM_ON_m;
+            /* Entry 'HVM_ON': '<S37>:73' */
+            ATV_B.heater_ctrl_out = true;
+        }
+    } else {
+        ATV_B.heater_ctrl_out = true;
+        /* During 'HVM_ON': '<S37>:73' */
+        if (!ATV_B.RateTransition5) {
+            /* Transition: '<S37>:77' */
+            ATV_DW.is_HEATER_CTRL = ATV_IN_HEATER_OFF;
+            /* Entry 'HEATER_OFF': '<S37>:69' */
+            ATV_B.heater_ctrl_out = false;
+        }
+    }
+    /* During 'DRIVE_ENABLE': '<S37>:85' */
+    switch (ATV_DW.is_DRIVE_ENABLE) {
+      case ATV_IN_DRIVE_ENABLED:
+        atv_state_out = 5U;
+        ATV_B.en_inv_rear_out = true;
+        ATV_B.en_inv_front_out = true;
+        ATV_B.en_inv_gen_out = true;
+        /* During 'DRIVE_ENABLED': '<S37>:88' */
+        if (ATV_DW.is_HV_CTRL != ATV_IN_HV_ON) {
+            /* Transition: '<S37>:92' */
+            /* Transition: '<S37>:93' */
+            /* Transition: '<S37>:94' */
+            /* Exit 'DRIVE_ENABLED': '<S37>:88' */
+            atv_runLed_out = false;
+            ATV_DW.is_DRIVE_ENABLE = ATV_IN_IDLE;
+            /* Entry 'IDLE': '<S37>:87' */
+            atv_state_out = 4U;
+            ATV_B.en_inv_rear_out = false;
+            ATV_B.en_inv_front_out = false;
+            ATV_B.en_inv_gen_out = false;
+        }
+        break;
+      case ATV_IN_HV_DEL:
+        /* During 'HV_DEL': '<S37>:96' */
+        if (ATV_DW.temporalCounter_i1_ji >= 50U) {
+            /* Transition: '<S37>:97' */
+            ATV_DW.is_DRIVE_ENABLE = ATV_IN_DRIVE_ENABLED;
+            /* Entry 'DRIVE_ENABLED': '<S37>:88' */
+            atv_state_out = 5U;
+            ATV_B.en_inv_rear_out = true;
+            ATV_B.en_inv_front_out = true;
+            ATV_B.en_inv_gen_out = true;
+            atv_runLed_out = true;
+        } else {
+            if (ATV_DW.is_HV_CTRL != ATV_IN_HV_ON) {
+                /* Transition: '<S37>:86' */
+                ATV_DW.is_DRIVE_ENABLE = ATV_IN_IDLE;
+                /* Entry 'IDLE': '<S37>:87' */
+                atv_state_out = 4U;
+                ATV_B.en_inv_rear_out = false;
+                ATV_B.en_inv_front_out = false;
+                ATV_B.en_inv_gen_out = false;
+            }
+        }
+        break;
+      default:
+        atv_state_out = 4U;
+        ATV_B.en_inv_rear_out = false;
+        ATV_B.en_inv_front_out = false;
+        ATV_B.en_inv_gen_out = false;
+        /* During 'IDLE': '<S37>:87' */
+        if (ATV_DW.is_HV_CTRL == ATV_IN_HV_ON) {
+            /* Transition: '<S37>:95' */
+            ATV_DW.is_DRIVE_ENABLE = ATV_IN_HV_DEL;
+            ATV_DW.temporalCounter_i1_ji = 0U;
+        }
+        break;
+    }
+    /* During 'STARTTRIGGER': '<S37>:119' */
+    if (ATV_DW.is_STARTTRIGGER == ATV_IN_STARTTRIGGER_OFF) {
+        /* During 'STARTTRIGGER_OFF': '<S37>:117' */
+        if (!ATV_B.LogicalOperator3) {
+            /* Transition: '<S37>:114' */
+            ATV_DW.is_STARTTRIGGER = ATV_IN_STARTTRIGGER_ON;
+            /* Entry 'STARTTRIGGER_ON': '<S37>:118' */
+            ATV_DW.startBtnArmed = true;
+        }
+    } else {
+        /* During 'STARTTRIGGER_ON': '<S37>:118' */
+        if (ATV_B.LogicalOperator3) {
+            /* Transition: '<S37>:116' */
+            ATV_DW.is_STARTTRIGGER = ATV_IN_STARTTRIGGER_OFF;
+        }
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_KEY_ON(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_Off_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T PumpSt;
+/* Truth Table Function 'Off': '<S40>:77' */
+if (TInverterLow && TMotorLow && ATV_B.RelationalOperator5) {
+    /* Condition '#1': '<S40>:77:10' */
+    /* Condition '#2': '<S40>:77:14' */
+    /* Condition '#3': '<S40>:77:18' */
+    /* Action '1': '<S40>:77:30' */
+    PumpSt = 0.0;
+} else {
+    /* Action '2': '<S40>:77:36' */
+    PumpSt = 1.0;
+}
+return PumpSt;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T ATV_Off(\
+%assign comma = ""
+%<comma>boolean_T TInverterLow\
+%assign comma = ", "
+%<comma>boolean_T TMotorLow\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_On_Fcn2(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T PumpSt;
+/* Truth Table Function 'On': '<S40>:92' */
+if (TInverterHi) {
+    /* Condition '#1': '<S40>:92:10' */
+    /* Action '1': '<S40>:92:34' */
+    PumpSt = 1.0;
+} else if (TMotorHi) {
+    /* Condition '#2': '<S40>:92:14' */
+    /* Action '1': '<S40>:92:34' */
+    PumpSt = 1.0;
+} else if (ATV_B.RelationalOperator4) {
+    /* Condition '#3': '<S40>:92:18' */
+    /* Action '1': '<S40>:92:34' */
+    PumpSt = 1.0;
+} else {
+    /* Action '2': '<S40>:92:40' */
+    PumpSt = 0.0;
+}
+return PumpSt;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T ATV_On(\
+%assign comma = ""
+%<comma>boolean_T TInverterHi\
+%assign comma = ", "
+%<comma>boolean_T TMotorHi\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ATV_ProceduraAvviamento_Fcn3(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+/* During 'ProceduraAvviamento': '<S66>:191' */
+if (((ATV_DW.ReqGen_prev != ATV_DW.ReqGen_start) && (!ATV_DW.ReqGen_start)) || ATV_DW.ShutDownHybrid) {
+    /* Transition: '<S66>:194' */
+    /* Exit Internal 'ProceduraAvviamento': '<S66>:191' */
+    if (ATV_DW.is_ProceduraAvviamento == ATV_IN_StarterMode) {
+        /* Exit Internal 'StarterMode': '<S66>:67' */
+        ATV_DW.is_StarterMode = ATV_IN_NO_ACTIVE_CHILD_b;
+        /* Exit 'StarterMode': '<S66>:67' */
+        ATV_DW.is_ProceduraAvviamento = ATV_IN_NO_ACTIVE_CHILD_b;
+    } else {
+        /* Exit Internal 'RegenerativeMode': '<S66>:167' */
+        ATV_DW.is_RegenerativeMode = ATV_IN_NO_ACTIVE_CHILD_b;
+        ATV_DW.is_ProceduraAvviamento = ATV_IN_NO_ACTIVE_CHILD_b;
+    }
+    ATV_DW.is_GestioneIbrido = ATV_IN_ProceduraSpegnimento;
+    /* Entry 'ProceduraSpegnimento': '<S66>:193' */
+} else {
+    switch (ATV_DW.is_ProceduraAvviamento) {
+      case ATV_IN_RegenerativeMode:
+        /* During 'RegenerativeMode': '<S66>:167' */
+        switch (ATV_DW.is_RegenerativeMode) {
+          case ATV_IN_Step1:
+            /* During 'Step1': '<S66>:202' */
+            if (ATV_DW.temporalCounter_i1 >= 500U) {
+                /* Transition: '<S66>:206' */
+                ATV_DW.is_RegenerativeMode = ATV_IN_Step2;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'Step2': '<S66>:204' */
+            }
+            break;
+          case ATV_IN_Step2:
+            /* During 'Step2': '<S66>:204' */
+            if (ATV_DW.temporalCounter_i1 >= 500U) {
+                /* Transition: '<S66>:207' */
+                ATV_DW.is_RegenerativeMode = ATV_IN_Step3;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'Step3': '<S66>:208' */
+            }
+            break;
+          case ATV_IN_Step3:
+            /* During 'Step3': '<S66>:208' */
+            if (ATV_DW.temporalCounter_i1 >= 500U) {
+                /* Transition: '<S66>:210' */
+                ATV_DW.is_RegenerativeMode = ATV_IN_Step4;
+                /* Entry 'Step4': '<S66>:209' */
+            }
+            break;
+          default:
+            /* During 'Step4': '<S66>:209' */
+            break;
+        }
+        break;
+      case ATV_IN_StarterMode:
+        /* During 'StarterMode': '<S66>:67' */
+        switch (ATV_DW.is_StarterMode) {
+          case ATV_IN_AvviamentoIce:
+            /* During 'AvviamentoIce': '<S66>:11' */
+            if (ATV_DW.temporalCounter_i1 >= 300U) {
+                /* Transition: '<S66>:123' */
+                ATV_DW.is_StarterMode = ATV_IN_TimeoutAvviamentoIce;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'TimeoutAvviamentoIce': '<S66>:215' */
+            } else {
+                /* Simulink Function 'IceRun': '<S66>:114' */
+                ATV_B.rPMG = 0U;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[17], "Output",0)
+                /* {S!d913}Outputs for Function Call SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%if SLibCG_SystemFcnArgAccessed("GestioneIbridoProceduraAvvi",17,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("GestioneIbridoProceduraAvvi", ["%<_modelSS>", "ATV_B.rPMG", "&ATV_B.GestioneIbridoProceduraAvviamen"], 17, 0, 7, 0, 7, 21)>\
+
+
+                /* {E!d913}End of Outputs for SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%endif
+                ATV_DW.IceStatus = ATV_B.GestioneIbridoProceduraAvviamen.Switch;
+            }
+            break;
+          case ATV_IN_Inizializzazione:
+            /* During 'Inizializzazione': '<S66>:6' */
+            if ((ATV_DW.ReqGen_prev != ATV_DW.ReqGen_start) && ATV_DW.ReqGen_start) {
+                /* Transition: '<S66>:9' */
+                ATV_DW.is_StarterMode = ATV_IN_AvviamentoIce;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'AvviamentoIce': '<S66>:11' */
+            }
+            break;
+          case ATV_IN_MonitoraggioICe:
+            /* During 'MonitoraggioICe': '<S66>:122' */
+            if (ATV_DW.temporalCounter_i1 >= 100U) {
+                /* Transition: '<S66>:125' */
+                ATV_DW.IceOn = true;
+                ATV_DW.is_StarterMode = ATV_IN_NO_ACTIVE_CHILD_b;
+                /* Exit 'StarterMode': '<S66>:67' */
+                ATV_DW.is_ProceduraAvviamento = ATV_IN_StopAvviamento;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'StopAvviamento': '<S66>:185' */
+            } else if ((!ATV_DW.IceStatus) && atv_apu_req_in && (ATV_DW.temporalCounter_i1 >= 300U)) {
+                /* Transition: '<S66>:96' */
+                /* Transition: '<S66>:198' */
+                /* Transition: '<S66>:196' */
+                /* Transition: '<S66>:165' */
+                ATV_DW.is_StarterMode = ATV_IN_AvviamentoIce;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'AvviamentoIce': '<S66>:11' */
+            } else {
+                /* Simulink Function 'IceRun': '<S66>:114' */
+                ATV_B.rPMG = 0U;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[17], "Output",0)
+                /* {S!d915}Outputs for Function Call SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%if SLibCG_SystemFcnArgAccessed("GestioneIbridoProceduraAvvi",17,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("GestioneIbridoProceduraAvvi", ["%<_modelSS>", "ATV_B.rPMG", "&ATV_B.GestioneIbridoProceduraAvviamen"], 17, 0, 7, 0, 7, 21)>\
+
+
+                /* {E!d915}End of Outputs for SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%endif
+                ATV_DW.IceStatus = ATV_B.GestioneIbridoProceduraAvviamen.Switch;
+            }
+            break;
+          default:
+            /* During 'TimeoutAvviamentoIce': '<S66>:215' */
+            if ((!ATV_DW.IceStatus) && atv_apu_req_in && (ATV_DW.temporalCounter_i1 >= 300U)) {
+                /* Transition: '<S66>:217' */
+                /* Transition: '<S66>:220' */
+                /* Transition: '<S66>:196' */
+                /* Transition: '<S66>:165' */
+                ATV_DW.is_StarterMode = ATV_IN_AvviamentoIce;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'AvviamentoIce': '<S66>:11' */
+            } else if (ATV_DW.IceStatus) {
+                /* Transition: '<S66>:216' */
+                ATV_DW.is_StarterMode = ATV_IN_MonitoraggioICe;
+                ATV_DW.temporalCounter_i1 = 0U;
+                /* Entry 'MonitoraggioICe': '<S66>:122' */
+            } else {
+                /* Simulink Function 'IceRun': '<S66>:114' */
+                ATV_B.rPMG = 0U;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[17], "Output",0)
+                /* {S!d911}Outputs for Function Call SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%if SLibCG_SystemFcnArgAccessed("GestioneIbridoProceduraAvvi",17,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("GestioneIbridoProceduraAvvi", ["%<_modelSS>", "ATV_B.rPMG", "&ATV_B.GestioneIbridoProceduraAvviamen"], 17, 0, 7, 0, 7, 21)>\
+
+
+                /* {E!d911}End of Outputs for SubSystem: '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+%endif
+                ATV_DW.IceStatus = ATV_B.GestioneIbridoProceduraAvviamen.Switch;
+            }
+            break;
+        }
+        break;
+      case ATV_IN_StopAvviamento:
+        /* During 'StopAvviamento': '<S66>:185' */
+        if (ATV_DW.temporalCounter_i1 >= 50U) {
+            /* Transition: '<S66>:186' */
+            ATV_DW.is_ProceduraAvviamento = ATV_IN_WarmUpTermico;
+            /* Entry 'WarmUpTermico': '<S66>:102' */
+        }
+        break;
+      default:
+        /* During 'WarmUpTermico': '<S66>:102' */
+        break;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ATV_ProceduraAvviamento(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 3, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

@@ -3,9 +3,9 @@
  *
  * Code generation for model "ATV".
  *
- * Model version              : 6.38
+ * Model version              : 6.151
  * Simulink Coder version : 9.0 (R2018b) 24-May-2018
- * C source code generated on : Tue Apr 18 19:34:44 2023
+ * C source code generated on : Wed Apr 26 22:21:58 2023
  *
  * Target selection: openecu_grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -861,56 +861,54 @@ typedef struct {
   uint8_T temporalCounter_i1;          /* '<S3>/Chart' */
 } DW_Chart_ATV_T;
 
-/* Block signals for system '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
-typedef struct {
-  boolean_T Switch;                    /* '<S67>/Switch' */
-} B_GestioneIbridoProceduraAvvi_T;
-
 /* Block signals (default storage) */
 typedef struct {
-  real_T pai_BasicAnalogInput;         /* '<S6>/pai_BasicAnalogInput' */
+  real_T pai_BasicAnalogInput;         /* '<S7>/pai_BasicAnalogInput' */
   real_T psc_CpuLoading;               /* '<S1>/psc_CpuLoading' */
-  real_T Saturation;                   /* '<S5>/Saturation' */
-  real_T pdx_PWMOutput;                /* '<S5>/pdx_PWMOutput' */
+  real_T Saturation;                   /* '<S6>/Saturation' */
+  real_T pdx_PWMOutput;                /* '<S6>/pdx_PWMOutput' */
   real_T pcx_CANdb_ReceiveMessage_o4;  /* '<S3>/pcx_CANdb_ReceiveMessage' */
   real_T pcx_CANdb_ReceiveMessage_o5;  /* '<S3>/pcx_CANdb_ReceiveMessage' */
   real_T pcx_CANdb_ReceiveMessage_o6;  /* '<S3>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o4_k;/* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o5_c;/* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o6_o;/* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o7;  /* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o8;  /* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o9;  /* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o10; /* '<S4>/pcx_CANdb_ReceiveMessage' */
-  real_T pai_BasicAnalogInput2;        /* '<S6>/pai_BasicAnalogInput2' */
+  real_T pcx_CANdb_ReceiveMessage_o4_f;/* '<S5>/pcx_CANdb_ReceiveMessage' */
+  real_T pcx_CANdb_ReceiveMessage_o5_m;/* '<S5>/pcx_CANdb_ReceiveMessage' */
+  real_T pcx_CANdb_ReceiveMessage_o7;  /* '<S5>/pcx_CANdb_ReceiveMessage' */
+  real_T pai_BasicAnalogInput2;        /* '<S7>/pai_BasicAnalogInput2' */
   real_T pcx_CANdb_ReceiveMessage_o4_n;/* '<S2>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o5_m;/* '<S2>/pcx_CANdb_ReceiveMessage' */
+  real_T pcx_CANdb_ReceiveMessage_o5_mv;/* '<S2>/pcx_CANdb_ReceiveMessage' */
   real_T atv_bms_pack_current;         /* '<S2>/pcx_CANdb_ReceiveMessage' */
   real_T atv_bms_pack_soh;             /* '<S2>/pcx_CANdb_ReceiveMessage' */
-  real_T pcx_CANdb_ReceiveMessage_o9_c;/* '<S2>/pcx_CANdb_ReceiveMessage' */
-  uint16_T Switch5;                    /* '<S43>/Switch5' */
-  uint16_T Switch1;                    /* '<S43>/Switch1' */
-  uint16_T Cast2;                      /* '<S35>/Cast2' */
-  uint16_T Cast1;                      /* '<S35>/Cast1' */
-  uint16_T Switch4;                    /* '<S31>/Switch4' */
-  uint16_T Switch3;                    /* '<S31>/Switch3' */
-  uint16_T rPMG;                       /* '<S34>/VSMGestioneIbrido' */
-  uint8_T RateTransition6;             /* '<Root>/Rate Transition6' */
-  uint8_T RateTransition7;             /* '<Root>/Rate Transition7' */
-  uint8_T RateTransition10;            /* '<Root>/Rate Transition10' */
-  uint8_T RateTransition8;             /* '<Root>/Rate Transition8' */
-  uint8_T RateTransition9;             /* '<Root>/Rate Transition9' */
-  uint8_T RateTransition11;            /* '<Root>/Rate Transition11' */
-  uint8_T RateTransition12;            /* '<Root>/Rate Transition12' */
+  real_T pcx_CANdb_ReceiveMessage_o9;  /* '<S2>/pcx_CANdb_ReceiveMessage' */
+  real32_T pcx_CANdb_ReceiveMessage_o6_n;/* '<S5>/pcx_CANdb_ReceiveMessage' */
+  uint16_T Cast2;                      /* '<S39>/Cast2' */
+  uint16_T Cast1;                      /* '<S39>/Cast1' */
+  uint16_T tHROTTLEGen_X1000_out;      /* '<S37>/VSMGestioneIbrido' */
+  uint16_T footBrake_X1000_out;        /* '<S37>/VSMGestioneIbrido' */
+  int16_T RateTransition6;             /* '<Root>/Rate Transition6' */
+  int16_T RateTransition7;             /* '<Root>/Rate Transition7' */
+  int16_T RateTransition10;            /* '<Root>/Rate Transition10' */
+  int16_T RateTransition8;             /* '<Root>/Rate Transition8' */
+  int16_T RateTransition9;             /* '<Root>/Rate Transition9' */
+  int16_T RateTransition11;            /* '<Root>/Rate Transition11' */
+  int16_T RateTransition12;            /* '<Root>/Rate Transition12' */
+  int16_T RateTransition24;            /* '<Root>/Rate Transition24' */
+  int16_T pcx_CANdb_ReceiveMessage_o4_k;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o5_c;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o6_o;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o7_p;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o8; /* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o9_b;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T pcx_CANdb_ReceiveMessage_o10;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  int16_T atv_v_dbg_T_FMot;            /* '<S4>/Switch' */
+  int16_T atv_v_dbg_T_FInv;            /* '<S4>/Switch1' */
+  int16_T atv_v_dbg_T_RMot;            /* '<S4>/Switch2' */
+  int16_T atv_v_dbg_T_RInv;            /* '<S4>/Switch3' */
+  int16_T atv_v_dbg_T_GMot;            /* '<S4>/Switch4' */
+  int16_T atv_v_dbg_T_GInv;            /* '<S4>/Switch5' */
+  int16_T atv_v_dbg_T_Rad;             /* '<S4>/Switch6' */
+  int16_T Saturation_a;                /* '<S5>/Saturation' */
   uint8_T RateTransition7_p;           /* '<S1>/Rate Transition7' */
-  uint8_T atv_v_dbg_T_FMot;            /* '<S4>/Switch' */
-  uint8_T atv_v_dbg_T_FInv;            /* '<S4>/Switch1' */
-  uint8_T atv_v_dbg_T_RMot;            /* '<S4>/Switch2' */
-  uint8_T atv_v_dbg_T_RInv;            /* '<S4>/Switch3' */
-  uint8_T atv_v_dbg_T_GMot;            /* '<S4>/Switch4' */
-  uint8_T atv_v_dbg_T_GInv;            /* '<S4>/Switch5' */
-  uint8_T atv_v_dbg_T_Rad;             /* '<S4>/Switch6' */
-  boolean_T LogicalOperator3;          /* '<S8>/Logical Operator3' */
+  boolean_T LogicalOperator3;          /* '<S9>/Logical Operator3' */
   boolean_T RateTransition4;           /* '<Root>/Rate Transition4' */
   boolean_T RateTransition5;           /* '<Root>/Rate Transition5' */
   boolean_T pcx_CANdb_TransmitMessage; /* '<S1>/pcx_CANdb_TransmitMessage' */
@@ -919,9 +917,7 @@ typedef struct {
   boolean_T RateTransition1;           /* '<S1>/Rate Transition1' */
   boolean_T RateTransition2;           /* '<S1>/Rate Transition2' */
   boolean_T pcx_CANdb_TransmitMessage1;/* '<S1>/pcx_CANdb_TransmitMessage1' */
-  boolean_T RelationalOperator4;       /* '<S29>/Relational Operator4' */
-  boolean_T RelationalOperator5;       /* '<S29>/Relational Operator5' */
-  boolean_T Switch;                    /* '<S38>/Switch' */
+  boolean_T Switch;                    /* '<S42>/Switch' */
   boolean_T RateTransition3;           /* '<S1>/Rate Transition3' */
   boolean_T RateTransition5_g;         /* '<S1>/Rate Transition5' */
   boolean_T RateTransition6_p;         /* '<S1>/Rate Transition6' */
@@ -930,88 +926,103 @@ typedef struct {
   boolean_T pcx_CANdb_TransmitMessage3;/* '<S1>/pcx_CANdb_TransmitMessage3' */
   boolean_T pcx_CANdb_TransmitMessage4;/* '<S1>/pcx_CANdb_TransmitMessage4' */
   boolean_T pcx_CANdb_TransmitMessage5;/* '<S1>/pcx_CANdb_TransmitMessage5' */
-  boolean_T pdx_DigitalOutput;         /* '<S5>/pdx_DigitalOutput' */
-  boolean_T pdx_DigitalOutput1;        /* '<S5>/pdx_DigitalOutput1' */
-  boolean_T pdx_DigitalOutput3;        /* '<S5>/pdx_DigitalOutput3' */
-  boolean_T pdx_DigitalOutput4;        /* '<S5>/pdx_DigitalOutput4' */
-  boolean_T pdx_DigitalOutput5;        /* '<S5>/pdx_DigitalOutput5' */
-  boolean_T pdx_DigitalOutput6;        /* '<S5>/pdx_DigitalOutput6' */
-  boolean_T pdx_DigitalOutput7;        /* '<S5>/pdx_DigitalOutput7' */
-  boolean_T pdx_DigitalOutput8;        /* '<S5>/pdx_DigitalOutput8' */
+  boolean_T pcx_CANdb_TransmitMessage7;/* '<S1>/pcx_CANdb_TransmitMessage7' */
+  boolean_T pcx_CANdb_TransmitMessage8;/* '<S1>/pcx_CANdb_TransmitMessage8' */
+  boolean_T pdx_DigitalOutput;         /* '<S6>/pdx_DigitalOutput' */
+  boolean_T pdx_DigitalOutput1;        /* '<S6>/pdx_DigitalOutput1' */
+  boolean_T pdx_DigitalOutput2;        /* '<S6>/pdx_DigitalOutput2' */
+  boolean_T pdx_DigitalOutput3;        /* '<S6>/pdx_DigitalOutput3' */
+  boolean_T pdx_DigitalOutput4;        /* '<S6>/pdx_DigitalOutput4' */
+  boolean_T pdx_DigitalOutput5;        /* '<S6>/pdx_DigitalOutput5' */
+  boolean_T pdx_DigitalOutput6;        /* '<S6>/pdx_DigitalOutput6' */
+  boolean_T pdx_DigitalOutput7;        /* '<S6>/pdx_DigitalOutput7' */
+  boolean_T pdx_DigitalOutput8;        /* '<S6>/pdx_DigitalOutput8' */
+  boolean_T pdx_DigitalOutput9;        /* '<S6>/pdx_DigitalOutput9' */
   boolean_T pcx_CANdb_ReceiveMessage_o1;/* '<S3>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o2;/* '<S3>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o3;/* '<S3>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o1_k;/* '<S4>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o2_d;/* '<S4>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o3_b;/* '<S4>/pcx_CANdb_ReceiveMessage' */
+  boolean_T pcx_CANdb_ReceiveMessage_o1_g;/* '<S5>/pcx_CANdb_ReceiveMessage' */
+  boolean_T pcx_CANdb_ReceiveMessage_o2_n;/* '<S5>/pcx_CANdb_ReceiveMessage' */
+  boolean_T pcx_CANdb_ReceiveMessage_o3_d;/* '<S5>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o1_n;/* '<S2>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o2_l;/* '<S2>/pcx_CANdb_ReceiveMessage' */
   boolean_T pcx_CANdb_ReceiveMessage_o3_p;/* '<S2>/pcx_CANdb_ReceiveMessage' */
   boolean_T pdx_DigitalOutput_b;       /* '<Root>/pdx_DigitalOutput' */
   boolean_T pdx_DigitalOutput1_i;      /* '<Root>/pdx_DigitalOutput1' */
-  boolean_T pdx_DigitalOutput2;        /* '<Root>/pdx_DigitalOutput2' */
+  boolean_T pdx_DigitalOutput2_p;      /* '<Root>/pdx_DigitalOutput2' */
   boolean_T pdx_DigitalOutput3_l;      /* '<Root>/pdx_DigitalOutput3' */
-  boolean_T hvp_ctrl_out;              /* '<S8>/VSM' */
-  boolean_T hvm_ctrl_out;              /* '<S8>/VSM' */
-  boolean_T chg_ctrl_out;              /* '<S8>/VSM' */
-  boolean_T heater_ctrl_out;           /* '<S8>/VSM' */
-  boolean_T en_inv_rear_out;           /* '<S8>/VSM' */
-  boolean_T en_inv_front_out;          /* '<S8>/VSM' */
-  boolean_T en_inv_gen_out;            /* '<S8>/VSM' */
-  B_GestioneIbridoProceduraAvvi_T GestioneIbridoProceduraAvviamen;/* '<S66>/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun' */
+  boolean_T hvp_ctrl_out;              /* '<S9>/VSM' */
+  boolean_T hvm_ctrl_out;              /* '<S9>/VSM' */
+  boolean_T chg_ctrl_out;              /* '<S9>/VSM' */
+  boolean_T heater_ctrl_out;           /* '<S9>/VSM' */
+  boolean_T en_inv_rear_out;           /* '<S9>/VSM' */
+  boolean_T en_inv_front_out;          /* '<S9>/VSM' */
+  boolean_T en_inv_gen_out;            /* '<S9>/VSM' */
+  boolean_T GenFwd_out;                /* '<S37>/VSMGestioneIbrido' */
+  boolean_T FS1_out;                   /* '<S37>/VSMGestioneIbrido' */
+  B_Chart_ATV_T sf_Chart_l;            /* '<S5>/Chart' */
   B_Chart_ATV_T sf_Chart_b;            /* '<S4>/Chart' */
   B_Chart_ATV_T sf_Chart;              /* '<S3>/Chart' */
 } B_ATV_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  real_T PumpStB;                      /* '<S38>/PUMP LOGIC' */
-  real_T PumpStA;                      /* '<S38>/PUMP LOGIC' */
-  uint16_T temporalCounter_i1;         /* '<S34>/VSMGestioneIbrido' */
-  uint16_T temporalCounter_i2;         /* '<S34>/VSMGestioneIbrido' */
-  uint16_T temporalCounter_i1_j;       /* '<S38>/PUMP LOGIC' */
-  uint8_T RateTransition6_Buffer0;     /* '<Root>/Rate Transition6' */
-  uint8_T RateTransition7_Buffer0;     /* '<Root>/Rate Transition7' */
-  uint8_T RateTransition10_Buffer0;    /* '<Root>/Rate Transition10' */
-  uint8_T RateTransition8_Buffer0;     /* '<Root>/Rate Transition8' */
-  uint8_T RateTransition9_Buffer0;     /* '<Root>/Rate Transition9' */
-  uint8_T RateTransition11_Buffer0;    /* '<Root>/Rate Transition11' */
-  uint8_T RateTransition12_Buffer0;    /* '<Root>/Rate Transition12' */
-  uint8_T is_active_c3_ATV;            /* '<S8>/VSM' */
-  uint8_T is_c3_ATV;                   /* '<S8>/VSM' */
-  uint8_T is_DRIVE_ENABLE;             /* '<S8>/VSM' */
-  uint8_T is_HV_CTRL;                  /* '<S8>/VSM' */
-  uint8_T is_CHG_CTRL;                 /* '<S8>/VSM' */
-  uint8_T is_HEATER_CTRL;              /* '<S8>/VSM' */
-  uint8_T is_STARTTRIGGER;             /* '<S8>/VSM' */
-  uint8_T temporalCounter_i1_ji;       /* '<S8>/VSM' */
-  uint8_T temporalCounter_i2_j;        /* '<S8>/VSM' */
-  uint8_T temporalCounter_i3;          /* '<S8>/VSM' */
-  uint8_T is_active_c2_ATV;            /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_GestioneIbrido;           /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_ProceduraAvviamento;      /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_RegenerativeMode;         /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_StarterMode;              /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_MonitoraggioStatoICE;     /* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_active_MonitoraggioStatoICE;/* '<S34>/VSMGestioneIbrido' */
-  uint8_T is_active_c6_ATV;            /* '<S38>/PUMP LOGIC' */
-  uint8_T is_PumpALogic;               /* '<S38>/PUMP LOGIC' */
-  uint8_T is_PumpBLogic;               /* '<S38>/PUMP LOGIC' */
-  boolean_T Relay2_Mode;               /* '<S6>/Relay2' */
-  boolean_T Relay3_Mode;               /* '<S6>/Relay3' */
-  boolean_T Relay1_Mode;               /* '<S6>/Relay1' */
+  real_T IceStartAttempCnt;            /* '<S37>/VSMGestioneIbrido' */
+  real_T PumpStB;                      /* '<S42>/PUMP LOGIC' */
+  real_T PumpStA;                      /* '<S42>/PUMP LOGIC' */
+  real32_T PrevY;                      /* '<S37>/Rate Limiter2' */
+  int16_T RateTransition6_Buffer0;     /* '<Root>/Rate Transition6' */
+  int16_T RateTransition7_Buffer0;     /* '<Root>/Rate Transition7' */
+  int16_T RateTransition10_Buffer0;    /* '<Root>/Rate Transition10' */
+  int16_T RateTransition8_Buffer0;     /* '<Root>/Rate Transition8' */
+  int16_T RateTransition9_Buffer0;     /* '<Root>/Rate Transition9' */
+  int16_T RateTransition11_Buffer0;    /* '<Root>/Rate Transition11' */
+  int16_T RateTransition12_Buffer0;    /* '<Root>/Rate Transition12' */
+  int16_T RateTransition24_Buffer0;    /* '<Root>/Rate Transition24' */
+  uint16_T PrevY_k;                    /* '<S37>/Rate Limiter1' */
+  uint16_T PrevY_l;                    /* '<S37>/Rate Limiter' */
+  uint16_T temporalCounter_i1;         /* '<S37>/VSMGestioneIbrido' */
+  uint16_T temporalCounter_i1_f;       /* '<S42>/PUMP LOGIC' */
+  uint8_T is_active_c3_ATV;            /* '<S9>/VSM' */
+  uint8_T is_c3_ATV;                   /* '<S9>/VSM' */
+  uint8_T is_DRIVE_ENABLE;             /* '<S9>/VSM' */
+  uint8_T is_HV_CTRL;                  /* '<S9>/VSM' */
+  uint8_T is_CHG_CTRL;                 /* '<S9>/VSM' */
+  uint8_T is_HEATER_CTRL;              /* '<S9>/VSM' */
+  uint8_T is_STARTTRIGGER;             /* '<S9>/VSM' */
+  uint8_T temporalCounter_i1_j;        /* '<S9>/VSM' */
+  uint8_T temporalCounter_i2;          /* '<S9>/VSM' */
+  uint8_T temporalCounter_i3;          /* '<S9>/VSM' */
+  uint8_T is_active_c2_ATV;            /* '<S37>/VSMGestioneIbrido' */
+  uint8_T is_IceSM;                    /* '<S37>/VSMGestioneIbrido' */
+  uint8_T is_MonitoraggioStatoICE;     /* '<S37>/VSMGestioneIbrido' */
+  uint8_T is_WarmUpIce;                /* '<S37>/VSMGestioneIbrido' */
+  uint8_T temporalCounter_i2_m;        /* '<S37>/VSMGestioneIbrido' */
+  uint8_T is_active_c5_ATV;            /* '<S42>/PUMP LOGIC' */
+  uint8_T is_PumpALogic;               /* '<S42>/PUMP LOGIC' */
+  uint8_T is_PumpBLogic;               /* '<S42>/PUMP LOGIC' */
+  boolean_T Relay2_Mode;               /* '<S7>/Relay2' */
+  boolean_T Relay3_Mode;               /* '<S7>/Relay3' */
+  boolean_T Relay1_Mode;               /* '<S7>/Relay1' */
   boolean_T RateTransition4_Buffer0;   /* '<Root>/Rate Transition4' */
   boolean_T RateTransition5_Buffer0;   /* '<Root>/Rate Transition5' */
-  boolean_T Relay1_Mode_e;             /* '<S39>/Relay1' */
-  boolean_T Relay5_Mode;               /* '<S6>/Relay5' */
-  boolean_T Relay4_Mode;               /* '<S6>/Relay4' */
-  boolean_T startBtnArmed;             /* '<S8>/VSM' */
-  boolean_T IceStatus;                 /* '<S34>/VSMGestioneIbrido' */
-  boolean_T ShutDownHybrid;            /* '<S34>/VSMGestioneIbrido' */
-  boolean_T IceOn;                     /* '<S34>/VSMGestioneIbrido' */
-  boolean_T IceFault;                  /* '<S34>/VSMGestioneIbrido' */
-  boolean_T ReqGen_prev;               /* '<S34>/VSMGestioneIbrido' */
-  boolean_T ReqGen_start;              /* '<S34>/VSMGestioneIbrido' */
+  boolean_T Relay_Mode;                /* '<S30>/Relay' */
+  boolean_T Relay1_Mode_h;             /* '<S30>/Relay1' */
+  boolean_T Relay2_Mode_m;             /* '<S30>/Relay2' */
+  boolean_T Relay3_Mode_d;             /* '<S30>/Relay3' */
+  boolean_T Relay4_Mode;               /* '<S30>/Relay4' */
+  boolean_T Relay5_Mode;               /* '<S30>/Relay5' */
+  boolean_T Relay1_Mode_b;             /* '<S43>/Relay1' */
+  boolean_T Relay_Mode_b;              /* '<S7>/Relay' */
+  boolean_T Relay5_Mode_e;             /* '<S7>/Relay5' */
+  boolean_T Relay4_Mode_b;             /* '<S7>/Relay4' */
+  boolean_T startBtnArmed;             /* '<S9>/VSM' */
+  boolean_T ReqGen_prev;               /* '<S37>/VSMGestioneIbrido' */
+  boolean_T ReqGen_start;              /* '<S37>/VSMGestioneIbrido' */
+  DW_Chart_ATV_T sf_Chart_l;           /* '<S5>/Chart' */
   DW_Chart_ATV_T sf_Chart_b;           /* '<S4>/Chart' */
   DW_Chart_ATV_T sf_Chart;             /* '<S3>/Chart' */
 } DW_ATV_T;
@@ -1147,64 +1158,82 @@ extern DW_ATV_T ATV_DW;
  * these signals and export their symbols.
  *
  */
-extern real_T atv_xc1_raw_ain;         /* '<S6>/pai_BasicAnalogInput5' */
-extern real_T atv_xc4_raw_ain;         /* '<S6>/pai_BasicAnalogInput6' */
-extern real_T atv_xa3_brake_pedal_raw_ain;/* '<S6>/pai_BasicAnalogInput4' */
-extern real_T atv_dbg_FAN_out;         /* '<S38>/Switch1' */
-extern real_T atv_xa1_ain_throttle_raw;/* '<S6>/pai_BasicAnalogInput1' */
-extern real_T atv_xe4_raw_ain;         /* '<S6>/pai_BasicAnalogInput8' */
-extern real_T atv_xe2_raw_ain;         /* '<S6>/pai_BasicAnalogInput7' */
-extern real_T atv_xd3_raw_ain;         /* '<S6>/pai_BasicAnalogInput3' */
+extern real_T atv_xc1_raw_ain;         /* '<S7>/pai_BasicAnalogInput5' */
+extern real_T atv_xc4_raw_ain;         /* '<S7>/pai_BasicAnalogInput6' */
+extern real_T atv_xa3_brake_pedal_raw_ain;/* '<S7>/pai_BasicAnalogInput4' */
+extern real_T atv_xa1_ain_throttle_raw;/* '<S7>/pai_BasicAnalogInput1' */
+extern real_T atv_xd3_raw_ain;         /* '<S7>/pai_BasicAnalogInput3' */
+extern real_T atv_xe4_raw_ain;         /* '<S7>/pai_BasicAnalogInput8' */
+extern real_T atv_xe2_raw_ain;         /* '<S7>/pai_BasicAnalogInput7' */
+extern real_T atv_dbg_FAN_out;         /* '<S6>/Data Type Conversion' */
+extern real_T atv_yg3_raw_ain;         /* '<S7>/pai_BasicAnalogInput9' */
 extern real_T bms_pack_voltage;        /* '<S2>/pcx_CANdb_ReceiveMessage' */
-extern uint32_T atv_stack_used;        /* '<S24>/psc_StackUsed' */
-extern uint32_T atv_task_duration_1s;  /* '<S24>/pkn_TaskDuration1' */
-extern uint32_T atv_task_duration_1s_max;/* '<S24>/pkn_TaskDuration2' */
-extern int32_T atv_xd1_key_ain;        /* '<S6>/Gain' */
-extern int32_T atv_xe3_ain;            /* '<S6>/Gain2' */
-extern uint16_T atv_brake_pedalX1000;  /* '<S14>/Switch' */
-extern uint16_T atv_throttleX1000;     /* '<S13>/Switch' */
-extern uint16_T atv_app_code_year;     /* '<S25>/psc_AppBuildDate' */
-extern uint16_T atv_app_code_month;    /* '<S25>/psc_AppBuildDate' */
-extern uint16_T atv_app_code_day;      /* '<S25>/psc_AppBuildDate' */
-extern uint16_T atv_app_code_major_ver;/* '<S25>/psc_AppVersion' */
-extern uint16_T atv_app_code_minor_ver;/* '<S25>/psc_AppVersion' */
-extern uint16_T atv_app_code_subminor_ver;/* '<S25>/psc_AppVersion' */
-extern uint16_T atv_boot_code_year;    /* '<S26>/psc_BootBuildDate' */
-extern uint16_T atv_boot_code_month;   /* '<S26>/psc_BootBuildDate' */
-extern uint16_T atv_boot_code_day;     /* '<S26>/psc_BootBuildDate' */
-extern uint16_T atv_boot_code_major_ver;/* '<S26>/psc_BootVersion' */
-extern uint16_T atv_boot_code_minor_ver;/* '<S26>/psc_BootVersion' */
-extern uint16_T atv_boot_code_subminor_ver;/* '<S26>/psc_BootVersion' */
-extern uint16_T atv_prg_code_year;     /* '<S27>/psc_PrgBuildDate' */
-extern uint16_T atv_prg_code_month;    /* '<S27>/psc_PrgBuildDate' */
-extern uint16_T atv_prg_code_day;      /* '<S27>/psc_PrgBuildDate' */
-extern uint16_T atv_prg_code_major_ver;/* '<S27>/psc_PrgVersion' */
-extern uint16_T atv_prg_code_minor_ver;/* '<S27>/psc_PrgVersion' */
-extern uint16_T atv_prg_code_subminor_ver;/* '<S27>/psc_PrgVersion' */
-extern uint16_T atv_platform_code_year;/* '<S28>/psc_PlatformBuildDate' */
-extern uint16_T atv_platform_code_month;/* '<S28>/psc_PlatformBuildDate' */
-extern uint16_T atv_platform_code_day; /* '<S28>/psc_PlatformBuildDate' */
-extern uint16_T atv_platform_code_major_ver;/* '<S28>/psc_PlatformVersion' */
-extern uint16_T atv_platform_code_minor_ver;/* '<S28>/psc_PlatformVersion' */
-extern uint16_T atv_platform_code_subminor_ver;/* '<S28>/psc_PlatformVersion' */
-extern uint8_T atv_cpu_loading;        /* '<S24>/psc_CpuLoading1' */
-extern uint8_T atv_cpu_loading_max;    /* '<S24>/psc_CpuLoading2' */
-extern uint8_T atv_state_out;          /* '<S8>/VSM' */
-extern uint8_T atv_sub_state_out;      /* '<S8>/VSM' */
-extern boolean_T atv_key_signal;       /* '<S30>/Compare' */
-extern boolean_T atv_za3_StartBtn_din; /* '<S6>/pdx_DigitalInput' */
-extern boolean_T atv_fwd_mode_in;      /* '<S6>/Relay2' */
-extern boolean_T atv_rwd_mode_in;      /* '<S6>/Relay3' */
-extern boolean_T atv_brake_pedal_digital_in;/* '<S6>/Relay1' */
-extern boolean_T atv_fs1_in;           /* '<S6>/Logical Operator1' */
-extern boolean_T atv_4wd_din;          /* '<S6>/Relay5' */
+extern uint32_T atv_stack_used;        /* '<S25>/psc_StackUsed' */
+extern uint32_T atv_task_duration_1s;  /* '<S25>/pkn_TaskDuration1' */
+extern uint32_T atv_task_duration_1s_max;/* '<S25>/pkn_TaskDuration2' */
+extern int32_T atv_xd1_key_ain;        /* '<S7>/Gain' */
+extern int32_T atv_xe3_ain;            /* '<S7>/Gain2' */
+extern uint16_T atv_brake_pedalX1000;  /* '<S15>/Switch' */
+extern uint16_T atv_throttleX1000;     /* '<S14>/Switch' */
+extern uint16_T atv_regen_x1000_rear;  /* '<S47>/Switch5' */
+extern uint16_T atv_motoring_x1000_rear;/* '<S47>/Switch1' */
+extern uint16_T atv_motoring_x1000_rear_limited;/* '<S48>/Switch2' */
+extern uint16_T atv_regen_x1000_front; /* '<S32>/Switch4' */
+extern uint16_T atv_motoring_x1000_front;/* '<S46>/Switch1' */
+extern uint16_T atv_motoring_x1000_front_limited;/* '<S49>/Switch2' */
+extern uint16_T atv_footBrake_X1000_out;/* '<S37>/Rate Limiter1' */
+extern uint16_T atv_tHROTTLEGen_X1000_out;/* '<S37>/Rate Limiter' */
+extern uint16_T atv_app_code_year;     /* '<S26>/psc_AppBuildDate' */
+extern uint16_T atv_app_code_month;    /* '<S26>/psc_AppBuildDate' */
+extern uint16_T atv_app_code_day;      /* '<S26>/psc_AppBuildDate' */
+extern uint16_T atv_app_code_major_ver;/* '<S26>/psc_AppVersion' */
+extern uint16_T atv_app_code_minor_ver;/* '<S26>/psc_AppVersion' */
+extern uint16_T atv_app_code_subminor_ver;/* '<S26>/psc_AppVersion' */
+extern uint16_T atv_boot_code_year;    /* '<S27>/psc_BootBuildDate' */
+extern uint16_T atv_boot_code_month;   /* '<S27>/psc_BootBuildDate' */
+extern uint16_T atv_boot_code_day;     /* '<S27>/psc_BootBuildDate' */
+extern uint16_T atv_boot_code_major_ver;/* '<S27>/psc_BootVersion' */
+extern uint16_T atv_boot_code_minor_ver;/* '<S27>/psc_BootVersion' */
+extern uint16_T atv_boot_code_subminor_ver;/* '<S27>/psc_BootVersion' */
+extern uint16_T atv_prg_code_year;     /* '<S28>/psc_PrgBuildDate' */
+extern uint16_T atv_prg_code_month;    /* '<S28>/psc_PrgBuildDate' */
+extern uint16_T atv_prg_code_day;      /* '<S28>/psc_PrgBuildDate' */
+extern uint16_T atv_prg_code_major_ver;/* '<S28>/psc_PrgVersion' */
+extern uint16_T atv_prg_code_minor_ver;/* '<S28>/psc_PrgVersion' */
+extern uint16_T atv_prg_code_subminor_ver;/* '<S28>/psc_PrgVersion' */
+extern uint16_T atv_platform_code_year;/* '<S29>/psc_PlatformBuildDate' */
+extern uint16_T atv_platform_code_month;/* '<S29>/psc_PlatformBuildDate' */
+extern uint16_T atv_platform_code_day; /* '<S29>/psc_PlatformBuildDate' */
+extern uint16_T atv_platform_code_major_ver;/* '<S29>/psc_PlatformVersion' */
+extern uint16_T atv_platform_code_minor_ver;/* '<S29>/psc_PlatformVersion' */
+extern uint16_T atv_platform_code_subminor_ver;/* '<S29>/psc_PlatformVersion' */
+extern int16_T atv_GenCurrentSetPoint; /* '<S37>/Data Type Conversion1' */
+extern uint8_T atv_cpu_loading;        /* '<S25>/psc_CpuLoading1' */
+extern uint8_T atv_cpu_loading_max;    /* '<S25>/psc_CpuLoading2' */
+extern uint8_T atv_state_out;          /* '<S9>/VSM' */
+extern uint8_T atv_sub_state_out;      /* '<S9>/VSM' */
+extern uint8_T atv_IceSM;              /* '<S37>/VSMGestioneIbrido' */
+extern uint8_T atv_IceRG;              /* '<S37>/VSMGestioneIbrido' */
+extern boolean_T atv_key_signal;       /* '<S31>/Compare' */
+extern boolean_T atv_za3_StartBtn_din; /* '<S7>/pdx_DigitalInput' */
+extern boolean_T atv_fwd_mode_in;      /* '<S7>/Relay2' */
+extern boolean_T atv_rwd_mode_in;      /* '<S7>/Relay3' */
+extern boolean_T atv_brake_pedal_digital_in;/* '<S7>/Relay1' */
+extern boolean_T atv_throttleRegOff;   /* '<S32>/atvc_throttleRegOff' */
+extern boolean_T atv_fs1_in;           /* '<S7>/Relay' */
+extern boolean_T atv_fs1_out;          /* '<S32>/Switch' */
+extern boolean_T atv_4wd_din;          /* '<S7>/Relay5' */
+extern boolean_T atv_apu_req_in;       /* '<S7>/Relay4' */
 extern boolean_T atv_v_dbg_chg_req;    /* '<S3>/Switch1' */
 extern boolean_T atv_v_dbg_heater_req; /* '<S3>/Switch2' */
-extern boolean_T atv_apu_req_in;       /* '<S6>/Relay4' */
-extern boolean_T atv_wakelock_out;     /* '<S8>/VSM' */
-extern boolean_T atv_runLed_out;       /* '<S8>/VSM' */
-extern boolean_T atv_en_dcdc_out;      /* '<S8>/VSM' */
-extern boolean_T atv_dbg_pumpB_out;    /* '<S38>/PUMP LOGIC' */
+extern boolean_T atv_wakelock_out;     /* '<S9>/VSM' */
+extern boolean_T atv_runLed_out;       /* '<S9>/VSM' */
+extern boolean_T atv_en_dcdc_out;      /* '<S9>/VSM' */
+extern boolean_T atv_IceKey_out;       /* '<S37>/VSMGestioneIbrido' */
+extern boolean_T atv_IceShutdown_out;  /* '<S37>/VSMGestioneIbrido' */
+extern boolean_T atv_IceOn;            /* '<S37>/VSMGestioneIbrido' */
+extern boolean_T atv_IceFault;         /* '<S37>/VSMGestioneIbrido' */
+extern boolean_T atv_dbg_pumpB_out;    /* '<S42>/PUMP LOGIC' */
 
 /*
  * Exported Global Parameters
@@ -1216,66 +1245,114 @@ extern boolean_T atv_dbg_pumpB_out;    /* '<S38>/PUMP LOGIC' */
  */
 extern OE_CAL real_T atvc_an_in_sel_his;/* Variable: atvc_an_in_sel_his
                                          * Referenced by:
-                                         *   '<S6>/Relay2'
-                                         *   '<S6>/Relay3'
-                                         *   '<S6>/Relay4'
-                                         *   '<S6>/Relay5'
+                                         *   '<S7>/Relay2'
+                                         *   '<S7>/Relay3'
+                                         *   '<S7>/Relay4'
+                                         *   '<S7>/Relay5'
                                          */
 extern OE_CAL real_T atvc_an_in_sel_th;/* Variable: atvc_an_in_sel_th
                                         * Referenced by:
-                                        *   '<S6>/Relay2'
-                                        *   '<S6>/Relay3'
-                                        *   '<S6>/Relay4'
-                                        *   '<S6>/Relay5'
+                                        *   '<S7>/Relay2'
+                                        *   '<S7>/Relay3'
+                                        *   '<S7>/Relay4'
+                                        *   '<S7>/Relay5'
                                         */
+extern OE_CAL int16_T atvc_GenTestCurrent;/* Variable: atvc_GenTestCurrent
+                                           * Referenced by: '<S9>/atvc_GenTestCurrent'
+                                           */
+extern OE_CAL int16_T atvc_GenWarmUpCurrent;/* Variable: atvc_GenWarmUpCurrent
+                                             * Referenced by: '<S37>/atvc_GenWarmUpCurrent'
+                                             */
+extern OE_CAL uint16_T atvc_IceOffTh;  /* Variable: atvc_IceOffTh
+                                        * Referenced by: '<S37>/VSMGestioneIbrido'
+                                        */
+extern OE_CAL uint16_T atvc_IceOnTh;   /* Variable: atvc_IceOnTh
+                                        * Referenced by: '<S37>/VSMGestioneIbrido'
+                                        */
+extern OE_CAL uint16_T atvc_RpmEndWarmUp;/* Variable: atvc_RpmEndWarmUp
+                                          * Referenced by: '<S37>/atvc_RpmEndwarmUp'
+                                          */
+extern OE_CAL uint16_T atvc_StartThrottleIce;/* Variable: atvc_StartThrottleIce
+                                              * Referenced by: '<S37>/VSMGestioneIbrido'
+                                              */
 extern OE_CAL uint16_T atvc_brakePedalHis;/* Variable: atvc_brakePedalHis
-                                           * Referenced by: '<S6>/Relay1'
+                                           * Referenced by: '<S7>/Relay1'
                                            */
 extern OE_CAL uint16_T atvc_brakePedalOn;/* Variable: atvc_brakePedalOn
-                                          * Referenced by: '<S6>/Relay1'
+                                          * Referenced by: '<S7>/Relay1'
                                           */
+extern OE_CAL uint16_T atvc_footBrakeIce;/* Variable: atvc_footBrakeIce
+                                          * Referenced by: '<S37>/VSMGestioneIbrido'
+                                          */
+extern OE_CAL uint16_T atvc_footBrakeWarmUp;/* Variable: atvc_footBrakeWarmUp
+                                             * Referenced by: '<S37>/VSMGestioneIbrido'
+                                             */
 extern OE_CAL uint16_T atvc_maxDischCurr;/* Variable: atvc_maxDischCurr
                                           * Referenced by: '<S1>/atvc_maxDischCurr'
                                           */
 extern OE_CAL uint16_T atvc_maxRegenCurr;/* Variable: atvc_maxRegenCurr
                                           * Referenced by: '<S1>/atvc_maxRegenCurr'
                                           */
+extern OE_CAL uint16_T atvc_throttleMaxLimit;/* Variable: atvc_throttleMaxLimit
+                                              * Referenced by: '<S32>/atvc_throttleMaxLimit'
+                                              */
 extern OE_CAL uint16_T atvc_throttleNeutralPoint;/* Variable: atvc_throttleNeutralPoint
                                                   * Referenced by:
-                                                  *   '<S6>/Constant'
-                                                  *   '<S31>/atvc_throttleNeutralPoint'
+                                                  *   '<S32>/atvc_throttleNeutralPoint'
+                                                  *   '<S32>/Switch'
                                                   */
+extern OE_CAL boolean_T atvc_throttleRegOff;/* Variable: atvc_throttleRegOff
+                                             * Referenced by: '<S32>/atvc_throttleRegOff'
+                                             */
+extern OE_CAL uint8_T atvc_FanTest;    /* Variable: atvc_FanTest
+                                        * Referenced by: '<S6>/atvc_FanTest'
+                                        */
+extern OE_CAL uint8_T atvc_IceStartRetry;/* Variable: atvc_IceStartRetry
+                                          * Referenced by: '<S37>/VSMGestioneIbrido'
+                                          */
 extern OE_CAL uint8_T atvc_dcMinFan;   /* Variable: atvc_dcMinFan
-                                        * Referenced by: '<S39>/Constant1'
+                                        * Referenced by: '<S43>/Constant2'
                                         */
 extern OE_CAL uint8_T atvc_maxTempInv; /* Variable: atvc_maxTempInv
-                                        * Referenced by: '<S29>/atvc_maxTempInv'
+                                        * Referenced by:
+                                        *   '<S30>/Relay1'
+                                        *   '<S30>/Relay4'
+                                        *   '<S30>/Relay5'
                                         */
 extern OE_CAL uint8_T atvc_maxTempMotor;/* Variable: atvc_maxTempMotor
-                                         * Referenced by: '<S29>/atvc_maxTempMotor'
+                                         * Referenced by:
+                                         *   '<S30>/Relay'
+                                         *   '<S30>/Relay2'
+                                         *   '<S30>/Relay3'
                                          */
 extern OE_CAL uint8_T atvc_minTempInv; /* Variable: atvc_minTempInv
-                                        * Referenced by: '<S29>/atvc_minTempInv'
+                                        * Referenced by:
+                                        *   '<S30>/Relay1'
+                                        *   '<S30>/Relay4'
+                                        *   '<S30>/Relay5'
                                         */
 extern OE_CAL uint8_T atvc_minTempMotor;/* Variable: atvc_minTempMotor
-                                         * Referenced by: '<S29>/atvc_minTempMotor'
+                                         * Referenced by:
+                                         *   '<S30>/Relay'
+                                         *   '<S30>/Relay2'
+                                         *   '<S30>/Relay3'
                                          */
 extern OE_CAL uint8_T atvc_socLimitSave;/* Variable: atvc_socLimitSave
-                                         * Referenced by: '<S29>/atvc_socLimitSave'
+                                         * Referenced by: '<S30>/atvc_socLimitSave'
                                          */
 extern OE_CAL uint8_T atvc_tempSwitchOffFan;/* Variable: atvc_tempSwitchOffFan
-                                             * Referenced by: '<S39>/Relay1'
+                                             * Referenced by: '<S43>/Relay1'
                                              */
 extern OE_CAL uint8_T atvc_tempSwitchOnFan;/* Variable: atvc_tempSwitchOnFan
                                             * Referenced by:
-                                            *   '<S38>/atvc_tempSwitchOnFan'
-                                            *   '<S39>/Relay1'
+                                            *   '<S42>/atvc_tempSwitchOnFan'
+                                            *   '<S43>/Relay1'
                                             */
 extern OE_CAL uint8_T atvc_velocityLimitFwd;/* Variable: atvc_velocityLimitFwd
-                                             * Referenced by: '<S8>/atvc_velocityLimitFwd'
+                                             * Referenced by: '<S9>/atvc_velocityLimitFwd'
                                              */
 extern OE_CAL uint8_T atvc_velocityLimitRwd;/* Variable: atvc_velocityLimitRwd
-                                             * Referenced by: '<S8>/atvc_velocityLimitRwd'
+                                             * Referenced by: '<S9>/atvc_velocityLimitRwd'
                                              */
 
 /* External function called from main */
@@ -1303,8 +1380,11 @@ extern PCX_HANDLE_T pcx_CANdb_TransmitMessage2_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_TransmitMessage3_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_TransmitMessage4_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_TransmitMessage5_msg_handle;
+extern PCX_HANDLE_T pcx_CANdb_TransmitMessage7_msg_handle;
+extern PCX_HANDLE_T pcx_CANdb_TransmitMessage8_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_ReceiveMessage_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_ReceiveMessage_p_msg_handle;
+extern PCX_HANDLE_T pcx_CANdb_ReceiveMessage_f_msg_handle;
 extern PCX_HANDLE_T pcx_CANdb_ReceiveMessage_e_msg_handle;
 
 /* Real-time Model object */
@@ -1315,50 +1395,56 @@ extern RT_MODEL_ATV_T *const ATV_M;
  *
  * Block '<S3>/Constant' : Unused code path elimination
  * Block '<S3>/Switch' : Unused code path elimination
- * Block '<S12>/FixPt Data Type Duplicate' : Unused code path elimination
- * Block '<S6>/Relay' : Unused code path elimination
- * Block '<S15>/FixPt Data Type Duplicate' : Unused code path elimination
- * Block '<S13>/Logical Operator' : Unused code path elimination
+ * Block '<S5>/Constant' : Unused code path elimination
+ * Block '<S5>/Constant1' : Unused code path elimination
+ * Block '<S5>/Constant2' : Unused code path elimination
+ * Block '<S5>/Switch' : Unused code path elimination
+ * Block '<S5>/Switch1' : Unused code path elimination
+ * Block '<S5>/Switch2' : Unused code path elimination
  * Block '<S16>/FixPt Data Type Duplicate' : Unused code path elimination
  * Block '<S14>/Logical Operator' : Unused code path elimination
+ * Block '<S17>/FixPt Data Type Duplicate' : Unused code path elimination
+ * Block '<S15>/Logical Operator' : Unused code path elimination
  * Block '<Root>/Rate Transition14' : Unused code path elimination
  * Block '<Root>/Rate Transition17' : Unused code path elimination
  * Block '<Root>/Rate Transition18' : Unused code path elimination
  * Block '<Root>/Rate Transition2' : Unused code path elimination
+ * Block '<Root>/Rate Transition23' : Unused code path elimination
  * Block '<Root>/Rate Transition3' : Unused code path elimination
- * Block '<S41>/Data Type Duplicate' : Unused code path elimination
- * Block '<S41>/Data Type Propagation' : Unused code path elimination
- * Block '<S29>/Scope1' : Unused code path elimination
- * Block '<S67>/Scope' : Unused code path elimination
- * Block '<S36>/ ' : Unused code path elimination
- * Block '<S36>/ATVC_front_mtawfb' : Unused code path elimination
- * Block '<S36>/ATVC_rear_mtadd' : Unused code path elimination
- * Block '<S36>/ATVC_rear_mtawfb' : Unused code path elimination
- * Block '<S36>/ATVC_torque_split ' : Unused code path elimination
- * Block '<S36>/Abs2' : Unused code path elimination
- * Block '<S36>/Cast' : Unused code path elimination
- * Block '<S36>/Cast3' : Unused code path elimination
- * Block '<S36>/Constant' : Unused code path elimination
- * Block '<S36>/Constant12' : Unused code path elimination
- * Block '<S36>/Constant2' : Unused code path elimination
- * Block '<S36>/Constant3' : Unused code path elimination
- * Block '<S36>/Constant5' : Unused code path elimination
- * Block '<S36>/Gain' : Unused code path elimination
- * Block '<S36>/Gain1' : Unused code path elimination
- * Block '<S36>/Relational Operator' : Unused code path elimination
- * Block '<S36>/Subtract' : Unused code path elimination
- * Block '<S36>/Subtract5' : Unused code path elimination
- * Block '<S36>/Switch' : Unused code path elimination
- * Block '<S36>/Switch1' : Unused code path elimination
- * Block '<S36>/atvc_mtawnb' : Unused code path elimination
- * Block '<S36>/front' : Unused code path elimination
- * Block '<S36>/rear' : Unused code path elimination
+ * Block '<S45>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S45>/Data Type Propagation' : Unused code path elimination
+ * Block '<S48>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S48>/Data Type Propagation' : Unused code path elimination
+ * Block '<S49>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S49>/Data Type Propagation' : Unused code path elimination
+ * Block '<S40>/ ' : Unused code path elimination
+ * Block '<S40>/ATVC_front_mtawfb' : Unused code path elimination
+ * Block '<S40>/ATVC_rear_mtadd' : Unused code path elimination
+ * Block '<S40>/ATVC_rear_mtawfb' : Unused code path elimination
+ * Block '<S40>/ATVC_torque_split ' : Unused code path elimination
+ * Block '<S40>/Abs2' : Unused code path elimination
+ * Block '<S40>/Cast' : Unused code path elimination
+ * Block '<S40>/Cast3' : Unused code path elimination
+ * Block '<S40>/Constant' : Unused code path elimination
+ * Block '<S40>/Constant12' : Unused code path elimination
+ * Block '<S40>/Constant2' : Unused code path elimination
+ * Block '<S40>/Constant3' : Unused code path elimination
+ * Block '<S40>/Constant5' : Unused code path elimination
+ * Block '<S40>/Gain' : Unused code path elimination
+ * Block '<S40>/Gain1' : Unused code path elimination
+ * Block '<S40>/Relational Operator' : Unused code path elimination
+ * Block '<S40>/Subtract' : Unused code path elimination
+ * Block '<S40>/Subtract5' : Unused code path elimination
+ * Block '<S40>/Switch' : Unused code path elimination
+ * Block '<S40>/Switch1' : Unused code path elimination
+ * Block '<S40>/atvc_mtawnb' : Unused code path elimination
+ * Block '<S40>/front' : Unused code path elimination
+ * Block '<S40>/rear' : Unused code path elimination
  * Block '<Root>/ ' : Unused code path elimination
  * Block '<S2>/Data Type Conversion' : Eliminate redundant data type conversion
  * Block '<S2>/Data Type Conversion1' : Eliminate redundant data type conversion
- * Block '<S5>/Data Type Conversion' : Eliminate redundant data type conversion
- * Block '<S5>/Data Type Conversion1' : Eliminate redundant data type conversion
- * Block '<S5>/Data Type Conversion2' : Eliminate redundant data type conversion
+ * Block '<S6>/Data Type Conversion1' : Eliminate redundant data type conversion
+ * Block '<S6>/Data Type Conversion2' : Eliminate redundant data type conversion
  * Block '<Root>/Rate Transition' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition1' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition13' : Eliminated since input and output rates are identical
@@ -1368,13 +1454,8 @@ extern RT_MODEL_ATV_T *const ATV_M;
  * Block '<Root>/Rate Transition20' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition21' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition22' : Eliminated since input and output rates are identical
- * Block '<S42>/Cast1' : Eliminate redundant data type conversion
- * Block '<S42>/Switch2' : Eliminated due to constant selection input
- * Block '<S43>/Cast1' : Eliminate redundant data type conversion
- * Block '<S43>/Switch2' : Eliminated due to constant selection input
- * Block '<S42>/Constant1' : Unused code path elimination
- * Block '<S43>/Constant1' : Unused code path elimination
- * Block '<S31>/atvc_throttleRegOff' : Unused code path elimination
+ * Block '<S46>/Cast1' : Eliminate redundant data type conversion
+ * Block '<S47>/Cast1' : Eliminate redundant data type conversion
  */
 
 /*-
@@ -1396,69 +1477,73 @@ extern RT_MODEL_ATV_T *const ATV_M;
  * '<S2>'   : 'ATV/CANBUS_Reception_BMS'
  * '<S3>'   : 'ATV/CANBUS_Reception_V_DBG_CTRL'
  * '<S4>'   : 'ATV/CANBUS_Reception_V_DBG_CTRL1'
- * '<S5>'   : 'ATV/Digital_Output_Processing'
- * '<S6>'   : 'ATV/Input_Processing'
- * '<S7>'   : 'ATV/config_and_status'
- * '<S8>'   : 'ATV/loop_10ms'
- * '<S9>'   : 'ATV/CANBUS_Output_Processing/Compare To Zero'
- * '<S10>'  : 'ATV/CANBUS_Reception_V_DBG_CTRL/Chart'
- * '<S11>'  : 'ATV/CANBUS_Reception_V_DBG_CTRL1/Chart'
- * '<S12>'  : 'ATV/Input_Processing/Interval Test Dynamic'
- * '<S13>'  : 'ATV/Input_Processing/Throttle_validation'
- * '<S14>'  : 'ATV/Input_Processing/Throttle_validation1'
- * '<S15>'  : 'ATV/Input_Processing/Throttle_validation/Interval Test'
- * '<S16>'  : 'ATV/Input_Processing/Throttle_validation1/Interval Test'
- * '<S17>'  : 'ATV/config_and_status/ECU Configuration'
- * '<S18>'  : 'ATV/config_and_status/ECU_Status'
- * '<S19>'  : 'ATV/config_and_status/Model_Configuration'
- * '<S20>'  : 'ATV/config_and_status/ECU Configuration/Configure CAN'
- * '<S21>'  : 'ATV/config_and_status/ECU Configuration/Configure CCP'
- * '<S22>'  : 'ATV/config_and_status/ECU Configuration/Configure I//O'
- * '<S23>'  : 'ATV/config_and_status/ECU Configuration/Configure CCP/pcp_CCPConfiguration'
- * '<S24>'  : 'ATV/config_and_status/ECU_Status/CPU_Status'
- * '<S25>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode'
- * '<S26>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code'
- * '<S27>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code'
- * '<S28>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code'
- * '<S29>'  : 'ATV/loop_10ms/COOLING SYSTEM'
- * '<S30>'  : 'ATV/loop_10ms/Compare To Constant'
- * '<S31>'  : 'ATV/loop_10ms/DRIVE BY WIRE'
- * '<S32>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT'
- * '<S33>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR'
- * '<S34>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT'
- * '<S35>'  : 'ATV/loop_10ms/SPEED LIMITER'
- * '<S36>'  : 'ATV/loop_10ms/TORQUE SPLITTER'
- * '<S37>'  : 'ATV/loop_10ms/VSM'
- * '<S38>'  : 'ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento'
- * '<S39>'  : 'ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC'
- * '<S40>'  : 'ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC'
- * '<S41>'  : 'ATV/loop_10ms/COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC/Saturation Dynamic'
- * '<S42>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT'
- * '<S43>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR'
- * '<S44>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT/negativo'
- * '<S45>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT/positivo'
- * '<S46>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/negativo1'
- * '<S47>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/positivo1'
- * '<S48>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE'
- * '<S49>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD'
- * '<S50>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/SELETTORE SENSI DI MARCIA'
- * '<S51>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/Compare To Constant'
- * '<S52>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/Saturation Dynamic'
- * '<S53>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/negativo1'
- * '<S54>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/positivo1'
- * '<S55>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa'
- * '<S56>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/negativo'
- * '<S57>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/positivo'
- * '<S58>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE'
- * '<S59>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD'
- * '<S60>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/SELETTORE SENSI DI MARCIA'
- * '<S61>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE/negativo1'
- * '<S62>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE/positivo1'
- * '<S63>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa'
- * '<S64>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/negativo'
- * '<S65>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/positivo'
- * '<S66>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT/VSMGestioneIbrido'
- * '<S67>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT/VSMGestioneIbrido/GestioneIbrido.ProceduraAvviamento.StarterMode.IceRun'
- * '<S68>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT/VSMGestioneIbrido/MonitoraggioStatoICE.IceCheck'
+ * '<S5>'   : 'ATV/CANBUS_Reception_V_DBG_CTRL2'
+ * '<S6>'   : 'ATV/Digital_Output_Processing'
+ * '<S7>'   : 'ATV/Input_Processing'
+ * '<S8>'   : 'ATV/config_and_status'
+ * '<S9>'   : 'ATV/loop_10ms'
+ * '<S10>'  : 'ATV/CANBUS_Output_Processing/Compare To Zero'
+ * '<S11>'  : 'ATV/CANBUS_Reception_V_DBG_CTRL/Chart'
+ * '<S12>'  : 'ATV/CANBUS_Reception_V_DBG_CTRL1/Chart'
+ * '<S13>'  : 'ATV/CANBUS_Reception_V_DBG_CTRL2/Chart'
+ * '<S14>'  : 'ATV/Input_Processing/Throttle_validation'
+ * '<S15>'  : 'ATV/Input_Processing/Throttle_validation1'
+ * '<S16>'  : 'ATV/Input_Processing/Throttle_validation/Interval Test'
+ * '<S17>'  : 'ATV/Input_Processing/Throttle_validation1/Interval Test'
+ * '<S18>'  : 'ATV/config_and_status/ECU Configuration'
+ * '<S19>'  : 'ATV/config_and_status/ECU_Status'
+ * '<S20>'  : 'ATV/config_and_status/Model_Configuration'
+ * '<S21>'  : 'ATV/config_and_status/ECU Configuration/Configure CAN'
+ * '<S22>'  : 'ATV/config_and_status/ECU Configuration/Configure CCP'
+ * '<S23>'  : 'ATV/config_and_status/ECU Configuration/Configure I//O'
+ * '<S24>'  : 'ATV/config_and_status/ECU Configuration/Configure CCP/pcp_CCPConfiguration'
+ * '<S25>'  : 'ATV/config_and_status/ECU_Status/CPU_Status'
+ * '<S26>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_AppCode'
+ * '<S27>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Boot_Code'
+ * '<S28>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Platform_Lib_Code'
+ * '<S29>'  : 'ATV/config_and_status/ECU_Status/ECU_SW_Ver_Reprogramming_Code'
+ * '<S30>'  : 'ATV/loop_10ms/ COOLING SYSTEM'
+ * '<S31>'  : 'ATV/loop_10ms/Compare To Constant'
+ * '<S32>'  : 'ATV/loop_10ms/DRIVE BY WIRE'
+ * '<S33>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT'
+ * '<S34>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR'
+ * '<S35>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_ByGiovanni'
+ * '<S36>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_0'
+ * '<S37>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1'
+ * '<S38>'  : 'ATV/loop_10ms/Interval Test Dynamic'
+ * '<S39>'  : 'ATV/loop_10ms/SPEED LIMITER'
+ * '<S40>'  : 'ATV/loop_10ms/TORQUE SPLITTER'
+ * '<S41>'  : 'ATV/loop_10ms/VSM'
+ * '<S42>'  : 'ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento'
+ * '<S43>'  : 'ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC'
+ * '<S44>'  : 'ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/PUMP LOGIC'
+ * '<S45>'  : 'ATV/loop_10ms/ COOLING SYSTEM/GestioneImpiantoRaffreddamento/FAN LOGIC/Saturation Dynamic'
+ * '<S46>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT'
+ * '<S47>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR'
+ * '<S48>'  : 'ATV/loop_10ms/DRIVE BY WIRE/Saturation Dynamic'
+ * '<S49>'  : 'ATV/loop_10ms/DRIVE BY WIRE/Saturation Dynamic1'
+ * '<S50>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT/negativo'
+ * '<S51>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE FRONT/positivo'
+ * '<S52>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/negativo1'
+ * '<S53>'  : 'ATV/loop_10ms/DRIVE BY WIRE/DRIVE BY WIRE REAR/positivo1'
+ * '<S54>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE'
+ * '<S55>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD'
+ * '<S56>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/SELETTORE SENSI DI MARCIA'
+ * '<S57>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/negativo1'
+ * '<S58>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW REVERSE/positivo1'
+ * '<S59>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa'
+ * '<S60>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/negativo'
+ * '<S61>'  : 'ATV/loop_10ms/DRIVE BY WIRE_FRONT/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/positivo'
+ * '<S62>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE'
+ * '<S63>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD'
+ * '<S64>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/SELETTORE SENSI DI MARCIA'
+ * '<S65>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE/negativo1'
+ * '<S66>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW REVERSE/positivo1'
+ * '<S67>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa'
+ * '<S68>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/negativo'
+ * '<S69>'  : 'ATV/loop_10ms/DRIVE BY WIRE_REAR/DBW + REG_BRAKE FORWARD/positiva // rigenerativa/positivo'
+ * '<S70>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_ByGiovanni/VSMGestioneIbrido'
+ * '<S71>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_0/VSMGestioneIbrido'
+ * '<S72>'  : 'ATV/loop_10ms/HYBRID MANAGEMENT_Rev1_1/VSMGestioneIbrido'
  */
 #endif                                 /* RTW_HEADER_ATV_h_ */

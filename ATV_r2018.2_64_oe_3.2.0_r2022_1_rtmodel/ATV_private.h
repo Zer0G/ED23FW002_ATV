@@ -3,9 +3,9 @@
  *
  * Code generation for model "ATV".
  *
- * Model version              : 6.38
+ * Model version              : 6.151
  * Simulink Coder version : 9.0 (R2018b) 24-May-2018
- * C source code generated on : Tue Apr 18 19:34:44 2023
+ * C source code generated on : Wed Apr 26 22:21:58 2023
  *
  * Target selection: openecu_grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -90,7 +90,5 @@ extern int32_T sMultiWordCmp(const uint32_T u1[], const uint32_T u2[], int32_T n
 extern void ATV_Chart_Init(DW_Chart_ATV_T *localDW);
 extern void ATV_Chart(boolean_T rtu_in, B_Chart_ATV_T *localB, DW_Chart_ATV_T
                       *localDW);
-extern void GestioneIbridoProceduraAvvi(uint16_T rtu_rPMG,
-  B_GestioneIbridoProceduraAvvi_T *localB);
 
 #endif                                 /* RTW_HEADER_ATV_private_h_ */

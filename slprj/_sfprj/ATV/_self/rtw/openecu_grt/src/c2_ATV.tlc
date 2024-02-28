@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   15 \
+    NumChartData   9 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,73 +21,31 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_GestioneIbrido"\
+      Name         "is_IceSM"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "GestioneIbrido"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_ProceduraAvviamento"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "GestioneIbrido.ProceduraAvviamento"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_RegenerativeMode"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "GestioneIbrido.ProceduraAvviamento.RegenerativeMode"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_StarterMode"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "GestioneIbrido.ProceduraAvviamento.StarterMode"\
+      Path         "GestioneIbrido.IceSM"\
       SrcLocation  ""\
     }\
     ChartData {\
       Name         "is_MonitoraggioStatoICE"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "MonitoraggioStatoICE"\
+      Path         "GestioneIbrido.IceSM.MonitoraggioStatoICE"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_active_MonitoraggioStatoICE"\
-      Description  "StateIsActive"\
+      Name         "is_WarmUpIce"\
+      Description  "StateActiveChild"\
       SFName       ""\
-      Path         "MonitoraggioStatoICE"\
+      Path         "WarmUpIce"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "IceStatus"\
+      Name         "IceStartAttempCnt"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "IceStatus"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "ShutDownHybrid"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "ShutDownHybrid"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "IceOn"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "IceOn"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "IceFault"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "IceFault"\
+      Path         "IceStartAttempCnt"\
       SrcLocation  ""\
     }\
     ChartData {\

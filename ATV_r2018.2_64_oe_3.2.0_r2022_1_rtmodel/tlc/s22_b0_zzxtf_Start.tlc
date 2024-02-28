@@ -1,0 +1,270 @@
+%implements s22_b0_zzxtf_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS21B2 = OpaqueTLCBlockFcn("Start", 21, 2, 2, 4)
+%assign tlcStartFcnOfS21B13 = OpaqueTLCBlockFcn("Start", 21, 13, 2, 4)
+%assign tlcStartFcnOfS21B14 = OpaqueTLCBlockFcn("Start", 21, 14, 2, 4)
+%assign tlcStartFcnOfS21B31 = OpaqueTLCBlockFcn("Start", 21, 31, 2, 4)
+%assign tlcStartFcnOfS21B52 = OpaqueTLCBlockFcn("Start", 21, 52, 2, 4)
+%assign tlcStartFcnOfS21B58 = OpaqueTLCBlockFcn("Start", 21, 58, 2, 4)
+%assign tlcStartFcnOfS21B69 = OpaqueTLCBlockFcn("Start", 21, 69, 2, 4)
+%assign tlcStartFcnOfS21B70 = OpaqueTLCBlockFcn("Start", 21, 70, 2, 4)
+%assign tlcStartFcnOfS21B72 = OpaqueTLCBlockFcn("Start", 21, 72, 2, 4)
+%assign tlcStartFcnOfS21B73 = OpaqueTLCBlockFcn("Start", 21, 73, 2, 4)
+%assign tlcStartFcnOfS21B74 = OpaqueTLCBlockFcn("Start", 21, 74, 2, 4)
+%assign tlcStartFcnOfS21B75 = OpaqueTLCBlockFcn("Start", 21, 75, 2, 4)
+%assign tlcStartFcnOfS21B76 = OpaqueTLCBlockFcn("Start", 21, 76, 2, 4)
+%assign tlcStartFcnOfS21B77 = OpaqueTLCBlockFcn("Start", 21, 77, 2, 4)
+%assign tlcStartFcnOfS21B78 = OpaqueTLCBlockFcn("Start", 21, 78, 2, 4)
+%assign tlcStartFcnOfS21B79 = OpaqueTLCBlockFcn("Start", 21, 79, 2, 4)
+%assign tlcStartFcnOfS21B80 = OpaqueTLCBlockFcn("Start", 21, 80, 2, 4)
+%assign tlcStartFcnOfS21B81 = OpaqueTLCBlockFcn("Start", 21, 81, 2, 4)
+%assign tlcStartFcnOfS21B85 = OpaqueTLCBlockFcn("Start", 21, 85, 2, 4)
+%assign tlcStartFcnOfS21B97 = OpaqueTLCBlockFcn("Start", 21, 97, 2, 4)
+%assign tlcStartFcnOfS21B99 = OpaqueTLCBlockFcn("Start", 21, 99, 2, 4)
+%assign tlcStartFcnOfS21B100 = OpaqueTLCBlockFcn("Start", 21, 100, 2, 4)
+%assign tlcStartFcnOfS21B101 = OpaqueTLCBlockFcn("Start", 21, 101, 2, 4)
+%assign tlcStartFcnOfS21B103 = OpaqueTLCBlockFcn("Start", 21, 103, 2, 4)
+%assign tlcStartFcnOfS21B104 = OpaqueTLCBlockFcn("Start", 21, 104, 2, 4)
+%assign tlcStartFcnOfS21B106 = OpaqueTLCBlockFcn("Start", 21, 106, 2, 4)
+%assign tlcStartFcnOfS21B112 = OpaqueTLCBlockFcn("Start", 21, 112, 2, 4)
+%assign tlcStartFcnOfS21B113 = OpaqueTLCBlockFcn("Start", 21, 113, 2, 4)
+%assign tlcStartFcnOfS21B114 = OpaqueTLCBlockFcn("Start", 21, 114, 2, 4)
+%assign tlcStartFcnOfS21B115 = OpaqueTLCBlockFcn("Start", 21, 115, 2, 4)
+%assign tlcStartFcnOfS21B116 = OpaqueTLCBlockFcn("Start", 21, 116, 2, 4)
+%assign tlcStartFcnOfS21B117 = OpaqueTLCBlockFcn("Start", 21, 117, 2, 4)
+%assign tlcStartFcnOfS21B118 = OpaqueTLCBlockFcn("Start", 21, 118, 2, 4)
+%assign tlcStartFcnOfS21B119 = OpaqueTLCBlockFcn("Start", 21, 119, 2, 4)
+%assign tlcOutputsFcnOfS21B104 = OpaqueTLCBlockFcn("Outputs", 21, 104, 2, 4)
+%assign tlcOutputsFcnOfS21B105 = OpaqueTLCBlockFcn("Outputs", 21, 105, 2, 4)
+%assign tlcOutputsFcnOfS21B106 = OpaqueTLCBlockFcn("Outputs", 21, 106, 2, 4)
+%assign tlcOutputsFcnOfS21B120 = OpaqueTLCBlockFcn("Outputs", 21, 120, 2, 4)
+%assign tlcOutputsFcnOfS21B121 = OpaqueTLCBlockFcn("Outputs", 21, 121, 2, 4)
+%assign tlcOutputsFcnOfS21B122 = OpaqueTLCBlockFcn("Outputs", 21, 122, 2, 4)
+%assign tlcOutputsFcnOfS21B123 = OpaqueTLCBlockFcn("Outputs", 21, 123, 2, 4)
+%if !WHITE_SPACE(tlcStartFcnOfS21B2)
+/* Start for S-Function (pdx_digital_input): '<S6>/pdx_DigitalInput' */
+%<tlcStartFcnOfS21B2>\
+%endif
+/* Start for RateTransition: '<Root>/Rate Transition4' */
+ATV_B.RateTransition4 = false;
+/* Start for RateTransition: '<Root>/Rate Transition5' */
+ATV_B.RateTransition5 = false;
+%if !WHITE_SPACE(tlcStartFcnOfS21B13)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage' */
+%<tlcStartFcnOfS21B13>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B14)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage1' */
+%<tlcStartFcnOfS21B14>\
+%endif
+/* Start for RateTransition: '<Root>/Rate Transition6' */
+ATV_B.RateTransition6 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition7' */
+ATV_B.RateTransition7 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition10' */
+ATV_B.RateTransition10 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition8' */
+ATV_B.RateTransition8 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition9' */
+ATV_B.RateTransition9 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition11' */
+ATV_B.RateTransition11 = 0U;
+/* Start for RateTransition: '<Root>/Rate Transition12' */
+ATV_B.RateTransition12 = 0U;
+%if !WHITE_SPACE(tlcStartFcnOfS21B31)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage6' */
+%<tlcStartFcnOfS21B31>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B52)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage2' */
+%<tlcStartFcnOfS21B52>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B58)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage3' incorporates:
+ *  Constant: '<S1>/atvc_maxDischCurr'
+ *  Constant: '<S1>/atvc_maxRegenCurr'
+ */
+%<tlcStartFcnOfS21B58>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B69)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage4' */
+%<tlcStartFcnOfS21B69>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B70)
+/* Start for S-Function (pcx_candb_transmit_message): '<S1>/pcx_CANdb_TransmitMessage5' incorporates:
+ *  Constant: '<S1>/atvc_maxDischCurr'
+ *  Constant: '<S1>/atvc_maxRegenCurr'
+ */
+%<tlcStartFcnOfS21B70>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B72)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B72>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B73)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B73>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B74)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B74>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B75)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput4' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B75>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B76)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput5' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B76>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B77)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput6' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B77>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B78)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput7' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B78>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B79)
+/* Start for S-Function (pdx_digital_output): '<S5>/pdx_DigitalOutput8' */
+%<tlcStartFcnOfS21B79>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B80)
+/* Start for S-Function (pdx_pwm_output): '<S5>/pdx_PWMOutput' incorporates:
+ *  Constant: '<S5>/Constant1'
+ */
+%<tlcStartFcnOfS21B80>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B81)
+/* Start for S-Function (pcx_candb_receive_message): '<S3>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS21B81>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B85)
+/* Start for S-Function (pcx_candb_receive_message): '<S4>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS21B85>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B97)
+/* Start for S-Function (pcx_candb_receive_message): '<S2>/pcx_CANdb_ReceiveMessage' */
+%<tlcStartFcnOfS21B97>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B99)
+/* Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS21B99>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B100)
+/* Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput1' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS21B100>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B101)
+/* Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput2' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+%<tlcStartFcnOfS21B101>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B103)
+/* Start for S-Function (pdx_digital_output): '<Root>/pdx_DigitalOutput3' incorporates:
+ *  Constant: '<Root>/Constant'
+ */
+%<tlcStartFcnOfS21B103>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B104)
+/* Start for S-Function (pcx_can_config): '<S20>/pcx_CANConfiguration' */
+%<tlcStartFcnOfS21B104>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B106)
+/* Start for S-Function (pcfg_config_m5xx): '<S22>/pcfg_Config_M5xx' */
+%<tlcStartFcnOfS21B106>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B112)
+/* Start for S-Function (psc_app_build_date): '<S25>/psc_AppBuildDate' */
+%<tlcStartFcnOfS21B112>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B113)
+/* Start for S-Function (psc_app_version): '<S25>/psc_AppVersion' */
+%<tlcStartFcnOfS21B113>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B114)
+/* Start for S-Function (psc_boot_build_date): '<S26>/psc_BootBuildDate' */
+%<tlcStartFcnOfS21B114>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B115)
+/* Start for S-Function (psc_boot_version): '<S26>/psc_BootVersion' */
+%<tlcStartFcnOfS21B115>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B116)
+/* Start for S-Function (psc_prg_build_date): '<S27>/psc_PrgBuildDate' */
+%<tlcStartFcnOfS21B116>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B117)
+/* Start for S-Function (psc_prg_version): '<S27>/psc_PrgVersion' */
+%<tlcStartFcnOfS21B117>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B118)
+/* Start for S-Function (psc_platform_build_date): '<S28>/psc_PlatformBuildDate' */
+%<tlcStartFcnOfS21B118>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS21B119)
+/* Start for S-Function (psc_platform_version): '<S28>/psc_PlatformVersion' */
+%<tlcStartFcnOfS21B119>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B104)
+/* ConstCode for S-Function (pcx_can_config): '<S20>/pcx_CANConfiguration' */
+%<tlcOutputsFcnOfS21B104>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B105)
+/* ConstCode for S-Function (pcp_ccp_config): '<S23>/S-Function' */
+%<tlcOutputsFcnOfS21B105>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B106)
+/* ConstCode for S-Function (pcfg_config_m5xx): '<S22>/pcfg_Config_M5xx' */
+%<tlcOutputsFcnOfS21B106>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B120)
+/* ConstCode for S-Function (prtw_config_using_ert): '<S19>/prtw_ConfigUsingRtwEc' */
+%<tlcOutputsFcnOfS21B120>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B121)
+/* ConstCode for S-Function (prtw_config_using_grt_rtmodel): '<S19>/prtw_ConfigUsingRtwRtmodel' */
+%<tlcOutputsFcnOfS21B121>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B122)
+/* ConstCode for S-Function (prtw_build): '<Root>/prtw_Build' */
+%<tlcOutputsFcnOfS21B122>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS21B123)
+/* ConstCode for S-Function (put_identification): '<Root>/put_Identification' */
+%<tlcOutputsFcnOfS21B123>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 4, fcnProtoType)>
+%endfunction
